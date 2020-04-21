@@ -1,0 +1,52 @@
+1585623213820	geckodriver	INFO	Listening on 127.0.0.1:18121
+1585623216995	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1585623229943	geckodriver::marionette	ERROR	Failed to kill browser process
+1585623324818	geckodriver	INFO	Listening on 127.0.0.1:18315
+1585623327833	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1585623330132	Marionette	INFO	Listening on port 18325
+1585623331065	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: resource://gre/components/nsSearchService.js, line 617: uncaught exception: out of memory
+1585623337566	geckodriver::marionette	ERROR	Failed to kill browser process
+1585623478103	geckodriver	INFO	Listening on 127.0.0.1:18566
+1585623481584	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1585623484610	Marionette	INFO	Listening on port 18579
+1585623484911	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: D3D11 swap resize buffers failed 0x8007000e on Size(1268,768)
+[GFX1]: [CompositorD3D11] error code: 0x8007000e, 0, 1
+[GFX1-]: Failed VerifyBufferSize in UpdateRenderTarget Size(1268,768)
+[GFX1]: [D3D11] 2 CreateTexture2D failure Size(1268,768) Code: 0x8007000e
+[GFX1]: [D3D11] 2 CreateTexture2D failure Size(1268,768) Code: 0x8007000e
+[GFX1-]: Failed 2 buffer db=00000000 dw=00000000 for 0, 0, 1268, 768
+JavaScript error: chrome://browser/content/browser.js, line 1447: uncaught exception: out of memory
+JavaScript error: chrome://browser/content/browser.js, line 1447: uncaught exception: out of memory
+1585623490769	geckodriver::marionette	ERROR	Failed to kill browser process
+[Child 19472] WARNING: pipe error: 232: file c:/builds/moz2_slave/m-esr52-w32-000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 512
+[Child 19472] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-esr52-w32-000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 345
+[Child 19472] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-esr52-w32-000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2152
+[Child 19472] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-esr52-w32-000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2152
+1585624871060	geckodriver	INFO	Listening on 127.0.0.1:20673
+1585624874197	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1585624878812	addons.manager	ERROR	Exception loading default provider "resource://gre/modules/addons/XPIProvider.jsm": [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [nsIXPCComponents_Utils.import]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/AddonManager.jsm :: AddonManagerInternal.startup :: line 929"  data: no] Stack trace: AddonManagerInternal.startup()@resource://gre/modules/AddonManager.jsm:929 < this.AddonManagerPrivate.startup()@resource://gre/modules/AddonManager.jsm:3033 < amManager.prototype.observe()@resource://gre/components/addonManager.js:65
+Exception trying to format object for log message: out of memory No traceback available
+1585624878853	addons.manager	ERROR	Exception loading provider PluginProvider from category "resource://gre/modules/addons/PluginProvider.jsm": ({})
+1585625932078	geckodriver	INFO	Listening on 127.0.0.1:23162
+1585625935211	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1585625947405	Marionette	INFO	Listening on port 23178
+1585625947813	Marionette	WARN	TLS certificate errors will be ignored for this session
+1585626061264	geckodriver	INFO	Listening on 127.0.0.1:23563
+1585626064391	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1585626066020	Marionette	INFO	Listening on port 23577
+1585626066498	Marionette	WARN	TLS certificate errors will be ignored for this session
+1585626180713	geckodriver	INFO	Listening on 127.0.0.1:23826
+1585626183844	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1585626185521	Marionette	INFO	Listening on port 23838
+1585626185903	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 14596] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-esr52-w32-000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 345
+[Child 14596] WAR1585626644103	geckodriver	INFO	Listening on 127.0.0.1:24120
+1585626647238	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1585626648657	Marionette	INFO	Listening on port 24128
+1585626648890	Marionette	WARN	TLS certificate errors will be ignored for this session
