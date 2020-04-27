@@ -23,6 +23,10 @@ class TopMenuPage(BasePage):
         config.read(file_path)
         base_url = config.get("testServer", "URL")
         self.driver.get(base_url)
+        # 记录 executor_url 和 session_id 以便复用session
+        executor_url = self.driver.command_executor._url
+        session_id = self.driver.session_id
+
         # try:
         #     self.sleep(5)
         #     self.find_element_by_wait('xpath',HomepageEntity.default_text)
@@ -104,30 +108,6 @@ class TopMenuPage(BasePage):
             logger.info('four_menu: %s' % four_menu)
             return True
 
-
-
-    # def  search_customer_menu(self,S,T):
-    #     """
-    #     # 选择Customer-second or third menu
-    #     :param S second menu , T third menu
-    #     #1  Search    -> 1: ALL Customers
-    #     #2  New
-    #     #3  Reports   ->1: ALAMO CRM Checklist ,2:Blanket Authorization Royalty Reports Affidavit,3:MIP Customer Activity
-    #     #4  CRM Style Guide
-    #     :return:
-    #     """
-    #     self.click(TopMenuEntity.CUSTOMERS)
-    #     self.move_to_element(TopMenuEntity().get_second_menu(S))
-    #
-    #     if S==1:
-    #         self.click(TopMenuEntity().get_third_menu(S,T))
-    #         if  self.find_element(SearchCustomerEntity.assert_title):
-    #             logger.info("into search page successful")
-    #             return True
-    #         else:
-    #             logger.error("into search page fail")
-    #     elif S==2:
-    #         self.click(TopMenuEntity().get_second_menu(S))
 
 
 

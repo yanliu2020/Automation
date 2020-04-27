@@ -1,2 +1,0 @@
-2020-04-21 15:41:11,746|base_page.py[line:68] ERROR:TimeoutException: selector by id ,value customers
-2020-04-21 15:41:11,746|base_page.py[line:121] ERROR:NoSuchElement selector_by: id, selector: customers 

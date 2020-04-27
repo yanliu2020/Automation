@@ -8,4 +8,3 @@ class HomePage(BasePage):
     def is_visibility_homepage(self):
         self.find_element_by_wait("xpath",HomepageEntity.default_text)
         return bool(self.find_element(HomepageEntity.default_text))
-        print("++++进入首页")

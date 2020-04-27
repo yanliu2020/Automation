@@ -35,7 +35,7 @@ class BrowserEngine(object):
             profile.set_preference('browser.download.folderList', 2)
             profile.set_preference('browser.download.manager.showWhenStarting', False)
             profile.set_preference('browser.helperApps.neverAsk.saveToDisk', 'application/x-octetstream')
-            self.driver = webdriver.Firefox(firefox_profile=profile, executable_path=self.firefox_driver_path)
+            self.driver = webdriver.Firefox(firefox_profile=profile, executable_path=self.firefox_driver_path,log_path=r'E:\Automation\UI\utils\geckodriver.log')
             logger.info("Starting firefox browser.")
         elif browser == "Chrome":
             self.driver = webdriver.Chrome(self.chrome_driver_path)
@@ -58,9 +58,9 @@ class BrowserEngine(object):
         # self.driver.implicitly_wait(3)
         # logger.info("Set implicitly wait 10 seconds.")
 
-        # 登录前清楚所有cookie
+        # # 登录前清楚所有cookie
         self.driver.delete_all_cookies()
-        ##登录前打印cookie
+        # ##登录前打印cookie
         print(self.driver.get_cookies())
 
         BasePage(self.driver).find_element_by_wait('xpath',Login.login_title)
@@ -68,12 +68,10 @@ class BrowserEngine(object):
         #传入登陆用户名和密码
         SystemLogin(self.driver).user_login('yan.liu@an-chen.com','Lychan@2012')
 
-        ### 获取cookie
+        # ### 获取cookie
         cookie = self.driver.get_cookies()
         print(cookie)
-        jsonCookies = json.dumps(cookie)
-        with open('vcyber.json', 'w') as f:
-            f.write(jsonCookies)
+
 
         time.sleep(30)
 
