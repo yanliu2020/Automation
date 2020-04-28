@@ -4,8 +4,6 @@ from pageobjects.homepage.homepage import HomePage
 from utils.logger import logger
 from utils.base_page import BasePage
 from config.login.login_entity import Login
-from config.common.topmenu_entity import  TopMenuEntity
-
 
 class SystemLogin(BasePage):
 
@@ -23,6 +21,7 @@ class SystemLogin(BasePage):
     def click_login(self):
         self.find_element(Login.login_btn).click()
 
+    #判断登录页面
     def is_login_page(self):
         text = self.find_element(Login.login_title).text
         if text == 'Sign in with your existing account':
@@ -30,6 +29,7 @@ class SystemLogin(BasePage):
             print("return true")
         return False
 
+     #登录操作
     def user_login(self, username, password):
         if not self.is_login_page():
             logger.error('not in login page')

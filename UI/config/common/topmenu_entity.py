@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 
-
 class TopMenuEntity(object):
+
     #logo
-    logo = "id=>logo"
+    logo = "id=>alano-glo-brand-logo"
+
     #用户头像
-    #user_log = "xpath=>//div[@class='header-badge']"
-    user_log = "xpath=>//div[@class='header-badge-glo']"
+    user_logo = "xpath=>//div[@class='header-badge-glo']"
+
     #退出登录
     logout_user = "xpath=>//a[text()='Logout']"
 

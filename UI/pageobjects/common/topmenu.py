@@ -1,21 +1,17 @@
 # -*- coding: utf-8 -*-
 from configparser import ConfigParser
-
 from selenium.common.exceptions import NoSuchElementException
 from config.common.topmenu_entity import TopMenuEntity
 from utils.base_page import BasePage
 from utils.basepath_helper import config_path
 from utils.logger import logger
-from config.homepage.homepage_entity import HomepageEntity
 from pageobjects.login.login import SystemLogin
-from config.customer.search_customer_entity import  SearchCustomerEntity
-
 
 class TopMenuPage(BasePage):
 
     def get_url(self):
         """
-        # 重新访问服务器，页面重定向到默认看板
+        # 重新访问服务器
         :return:
         """
         config = ConfigParser()
@@ -23,10 +19,6 @@ class TopMenuPage(BasePage):
         config.read(file_path)
         base_url = config.get("testServer", "URL")
         self.driver.get(base_url)
-        # 记录 executor_url 和 session_id 以便复用session
-        executor_url = self.driver.command_executor._url
-        session_id = self.driver.session_id
-
         # try:
         #     self.sleep(5)
         #     self.find_element_by_wait('xpath',HomepageEntity.default_text)
@@ -41,8 +33,8 @@ class TopMenuPage(BasePage):
         # 退出账号
         :return:
         """
-        self.find_element_by_wait('xpath',TopMenuEntity.user_log)
-        self.click(TopMenuEntity.user_log)
+        self.find_element_by_wait('xpath',TopMenuEntity.user_logo)
+        self.click(TopMenuEntity.user_logo)
         self.click(TopMenuEntity.logout_user)
         if SystemLogin(self.driver).is_login_page():
             logger.info('logout success')
@@ -54,8 +46,8 @@ class TopMenuPage(BasePage):
 
     def choose_top_menu(self,level,first_menu,second_menu,third_menu,four_menu):
         """
-        #choose first and second menu
-        :param first_menu,second_menu:third_menu
+        #导航多级菜单选择
+        :param first_menu,second_menu,third_menu,four_menu
         :param level
         :return:
         """
