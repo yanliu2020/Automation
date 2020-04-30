@@ -44,7 +44,7 @@ class TopMenuPage(BasePage):
             return False
 
 
-    def choose_top_menu(self,level,first_menu,second_menu,third_menu,four_menu):
+    def select_multiple_menu(self,level,first_menu,second_menu,third_menu,four_menu):
         """
         #导航多级菜单选择
         :param first_menu,second_menu,third_menu,four_menu

@@ -7,7 +7,7 @@ from utils.logger import  logger
 class NewCustomerPage(BasePage):
 
     #选择用户类型
-    def  choose_cust_type(self,type,className):
+    def  select_customer_type(self,type,className):
         """
           # 选择创建的用户类型
           :param  type：Person, Organization

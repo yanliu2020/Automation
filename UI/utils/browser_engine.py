@@ -3,7 +3,7 @@ from configparser import ConfigParser
 from selenium import webdriver
 
 from pageobjects.login.login import SystemLogin
-from config.login.login_entity import  Login
+from config.login.login_entity import  LoginEntity
 from utils.basepath_helper import logs_path, project_path, drivers_path, config_path
 from utils.logger import logger
 from utils.base_page import BasePage
@@ -63,7 +63,7 @@ class BrowserEngine(object):
         # # ##登录前打印cookie
         # print(self.driver.get_cookies())
 
-        BasePage(self.driver).find_element_by_wait('xpath',Login.login_title)
+        BasePage(self.driver).find_element_by_wait('xpath',LoginEntity.login_title)
 
         #传入登陆用户名和密码
         SystemLogin(self.driver).user_login('yan.liu@an-chen.com','Lychan@2012')

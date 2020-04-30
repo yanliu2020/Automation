@@ -1,7 +1,7 @@
 #-*- coding: UTF-8 -*-
 
 
-class Login(object):
+class LoginEntity(object):
     # 用户名
     username = "id=>logonIdentifier"
     # 密码

@@ -2,10 +2,10 @@
 
 import datetime
 import unittest
-from pageobjects.common.topmenu import TopMenuPage
-from pageobjects.customer.newcustomer import NewCustomerPage
+from pageobjects.common.topMenu import TopMenuPage
+from pageobjects.customer.newCustomer import NewCustomerPage
 from utils.browser_engine import driver
-from pageobjects.customer.searchpage import  SearchCustomerPage
+from pageobjects.customer.searchCustomer import  SearchCustomerPage
 from selenium import webdriver
 from utils.basepath_helper import logs_path, project_path, drivers_path, config_path
 
@@ -22,14 +22,14 @@ class New_Customer(unittest.TestCase):
         # chrome_driver_path = drivers_path + 'chromedriver.exe'
         # cls.driver = webdriver.Chrome(chrome_driver_path)
         # TopMenuPage(cls.driver).get_url()
-        TopMenuPage(cls.driver).choose_top_menu(2,"customers","New","","")
+        TopMenuPage(cls.driver).select_multiple_menu(2,"customers","New","","")
 
 
     # New Individual Customer
     def test_01_new_customer(self):
 
         u"""New Individual Customer"""
-        NewCustomerPage(self.driver).choose_cust_type("Person","Individual")
+        NewCustomerPage(self.driver).select_customer_type("Person","Individual")
 
 
 

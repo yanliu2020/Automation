@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 class TopMenuEntity(object):
-
     #logo
     logo = "id=>alano-glo-brand-logo"
 
