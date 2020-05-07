@@ -8,7 +8,7 @@ class HomePageEntity(object):
     module_list="xpath=>//div[@class='card']/form//div[@id='homeGrid']/div//h2"
 
     #module_operator
-    module_operator="xpath=>//div[@class='card']/form//div[@id='homeGrid']/div[%s]/div[2]//a[text()='%s']"
+    module_operator="xpath=>//div[@class='card']/form//div[@id='homeGrid']/div[%s]/div[2]//a[text()=' %s']"
     def get_module_operator(self,loc,name):
         return self.module_operator %(loc,name)
 

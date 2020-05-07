@@ -8,17 +8,19 @@ from utils.logger import logger
 class HomePage(BasePage):
     #校验进入首页
     def is_visibility_homepage(self):
+        self.find_element_by_wait("xpath",HomePageEntity.default_text)
         return bool(self.find_element(HomePageEntity.default_text))
 
-    #首页点击Search && Add New
-    def quick_operator(self,module_name,Name,flag):
+    #首页快捷入口
+    def quick_entrance(self,module_name,Name,flag):
         """
-        #click search or add new
+        #default page quickly entrance
         :param  module_name : Land,Surface Leasing,Mineral Leasing,Customers
-        :param  Name : Search, Add New(注意前面加空格),select_value,input_value
+        :param  Name :Search,Add New,select_value,input_value
         :param  flag : 1,2
         :return:
         """
+        self.find_element_by_wait("xpath",HomePageEntity.module_list)
         module_list = self.find_elements(HomePageEntity.module_list)
         print(module_list)
         module_item = None
@@ -29,16 +31,16 @@ class HomePage(BasePage):
         if module_item is None:
             raise NoSuchElementException(msg="module_name %s not found!" % module_name)
         #下拉框选择
-        elif flag ==1:
+        elif flag == 1:
             self.find_element(HomePageEntity().get_quick_select(module_item[0]))
             self.click(HomePageEntity().get_quick_select(module_item[0]))
-            self.drop_select(HomePageEntity().get_quick_select(module_item[0]), Name)
+            self.drop_select(HomePageEntity().get_quick_select(module_item[0]),Name)
             self.click(HomePageEntity().get_quick_select_go(module_item[0]))
             logger.info('module_name: %s' % module_name)
             return True
         #输入文本
-        elif flag ==2:
-            self.type(HomePageEntity().get_quick_search(module_item[0]), Name)
+        elif flag == 2:
+            self.type(HomePageEntity().get_quick_search(module_item[0]),Name)
             self.click(HomePageEntity().get_quick_search_go(module_item[0]))
             logger.info('module_name: %s' % module_name)
             return True

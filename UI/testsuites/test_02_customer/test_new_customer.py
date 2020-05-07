@@ -20,7 +20,10 @@ class New_Customer(unittest.TestCase):
         # browser = BrowserEngine(cls)
         cls.driver = driver
         # chrome_driver_path = drivers_path + 'chromedriver.exe'
-        # cls.driver = webdriver.Chrome(chrome_driver_path)
+        # driverOptions = webdriver.ChromeOptions()
+        # driverOptions.add_argument(r"user-data-dir=C:\Users\ElenaTang\AppData\Local\Google\Chrome\User Data")
+        # print(driverOptions)
+        # cls.driver = webdriver.Chrome(chrome_driver_path, 0, driverOptions)
         # TopMenuPage(cls.driver).get_url()
         TopMenuPage(cls.driver).select_multiple_menu(2,"customers","New","","")
 
