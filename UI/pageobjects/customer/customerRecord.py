@@ -134,8 +134,8 @@ class CustomerRecordPage(BasePage):
         :return:
         """
         #self.find_element_by_wait("xpath",CustomerRecordEntity.tips_msg)
-        self.sleep(2)
-        msg = self.find_element(CustomerRecordEntity.tips_msg).text
+        msg = self.find_element(CustomerRecordEntity.tips_msg).text.lower()
+        print(msg)
         return msg
 
     def input_DBA_Website(self, name, txt):
@@ -144,6 +144,7 @@ class CustomerRecordPage(BasePage):
         :param: name : alias, url
         :return:
         """
+        self.ctrl_all(CustomerRecordEntity().get_input_info(name))
         self.type(CustomerRecordEntity().get_input_info(name), txt)
         self.click(CustomerRecordEntity.save)
         msg = self.get_tips_msg()

@@ -16,7 +16,7 @@ class Customer_Record(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.driver = driver
-        HomePage(cls.driver).quick_entrance("Customers","C000088898",2)
+        HomePage(cls.driver).quick_entrance("Customers","C000088923",2)
 
     def test_01_DBA_new(self):
         u"""new a DBA"""
@@ -24,39 +24,33 @@ class Customer_Record(unittest.TestCase):
         CustomerRecordPage(self.driver).entity_operator("Doing Business As (DBA)", "New", "")
         self.assertTrue(CustomerRecordPage(self.driver).input_DBA_Website("alias", "UIAutomation"+nowTime))
 
-    def test_02_query_summary(self):
-        u"""show summary"""
-        CustomerRecordPage(self.driver).switch_tab("Summary")
 
-    def test_03_DBA_detail(self):
+    def test_02_DBA_detail(self):
         u"""query DBA detail"""
-        CustomerRecordPage(self.driver).switch_tab("Entity")
         CustomerRecordPage(self.driver).entity_operator("Doing Business As (DBA)","Details","1")
         self.assertTrue(CustomerRecordPage(self.driver).detail_history("Details"))
 
-
-    # def test_03_DBA_edit(self):
-    #     u"""edit DBA"""
-    #     CustomerRecordPage(self.driver).switch_tab("Entity")
-    #     CustomerRecordPage(self.driver).entity_operator("Doing Business As (DBA)","Edit","1")
-    #     self.assertTrue(CustomerRecordPage(self.driver).input_DBA_Website("alias", "UIAutomationEdit"+nowTime))
+    def test_03_DBA_edit(self):
+        u"""edit DBA"""
+        CustomerRecordPage(self.driver).entity_operator("Doing Business As (DBA)","Edit","1")
+        self.assertTrue(CustomerRecordPage(self.driver).input_DBA_Website("alias", "UIAutomationEdit"+nowTime))
 
     def test_04_DBA_delete(self):
         u"""delete DBA"""
         CustomerRecordPage(self.driver).switch_tab("Entity")
-        CustomerRecordPage(self.driver).entity_operator("Doing Business As (DBA)","Delete","2")
+        CustomerRecordPage(self.driver).entity_operator("Doing Business As (DBA)","Delete","1")
         self.assertTrue(CustomerRecordPage(self.driver).delete())
 
-    # def test_05_DBA_history(self):
-    #     u"""show DBA history"""
-    #     CustomerRecordPage(self.driver).switch_tab("Entity")
-    #     CustomerRecordPage(self.driver).entity_operator("Doing Business As (DBA)","History","")
-    #     self.assertTrue(CustomerRecordPage(self.driver).detail_history("History"))
+    def test_05_DBA_history(self):
+        u"""show DBA history"""
+        CustomerRecordPage(self.driver).switch_tab("Entity")
+        CustomerRecordPage(self.driver).entity_operator("Doing Business As (DBA)","History","")
+        self.assertTrue(CustomerRecordPage(self.driver).detail_history("History"))
 
     def test_06_Websites_new(self):
         u"""new Websites"""
         CustomerRecordPage(self.driver).entity_operator("Websites","New","")
-        self.assertTrue(CustomerRecordPage(self.driver).input_DBA_Website("url","https://www.uiautomation.com"))
+        self.assertTrue(CustomerRecordPage(self.driver).input_DBA_Website("url","http://www.uiautomationEdit.com"))
 
     def test_07_Websites_detail(self):
         u"""show Websites details"""
@@ -66,7 +60,7 @@ class Customer_Record(unittest.TestCase):
     def test_08_Websites_edit(self):
         u"""edit Websites"""
         CustomerRecordPage(self.driver).entity_operator("Websites", "Edit", "1")
-        self.assertTrue(CustomerRecordPage(self.driver).input_DBA_Website("url", "https://www.uiautomationEdit.com"))
+        self.assertTrue(CustomerRecordPage(self.driver).input_DBA_Website("url", "http://www.uiautomationEdit.com"))
 
     def test_09_Websites_delete(self):
         u"""delete Websites"""

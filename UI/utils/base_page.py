@@ -4,6 +4,7 @@ from selenium.common.exceptions import NoSuchElementException, TimeoutException,
 import os
 
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support.ui import Select
@@ -137,7 +138,6 @@ class BasePage(object):
 
     # 清除文本框
     def clear(self, selector):
-
         el = self.find_element(selector)
         try:
             el.clear()
@@ -362,6 +362,13 @@ class BasePage(object):
         :return:
         """
         Select(self.find_element(selector)).select_by_value(Name)
+
+    def ctrl_all(self,selector):
+        # 双击事件
+        self.click(selector)
+        self.find_element(selector).send_keys(Keys.CONTROL,'a')
+        self.find_element(selector).send_keys(Keys.BACKSPACE)
+
 
 
 
