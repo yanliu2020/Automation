@@ -53,15 +53,11 @@ class CustomerRecordPage(BasePage):
                 self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
             else:
                 if self.find_elements(CustomerRecordEntity().get_entity_records(section_item[0])):
-                   selected = self.find_element(CustomerRecordEntity().get_entity_record(section_item[0], row)).get_attribute('style')
-                   print("+++++"+ selected)
-                   if "background" in selected:
-                       self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
-                   else:
-                       self.click(CustomerRecordEntity().get_entity_record(section_item[0], row))
-                       self.click(CustomerRecordEntity().get_section_operator(section_item[0],buttonName))
+                    if self.not_selected(section_item[0], row) == True:
+                        self.click(CustomerRecordEntity().get_entity_record(section_item[0], row))
+                    self.click(CustomerRecordEntity().get_section_operator(section_item[0],buttonName))
                 else:
-                   Logger.info("sectionName %s have no record!"% sectionName)
+                    Logger.info("sectionName %s have no record!"% sectionName)
 
 
     def contact_operator(self,sectionName,buttonName,row):
@@ -88,33 +84,18 @@ class CustomerRecordPage(BasePage):
                 self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
             elif sectionName == "Contacts":
                 if self.find_elements(CustomerRecordEntity().get_entity_records(section_item[0])):
-                    selected = self.find_element(
-                        CustomerRecordEntity().get_entity_record(section_item[0], row)).get_attribute('style')
-                    print("+++++" + selected)
-                    if "background" in selected:
-                        self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
-                    else:
+                    if self.not_selected(section_item[0],row) == True:
                         self.click(CustomerRecordEntity().get_entity_record(section_item[0], row))
-                        self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
+                    self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
                 else:
                     Logger.info("sectionName %s have no record!" % sectionName)
-            elif  self.find_elements(CustomerRecordEntity().get_entity_records(1)):
-                selected = self.find_element(
-                    CustomerRecordEntity().get_entity_record(1, row)).get_attribute('style')
-                print("+++++" + selected)
-                if "background" not in selected:
+            elif self.find_elements(CustomerRecordEntity().get_entity_records(1)):
+                if self.not_selected(1, row) == True:
                     self.click(CustomerRecordEntity().get_entity_record(1, row))
-                else:
-                    pass
                 if self.find_elements(CustomerRecordEntity().get_entity_records(section_item[0])):
-                    selected = self.find_element(
-                            CustomerRecordEntity().get_entity_record(section_item[0], row)).get_attribute('style')
-                    print("+++++" + selected)
-                    if "background" in selected:
-                        self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
-                    else:
-                        self.click(CustomerRecordEntity().get_entity_record(section_item[0],row))
-                        self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
+                    if self.not_selected(section_item[0],row) == True:
+                        self.click(CustomerRecordEntity().get_entity_record(section_item[0], row))
+                    self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
                 else:
                     Logger.info("sectionName %s have no record!" % sectionName)
             else:
@@ -195,6 +176,14 @@ class CustomerRecordPage(BasePage):
         else:
             return False
 
+    def not_selected(self,section,row):
+        selected = self.find_element(
+            CustomerRecordEntity().get_entity_record(section, row)).get_attribute('style')
+        print("+++++" + selected)
+        if "background" in  selected:
+            pass
+        else:
+            return True
 
 
 

@@ -16,6 +16,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/UI$Unittests_in_test_quickEntrance_customer_py.coverage" NAME="Unittests in test_quickEntrance_customer.py Coverage Results" MODIFIED="1588129594699" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_03_quickEntrance" />
     <SUITE FILE_PATH="coverage/UI$pytest_in_runner_py.coverage" NAME="pytest in runner.py Coverage Results" MODIFIED="1584411730908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testrunner" />
+    <SUITE FILE_PATH="coverage/UI$Unittests_in_test_customer_record_entity_py.coverage" NAME="Unittests in test_customer_record_entity.py Coverage Results" MODIFIED="1588910771974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_03_customer_record" />
     <SUITE FILE_PATH="coverage/UI$run_appoint.coverage" NAME="run_appoint Coverage Results" MODIFIED="1584411399396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testrunner" />
     <SUITE FILE_PATH="coverage/UI$Unittests_in_test_logout_py.coverage" NAME="Unittests in test_logout.py Coverage Results" MODIFIED="1588036946710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_01_logout" />
     <SUITE FILE_PATH="coverage/UI$Unittests_in_test_new_customer_py.coverage" NAME="Unittests in test_new_customer.py Coverage Results" MODIFIED="1588239187462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_02_customer" />
@@ -23,7 +24,7 @@
     <SUITE FILE_PATH="coverage/UI$test_event.coverage" NAME="test_event Coverage Results" MODIFIED="1583852483896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testrunner/test_01_event" />
     <SUITE FILE_PATH="coverage/UI$Unittests_in_test_link_py.coverage" NAME="Unittests in test_link.py Coverage Results" MODIFIED="1584971825829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_02_user" />
     <SUITE FILE_PATH="coverage/UI$Unittests_in_test_event_py.coverage" NAME="Unittests in test_event.py Coverage Results" MODIFIED="1585552080096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_01_event" />
-    <SUITE FILE_PATH="coverage/UI$Unittests_in_test_customer_record_contacts_py.coverage" NAME="Unittests in test_customer_record_contacts.py Coverage Results" MODIFIED="1588843811767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_03_customer_record" />
+    <SUITE FILE_PATH="coverage/UI$Unittests_in_test_customer_record_contacts_py.coverage" NAME="Unittests in test_customer_record_contacts.py Coverage Results" MODIFIED="1588910472343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_03_customer_record" />
     <SUITE FILE_PATH="coverage/UI$Unittests_in_test_drag_py.coverage" NAME="Unittests in test_drag.py Coverage Results" MODIFIED="1585187723212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_02_user" />
     <SUITE FILE_PATH="coverage/UI$test_scroll.coverage" NAME="test_scroll Coverage Results" MODIFIED="1584758814314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_02_user" />
     <SUITE FILE_PATH="coverage/UI$Unittests_in_test_scroll_py.coverage" NAME="Unittests in test_scroll.py Coverage Results" MODIFIED="1584761092499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_02_user" />
@@ -40,28 +41,7 @@
     <favorites_list name="UI" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test_customer_record_contacts.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testsuites/test_03_customer_record/test_customer_record_contacts.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1125">
-              <caret line="16" column="67" lean-forward="false" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="customerRecord.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pageobjects/customer/customerRecord.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="107" column="24" lean-forward="true" selection-start-line="107" selection-start-column="24" selection-end-line="107" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -136,7 +116,6 @@
         <option value="$PROJECT_DIR$/testsuites/test_02_customer/test_search_customer.py" />
         <option value="$PROJECT_DIR$/utils/mail_helper.py" />
         <option value="$PROJECT_DIR$/testsuites/test_01_event/event.py" />
-        <option value="$PROJECT_DIR$/utils/base_page.py" />
         <option value="$PROJECT_DIR$/pageobjects/common/get_url.py" />
         <option value="$PROJECT_DIR$/testsuites/test_01_logout/myFirefox.py" />
         <option value="$PROJECT_DIR$/testsuites/test_01_logout/no_login.py" />
@@ -166,9 +145,10 @@
         <option value="$PROJECT_DIR$/pageobjects/login/login.py" />
         <option value="$PROJECT_DIR$/testsuites/test_03_customer_record/test_customer_record_entity.py" />
         <option value="$PROJECT_DIR$/testsuites/test_03_customer_record/test_customer_record_related.py" />
-        <option value="$PROJECT_DIR$/testsuites/test_03_customer_record/test_customer_record_contacts.py" />
         <option value="$PROJECT_DIR$/config/customer/customer_record_entity.py" />
+        <option value="$PROJECT_DIR$/testsuites/test_03_customer_record/test_customer_record_contacts.py" />
         <option value="$PROJECT_DIR$/pageobjects/customer/customerRecord.py" />
+        <option value="$PROJECT_DIR$/utils/base_page.py" />
       </list>
     </option>
   </component>
@@ -178,7 +158,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="69" />
     <option name="width" value="1401" />
     <option name="height" value="741" />
@@ -199,8 +179,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -240,6 +218,11 @@
             <path>
               <item name="UI" type="b2602c69:ProjectViewProjectNode" />
               <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
               <item name="pageobjects" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -266,44 +249,18 @@
               <item name="pageobjects" type="462c0819:PsiDirectoryNode" />
               <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="UI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="testsuites" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="testsuites" type="462c0819:PsiDirectoryNode" />
-              <item name="test_01_logout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="testsuites" type="462c0819:PsiDirectoryNode" />
-              <item name="test_02_customer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="testsuites" type="462c0819:PsiDirectoryNode" />
-              <item name="test_03_customer_record" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/Web/automation/UI" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -331,7 +288,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in test_customer_record_contacts.py">
+  <component name="RunManager" selected="Python tests.Unittests in test_customer_record_entity.py">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -435,8 +392,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test_customer_record_contacts.py" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_customer_record_entity.py" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test_customer_record_entity.py" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_customer_record_contacts.py" />
         <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in test_customer_record_related.py" />
         <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in test_new_customer.py" />
         <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in test_logout.py" />
@@ -491,35 +448,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_customer_record_contacts_py - 2020.05.07 at 16h 35m 06s.xml">
+    <history-entry file="Unittests_in_test_customer_record_contacts_py - 2020.05.08 at 10h 02m 47s.xml">
       <configuration name="Unittests in test_customer_record_contacts.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_customer_record_contacts_py - 2020.05.07 at 16h 37m 12s.xml">
+    <history-entry file="Unittests_in_test_customer_record_contacts_py - 2020.05.08 at 10h 09m 24s.xml">
       <configuration name="Unittests in test_customer_record_contacts.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_customer_record_contacts_py - 2020.05.07 at 16h 39m 56s.xml">
+    <history-entry file="Unittests_in_test_customer_record_contacts_py - 2020.05.08 at 10h 26m 54s.xml">
       <configuration name="Unittests in test_customer_record_contacts.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_customer_record_contacts_py - 2020.05.07 at 17h 33m 36s.xml">
+    <history-entry file="Unittests_in_test_customer_record_contacts_py - 2020.05.08 at 10h 31m 28s.xml">
       <configuration name="Unittests in test_customer_record_contacts.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_customer_record_entity_py - 2020.05.07 at 16h 10m 49s.xml">
-      <configuration name="Unittests in test_customer_record_entity.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_customer_record_contacts_py - 2020.05.08 at 10h 35m 01s.xml">
+      <configuration name="Unittests in test_customer_record_contacts.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_customer_record_entity_py - 2020.05.07 at 16h 15m 59s.xml">
-      <configuration name="Unittests in test_customer_record_entity.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_customer_record_contacts_py - 2020.05.08 at 10h 38m 29s.xml">
+      <configuration name="Unittests in test_customer_record_contacts.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_customer_record_entity_py - 2020.05.07 at 17h 00m 24s.xml">
-      <configuration name="Unittests in test_customer_record_entity.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_customer_record_contacts_py - 2020.05.08 at 11h 46m 44s.xml">
+      <configuration name="Unittests in test_customer_record_contacts.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_customer_record_entity_py - 2020.05.07 at 17h 03m 27s.xml">
-      <configuration name="Unittests in test_customer_record_entity.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_customer_record_contacts_py - 2020.05.08 at 11h 49m 30s.xml">
+      <configuration name="Unittests in test_customer_record_contacts.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_customer_record_entity_py - 2020.05.07 at 17h 10m 50s.xml">
-      <configuration name="Unittests in test_customer_record_entity.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_customer_record_contacts_py - 2020.05.08 at 12h 04m 11s.xml">
+      <configuration name="Unittests in test_customer_record_contacts.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_customer_record_related_py - 2020.05.07 at 16h 24m 35s.xml">
-      <configuration name="Unittests in test_customer_record_related.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_customer_record_entity_py - 2020.05.08 at 12h 10m 37s.xml">
+      <configuration name="Unittests in test_customer_record_entity.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
@@ -536,17 +493,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.027936963" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="300" height="677" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.027936963" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="300" height="677" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3243243" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08648649" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.245702" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25286534" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -604,7 +560,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/selenium/webdriver/support/select.py" />
     <entry file="file:///usr/local/lib/python3.7/site-packages/selenium/webdriver/chrome/webdriver.py" />
     <entry file="file:///usr/local/lib/python3.7/site-packages/selenium/webdriver/common/service.py" />
     <entry file="file:///usr/local/lib/python3.7/site-packages/selenium/webdriver/support/select.py" />
@@ -712,7 +667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-160">
           <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -802,19 +756,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/base_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="56" column="8" lean-forward="false" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/homepage/homepage_entity.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -822,7 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="68" column="41" lean-forward="false" selection-start-line="68" selection-start-column="41" selection-end-line="68" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -830,7 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -846,7 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="38" column="23" lean-forward="false" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -854,38 +796,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/customer/customer_record_entity.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="-184">
+          <caret line="43" column="38" lean-forward="false" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testsuites/test_03_customer_record/test_customer_record_entity.py">
+    <entry file="file://C:/Program Files (x86)/Python36-32/Lib/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="68" column="69" lean-forward="true" selection-start-line="68" selection-start-column="69" selection-end-line="68" selection-end-column="69" />
+        <state relative-caret-position="2242">
+          <caret line="677" column="8" lean-forward="false" selection-start-line="677" selection-start-column="8" selection-end-line="677" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testsuites/test_03_customer_record/test_customer_record_contacts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1125">
-          <caret line="16" column="67" lean-forward="false" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="67" />
+        <state relative-caret-position="425">
+          <caret line="29" column="82" lean-forward="true" selection-start-line="29" selection-start-column="82" selection-end-line="29" selection-end-column="82" />
+          <folding>
+            <element signature="e#24#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/base_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="45" column="24" lean-forward="false" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testsuites/test_03_customer_record/test_customer_record_entity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="68" column="64" lean-forward="false" selection-start-line="68" selection-start-column="64" selection-end-line="68" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pageobjects/customer/customerRecord.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="107" column="24" lean-forward="true" selection-start-line="107" selection-start-column="24" selection-end-line="107" selection-end-column="24" />
+        <state relative-caret-position="2562">
+          <caret line="150" column="23" lean-forward="true" selection-start-line="150" selection-start-column="23" selection-end-line="150" selection-end-column="23" />
           <folding />
         </state>
       </provider>
