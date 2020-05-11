@@ -186,5 +186,30 @@ class CustomerRecordPage(BasePage):
         else:
             return True
 
+    def operator_email(self,email,type,isPrimary):
+        self.ctrl_all(CustomerRecordEntity.emailAddress)
+        self.type(CustomerRecordEntity.emailAddress, email)
+        self.drop_select(CustomerRecordEntity.emailType,type)
+        self.drop_select(CustomerRecordEntity.isPrimary,isPrimary)
+        self.click(CustomerRecordEntity.save)
+        msg = self.get_tips_msg()
+        if 'successfully' in msg:
+            return True
+        else:
+            return False
+
+    def operator_identifier(self,type,identifierNo):
+        self.drop_select(CustomerRecordEntity.identifierName,type)
+        self.ctrl_all(CustomerRecordEntity.identifier)
+        self.type(CustomerRecordEntity.identifier,identifierNo)
+        self.click(CustomerRecordEntity.save)
+        msg = self.get_tips_msg()
+        if 'successfully' in msg:
+            return True
+        else:
+            return False
+
+
+
 
 

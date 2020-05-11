@@ -5,18 +5,22 @@ import unittest
 from utils.browser_engine import driver
 from utils.base_page import  BasePage
 from config.customer.customer_record_entity import CustomerRecordEntity
+from pageobjects.common.topMenu import TopMenuPage
 from pageobjects.homepage.homePage import  HomePage
 from pageobjects.customer.customerRecord import CustomerRecordPage
 
 nowTime = datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S")
 
-class Customer_Record(unittest.TestCase):
+class DBA_Websites(unittest.TestCase):
 
     # 初始化，打开浏览器，并进行登录(实例化)
     @classmethod
     def setUpClass(cls):
         cls.driver = driver
+        TopMenuPage(cls.driver).get_url()
+        #BasePage(cls.driver).refresh_page()
         HomePage(cls.driver).quick_entrance("Customers","C000088923",2)
+
 
     def test_01_DBA_new(self):
         u"""new a DBA"""
@@ -50,7 +54,7 @@ class Customer_Record(unittest.TestCase):
     def test_06_Websites_new(self):
         u"""new Websites"""
         CustomerRecordPage(self.driver).entity_operator("Websites","New","")
-        self.assertTrue(CustomerRecordPage(self.driver).input_DBA_Website("url","http://www.uiautomationEdit.com"))
+        self.assertTrue(CustomerRecordPage(self.driver).input_DBA_Website("url","http://www.uiautomation.com"))
 
     def test_07_Websites_detail(self):
         u"""show Websites details"""
@@ -71,6 +75,7 @@ class Customer_Record(unittest.TestCase):
         u"""show Websites history"""
         CustomerRecordPage(self.driver).entity_operator("Websites", "History", "")
         self.assertTrue(CustomerRecordPage(self.driver).detail_history("History"))
+
 
 
 

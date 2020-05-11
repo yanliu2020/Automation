@@ -1,0 +1,165 @@
+2020-05-09 17:26:01,084|browser_engine.py[line:27] INFO:You had select Chrome browser.
+2020-05-09 17:26:01,085|browser_engine.py[line:29] INFO:The test server url is: https://rralamotest.z21.web.core.windows.net/
+2020-05-09 17:26:04,989|browser_engine.py[line:42] INFO:Starting Chrome browser.
+2020-05-09 17:26:06,161|browser_engine.py[line:53] INFO:Maximize the current window.
+2020-05-09 17:26:34,798|browser_engine.py[line:56] INFO:Open url: https://rralamotest.z21.web.core.windows.net/
+2020-05-09 17:26:46,920|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='localAccount']//div[@class='intro']/h2
+2020-05-09 17:26:49,632|base_page.py[line:67] INFO:Had find the element ' Sign in with your existing account ' successful by xpath via value: //div[@class='localAccount']//div[@class='intro']/h2 
+2020-05-09 17:26:52,732|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-05-09 17:26:52,998|base_page.py[line:144] INFO:Clear text in input box before typing.
+2020-05-09 17:26:55,064|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-05-09 17:26:55,554|base_page.py[line:134] INFO:Had type ' yan.liu@an-chen.com ' in inputBox
+2020-05-09 17:26:57,627|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: password 
+2020-05-09 17:26:57,745|base_page.py[line:144] INFO:Clear text in input box before typing.
+2020-05-09 17:26:59,765|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: password 
+2020-05-09 17:27:00,069|base_page.py[line:134] INFO:Had type ' Lychan@2012 ' in inputBox
+2020-05-09 17:27:02,134|base_page.py[line:67] INFO:Had find the element ' Sign in ' successful by xpath via value: //div[@class='buttons']/button[text()='Sign in'] 
+2020-05-09 17:27:14,620|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@id='root']//div[@class='content-heading']
+2020-05-09 17:27:16,690|base_page.py[line:67] INFO:Had find the element ' Welcome, yanliu ' successful by xpath via value: //div[@id='root']//div[@class='content-heading'] 
+2020-05-09 17:27:16,690|login.py[line:41] INFO:login success
+2020-05-09 17:27:29,153|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='card']/form//div[@id='homeGrid']/div//h2
+2020-05-09 17:27:29,687|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']/form//div[@id='homeGrid']/div//h2 
+2020-05-09 17:27:31,821|base_page.py[line:67] INFO:Had find the element '  ' successful by xpath via value: //div[@class='card']/form//div[@id='homeGrid']/div[4]//input 
+2020-05-09 17:27:32,142|base_page.py[line:134] INFO:Had type ' C000088923 ' in inputBox
+2020-05-09 17:27:34,202|base_page.py[line:67] INFO:Had find the element ' Go ' successful by xpath via value: //div[@class='card']/form//div[@id='homeGrid']/div[4]/div/button 
+2020-05-09 17:27:34,385|base_page.py[line:156] INFO:The element ' Go ' was clicked.
+2020-05-09 17:27:34,385|homePage.py[line:45] INFO:module_name: Customers
+2020-05-09 17:27:46,842|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='card']//li/a[text()='Entity']
+2020-05-09 17:27:48,894|base_page.py[line:67] INFO:Had find the element ' Entity ' successful by xpath via value: //div[@class='card']//li/a[text()='Entity'] 
+2020-05-09 17:27:49,048|base_page.py[line:156] INFO:The element ' Entity ' was clicked.
+2020-05-09 17:27:49,564|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-05-09 17:27:51,696|base_page.py[line:67] INFO:Had find the element ' Doing Business As (DBA) ' successful by xpath via value: //div[@class='card']//div//h4[text()='Doing Business As (DBA)'] 
+2020-05-09 17:27:53,749|base_page.py[line:67] INFO:Had find the element ' New ' successful by xpath via value: //div[@class='glo-row']/div[4]//button[text()=' New'] 
+2020-05-09 17:27:53,921|base_page.py[line:156] INFO:The element ' New ' was clicked.
+2020-05-09 17:27:55,974|base_page.py[line:67] INFO:Had find the element '  ' successful by xpath via value: //input[@name='alias'] 
+2020-05-09 17:27:56,098|base_page.py[line:156] INFO:The element '  ' was clicked.
+2020-05-09 17:27:58,162|base_page.py[line:67] INFO:Had find the element '  ' successful by xpath via value: //input[@name='alias'] 
+2020-05-09 17:28:00,244|base_page.py[line:67] INFO:Had find the element '  ' successful by xpath via value: //input[@name='alias'] 
+2020-05-09 17:28:02,293|base_page.py[line:67] INFO:Had find the element '  ' successful by xpath via value: //input[@name='alias'] 
+2020-05-09 17:28:03,172|base_page.py[line:134] INFO:Had type ' UIAutomation2020/05/09 17:27:16 ' in inputBox
+2020-05-09 17:28:05,229|base_page.py[line:67] INFO:Had find the element ' Save ' successful by xpath via value: //button[text()='Save'] 
+2020-05-09 17:28:05,325|base_page.py[line:156] INFO:The element ' Save ' was clicked.
+2020-05-09 17:28:07,390|base_page.py[line:67] INFO:Had find the element ' Doing Business As DBA:: UIAutomation2020/05/09 17:27:16 created successfully. ' successful by xpath via value: //div[@role='alert'] 
+2020-05-09 17:28:07,927|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-05-09 17:28:10,044|base_page.py[line:67] INFO:Had find the element ' Doing Business As (DBA) ' successful by xpath via value: //div[@class='card']//div//h4[text()='Doing Business As (DBA)'] 
+2020-05-09 17:28:10,588|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='glo-row']/div[4]//div[@class='glo-row']//div[@class='rt-tr-group'] 
+2020-05-09 17:28:12,626|base_page.py[line:67] INFO:Had find the element ' UIAutomation2020/05/08 16:18:47 ' successful by xpath via value: //div[@class='glo-row']/div[4]//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-05-09 17:28:14,747|base_page.py[line:67] INFO:Had find the element ' UIAutomation2020/05/08 16:18:47 ' successful by xpath via value: //div[@class='glo-row']/div[4]//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-05-09 17:28:14,977|base_page.py[line:156] INFO:The element ' UIAutomation2020/05/08 16:18:47 ' was clicked.
+2020-05-09 17:28:17,029|base_page.py[line:67] INFO:Had find the element ' Details ' successful by xpath via value: //div[@class='glo-row']/div[4]//button[text()=' Details'] 
+2020-05-09 17:28:17,163|base_page.py[line:156] INFO:The element ' Details ' was clicked.
+2020-05-09 17:28:19,217|base_page.py[line:67] INFO:Had find the element ' Doing Business As (DBA) Details ' successful by xpath via value: //h4[@class='modal-title'] 
+2020-05-09 17:28:21,275|base_page.py[line:67] INFO:Had find the element ' × ' successful by xpath via value: //button[@class='close'] 
+2020-05-09 17:28:21,445|base_page.py[line:156] INFO:The element ' × ' was clicked.
+2020-05-09 17:28:21,957|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-05-09 17:28:24,032|base_page.py[line:67] INFO:Had find the element ' Doing Business As (DBA) ' successful by xpath via value: //div[@class='card']//div//h4[text()='Doing Business As (DBA)'] 
+2020-05-09 17:28:24,561|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='glo-row']/div[4]//div[@class='glo-row']//div[@class='rt-tr-group'] 
+2020-05-09 17:28:26,629|base_page.py[line:67] INFO:Had find the element ' UIAutomation2020/05/08 16:18:47 ' successful by xpath via value: //div[@class='glo-row']/div[4]//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-05-09 17:28:28,694|base_page.py[line:67] INFO:Had find the element ' Edit ' successful by xpath via value: //div[@class='glo-row']/div[4]//button[text()=' Edit'] 
+2020-05-09 17:28:28,822|base_page.py[line:156] INFO:The element ' Edit ' was clicked.
+2020-05-09 17:28:30,879|base_page.py[line:67] INFO:Had find the element '  ' successful by xpath via value: //input[@name='alias'] 
+2020-05-09 17:28:30,996|base_page.py[line:156] INFO:The element '  ' was clicked.
+2020-05-09 17:28:33,015|base_page.py[line:67] INFO:Had find the element '  ' successful by xpath via value: //input[@name='alias'] 
+2020-05-09 17:28:35,091|base_page.py[line:67] INFO:Had find the element '  ' successful by xpath via value: //input[@name='alias'] 
+2020-05-09 17:28:37,161|base_page.py[line:67] INFO:Had find the element '  ' successful by xpath via value: //input[@name='alias'] 
+2020-05-09 17:28:37,713|base_page.py[line:134] INFO:Had type ' UIAutomationEdit2020/05/09 17:27:16 ' in inputBox
+2020-05-09 17:28:39,760|base_page.py[line:67] INFO:Had find the element ' Save ' successful by xpath via value: //button[text()='Save'] 
+2020-05-09 17:28:39,835|base_page.py[line:156] INFO:The element ' Save ' was clicked.
+2020-05-09 17:28:41,889|base_page.py[line:67] INFO:Had find the element ' Doing Business As DBA:: UIAutomationEdit2020/05/09 17:27:16 updated successfully. ' successful by xpath via value: //div[@role='alert'] 
+2020-05-09 17:28:54,324|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='card']//li/a[text()='Entity']
+2020-05-09 17:28:56,375|base_page.py[line:67] INFO:Had find the element ' Entity ' successful by xpath via value: //div[@class='card']//li/a[text()='Entity'] 
+2020-05-09 17:28:56,501|base_page.py[line:156] INFO:The element ' Entity ' was clicked.
+2020-05-09 17:28:57,023|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-05-09 17:28:59,114|base_page.py[line:67] INFO:Had find the element ' Doing Business As (DBA) ' successful by xpath via value: //div[@class='card']//div//h4[text()='Doing Business As (DBA)'] 
+2020-05-09 17:28:59,650|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='glo-row']/div[4]//div[@class='glo-row']//div[@class='rt-tr-group'] 
+2020-05-09 17:29:01,699|base_page.py[line:67] INFO:Had find the element ' UIAutomationEdit2020/05/09 17:27:16 ' successful by xpath via value: //div[@class='glo-row']/div[4]//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-05-09 17:29:03,771|base_page.py[line:67] INFO:Had find the element ' Delete ' successful by xpath via value: //div[@class='glo-row']/div[4]//button[text()=' Delete'] 
+2020-05-09 17:29:03,863|base_page.py[line:156] INFO:The element ' Delete ' was clicked.
+2020-05-09 17:29:05,901|base_page.py[line:67] INFO:Had find the element ' Yes, delete it! ' successful by xpath via value: //button[text()='Yes, delete it!'] 
+2020-05-09 17:29:05,975|base_page.py[line:156] INFO:The element ' Yes, delete it! ' was clicked.
+2020-05-09 17:29:08,007|base_page.py[line:67] INFO:Had find the element ' DBA: UIAutomationEdit2020/05/09 17:27:16 deleted successfully. ' successful by xpath via value: //div[@role='alert'] 
+2020-05-09 17:29:20,337|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='card']//li/a[text()='Entity']
+2020-05-09 17:29:22,405|base_page.py[line:67] INFO:Had find the element ' Entity ' successful by xpath via value: //div[@class='card']//li/a[text()='Entity'] 
+2020-05-09 17:29:22,508|base_page.py[line:156] INFO:The element ' Entity ' was clicked.
+2020-05-09 17:29:23,024|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-05-09 17:29:25,099|base_page.py[line:67] INFO:Had find the element ' Doing Business As (DBA) ' successful by xpath via value: //div[@class='card']//div//h4[text()='Doing Business As (DBA)'] 
+2020-05-09 17:29:27,190|base_page.py[line:67] INFO:Had find the element ' History ' successful by xpath via value: //div[@class='glo-row']/div[4]//button[text()=' History'] 
+2020-05-09 17:29:27,387|base_page.py[line:156] INFO:The element ' History ' was clicked.
+2020-05-09 17:29:29,473|base_page.py[line:67] INFO:Had find the element ' History For Doing Business As (DBA) ' successful by xpath via value: //h4[@class='modal-title'] 
+2020-05-09 17:29:31,552|base_page.py[line:67] INFO:Had find the element ' × ' successful by xpath via value: //button[@class='close'] 
+2020-05-09 17:29:31,674|base_page.py[line:156] INFO:The element ' × ' was clicked.
+2020-05-09 17:29:32,186|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-05-09 17:29:34,269|base_page.py[line:67] INFO:Had find the element ' Websites ' successful by xpath via value: //div[@class='card']//div//h4[text()='Websites'] 
+2020-05-09 17:29:36,310|base_page.py[line:67] INFO:Had find the element ' New ' successful by xpath via value: //div[@class='glo-row']/div[3]//button[text()=' New'] 
+2020-05-09 17:29:36,446|base_page.py[line:156] INFO:The element ' New ' was clicked.
+2020-05-09 17:29:38,488|base_page.py[line:67] INFO:Had find the element '  ' successful by xpath via value: //input[@name='url'] 
+2020-05-09 17:29:38,561|base_page.py[line:156] INFO:The element '  ' was clicked.
+2020-05-09 17:29:40,597|base_page.py[line:67] INFO:Had find the element '  ' successful by xpath via value: //input[@name='url'] 
+2020-05-09 17:29:42,653|base_page.py[line:67] INFO:Had find the element '  ' successful by xpath via value: //input[@name='url'] 
+2020-05-09 17:29:44,705|base_page.py[line:67] INFO:Had find the element '  ' successful by xpath via value: //input[@name='url'] 
+2020-05-09 17:29:45,139|base_page.py[line:134] INFO:Had type ' http://www.uiautomationEdit.com ' in inputBox
+2020-05-09 17:29:47,199|base_page.py[line:67] INFO:Had find the element ' Save ' successful by xpath via value: //button[text()='Save'] 
+2020-05-09 17:29:47,289|base_page.py[line:156] INFO:The element ' Save ' was clicked.
+2020-05-09 17:29:49,325|base_page.py[line:67] INFO:Had find the element ' Website:: http://www.uiautomationEdit.com created successfully. ' successful by xpath via value: //div[@role='alert'] 
+2020-05-09 17:29:49,850|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-05-09 17:29:51,917|base_page.py[line:67] INFO:Had find the element ' Websites ' successful by xpath via value: //div[@class='card']//div//h4[text()='Websites'] 
+2020-05-09 17:29:52,441|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='glo-row']/div[3]//div[@class='glo-row']//div[@class='rt-tr-group'] 
+2020-05-09 17:29:54,495|base_page.py[line:67] INFO:Had find the element ' http://www.uiautomationEdit.com ' successful by xpath via value: //div[@class='glo-row']/div[3]//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-05-09 17:29:56,551|base_page.py[line:67] INFO:Had find the element ' http://www.uiautomationEdit.com ' successful by xpath via value: //div[@class='glo-row']/div[3]//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-05-09 17:29:56,685|base_page.py[line:156] INFO:The element ' http://www.uiautomationEdit.com ' was clicked.
+2020-05-09 17:29:58,735|base_page.py[line:67] INFO:Had find the element ' Details ' successful by xpath via value: //div[@class='glo-row']/div[3]//button[text()=' Details'] 
+2020-05-09 17:29:59,037|base_page.py[line:156] INFO:The element ' Details ' was clicked.
+2020-05-09 17:30:01,072|base_page.py[line:67] INFO:Had find the element ' Websites Details ' successful by xpath via value: //h4[@class='modal-title'] 
+2020-05-09 17:30:03,132|base_page.py[line:67] INFO:Had find the element ' × ' successful by xpath via value: //button[@class='close'] 
+2020-05-09 17:30:03,247|base_page.py[line:156] INFO:The element ' × ' was clicked.
+2020-05-09 17:30:03,762|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-05-09 17:30:05,830|base_page.py[line:67] INFO:Had find the element ' Websites ' successful by xpath via value: //div[@class='card']//div//h4[text()='Websites'] 
+2020-05-09 17:30:06,353|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='glo-row']/div[3]//div[@class='glo-row']//div[@class='rt-tr-group'] 
+2020-05-09 17:30:08,399|base_page.py[line:67] INFO:Had find the element ' http://www.uiautomationEdit.com ' successful by xpath via value: //div[@class='glo-row']/div[3]//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-05-09 17:30:10,480|base_page.py[line:67] INFO:Had find the element ' Edit ' successful by xpath via value: //div[@class='glo-row']/div[3]//button[text()=' Edit'] 
+2020-05-09 17:30:10,591|base_page.py[line:156] INFO:The element ' Edit ' was clicked.
+2020-05-09 17:30:12,637|base_page.py[line:67] INFO:Had find the element '  ' successful by xpath via value: //input[@name='url'] 
+2020-05-09 17:30:12,719|base_page.py[line:156] INFO:The element '  ' was clicked.
+2020-05-09 17:30:14,745|base_page.py[line:67] INFO:Had find the element '  ' successful by xpath via value: //input[@name='url'] 
+2020-05-09 17:30:16,796|base_page.py[line:67] INFO:Had find the element '  ' successful by xpath via value: //input[@name='url'] 
+2020-05-09 17:30:18,865|base_page.py[line:67] INFO:Had find the element '  ' successful by xpath via value: //input[@name='url'] 
+2020-05-09 17:30:19,295|base_page.py[line:134] INFO:Had type ' http://www.uiautomationEdit.com ' in inputBox
+2020-05-09 17:30:21,335|base_page.py[line:67] INFO:Had find the element ' Save ' successful by xpath via value: //button[text()='Save'] 
+2020-05-09 17:30:21,417|base_page.py[line:156] INFO:The element ' Save ' was clicked.
+2020-05-09 17:30:23,473|base_page.py[line:67] INFO:Had find the element ' Website:: http://www.uiautomationEdit.com updated successfully. ' successful by xpath via value: //div[@role='alert'] 
+2020-05-09 17:30:24,016|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-05-09 17:30:26,103|base_page.py[line:67] INFO:Had find the element ' Websites ' successful by xpath via value: //div[@class='card']//div//h4[text()='Websites'] 
+2020-05-09 17:30:26,622|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='glo-row']/div[3]//div[@class='glo-row']//div[@class='rt-tr-group'] 
+2020-05-09 17:30:28,653|base_page.py[line:67] INFO:Had find the element ' http://www.uiautomationEdit.com ' successful by xpath via value: //div[@class='glo-row']/div[3]//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-05-09 17:30:30,699|base_page.py[line:67] INFO:Had find the element ' Delete ' successful by xpath via value: //div[@class='glo-row']/div[3]//button[text()=' Delete'] 
+2020-05-09 17:30:30,798|base_page.py[line:156] INFO:The element ' Delete ' was clicked.
+2020-05-09 17:30:32,834|base_page.py[line:67] INFO:Had find the element ' Yes, delete it! ' successful by xpath via value: //button[text()='Yes, delete it!'] 
+2020-05-09 17:30:33,100|base_page.py[line:156] INFO:The element ' Yes, delete it! ' was clicked.
+2020-05-09 17:30:35,134|base_page.py[line:67] INFO:Had find the element ' Website: http://www.uiautomationEdit.com deleted successfully. ' successful by xpath via value: //div[@role='alert'] 
+2020-05-09 17:30:35,662|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-05-09 17:30:37,744|base_page.py[line:67] INFO:Had find the element ' Websites ' successful by xpath via value: //div[@class='card']//div//h4[text()='Websites'] 
+2020-05-09 17:30:39,805|base_page.py[line:67] INFO:Had find the element ' History ' successful by xpath via value: //div[@class='glo-row']/div[3]//button[text()=' History'] 
+2020-05-09 17:30:39,938|base_page.py[line:156] INFO:The element ' History ' was clicked.
+2020-05-09 17:30:41,976|base_page.py[line:67] INFO:Had find the element ' History For Websites ' successful by xpath via value: //h4[@class='modal-title'] 
+2020-05-09 17:30:44,249|base_page.py[line:67] INFO:Had find the element ' × ' successful by xpath via value: //button[@class='close'] 
+2020-05-09 17:30:44,384|base_page.py[line:156] INFO:The element ' × ' was clicked.
+2020-05-09 17:30:44,897|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-05-09 17:30:47,085|base_page.py[line:67] INFO:Had find the element ' Business Identifiers ' successful by xpath via value: //div[@class='card']//div//h4[text()='Business Identifiers'] 
+2020-05-09 17:30:49,151|base_page.py[line:67] INFO:Had find the element ' New ' successful by xpath via value: //div[@class='glo-row']/div[5]//button[text()=' New'] 
+2020-05-09 17:30:49,406|base_page.py[line:156] INFO:The element ' New ' was clicked.
+2020-05-09 17:30:51,460|base_page.py[line:67] INFO:Had find the element ' Select one...
+SSN
+Federal EIN
+Agency ID
+State Tax ID
+Internal GLO ID
+Unknown ' successful by id via value: detailsIdentifierName 
+2020-05-09 17:30:53,620|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: CreateIdentifier 
+2020-05-09 17:30:53,780|base_page.py[line:156] INFO:The element '  ' was clicked.
+2020-05-09 17:30:55,826|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: CreateIdentifier 
+2020-05-09 17:30:57,902|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: CreateIdentifier 
+2020-05-09 17:30:59,949|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: CreateIdentifier 
+2020-05-09 17:31:00,183|base_page.py[line:134] INFO:Had type ' 123456789 ' in inputBox
+2020-05-09 17:31:02,249|base_page.py[line:67] INFO:Had find the element ' Save ' successful by xpath via value: //button[text()='Save'] 
+2020-05-09 17:31:02,338|base_page.py[line:156] INFO:The element ' Save ' was clicked.
+2020-05-09 17:31:04,528|base_page.py[line:67] INFO:Had find the element ' Unable to Update Website: Error: Request failed with status code 500 at e.exports (https://rralamotest.z21.web.core.windows.net/static/js/2.93b2bda1.chunk.js:2:827370) at e.exports (https://rralamotest.z21.web.core.windows.net/static/js/2.93b2bda1.chunk.js:2:1113979) at XMLHttpRequest.p.onreadystatechange (https://rralamotest.z21.web.core.windows.net/static/js/2.93b2bda1.chunk.js:2:826203). ' successful by xpath via value: //div[@role='alert'] 

@@ -1,14 +1,12 @@
 # -*- coding:utf-8 -*-
 from configparser import ConfigParser
 from selenium import webdriver
-
 from pageobjects.login.login import SystemLogin
 from config.login.login_entity import  LoginEntity
 from utils.basepath_helper import logs_path, project_path, drivers_path, config_path
 from utils.logger import logger
 from utils.base_page import BasePage
-import json
-import time
+
 
 class BrowserEngine(object):
     chrome_driver_path = drivers_path + 'chromedriver.exe'
@@ -58,19 +56,10 @@ class BrowserEngine(object):
         # self.driver.implicitly_wait(3)
         # logger.info("Set implicitly wait 10 seconds.")
 
-        # # # 登录前清楚所有cookie
-        # self.driver.delete_all_cookies()
-        # # ##登录前打印cookie
-        # print(self.driver.get_cookies())
-
         BasePage(self.driver).find_element_by_wait('xpath',LoginEntity.login_title)
 
         #传入登陆用户名和密码
         SystemLogin(self.driver).user_login('yan.liu@an-chen.com','Lychan@2012')
-        # # ### 获取cookie
-        # cookie = self.driver.get_cookies()
-        # print(cookie)
-
         return self.driver
 
     def quit_browser(self):

@@ -74,4 +74,13 @@ class CustomerRecordEntity(object):
     #提示消息
     tips_msg = "xpath=>//div[@role='alert']"
 
+    #email
+    emailAddress = "id=>CreateContactEmail"
+    emailType = "id=>CreateEmailType"
+    isPrimary = "id=>CreateIsPrimary"
+
+    #identifier
+    identifierName = "id=>detailsIdentifierName"
+    identifier = "id=>CreateIdentifier"
+
 

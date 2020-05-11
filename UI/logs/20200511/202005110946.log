@@ -1,0 +1,35 @@
+2020-05-11 09:46:22,029|browser_engine.py[line:27] INFO:You had select Chrome browser.
+2020-05-11 09:46:22,030|browser_engine.py[line:29] INFO:The test server url is: https://rralamotest.z21.web.core.windows.net/
+2020-05-11 09:46:25,068|browser_engine.py[line:42] INFO:Starting Chrome browser.
+2020-05-11 09:46:26,199|browser_engine.py[line:53] INFO:Maximize the current window.
+2020-05-11 09:47:59,442|browser_engine.py[line:56] INFO:Open url: https://rralamotest.z21.web.core.windows.net/
+2020-05-11 09:48:11,931|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='localAccount']//div[@class='intro']/h2
+2020-05-11 09:48:13,976|base_page.py[line:67] INFO:Had find the element ' Sign in with your existing account ' successful by xpath via value: //div[@class='localAccount']//div[@class='intro']/h2 
+2020-05-11 09:48:16,049|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-05-11 09:48:16,129|base_page.py[line:144] INFO:Clear text in input box before typing.
+2020-05-11 09:48:18,153|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-05-11 09:48:18,317|base_page.py[line:134] INFO:Had type ' yan.liu@an-chen.com ' in inputBox
+2020-05-11 09:48:20,358|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: password 
+2020-05-11 09:48:20,410|base_page.py[line:144] INFO:Clear text in input box before typing.
+2020-05-11 09:48:22,448|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: password 
+2020-05-11 09:48:22,690|base_page.py[line:134] INFO:Had type ' Lychan@2012 ' in inputBox
+2020-05-11 09:48:24,746|base_page.py[line:67] INFO:Had find the element ' Sign in ' successful by xpath via value: //div[@class='buttons']/button[text()='Sign in'] 
+2020-05-11 09:48:36,921|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@id='root']//div[@class='content-heading']
+2020-05-11 09:48:38,987|base_page.py[line:67] INFO:Had find the element ' Welcome, yanliu ' successful by xpath via value: //div[@id='root']//div[@class='content-heading'] 
+2020-05-11 09:48:38,988|login.py[line:41] INFO:login success
+2020-05-11 09:48:51,353|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='header-badge-glo']
+2020-05-11 09:48:53,405|base_page.py[line:67] INFO:Had find the element ' Y ' successful by xpath via value: //div[@class='header-badge-glo'] 
+2020-05-11 09:48:53,489|base_page.py[line:156] INFO:The element ' Y ' was clicked.
+2020-05-11 09:48:55,525|base_page.py[line:67] INFO:Had find the element ' Logout ' successful by xpath via value: //a[text()='Logout'] 
+2020-05-11 09:48:55,668|base_page.py[line:156] INFO:The element ' Logout ' was clicked.
+2020-05-11 09:49:08,090|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value //div[@class='localAccount']//div[@class='intro']/h2
+2020-05-11 09:49:08,090|base_page.py[line:122] ERROR:NoSuchElement selector_by: xpath, selector: //div[@class='localAccount']//div[@class='intro']/h2 
+2020-05-11 09:49:10,475|base_page.py[line:67] INFO:Had find the element ' CUSTOMERS ' successful by id via value: customers 
+2020-05-11 09:49:10,656|base_page.py[line:156] INFO:The element ' CUSTOMERS ' was clicked.
+2020-05-11 09:49:11,186|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //ul[@class='dropdown-menu multi-level show']/li/a 
+2020-05-11 09:49:13,280|base_page.py[line:67] INFO:Had find the element ' New ' successful by xpath via value: //ul[@class='dropdown-menu multi-level show']/li[2]/a 
+2020-05-11 09:49:13,377|base_page.py[line:156] INFO:The element ' New ' was clicked.
+2020-05-11 09:49:13,377|topMenu.py[line:69] INFO:second_menu: New
+2020-05-11 09:49:25,749|base_page.py[line:69] ERROR:TimeoutException: selector by id ,value entityType
+2020-05-11 09:49:25,749|base_page.py[line:122] ERROR:NoSuchElement selector_by: id, selector: entityType 
+2020-05-11 09:50:03,854|browser_engine.py[line:77] INFO:Now, Close and quit the browser.

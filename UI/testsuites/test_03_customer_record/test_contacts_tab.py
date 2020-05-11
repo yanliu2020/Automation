@@ -4,16 +4,20 @@ import datetime
 import unittest
 from utils.browser_engine import driver
 from pageobjects.homepage.homePage import  HomePage
+from pageobjects.common.topMenu import TopMenuPage
+from utils.base_page import BasePage
 from pageobjects.customer.customerRecord import CustomerRecordPage
 
 nowTime = datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S")
 
-class Customer_Record(unittest.TestCase):
+class Contacts_Email_Phone(unittest.TestCase):
 
     # 初始化，打开浏览器，并进行登录(实例化)
     @classmethod
     def setUpClass(cls):
         cls.driver = driver
+        TopMenuPage(cls.driver).get_url()
+        #BasePage(cls.driver).refresh_page()
         HomePage(cls.driver).quick_entrance("Customers","C000088898",2)
 
     # def test_01_contacts_new(self):
@@ -21,9 +25,9 @@ class Customer_Record(unittest.TestCase):
     #     CustomerRecordPage(self.driver).switch_tab("Contacts")
     #     CustomerRecordPage(self.driver).contact_operator("Contacts", "New","")
 
-    # def test_02_contacts_detail(self):
-    #     u"""show contacts detail"""
-    #     CustomerRecordPage(self.driver).contact_operator("Contacts", "Details","1")
+    def test_02_contacts_detail(self):
+        u"""show contacts detail"""
+        CustomerRecordPage(self.driver).contact_operator("Contacts", "Details","1")
 
     # def test_03_contacts_edit(self):
     #     u"""edit contact"""
@@ -35,17 +39,20 @@ class Customer_Record(unittest.TestCase):
         CustomerRecordPage(self.driver).contact_operator("Contacts", "History","")
         self.assertTrue(CustomerRecordPage(self.driver).detail_history("History"))
 
-    # def test_05_email_new(self):
-    #     u"""new contact email"""
-    #     CustomerRecordPage(self.driver).contact_operator("Email", "New","")
+    def test_05_email_new(self):
+        u"""new contact email"""
+        CustomerRecordPage(self.driver).contact_operator("Email", "New","")
+        self.assertTrue(CustomerRecordPage(self.driver).operator_email("uiautomation@qq.com","Business","false"))
 
-    # def test_06_email_detail(self):
-    #     u"""show contact email detail"""
-    #     CustomerRecordPage(self.driver).contact_operator("Email", "Details","1")
+    def test_06_email_detail(self):
+        u"""show contact email detail"""
+        CustomerRecordPage(self.driver).contact_operator("Email", "Details","1")
+        self.assertTrue(CustomerRecordPage(self.driver).detail_history("Details"))
 
     # def test_07_email_edit(self):
     #     u"""edit contact email"""
-    #     CustomerRecordPage(self.driver).contact_operator("Email", "Details","1")
+    #     CustomerRecordPage(self.driver).contact_operator("Email", "Edit","1")
+    #     self.assertTrue(CustomerRecordPage(self.driver).operator_email("uiautomationEdit@qq.com", "Company", "Yes"))
 
     def test_08_email_delete(self):
         u"""delete contact email"""

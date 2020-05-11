@@ -2,6 +2,7 @@
 
 from  utils.base_page import  BasePage
 from config.homepage.homepage_entity import  HomePageEntity
+from config.common.topmenu_entity import TopMenuEntity
 from selenium.common.exceptions import NoSuchElementException
 from utils.logger import logger
 
@@ -10,6 +11,10 @@ class HomePage(BasePage):
     def is_visibility_homepage(self):
         self.find_element_by_wait("xpath",HomePageEntity.default_text)
         return bool(self.find_element(HomePageEntity.default_text))
+
+    #点击login
+    def click_logo(self):
+        self.click(TopMenuEntity.logo)
 
     #首页快捷入口
     def quick_entrance(self,module_name,Name,flag):

@@ -356,12 +356,14 @@ class BasePage(object):
 
         ActionChains(self.driver).drag_and_drop(source, target).perform()
 
-    def drop_select(self,selector,Name):
+    def drop_select(self,selector,value):
         """下拉框选择
-        :param selector,value:
+        :param selector
+        :param value: option value=
         :return:
         """
-        Select(self.find_element(selector)).select_by_value(Name)
+        self.click(selector)
+        Select(self.find_element(selector)).select_by_value(value)
 
     def ctrl_all(self,selector):
         # 双击事件

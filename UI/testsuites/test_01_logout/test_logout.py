@@ -17,8 +17,8 @@ class Logout(unittest.TestCase):
         cls.driver = driver
         #TopMenuPage().get_url()
 
-    # 退出登录
-    def test_01_logout(self):
-
-        u"""logout"""
-        self.assertTrue(TopMenuPage(self.driver).logout())
+    # # 退出登录
+    # def test_01_logout(self):
+    #
+    #     u"""logout"""
+    #     self.assertTrue(TopMenuPage(self.driver).logout())
