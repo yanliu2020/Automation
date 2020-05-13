@@ -69,9 +69,14 @@ class CustomerRecordPage(BasePage):
         :param buttonName:Detail，Edit，New,Delete,History
         :return:
         """
+        if self.find_elements(CustomerRecordEntity().get_entity_records(1)):
+            #判断是否选中contact记录,确定选中
+            if self.not_selected(1, 1) == True:
+                self.click(CustomerRecordEntity().get_entity_record(1, 1))
         section_list = self.find_elements(CustomerRecordEntity.section_list)
         print(section_list)
         section_item = None
+        #根据传入的section名获取section_item
         for i, item in enumerate(section_list):
             if sectionName == item.text:
                 section_item = (i+1,item)
@@ -90,8 +95,8 @@ class CustomerRecordPage(BasePage):
                 else:
                     Logger.info("sectionName %s have no record!" % sectionName)
             elif self.find_elements(CustomerRecordEntity().get_entity_records(1)):
-                if self.not_selected(1, row) == True:
-                    self.click(CustomerRecordEntity().get_entity_record(1, row))
+                if self.not_selected(1, 1) == True:
+                    self.click(CustomerRecordEntity().get_entity_record(1, 1))
                 if self.find_elements(CustomerRecordEntity().get_entity_records(section_item[0])):
                     if self.not_selected(section_item[0],row) == True:
                         self.click(CustomerRecordEntity().get_entity_record(section_item[0], row))
@@ -100,6 +105,13 @@ class CustomerRecordPage(BasePage):
                     Logger.info("sectionName %s have no record!" % sectionName)
             else:
                 Logger.info("sectionName %s have no record!" % sectionName)
+            # elif self.find_elements(CustomerRecordEntity().get_entity_records(section_item[0])):
+            #     if self.not_selected(section_item[0], row) == True:
+            #         self.click(CustomerRecordEntity().get_entity_record(section_item[0], row))
+            #     self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
+            # else:
+            #     Logger.info("sectionName %s have no record!" % sectionName)
+
 
     def related_leases_operator(self,sectionName,buttonName,row):
         """
@@ -140,7 +152,7 @@ class CustomerRecordPage(BasePage):
 
     def input_DBA_Website(self, name, txt):
         """
-        #输入DBA或者Websites
+        #输入DBA,Websites
         :param: name : alias, url
         :return:
         """
@@ -153,13 +165,14 @@ class CustomerRecordPage(BasePage):
         else:
             return False
 
-    def detail_history(self,name):
+    def detail_history(self,title):
         """
-        #详情页
+        #详情页,历史页
+        :param : title
         :return:
         """
         title = self.find_element(CustomerRecordEntity.window_title).text
-        if name in title:
+        if title in title:
             self.click(CustomerRecordEntity.close_window)
             return True
         else:
@@ -178,6 +191,12 @@ class CustomerRecordPage(BasePage):
             return False
 
     def not_selected(self,section,row):
+        """
+        # 未选中状态
+        :param : section
+        :param : row
+        :return:
+        """
         selected = self.find_element(
             CustomerRecordEntity().get_entity_record(section, row)).get_attribute('style')
         print("+++++" + selected)
@@ -186,12 +205,58 @@ class CustomerRecordPage(BasePage):
         else:
             return True
 
-    def operator_email(self,email,type,isPrimary):
-        self.ctrl_all(CustomerRecordEntity.emailAddress)
-        self.type(CustomerRecordEntity.emailAddress, email)
-        self.drop_select(CustomerRecordEntity.emailType,type)
-        self.drop_select(CustomerRecordEntity.isPrimary,isPrimary)
-        self.click(CustomerRecordEntity.save)
+    def operator_email(self,index,email,type,isPrimary):
+        """
+        # 新增/修改 contact email
+        :param : email
+        :param : type
+        :param : isPrimary
+        :return:
+        """
+        if index == "New":
+            self.ctrl_all(CustomerRecordEntity.emailAddress)
+            self.type(CustomerRecordEntity.emailAddress, email)
+            self.drop_select(CustomerRecordEntity.emailType, type)
+            self.drop_select(CustomerRecordEntity.isPrimary, isPrimary)
+            self.click(CustomerRecordEntity.save)
+        elif index == "Edit":
+            self.ctrl_all(CustomerRecordEntity.editEmailAddress)
+            self.type(CustomerRecordEntity.editEmailAddress, email)
+            self.drop_select(CustomerRecordEntity.editEmailType, type)
+            self.drop_select(CustomerRecordEntity.editEmailPrimary, isPrimary)
+            self.click(CustomerRecordEntity.save)
+        msg = self.get_tips_msg()
+        if 'successfully' in msg:
+            return True
+        else:
+            return False
+
+    def operator_phone(self,index,countryCode,type,areaCode,phone,exetension):
+        """
+        # 新增/修改 contact phone
+        :param : index
+        :param : countryCode
+        :param : type
+        :param : areaCode
+        :param : phone
+        :param : exetension
+        :return:
+        """
+        if index == 'New':
+            self.type(CustomerRecordEntity.countryCode,countryCode)
+            self.drop_select(CustomerRecordEntity.phoneType, type)
+            self.type(CustomerRecordEntity.phoneNumber,phone)
+            self.type(CustomerRecordEntity.phoneExtension, exetension)
+        elif index == "Edit":
+            self.ctrl_all(CustomerRecordEntity.countryCode)
+            self.type(CustomerRecordEntity.countryCode, countryCode)
+            self.drop_select(CustomerRecordEntity.phoneType, type)
+            self.ctrl_all(CustomerRecordEntity.areaCode)
+            self.type(CustomerRecordEntity.areaCode, areaCode)
+            self.ctrl_all(CustomerRecordEntity.phoneNumber)
+            self.type(CustomerRecordEntity.phoneNumber, phone)
+            self.ctrl_all(CustomerRecordEntity.phoneExtension)
+            self.type(CustomerRecordEntity.phoneExtension, exetension)
         msg = self.get_tips_msg()
         if 'successfully' in msg:
             return True
@@ -199,6 +264,12 @@ class CustomerRecordPage(BasePage):
             return False
 
     def operator_identifier(self,type,identifierNo):
+        """
+        # 新增/修改 identifier
+        :param : type
+        :param : identifierNo
+        :return:
+        """
         self.drop_select(CustomerRecordEntity.identifierName,type)
         self.ctrl_all(CustomerRecordEntity.identifier)
         self.type(CustomerRecordEntity.identifier,identifierNo)

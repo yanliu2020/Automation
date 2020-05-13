@@ -74,13 +74,24 @@ class CustomerRecordEntity(object):
     #提示消息
     tips_msg = "xpath=>//div[@role='alert']"
 
+    #contacts
     #email
     emailAddress = "id=>CreateContactEmail"
     emailType = "id=>CreateEmailType"
     isPrimary = "id=>CreateIsPrimary"
+    editEmailAddress = "id=>EditContactEmail"
+    editEmailType = "id=>EditEmailType"
+    editEmailPrimary = "id=>EditIsPrimary"
+    #phone
+    countryCode = "id=>CreateCountryCode"
+    phoneType = "id=>CreatePhoneType"
+    areaCode = "id=>CreatePhoneAreaCode"
+    phoneNumber = "id=>CreatePhoneNumber"
+    phoneExtension = "id=>CreatePhoneExtension"
 
     #identifier
     identifierName = "id=>detailsIdentifierName"
     identifier = "id=>CreateIdentifier"
+
 
 

@@ -47,3 +47,40 @@ JavaScript error: resource://app/modules/ContentCrashHandlers.jsm, line 137: Typ
 1588036463006	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
 1588036465369	Marionette	INFO	Listening on port 5839
 1588036466200	Marionette	WARN	TLS certificate errors will be ignored for this session
+1589185336952	geckodriver	INFO	Listening on 127.0.0.1:24567
+1589185340614	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1589185349803	Marionette	INFO	Listening on port 24584
+1589185351131	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: D3D11 swap resize buffers failed 0x8007000e on Size(1268,768)
+[GFX1]: [CompositorD3D11] error code: 0x8007000e, 0, 1
+[GFX1-]: Failed VerifyBufferSize in UpdateRenderTarget Size(1268,768)
+[GFX1]: [D3D11] 2 CreateTexture2D failure Size(1268,768) Code: 0x8007000e
+[GFX1]: [D3D11] 2 CreateTexture2D failure Size(1268,768) Code: 0x8007000e
+[GFX1-]: Failed 2 buffer db=00000000 dw=00000000 for 0, 0, 1268, 768
+JavaScript error: undefined, line 0: Error
+1589185360659	geckodriver::marionette	ERROR	Failed to kill browser process
+[Child 14260] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-esr52-w32-000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2152
+[Child 14260] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-esr52-w32-000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2152
+1589185361374	geckodriver	INFO	Listening on 127.0.0.1:24628
+1589185364807	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1589185374556	Marionette	INFO	Listening on port 24639
+1589185376915	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 13760] WARNING: pipe error: 232: file c:/builds/moz2_slave/m-esr52-w32-000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 512
+[Parent 13760] WARNING: pipe error: 232: file c:/builds/moz2_slave/m-esr52-w32-000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 512
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2C0092,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2C0085,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+1589185791991	geckodriver	INFO	Listening on 127.0.0.1:25370
+1589185795186	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1589185801013	Marionette	INFO	Listening on port 25384
+1589185801935	Marionette	WARN	TLS certificate errors will be ignored for this session
+1589186334981	Marionette	INFO	New connections will no longer be accepted
+[Child 14660] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-esr52-w32-000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2152
+[Child 14660] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-esr52-w32-000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2152
+1589255888823	geckodriver	INFO	Listening on 127.0.0.1:17032
+1589255891888	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1589255898891	Marionette	INFO	Listening on port 17046
+1589255900685	Marionette	WARN	TLS certificate errors will be ignored for this session

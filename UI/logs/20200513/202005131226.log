@@ -1,0 +1,7 @@
+2020-05-13 12:26:48,611|browser_engine.py[line:25] INFO:You had select Chrome browser.
+2020-05-13 12:26:48,611|browser_engine.py[line:27] INFO:The test server url is: https://rralamotest.z21.web.core.windows.net/
+2020-05-13 12:26:51,984|browser_engine.py[line:40] INFO:Starting Chrome browser.
+2020-05-13 12:26:53,135|browser_engine.py[line:51] INFO:Maximize the current window.
+2020-05-13 12:27:20,267|browser_engine.py[line:54] INFO:Open url: https://rralamotest.z21.web.core.windows.net/
+2020-05-13 12:27:32,431|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='localAccount']//div[@class='intro']/h2
+2020-05-13 12:27:35,261|base_page.py[line:67] INFO:Had find the element ' Sign in with your existing account ' successful by xpath via value: //div[@class='localAccount']//div[@class='intro']/h2 

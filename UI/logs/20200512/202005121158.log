@@ -1,0 +1,4 @@
+2020-05-12 11:58:08,100|browser_engine.py[line:25] INFO:You had select Firefox browser.
+2020-05-12 11:58:08,100|browser_engine.py[line:27] INFO:The test server url is: https://rralamotest.z21.web.core.windows.net/
+2020-05-12 11:58:28,300|browser_engine.py[line:37] INFO:Starting firefox browser.
+2020-05-12 11:58:28,475|browser_engine.py[line:51] INFO:Maximize the current window.

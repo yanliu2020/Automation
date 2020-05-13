@@ -1,0 +1,54 @@
+2020-05-13 10:07:01,686|browser_engine.py[line:25] INFO:You had select Chrome browser.
+2020-05-13 10:07:01,686|browser_engine.py[line:27] INFO:The test server url is: https://rralamotest.z21.web.core.windows.net/
+2020-05-13 10:07:05,397|browser_engine.py[line:40] INFO:Starting Chrome browser.
+2020-05-13 10:07:06,559|browser_engine.py[line:51] INFO:Maximize the current window.
+2020-05-13 10:07:56,633|browser_engine.py[line:54] INFO:Open url: https://rralamotest.z21.web.core.windows.net/
+2020-05-13 10:08:09,079|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='localAccount']//div[@class='intro']/h2
+2020-05-13 10:08:11,132|base_page.py[line:67] INFO:Had find the element ' Sign in with your existing account ' successful by xpath via value: //div[@class='localAccount']//div[@class='intro']/h2 
+2020-05-13 10:08:13,181|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-05-13 10:08:13,623|base_page.py[line:144] INFO:Clear text in input box before typing.
+2020-05-13 10:08:15,666|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-05-13 10:08:15,949|base_page.py[line:134] INFO:Had type ' yan.liu@an-chen.com ' in inputBox
+2020-05-13 10:08:17,993|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: password 
+2020-05-13 10:08:18,051|base_page.py[line:144] INFO:Clear text in input box before typing.
+2020-05-13 10:08:20,101|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: password 
+2020-05-13 10:08:20,421|base_page.py[line:134] INFO:Had type ' Lychan@2012 ' in inputBox
+2020-05-13 10:08:22,463|base_page.py[line:67] INFO:Had find the element ' Sign in ' successful by xpath via value: //div[@class='buttons']/button[text()='Sign in'] 
+2020-05-13 10:08:34,859|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@id='root']//div[@class='content-heading']
+2020-05-13 10:08:36,904|base_page.py[line:67] INFO:Had find the element ' Welcome, yanliu ' successful by xpath via value: //div[@id='root']//div[@class='content-heading'] 
+2020-05-13 10:08:36,904|login.py[line:41] INFO:login success
+2020-05-13 10:08:50,565|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='card']/form//div[@id='homeGrid']/div//h2
+2020-05-13 10:08:51,101|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']/form//div[@id='homeGrid']/div//h2 
+2020-05-13 10:08:53,235|base_page.py[line:67] INFO:Had find the element '  ' successful by xpath via value: //div[@class='card']/form//div[@id='homeGrid']/div[4]//input 
+2020-05-13 10:08:53,456|base_page.py[line:134] INFO:Had type ' C000088898 ' in inputBox
+2020-05-13 10:08:55,499|base_page.py[line:67] INFO:Had find the element ' Go ' successful by xpath via value: //div[@class='card']/form//div[@id='homeGrid']/div[4]/div/button 
+2020-05-13 10:08:56,170|base_page.py[line:156] INFO:The element ' Go ' was clicked.
+2020-05-13 10:08:56,170|homePage.py[line:50] INFO:module_name: Customers
+2020-05-13 10:09:08,253|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='card']//li/a[text()='Contacts']
+2020-05-13 10:09:10,308|base_page.py[line:67] INFO:Had find the element ' Contacts ' successful by xpath via value: //div[@class='card']//li/a[text()='Contacts'] 
+2020-05-13 10:09:10,511|base_page.py[line:156] INFO:The element ' Contacts ' was clicked.
+2020-05-13 10:09:11,042|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-05-13 10:09:13,137|base_page.py[line:67] INFO:Had find the element ' Contacts ' successful by xpath via value: //div[@class='card']//div//h4[text()='Contacts'] 
+2020-05-13 10:09:24,110|base_page.py[line:224] ERROR:TimeoutException: selector by xpath ,value //div[@class='glo-row']/div[1]//div[@class='glo-row']//div[@class='rt-tr-group']
+2020-05-13 10:09:24,635|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-05-13 10:09:36,701|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='card']//li/a[text()='Contacts']
+2020-05-13 10:09:38,750|base_page.py[line:67] INFO:Had find the element ' Contacts ' successful by xpath via value: //div[@class='card']//li/a[text()='Contacts'] 
+2020-05-13 10:09:38,939|base_page.py[line:156] INFO:The element ' Contacts ' was clicked.
+2020-05-13 10:09:39,457|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-05-13 10:09:39,999|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-05-13 10:09:52,931|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='card']//li/a[text()='Contacts']
+2020-05-13 10:09:54,970|base_page.py[line:67] INFO:Had find the element ' Contacts ' successful by xpath via value: //div[@class='card']//li/a[text()='Contacts'] 
+2020-05-13 10:09:55,057|base_page.py[line:156] INFO:The element ' Contacts ' was clicked.
+2020-05-13 10:09:55,573|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-05-13 10:09:56,111|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-05-13 10:09:56,648|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-05-13 10:10:08,842|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='card']//li/a[text()='Contacts']
+2020-05-13 10:10:10,894|base_page.py[line:67] INFO:Had find the element ' Contacts ' successful by xpath via value: //div[@class='card']//li/a[text()='Contacts'] 
+2020-05-13 10:10:11,039|base_page.py[line:156] INFO:The element ' Contacts ' was clicked.
+2020-05-13 10:10:11,577|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-05-13 10:10:12,194|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-05-13 10:10:12,737|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-05-13 10:10:13,282|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-05-13 10:10:13,828|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-05-13 10:10:15,904|base_page.py[line:67] INFO:Had find the element ' Contacts ' successful by xpath via value: //div[@class='card']//div//h4[text()='Contacts'] 
+2020-05-13 10:10:26,444|base_page.py[line:224] ERROR:TimeoutException: selector by xpath ,value //div[@class='glo-row']/div[1]//div[@class='glo-row']//div[@class='rt-tr-group']
