@@ -1,6 +1,0 @@
-2020-05-13 11:57:11,820|browser_engine.py[line:25] INFO:You had select Chrome browser.
-2020-05-13 11:57:11,820|browser_engine.py[line:27] INFO:The test server url is: https://rralamotest.z21.web.core.windows.net/
-2020-05-13 11:57:14,901|browser_engine.py[line:40] INFO:Starting Chrome browser.
-2020-05-13 11:57:16,054|browser_engine.py[line:51] INFO:Maximize the current window.
-2020-05-13 11:59:27,530|browser_engine.py[line:54] INFO:Open url: https://rralamotest.z21.web.core.windows.net/
-2020-05-13 11:59:39,947|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='localAccount']//div[@class='intro']/h2

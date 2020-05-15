@@ -73,25 +73,43 @@ class CustomerRecordEntity(object):
     delete_confirm = "xpath=>//button[text()='Yes, delete it!']"
     #提示消息
     tips_msg = "xpath=>//div[@role='alert']"
+    #contact记录数
+    contact_list_page = "xpath=>//span[@class='glo-table-pagination']"
 
     #contacts
+    salutation = "xpath=>//select[@name='salutation']"
+    firstName = "xpath=>//input[@name='firstName']"
+    middleName = "xpath=>//input[@name='middleName']"
+    lastName = "xpath=>//input[@name='lastName']"
+    suffix = "xpath=>//select[@name='suffix']"
+    contactRole = "xpath=>//select[@name='contactRole']"
+
     #email
-    emailAddress = "id=>CreateContactEmail"
-    emailType = "id=>CreateEmailType"
-    isPrimary = "id=>CreateIsPrimary"
-    editEmailAddress = "id=>EditContactEmail"
-    editEmailType = "id=>EditEmailType"
-    editEmailPrimary = "id=>EditIsPrimary"
+    emailAddress = "xpath=>//input[@name='emailAddress']"
+    emailType = "xpath=>//select[@name='emailType']"
+    isPrimary = "xpath=>//select[@name='isPrimary']"
+
     #phone
-    countryCode = "id=>CreateCountryCode"
-    phoneType = "id=>CreatePhoneType"
-    areaCode = "id=>CreatePhoneAreaCode"
-    phoneNumber = "id=>CreatePhoneNumber"
-    phoneExtension = "id=>CreatePhoneExtension"
+    countryCode = "xpath=>//input[@name='countryCode']"
+    phoneType = "xpath=>//select[@name='phoneType']"
+    areaCode = "xpath=>//input[@name='areaCode']"
+    phoneNumber = "xpath=>//input[@name='phone']"
+    phoneExtension = "xpath=>//input[@name='extension']"
 
     #identifier
-    identifierName = "id=>detailsIdentifierName"
-    identifier = "id=>CreateIdentifier"
+    identifierName = "xpath=>//select[@name='name']"
+    identifier = "xpath=>//input[@name='identifier']"
+
+    #address
+    attentionLine = "xpath=>//input[@name='attentionLine']"
+    address1 = "xpath=>//input[@name='address1']"
+    address2 = "xpath=>//input[@name='address2']"
+    city = "xpath=>//input[@name='city']"
+    postalCode = "xpath=>//input[@name='postalCode']"
+    addressType = "xpath=>//select[@name='addressType']"
+    stateCode = "xpath=>//select[@name='stateCode']"
+    country = "xpath=>//select[@name='country']"
+
 
 
 

@@ -191,7 +191,7 @@ class Template_mixin(object):
         2: u'error',
     }
 
-    DEFAULT_TITLE = 'Automation Test Report'
+    DEFAULT_TITLE = 'UI Automation Test Report'
     DEFAULT_DESCRIPTION = ''
 
     # ------------------------------------------------------------------------

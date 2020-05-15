@@ -46,3 +46,7 @@ config_path = base_path + 'config' + os.path.sep
 
 # \test_fz_auto
 sys_path = os.path.dirname(project_path)
+
+#test_fz_auto\UI\utils
+utils_path = base_path + 'utils' + os.path.sep
+

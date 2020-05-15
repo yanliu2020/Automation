@@ -3,7 +3,7 @@ from configparser import ConfigParser
 from selenium import webdriver
 from pageobjects.login.login import SystemLogin
 from config.login.login_entity import  LoginEntity
-from utils.basepath_helper import logs_path, project_path, drivers_path, config_path
+from utils.basepath_helper import logs_path, project_path, drivers_path, config_path,utils_path
 from utils.logger import logger
 from utils.base_page import BasePage
 
@@ -12,6 +12,8 @@ class BrowserEngine(object):
     chrome_driver_path = drivers_path + 'chromedriver.exe'
     firefox_driver_path = drivers_path + 'geckodriver.exe'
     ie_driver_path = drivers_path + 'IEDriverServer.exe'
+    edge_driver_path = drivers_path + 'MicrosoftWebDriver.exe'
+    geckodriver_path = utils_path + 'geckodriver.log'
 
     def __init__(self):
         self.driver = None
@@ -33,7 +35,9 @@ class BrowserEngine(object):
             profile.set_preference('browser.download.folderList', 2)
             profile.set_preference('browser.download.manager.showWhenStarting', False)
             profile.set_preference('browser.helperApps.neverAsk.saveToDisk', 'application/x-octetstream')
-            self.driver = webdriver.Firefox(firefox_profile=profile, executable_path=self.firefox_driver_path,log_path=r'E:\Automation\UI\utils\geckodriver.log')
+            #self.driver = webdriver.Firefox(firefox_profile=profile, executable_path=self.firefox_driver_path,log_path=r'E:\Automation\UI\utils\geckodriver.log')
+            self.driver = webdriver.Firefox(firefox_profile=profile, executable_path=self.firefox_driver_path,
+                                            log_path=self.geckodriver_path)
             logger.info("Starting firefox browser.")
         elif browser == "Chrome":
             self.driver = webdriver.Chrome(self.chrome_driver_path)
@@ -41,6 +45,9 @@ class BrowserEngine(object):
         elif browser == "IE":
             self.driver = webdriver.Ie(self.ie_driver_path)
             logger.info("Starting IE browser.")
+        elif browser == "Edge":
+            self.driver = webdriver.Edge(self.edge_driver_path)
+            logger.info("Starting Edge browser.")
 
         self.driver.maximize_window()
         """
