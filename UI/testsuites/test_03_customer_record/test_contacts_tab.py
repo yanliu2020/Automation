@@ -27,7 +27,6 @@ class Contacts_Email_Phone(unittest.TestCase):
 
     def test_02_contacts_detail(self):
         u"""show contacts detail"""
-        CustomerRecordPage(self.driver).switch_tab("Contacts")
         CustomerRecordPage(self.driver).contact_operator("Contacts", "Details","1")
         self.assertTrue(CustomerRecordPage(self.driver).detail_history("Details"))
 
@@ -38,8 +37,7 @@ class Contacts_Email_Phone(unittest.TestCase):
 
     def test_04_contacts_history(self):
         u"""query contact history"""
-        CustomerRecordPage(self.driver).switch_tab("Contacts")
-        CustomerRecordPage(self.driver).contact_operator("Contacts", "History","")
+        CustomerRecordPage(self.driver).contact_operator("Contacts", "History","1")
         self.assertTrue(CustomerRecordPage(self.driver).detail_history("History"))
 
     def test_05_email_new(self):
@@ -57,16 +55,15 @@ class Contacts_Email_Phone(unittest.TestCase):
         CustomerRecordPage(self.driver).contact_operator("Email", "Edit","1")
         self.assertTrue(CustomerRecordPage(self.driver).operator_email("uiautomationEdit@qq.com", "Company", "true"))
 
-    def test_08_email_delete(self):
+    def test_08_email_history(self):
+        u"""show contact email history"""
+        CustomerRecordPage(self.driver).contact_operator("Email", "History","1")
+        self.assertTrue(CustomerRecordPage(self.driver).detail_history("History"))
+
+    def test_09_email_delete(self):
         u"""delete contact email"""
-        CustomerRecordPage(self.driver).switch_tab("Contacts")
         CustomerRecordPage(self.driver).contact_operator("Email", "Delete","1")
         self.assertTrue(CustomerRecordPage(self.driver).delete())
-
-    def test_09_email_history(self):
-        u"""show contact email history"""
-        CustomerRecordPage(self.driver).contact_operator("Email", "History","")
-        self.assertTrue(CustomerRecordPage(self.driver).detail_history("History"))
 
     def test_10_phone_new(self):
         u"""new contact phone"""
@@ -78,20 +75,20 @@ class Contacts_Email_Phone(unittest.TestCase):
         CustomerRecordPage(self.driver).contact_operator("Phone", "Details","1")
         self.assertTrue(CustomerRecordPage(self.driver).detail_history("Details"))
 
-    # def test_12_phone_edit(self):
-    #     u"""edit contact phone"""
-    #     CustomerRecordPage(self.driver).contact_operator("Phone", "Edit","1")
-    #     self.assertTrue(CustomerRecordPage(self.driver).operator_phone("2", "Home", "666", "6666666", "111"))
+    def test_12_phone_edit(self):
+        u"""edit contact phone"""
+        CustomerRecordPage(self.driver).contact_operator("Phone", "Edit","1")
+        self.assertTrue(CustomerRecordPage(self.driver).operator_phone("2", "Home", "666", "6666666", "111"))
 
-    def test_13_phone_delete(self):
+    def test_13_phone_history(self):
+        u"""query contact phone history"""
+        CustomerRecordPage(self.driver).contact_operator("Phone", "History","1")
+        self.assertTrue(CustomerRecordPage(self.driver).detail_history("History"))
+
+    def test_14_phone_delete(self):
         u"""delete contact phone"""
         CustomerRecordPage(self.driver).contact_operator("Phone", "Delete","1")
         self.assertTrue(CustomerRecordPage(self.driver).delete())
-
-    def test_14_phone_history(self):
-        u"""query contact phone history"""
-        CustomerRecordPage(self.driver).contact_operator("Phone", "History","")
-        self.assertTrue(CustomerRecordPage(self.driver).detail_history("History"))
 
     def test_15_contacts_delete(self):
         u"""delete contacts"""

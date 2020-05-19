@@ -39,7 +39,7 @@ class CustomerRecordPage(BasePage):
         :param buttonName:Detail，Edit，New,Delete,History
         """
         section_list = self.find_elements(CustomerRecordEntity.section_list)
-        print(section_list)
+        # print(section_list)
         section_item = None
         for i, item in enumerate(section_list):
             if sectionName == item.text:
@@ -49,7 +49,7 @@ class CustomerRecordPage(BasePage):
             logger.info(msg="sectionName %s not found!" % sectionName)
         else:
             self.scroll_into_view(CustomerRecordEntity().get_section_name(sectionName))
-            if sectionName == "Customer Summary" or buttonName == "New" or buttonName == "History":
+            if sectionName == "Customer Summary" or buttonName == "New":
                 self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
             else:
                 if self.find_elements(CustomerRecordEntity().get_entity_records(section_item[0])):
@@ -58,7 +58,6 @@ class CustomerRecordPage(BasePage):
                     self.click(CustomerRecordEntity().get_section_operator(section_item[0],buttonName))
                 else:
                     logger.info("sectionName %s have no record!"% sectionName)
-
 
     def contact_operator(self,sectionName,buttonName,row):
         """
@@ -75,7 +74,7 @@ class CustomerRecordPage(BasePage):
                 if self.not_selected(1, 1) == True:
                     self.click(CustomerRecordEntity().get_entity_record(1, 1))
         section_list = self.find_elements(CustomerRecordEntity.section_list)
-        print(section_list)
+        # print(section_list)
         section_item = None
         #根据传入的section名获取section_item
         for i, item in enumerate(section_list):
@@ -86,7 +85,7 @@ class CustomerRecordPage(BasePage):
             raise NoSuchElementException(msg="sectionName %s not found!" % sectionName)
         else:
             self.scroll_into_view(CustomerRecordEntity().get_section_name(sectionName))
-            if  buttonName == "New" or buttonName == "History":
+            if  buttonName == "New":
                 self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
             elif sectionName == "Contacts":
                 if self.find_elements(CustomerRecordEntity().get_entity_records(section_item[0])):
@@ -122,7 +121,7 @@ class CustomerRecordPage(BasePage):
         :return:
         """
         section_list = self.find_elements(CustomerRecordEntity.related_section_list)
-        print(section_list)
+        # print(section_list)
         section_item = None
         for i, item in enumerate(section_list):
             if sectionName == item.text:
@@ -158,7 +157,7 @@ class CustomerRecordPage(BasePage):
         """
         selected = self.find_element(
             CustomerRecordEntity().get_entity_record(section, row)).get_attribute('style')
-        print("+++++" + selected)
+        # print("+++++" + selected)
         if "background" in  selected:
             pass
         else:
@@ -170,8 +169,8 @@ class CustomerRecordPage(BasePage):
         :return:
         """
         #self.find_element_by_wait("xpath",CustomerRecordEntity.tips_msg)
-        msg = self.find_element(CustomerRecordEntity.tips_msg).text.lower()
-        print(msg)
+        msg = self.find_element(CustomerRecordEntity.tips_msg).text
+        #print(msg)
         return msg
 
     def detail_history(self,title):
@@ -194,7 +193,7 @@ class CustomerRecordPage(BasePage):
         """
         self.click(CustomerRecordEntity.delete_confirm)
         msg = self.get_tips_msg()
-        if 'successfully' in msg:
+        if "successfully" in msg:
             return True
         else:
             return False
@@ -213,7 +212,7 @@ class CustomerRecordPage(BasePage):
         self.drop_select(CustomerRecordEntity.stateCode, stateCode)
         self.click(CustomerRecordEntity.save)
         msg = self.get_tips_msg()
-        if 'successfully' in msg:
+        if "successfully" in msg:
             return True
         else:
             return False
@@ -228,7 +227,7 @@ class CustomerRecordPage(BasePage):
         self.type(CustomerRecordEntity().get_input_info(name), txt)
         self.click(CustomerRecordEntity.save)
         msg = self.get_tips_msg()
-        if 'successfully' in msg:
+        if "successfully" in msg:
             return True
         else:
             return False
@@ -244,7 +243,7 @@ class CustomerRecordPage(BasePage):
         self.type(CustomerRecordEntity.identifier,identifierNo)
         self.click(CustomerRecordEntity.save)
         msg = self.get_tips_msg()
-        if 'successfully' in msg:
+        if "successfully" in msg:
             return True
         else:
             return False
@@ -268,7 +267,7 @@ class CustomerRecordPage(BasePage):
         self.drop_select(CustomerRecordEntity.contactRole, contactRole)
         self.click(CustomerRecordEntity.save)
         msg = self.get_tips_msg()
-        if 'successfully' in msg:
+        if "successfully" in msg:
             return True
         else:
             return False
@@ -284,7 +283,7 @@ class CustomerRecordPage(BasePage):
         self.drop_select(CustomerRecordEntity.emailType, type)
         self.drop_select(CustomerRecordEntity.isPrimary, isPrimary)
         self.click(CustomerRecordEntity.save)
-        msg = self.get_tips_msg()
+        msg = self.find_element(CustomerRecordEntity.tips_msg).text.lower()
         if 'successfully' in msg:
             return True
         else:
@@ -306,7 +305,7 @@ class CustomerRecordPage(BasePage):
         self.ctrl_all(CustomerRecordEntity.phoneExtension)
         self.type(CustomerRecordEntity.phoneExtension, exetension)
         self.click(CustomerRecordEntity.save)
-        msg = self.get_tips_msg()
+        msg = self.find_element(CustomerRecordEntity.tips_msg).text.lower()
         if 'successfully' in msg:
             return True
         else:

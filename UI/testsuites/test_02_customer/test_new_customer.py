@@ -31,10 +31,10 @@ class New_Customer(unittest.TestCase):
 
 
     # New Individual Customer
-    def test_01_new_customer(self):
-
-        u"""New Individual Customer"""
-        NewCustomerPage(self.driver).select_customer_type("Person","Individual")
+    # def test_01_new_customer(self):
+    #
+    #     u"""New Individual Customer"""
+    #     NewCustomerPage(self.driver).select_customer_type("Person","Individual")
 
 
 

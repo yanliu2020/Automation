@@ -57,7 +57,7 @@ class BasePage(object):
 
     def find_element_by_wait(self, selector_by, selector_value):
         # element = None
-        self.sleep(2)
+        self.sleep(1.5)
         try:
             # element = self.driver.find_element_by_id(selector_value)
             element = WebDriverWait(self.driver, 10).until(
@@ -341,9 +341,9 @@ class BasePage(object):
         window = self.driver.current_window_handle()
         windows = self.driver.window_handles()
         for current_window in windows:
-            if current_window != window and flag==1:
+            if current_window != window and flag == 1:
                 self.driver.switch_to.window(current_window)
-            elif flag==0:
+            elif flag == 0:
                 self.driver.switch_to.window(windows[0])
 
     def drag_and_drop(self,source_selector,target_selector):
@@ -353,7 +353,6 @@ class BasePage(object):
         """
         source = self.find_element(source_selector)
         target = self.find_element(target_selector)
-
         ActionChains(self.driver).drag_and_drop(source, target).perform()
 
     def drop_select(self,selector,value):
@@ -366,11 +365,11 @@ class BasePage(object):
         Select(self.find_element(selector)).select_by_value(value)
 
     def ctrl_all(self,selector):
-        # 双击事件
+        """全选操作
+        :param selector
+        :return:
+        """
         self.click(selector)
         self.find_element(selector).send_keys(Keys.CONTROL,'a')
         self.find_element(selector).send_keys(Keys.BACKSPACE)
-
-
-
 

@@ -88,3 +88,10 @@ JavaScript error: undefined, line 0: Error
 1589512670143	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
 1589512675894	Marionette	INFO	Listening on port 10587
 1589512676969	Marionette	WARN	TLS certificate errors will be ignored for this session
+1589852980324	geckodriver	INFO	Listening on 127.0.0.1:9663
+1589852983506	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1589852989632	Marionette	INFO	Listening on port 9675
+1589852990480	Marionette	WARN	TLS certificate errors will be ignored for this session
+1589853650254	Marionette	INFO	New connections will no longer be accepted
+[Child 14588] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-esr52-w32-000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2152
+[Child 14588] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-esr52-w32-000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2152
