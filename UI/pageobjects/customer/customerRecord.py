@@ -68,11 +68,11 @@ class CustomerRecordPage(BasePage):
         :param buttonName:Detail，Edit，New,Delete,History
         :return:
         """
-        if self.contact_list_page() == True:
-            if self.find_elements(CustomerRecordEntity().get_entity_records(1)):
-                # 判断是否选中contact记录,确定选中
-                if self.not_selected(1, 1) == True:
-                    self.click(CustomerRecordEntity().get_entity_record(1, 1))
+        # if self.contact_list_page() == True:
+        #     if self.find_elements(CustomerRecordEntity().get_entity_records(1)):
+        #         # 判断是否选中contact记录,确定选中
+        #         if self.not_selected(1, 1) == True:
+        #             self.click(CustomerRecordEntity().get_entity_record(1, 1))
         section_list = self.find_elements(CustomerRecordEntity.section_list)
         # print(section_list)
         section_item = None
@@ -85,26 +85,40 @@ class CustomerRecordPage(BasePage):
             raise NoSuchElementException(msg="sectionName %s not found!" % sectionName)
         else:
             self.scroll_into_view(CustomerRecordEntity().get_section_name(sectionName))
-            if  buttonName == "New":
-                self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
-            elif sectionName == "Contacts":
-                if self.find_elements(CustomerRecordEntity().get_entity_records(section_item[0])):
+            if sectionName == "Contacts":
+                if buttonName != "New" and self.contact_list_page() == True:
                     if self.not_selected(section_item[0],row) == True:
                         self.click(CustomerRecordEntity().get_entity_record(section_item[0], row))
-                    self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
-                else:
-                    logger.info("sectionName %s have no record!" % sectionName)
-            elif self.find_elements(CustomerRecordEntity().get_entity_records(1)):
+                self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
+            elif self.contact_list_page() == True:
                 if self.not_selected(1, 1) == True:
                     self.click(CustomerRecordEntity().get_entity_record(1, 1))
-                if self.find_elements(CustomerRecordEntity().get_entity_records(section_item[0])):
+                if buttonName != "New" and self.find_elements(CustomerRecordEntity().get_entity_records(section_item[0])):
                     if self.not_selected(section_item[0],row) == True:
                         self.click(CustomerRecordEntity().get_entity_record(section_item[0], row))
-                    self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
-                else:
-                    logger.info("sectionName %s have no record!" % sectionName)
-            else:
-                logger.info("sectionName %s have no record!" % sectionName)
+                self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
+
+            # if  buttonName == "New":
+            #     self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
+            # elif sectionName == "Contacts":
+            #     if self.find_elements(CustomerRecordEntity().get_entity_records(section_item[0])):
+            #         if self.not_selected(section_item[0],row) == True:
+            #             self.click(CustomerRecordEntity().get_entity_record(section_item[0], row))
+            #         self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
+            #     else:
+            #         logger.info("sectionName %s have no record!" % sectionName)
+            # elif self.find_elements(CustomerRecordEntity().get_entity_records(1)):
+            #     if self.not_selected(1, 1) == True:
+            #         self.click(CustomerRecordEntity().get_entity_record(1, 1))
+            #     if self.find_elements(CustomerRecordEntity().get_entity_records(section_item[0])):
+            #         if self.not_selected(section_item[0],row) == True:
+            #             self.click(CustomerRecordEntity().get_entity_record(section_item[0], row))
+            #         self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
+            #     else:
+            #         logger.info("sectionName %s have no record!" % sectionName)
+            # else:
+            #     logger.info("sectionName %s have no record!" % sectionName)
+
             # elif self.find_elements(CustomerRecordEntity().get_entity_records(section_item[0])):
             #     if self.not_selected(section_item[0], row) == True:
             #         self.click(CustomerRecordEntity().get_entity_record(section_item[0], row))
@@ -169,9 +183,10 @@ class CustomerRecordPage(BasePage):
         :return:
         """
         #self.find_element_by_wait("xpath",CustomerRecordEntity.tips_msg)
-        msg = self.find_element(CustomerRecordEntity.tips_msg).text
+        self.sleep(1)
+        return  self.find_element(CustomerRecordEntity.tips_msg).text
         #print(msg)
-        return msg
+        #return msg
 
     def detail_history(self,title):
         """
@@ -181,7 +196,7 @@ class CustomerRecordPage(BasePage):
         """
         title = self.find_element(CustomerRecordEntity.window_title).text
         if title in title:
-            self.click(CustomerRecordEntity.close_window)
+            self.execute_script_click(CustomerRecordEntity.close_window)
             return True
         else:
             return False
@@ -192,8 +207,8 @@ class CustomerRecordPage(BasePage):
         :return:
         """
         self.click(CustomerRecordEntity.delete_confirm)
-        msg = self.get_tips_msg()
-        if "successfully" in msg:
+        # msg = self.get_tips_msg()
+        if "successfully" in self.get_tips_msg():
             return True
         else:
             return False
@@ -211,8 +226,8 @@ class CustomerRecordPage(BasePage):
         self.type(CustomerRecordEntity.city,city)
         self.drop_select(CustomerRecordEntity.stateCode, stateCode)
         self.click(CustomerRecordEntity.save)
-        msg = self.get_tips_msg()
-        if "successfully" in msg:
+        # msg = self.get_tips_msg()
+        if "successfully" in self.get_tips_msg():
             return True
         else:
             return False
@@ -226,8 +241,8 @@ class CustomerRecordPage(BasePage):
         self.ctrl_all(CustomerRecordEntity().get_input_info(name))
         self.type(CustomerRecordEntity().get_input_info(name), txt)
         self.click(CustomerRecordEntity.save)
-        msg = self.get_tips_msg()
-        if "successfully" in msg:
+        # msg = self.get_tips_msg()
+        if "successfully" in self.get_tips_msg():
             return True
         else:
             return False
@@ -242,8 +257,8 @@ class CustomerRecordPage(BasePage):
         self.ctrl_all(CustomerRecordEntity.identifier)
         self.type(CustomerRecordEntity.identifier,identifierNo)
         self.click(CustomerRecordEntity.save)
-        msg = self.get_tips_msg()
-        if "successfully" in msg:
+        # msg = self.get_tips_msg()
+        if "successfully" in self.get_tips_msg():
             return True
         else:
             return False
@@ -266,8 +281,8 @@ class CustomerRecordPage(BasePage):
         self.drop_select(CustomerRecordEntity.suffix, suffix)
         self.drop_select(CustomerRecordEntity.contactRole, contactRole)
         self.click(CustomerRecordEntity.save)
-        msg = self.get_tips_msg()
-        if "successfully" in msg:
+        # msg = self.get_tips_msg()
+        if "successfully" in self.get_tips_msg():
             return True
         else:
             return False
@@ -283,20 +298,20 @@ class CustomerRecordPage(BasePage):
         self.drop_select(CustomerRecordEntity.emailType, type)
         self.drop_select(CustomerRecordEntity.isPrimary, isPrimary)
         self.click(CustomerRecordEntity.save)
-        msg = self.find_element(CustomerRecordEntity.tips_msg).text.lower()
-        if 'successfully' in msg:
+        # msg = self.get_tips_msg()
+        if 'successfully' in self.get_tips_msg():
             return True
         else:
             return False
 
-    def operator_phone(self,countryCode,type,areaCode,phone,exetension):
+    def operator_phone(self,type,areaCode,phone,exetension):
         """
         # 新增/修改 contact phone
         :param : countryCode,type,areaCode,phone,exetension
         :return:
         """
-        self.ctrl_all(CustomerRecordEntity.countryCode)
-        self.type(CustomerRecordEntity.countryCode, countryCode)
+        # self.ctrl_all(CustomerRecordEntity.countryCode)
+        # self.type(CustomerRecordEntity.countryCode, countryCode)
         self.drop_select(CustomerRecordEntity.phoneType, type)
         self.ctrl_all(CustomerRecordEntity.areaCode)
         self.type(CustomerRecordEntity.areaCode, areaCode)
@@ -305,8 +320,8 @@ class CustomerRecordPage(BasePage):
         self.ctrl_all(CustomerRecordEntity.phoneExtension)
         self.type(CustomerRecordEntity.phoneExtension, exetension)
         self.click(CustomerRecordEntity.save)
-        msg = self.find_element(CustomerRecordEntity.tips_msg).text.lower()
-        if 'successfully' in msg:
+        # msg = self.get_tips_msg()
+        if 'successfully' in self.get_tips_msg():
             return True
         else:
             return False

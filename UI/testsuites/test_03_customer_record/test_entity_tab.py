@@ -27,6 +27,7 @@ class Identifier_Address(unittest.TestCase):
 
     def test_02_Address_detail(self):
         u"""show address detail"""
+        CustomerRecordPage(self.driver).switch_tab("Entity")
         CustomerRecordPage(self.driver).entity_operator("Addresses", "Details", "1")
         self.assertTrue(CustomerRecordPage(self.driver).detail_history("Details"))
 

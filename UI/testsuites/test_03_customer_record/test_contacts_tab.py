@@ -16,8 +16,8 @@ class Contacts_Email_Phone(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.driver = driver
-        TopMenuPage(cls.driver).get_url()
-        HomePage(cls.driver).quick_entrance("Customers","C000089009",2)
+        # TopMenuPage(cls.driver).get_url()
+        HomePage(cls.driver).quick_entrance("Customers","C000048473",2)
 
     def test_01_contacts_new(self):
         u"""new a contact"""
@@ -68,7 +68,7 @@ class Contacts_Email_Phone(unittest.TestCase):
     def test_10_phone_new(self):
         u"""new contact phone"""
         CustomerRecordPage(self.driver).contact_operator("Phone", "New","")
-        self.assertTrue(CustomerRecordPage(self.driver).operator_phone("1","Fax","111","1234567","666"))
+        self.assertTrue(CustomerRecordPage(self.driver).operator_phone("Fax","111","1234567","extension"))
 
     def test_11_phone_detail(self):
         u"""show contact phone detail"""
@@ -78,7 +78,7 @@ class Contacts_Email_Phone(unittest.TestCase):
     def test_12_phone_edit(self):
         u"""edit contact phone"""
         CustomerRecordPage(self.driver).contact_operator("Phone", "Edit","1")
-        self.assertTrue(CustomerRecordPage(self.driver).operator_phone("2", "Home", "666", "6666666", "111"))
+        self.assertTrue(CustomerRecordPage(self.driver).operator_phone("Home", "666", "6666666", "edit"))
 
     def test_13_phone_history(self):
         u"""query contact phone history"""

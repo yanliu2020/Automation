@@ -57,7 +57,7 @@ class BasePage(object):
 
     def find_element_by_wait(self, selector_by, selector_value):
         # element = None
-        self.sleep(1.5)
+        self.sleep(0.5)
         try:
             # element = self.driver.find_element_by_id(selector_value)
             element = WebDriverWait(self.driver, 10).until(
@@ -372,4 +372,8 @@ class BasePage(object):
         self.click(selector)
         self.find_element(selector).send_keys(Keys.CONTROL,'a')
         self.find_element(selector).send_keys(Keys.BACKSPACE)
+
+    def execute_script_click(self,selector):
+        element = self.find_element(selector)
+        self.driver.execute_script("arguments[0].click();", element)
 
