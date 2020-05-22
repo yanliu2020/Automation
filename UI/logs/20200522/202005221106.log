@@ -1,0 +1,22 @@
+2020-05-22 11:06:10,650|browser_engine.py[line:27] INFO:You had select Chrome browser.
+2020-05-22 11:06:10,650|browser_engine.py[line:29] INFO:The test server url is: https://rralamotest.z21.web.core.windows.net/
+2020-05-22 11:06:16,529|browser_engine.py[line:44] INFO:Starting Chrome browser.
+2020-05-22 11:06:17,676|browser_engine.py[line:58] INFO:Maximize the current window.
+2020-05-22 11:08:33,064|browser_engine.py[line:61] INFO:Open url: https://rralamotest.z21.web.core.windows.net/
+2020-05-22 11:08:44,062|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='localAccount']//div[@class='intro']/h2
+2020-05-22 11:08:44,637|base_page.py[line:67] INFO:Had find the element ' Sign in with your existing account ' successful by xpath via value: //div[@class='localAccount']//div[@class='intro']/h2 
+2020-05-22 11:08:45,219|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-05-22 11:08:45,267|base_page.py[line:144] INFO:Clear text in input box before typing.
+2020-05-22 11:08:45,791|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-05-22 11:08:45,965|base_page.py[line:134] INFO:Had type ' yan.liu@an-chen.com ' in inputBox
+2020-05-22 11:08:46,521|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: password 
+2020-05-22 11:08:46,558|base_page.py[line:144] INFO:Clear text in input box before typing.
+2020-05-22 11:08:47,079|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: password 
+2020-05-22 11:08:47,234|base_page.py[line:134] INFO:Had type ' Lychan@2012 ' in inputBox
+2020-05-22 11:08:47,805|base_page.py[line:67] INFO:Had find the element ' Sign in ' successful by xpath via value: //div[@class='buttons']/button[text()='Sign in'] 
+2020-05-22 11:08:58,725|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@id='root']//div[@class='content-heading']
+2020-05-22 11:08:59,269|base_page.py[line:67] INFO:Had find the element ' Welcome, yanliu ' successful by xpath via value: //div[@id='root']//div[@class='content-heading'] 
+2020-05-22 11:08:59,269|login.py[line:41] INFO:login success
+2020-05-22 11:09:10,364|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='card']/form//div[@id='homeGrid']/div//h2
+2020-05-22 11:09:10,922|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']/form//div[@id='homeGrid']/div//h2 
+2020-05-22 11:09:11,566|base_page.py[line:67] INFO:Had find the element '  ' successful by xpath via value: //div[@class='card']/form//div[@id='homeGrid']/div[4]//input 

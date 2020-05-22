@@ -17,7 +17,7 @@ class Identifier_Address(unittest.TestCase):
     def setUpClass(cls):
         cls.driver = driver
         TopMenuPage(cls.driver).get_url()
-        HomePage(cls.driver).quick_entrance("Customers","C000036407",2)
+        HomePage(cls.driver).quick_entrance("Customers","C000089009",2)
 
     def test_01_Address_new(self):
         u"""new address"""

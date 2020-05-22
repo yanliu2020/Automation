@@ -2,7 +2,7 @@
 
 class CustomerRecordEntity(object):
     #Actions和History
-    customer_operate = "xpath=>//div[@class='btn-toolbar show']/button[text()='%s']"
+    customer_operate = "xpath=>//div[@class='btn-toolbar']/button[text()='%s']"
     def get_customer_operate(self,loc):
         return self.customer_operate %loc
 
@@ -66,11 +66,15 @@ class CustomerRecordEntity(object):
     #点击保存
     save = "xpath=>//button[text()='Save']"
     #关闭弹窗
-    close_window = "xpath=>//button[@class='close']"
+    contact_close = "xpath=>//button[@class='close']"
     #弹窗标题
-    window_title = "xpath=>//h4[@class='modal-title']"
+    contact_title = "xpath=>//h4[@class='modal-title']"
     #确认删除
     delete_confirm = "xpath=>//button[text()='Yes, delete it!']"
+
+    entity_title = "xpath=>//div[3]//h4[@class='modal-title']"
+    entity_close = "xpath=>//div[3]//button[@class='close']"
+
     #提示消息
     tips_msg = "xpath=>//div[@role='alert']"
     #contact记录数
@@ -109,6 +113,7 @@ class CustomerRecordEntity(object):
     addressType = "xpath=>//select[@name='addressType']"
     stateCode = "xpath=>//select[@name='stateCode']"
     country = "xpath=>//select[@name='country']"
+
 
 
 

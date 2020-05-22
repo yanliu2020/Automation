@@ -18,7 +18,7 @@ class DBA_Websites(unittest.TestCase):
     def setUpClass(cls):
         cls.driver = driver
         TopMenuPage(cls.driver).get_url()
-        HomePage(cls.driver).quick_entrance("Customers","C000048473",2)
+        HomePage(cls.driver).quick_entrance("Customers","C000089009",2)
 
 
     def test_01_DBA_new(self):
