@@ -300,7 +300,7 @@ class BasePage(object):
         """
         # self.driver.execute_script("arguments[0].scrollIntoView(false);", element)
         element = self.find_element(selector)
-        element.location_once_scrolled_into_view
+        element.location_once_scrolled_into_view()
 
     def get_page_title(self):
         """

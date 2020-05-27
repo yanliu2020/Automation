@@ -32,11 +32,8 @@ class CustomerRecordPage(BasePage):
     def entity_operator(self,sectionName,buttonName,row):
         """
         #Entity页签增删改查
-        :param sectionName :
-             Entity页签:Customer Summary,Addresses,Websites,Doing Business As (DBA),Business Identifiers
-             Contacts页签:Contacts,Email,Phone
-        :param row:选择记录行
-        :param buttonName:Detail，Edit，New,Delete,History
+        :param sectionName,buttonName,row
+        :return:
         """
         section_list = self.find_elements(CustomerRecordEntity.section_list)
         # print(section_list)
@@ -48,7 +45,7 @@ class CustomerRecordPage(BasePage):
         if section_item is None:
             logger.info(msg="sectionName %s not found!" % sectionName)
         else:
-            self.scroll_into_view(CustomerRecordEntity().get_section_name(sectionName))
+            #self.scroll_into_view(CustomerRecordEntity().get_section_name(sectionName))
             if sectionName == "Customer Summary" or buttonName == "New":
                 self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
             else:
@@ -62,10 +59,7 @@ class CustomerRecordPage(BasePage):
     def contact_operator(self,sectionName,buttonName,row):
         """
         #Contacts页签下增删改查
-        :param sectionName:
-             Contacts页签:Contacts,Email,Phone
-        :param row:选择记录行
-        :param buttonName:Detail，Edit，New,Delete,History
+        :param sectionName,buttonName,row
         :return:
         """
         section_list = self.find_elements(CustomerRecordEntity.section_list)
@@ -79,7 +73,7 @@ class CustomerRecordPage(BasePage):
         if section_item is None:
             raise NoSuchElementException(msg="sectionName %s not found!" % sectionName)
         else:
-            self.scroll_into_view(CustomerRecordEntity().get_section_name(sectionName))
+            #self.scroll_into_view(CustomerRecordEntity().get_section_name(sectionName))
             if sectionName == "Contacts":
                 if buttonName != "New" and self.contact_list_page() == True:
                     if self.not_selected(section_item[0],row) == True:
@@ -96,8 +90,7 @@ class CustomerRecordPage(BasePage):
     def related_leases_operator(self,sectionName,buttonName,row):
         """
         #Related Lease/Lands 查询和删除
-        :param  sectionName:Lands，Mineral Leases,Surface Leases，Surface Projects
-        :param  buttonName:Link Details,Delete Relationship
+        :param  sectionName,buttonName,row
         :return:
         """
         section_list = self.find_elements(CustomerRecordEntity.related_section_list)
@@ -121,6 +114,10 @@ class CustomerRecordPage(BasePage):
                     logger.info("sectionName %s have no record!"% sectionName)
 
     def contact_list_page(self):
+        """
+         # contact list是否有记录
+         :return:
+        """
         record = self.find_element(CustomerRecordEntity.contact_list_page).text
         if "0" in record:
             return False
@@ -137,7 +134,6 @@ class CustomerRecordPage(BasePage):
         """
         selected = self.find_element(
             CustomerRecordEntity().get_entity_record(section, row)).get_attribute('style')
-        # print("+++++" + selected)
         if "background" in  selected:
             pass
         else:
@@ -148,11 +144,8 @@ class CustomerRecordPage(BasePage):
         # 获取页面提示消息
         :return:
         """
-        #self.find_element_by_wait("xpath",CustomerRecordEntity.tips_msg)
         self.sleep(2)
         return  self.find_element(CustomerRecordEntity.tips_msg).text
-        #print(msg)
-        #return msg
 
     def detail_history(self,title):
         """
@@ -291,24 +284,29 @@ class CustomerRecordPage(BasePage):
             return False
 
     def top_operate(self,buttonName,acitonName):
-        self.scroll_into_view(CustomerRecordEntity().get_customer_operate(buttonName))
+        """
+        # Action区域快捷操作
+        :param : buttonName，acitonName
+        :return:
+        """
+        #self.scroll_into_view(CustomerRecordEntity().get_customer_operate(buttonName))
         self.click(CustomerRecordEntity().get_customer_operate(buttonName))
-        if buttonName != "History":
-            self.click(CustomerRecordEntity().get_action(acitonName))
-            if acitonName == "New":
-                url = self.find_element(CustomerRecordEntity().get_action("New")).get_attribute('href')
-                if "https://rralamotest.z21.web.core.windows.net/customers/new" == url:
-                    return  True
-                else:
-                    return  False
-        else:
+        if buttonName == "History":
             title = self.find_element(CustomerRecordEntity.entity_title).text
             if "History" in title:
                 self.execute_script_click(CustomerRecordEntity.entity_close)
                 return True
+        else:
+            self.click(CustomerRecordEntity().get_action(acitonName))
+            if acitonName == "New":
+                url = self.find_element(CustomerRecordEntity().get_action("New")).get_attribute('href')
+                if "https://rralamotest.z21.web.core.windows.net/customers/new" == url:
+                    return True
+                else:
+                    return False
 
-            else:
-                return False
+
+
 
 
 

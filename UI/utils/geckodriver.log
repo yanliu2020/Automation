@@ -95,3 +95,196 @@ JavaScript error: undefined, line 0: Error
 1589853650254	Marionette	INFO	New connections will no longer be accepted
 [Child 14588] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-esr52-w32-000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2152
 [Child 14588] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-esr52-w32-000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2152
+1590392850152	geckodriver	INFO	Listening on 127.0.0.1:4829
+1590392853112	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1590392860414	Marionette	INFO	Listening on port 4839
+1590392861001	Marionette	WARN	TLS certificate errors will be ignored for this session
+1590393010232	geckodriver	INFO	Listening on 127.0.0.1:4976
+1590393013598	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1590393026027	geckodriver	INFO	Listening on 127.0.0.1:4996
+1590393029250	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1590393031631	Marionette	INFO	Listening on port 5005
+1590393032461	Marionette	WARN	TLS certificate errors will be ignored for this session
+1590393083581	geckodriver	INFO	Listening on 127.0.0.1:5292
+1590393086821	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1590393090840	Marionette	INFO	Listening on port 5303
+1590393091793	Marionette	WARN	TLS certificate errors will be ignored for this session
+1590393148098	geckodriver	INFO	Listening on 127.0.0.1:5410
+1590393151427	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1590393343200	geckodriver	INFO	Listening on 127.0.0.1:5789
+1590393346361	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1590393348809	Marionette	INFO	Listening on port 5798
+1590393349777	Marionette	WARN	TLS certificate errors will be ignored for this session
+1590393407352	geckodriver	INFO	Listening on 127.0.0.1:5907
+1590393410758	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1590393414660	Marionette	INFO	Listening on port 5916
+1590393415101	Marionette	WARN	TLS certificate errors will be ignored for this session
+1590393442035	geckodriver	INFO	Listening on 127.0.0.1:5972
+1590393445495	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1590393450455	Marionette	INFO	Listening on port 5982
+5986
+1590393450913	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1590393456682	Marionette	INFO	Listening on port 6001
+1590393458312	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://app/modules/URLBarZoom.jsm, line 24: TypeError: win is null
+1590394503058	geckodriver	INFO	Listening on 127.0.0.1:8282
+1590394506221	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1590394509599	Marionette	INFO	Listening on port 8290
+1590394510895	Marionette	WARN	TLS certificate errors will be ignored for this session
+1590394613901	geckodriver	INFO	Listening on 127.0.0.1:8456
+1590394617112	geckodriver::marionette	INFO	Starting browser G:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1590394620466	Marionette	INFO	Listening on port 8464
+1590394621527	Marionette	WARN	TLS certificate errors will be ignored for this session
+1590395088723	Marionette	INFO	New connections will no longer be accepted
+[Child 12480] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-esr52-w32-000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2152
+[Child 12480] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-esr52-w32-000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2152
+1590395812665	mozrunner::runner	INFO	Running command: "G:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELENAT~1\\AppData\\Local\\Temp\\rust_mozprofile8Y8Gdq"
+1590395821821	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1590395822100	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1590395822101	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1590395822102	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1590395822102	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1590395834728	Marionette	INFO	Listening on port 11140
+1590395835167	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://redrivergloalamo.b2clogin.com/static/bundles/jquery-bundle-1.10.2.min.js?slice=001-000&dc=HKG, line 3: NS_ERROR_NOT_INITIALIZED: 
+1590395955857	Marionette	INFO	Stopped listening on port 11140
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1590395962875	mozrunner::runner	INFO	Running command: "G:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELENAT~1\\AppData\\Local\\Temp\\rust_mozprofileWc6ODe"
+1590395965242	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1590395965377	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1590395965378	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1590395965378	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1590395965378	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1590395979737	Marionette	INFO	Listening on port 11284
+1590395980088	Marionette	WARN	TLS certificate errors will be ignored for this session
+1590396229240	Marionette	INFO	Stopped listening on port 11284
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1590396235157	mozrunner::runner	INFO	Running command: "G:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELENAT~1\\AppData\\Local\\Temp\\rust_mozprofileIFbiwY"
+1590396236566	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1590396236618	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1590396236618	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1590396236618	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1590396236618	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1590396242743	Marionette	INFO	Listening on port 11450
+1590396243096	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1590396527655	Marionette	INFO	Stopped listening on port 11450
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+bextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1590396349532	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1590396349532	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1590396349532	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1590396349532	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1590396353522	Marionette	INFO	Listening on port 11551
+1590396353638	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://redrivergloalamo.b2clogin.com/redrivergloalamo.onmicrosoft.com/oauth2/v2.0/authorize?p=b2c_1_alamo_prototype_signin&client_id=e985fe72-999e-40c7-b36b-2dbe6d966b6c&redirect_uri=https%3A%2F%2Frralamotest.z21.web.core.windows.net%2Fsignin-callback&response_type=id_token%20token&scope=https%3A%2F%2Fredrivergloalamo.onmicrosoft.com%2Fe985fe72-999e-40c7-b36b-2dbe6d966b6c%2Fcustomers.read%20openid%20profile&state=f27b547375ef4649b6ee9daa7258c6ec&nonce=8eb0e81c8af34098860cd35c288d5118, line 16: TypeError: f[0] is undefined
+1590396526135	Marionette	INFO	Stopped listening on port 11551
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1590396403883	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1590396407925	Marionette	INFO	Listening on port 11627
+1590396407987	Marionette	WARN	TLS certificate errors will be ignored for this session
+1590396530661	Marionette	INFO	Stopped listening on port 11627
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+bextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1590396439834	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1590396439834	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1590396439834	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1590396439834	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1590396443961	Marionette	INFO	Listening on port 11691
+1590396444072	Marionette	WARN	TLS certificate errors will be ignored for this session
+1590396502892	Marionette	INFO	Stopped listening on port 11691
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+"-profile" "C:\\Users\\ELENAT~1\\AppData\\Local\\Temp\\rust_mozprofileFKqixy"
+1590396485140	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1590396485181	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1590396485181	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1590396485181	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1590396485181	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1590396489735	Marionette	INFO	Listening on port 11758
+1590396489813	Marionette	WARN	TLS certificate errors will be ignored for this session
+1590396519935	Marionette	INFO	Stopped listening on port 11758
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1590396524495	mozrunner::runner	INFO	Running command: "G:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELENAT~1\\AppData\\Local\\Temp\\rust_mozprofileDEIEYf"
+1590396529267	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1590396529376	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1590396529377	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1590396529377	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1590396529378	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1590396534672	mozrunner::runner	INFO	Running command: "G:\\Program Files (x86)\\Mozilla Firefox\\firef1590396535806	Marionette	INFO	Listening on port 11828
+1590396535887	Marionette	WARN	TLS certificate errors will be ignored for1590396537553	a1590396552860	Marionette	INFO	Stopped listening on port 11828
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+tus
+1590396537641	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1590396537641	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1590396537642	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1590396537643	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1590396544792	Marionette	INFO	Listening on port 11869
+1590396545083	Marionette	WARN	TLS certificate errors will be ignored for this session
+1590396557223	mozrunner::runner	INFO	Running command: "G:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELENAT~1\\AppData\\Local\\Temp\\rust_mozprofile0NyGKn"
+1590396559132	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1590396559182	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1590396559182	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1590396559183	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1590396559183	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1590396565982	Marionette	INFO	Listening on port 11959
+1590396566258	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x38012A,name=PContent::Msg_AsyncMessage) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1590396581442	mozrunner::runner	INFO	Running command: "G:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELENAT~1\\AppData\\Local\\Temp\\rust_mozprofilesSvFfR"
+1590396583076	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1590396583135	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1590396583135	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1590396583135	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1590396583136	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1590396588404	Marionette	INFO	Listening on port 12023
+1590396588877	Marionette	WARN	TLS certificate errors will be ignored for this session
+1590397019992	Marionette	INFO	Stopped listening on port 12023
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
