@@ -6,19 +6,6 @@ from selenium.common.exceptions import  NoSuchElementException
 from utils.logger import logger
 class CustomerRecordPage(BasePage):
 
-    def customer_operator(self,action,select_option):
-        """
-        #Customer增删改查
-        :param  action : Actions,History
-        :param  select_option : New, Edit, Delete
-        :return:
-        """
-        #点击操作按钮
-        self.click(CustomerRecordEntity().get_top_button(action))
-        #点击Actions 选择二级按钮
-        if select_option != "":
-            self.click(CustomerRecordEntity().get_action_submenu(select_option))
-
     def switch_tab(self,tabName):
         """
         #Customer Record 切换tab页
@@ -27,7 +14,6 @@ class CustomerRecordPage(BasePage):
         """
         self.find_element_by_wait("xpath",CustomerRecordEntity().get_record_tab(tabName))
         self.click(CustomerRecordEntity().get_record_tab(tabName))
-
 
     def entity_operator(self,sectionName,buttonName,row):
         """
@@ -298,12 +284,6 @@ class CustomerRecordPage(BasePage):
                 return True
         else:
             self.click(CustomerRecordEntity().get_action(acitonName))
-            if acitonName == "New":
-                url = self.find_element(CustomerRecordEntity().get_action("New")).get_attribute('href')
-                if "https://rralamotest.z21.web.core.windows.net/customers/new" == url:
-                    return True
-                else:
-                    return False
 
 
 
