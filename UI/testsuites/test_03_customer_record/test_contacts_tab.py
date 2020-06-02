@@ -16,7 +16,7 @@ class Contacts_Email_Phone(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.driver = driver
-        # TopMenuPage(cls.driver).get_url()
+        TopMenuPage(cls.driver).get_url()
         HomePage(cls.driver).quick_entrance("Customers","C000089009",2)
 
     def test_01_email_new(self):

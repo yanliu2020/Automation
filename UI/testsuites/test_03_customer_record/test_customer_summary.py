@@ -18,27 +18,5 @@ class Customer_Summary(unittest.TestCase):
         TopMenuPage(cls.driver).get_url()
         HomePage(cls.driver).quick_entrance("Customers","C000089009",2)
 
-    def test_01_entrance_history(self):
-        u"""show customer history"""
-        CustomerRecordPage(self.driver).switch_tab("Entity")
-        self.assertTrue(CustomerRecordPage(self.driver).top_operate("History",""))
 
 
-    def test_02_customer_detail(self):
-        u"""show customer detail"""
-        CustomerRecordPage(self.driver).entity_operator("Customer Summary", "Details","")
-        self.assertTrue(CustomerRecordPage(self.driver).detail_history("Details"))
-
-    # def test_03_customer_edit(self):
-    #     u"""edit customer"""
-    #     CustomerRecordPage(self.driver).entity_operator("Customer Summary", "Edit", "")
-
-    def test_04_customer_history(self):
-        u"""show customer history"""
-        CustomerRecordPage(self.driver).entity_operator("Customer Summary", "History", "")
-        self.assertTrue(CustomerRecordPage(self.driver).detail_history("History"))
-
-
-    # def test_05_customer_New(self):
-    #     u"""New forward"""
-    #     CustomerRecordPage(self.driver).top_operate("Actions","New")

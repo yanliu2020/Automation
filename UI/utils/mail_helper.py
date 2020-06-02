@@ -30,6 +30,7 @@ file_path = config_path + 'config.ini'
 config.read(file_path)
 
 url = config.get("testServer", "URL")
+browser = config.get("browserType","browserName")
 
 
 def send_mail(file_new):
@@ -41,7 +42,7 @@ def send_mail(file_new):
 
     # 编写 HTML类型的邮件正文
     msg = MIMEMultipart()
-    msg['Subject'] = Header(u"Automation Test Report(" + url + ")", 'utf-8')
+    msg['Subject'] = Header(u"UI Automation Test Report(" + url + ")("+ browser +")", 'utf-8')
     msg["From"] = "{}".format(sender)
     # 判断totest=1  接收方为to_list1中的收件人  非1为to_list2中的收件人
     if totest == 1:

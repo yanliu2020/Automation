@@ -282,6 +282,12 @@ class CustomerRecordPage(BasePage):
             if "History" in title:
                 self.execute_script_click(CustomerRecordEntity.entity_close)
                 return True
+        elif buttonName == "Delete":
+            self.click(CustomerRecordEntity.delete_confirm)
+            if 'successfully' in self.get_tips_msg():
+                return True
+            else:
+                return False
         else:
             self.click(CustomerRecordEntity().get_action(acitonName))
 
