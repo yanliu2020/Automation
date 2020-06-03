@@ -164,12 +164,12 @@ class CustomerRecordPage(BasePage):
         :param : type,identifierNo
         :return:
         """
-        self.drop_select(CustomerRecordEntity.addressType,addressType)
-        self.ctrl_all(CustomerRecordEntity.address1)
-        self.type(CustomerRecordEntity.address1,address1)
-        self.ctrl_all(CustomerRecordEntity.city)
-        self.type(CustomerRecordEntity.city,city)
-        self.drop_select(CustomerRecordEntity.stateCode, stateCode)
+        self.drop_select(CustomerRecordEntity().get_address_select("addressType"),addressType)
+        self.ctrl_all(CustomerRecordEntity().get_address_input("address1"))
+        self.type(CustomerRecordEntity().get_address_input("address1"),address1)
+        self.ctrl_all(CustomerRecordEntity().get_address_input("city"))
+        self.type(CustomerRecordEntity().get_address_input("city"),city)
+        self.drop_select(CustomerRecordEntity().get_address_select("stateCode"), stateCode)
         self.click(CustomerRecordEntity.save)
         # msg = self.get_tips_msg()
         if "successfully" in self.get_tips_msg():
@@ -214,15 +214,15 @@ class CustomerRecordPage(BasePage):
         :param : salutation,firstName,middleName,lastName,suffix,contactRole
         :return:
         """
-        self.drop_select(CustomerRecordEntity.salutation,salutation)
-        self.ctrl_all(CustomerRecordEntity.firstName)
-        self.type(CustomerRecordEntity.firstName,firstName)
-        self.ctrl_all(CustomerRecordEntity.middleName)
-        self.type(CustomerRecordEntity.middleName,middleName)
-        self.ctrl_all(CustomerRecordEntity.lastName)
-        self.type(CustomerRecordEntity.lastName,lastName)
-        self.drop_select(CustomerRecordEntity.suffix, suffix)
-        self.drop_select(CustomerRecordEntity.contactRole, contactRole)
+        self.drop_select(CustomerRecordEntity().get_contact_select("salutation"),salutation)
+        self.ctrl_all(CustomerRecordEntity().get_contact_input("firstName"))
+        self.type(CustomerRecordEntity().get_contact_input("firstName"),firstName)
+        self.ctrl_all(CustomerRecordEntity().get_contact_input("middleName"))
+        self.type(CustomerRecordEntity().get_contact_input("middleName"),middleName)
+        self.ctrl_all(CustomerRecordEntity().get_contact_input("lastName"))
+        self.type(CustomerRecordEntity().get_contact_input("lastName"),lastName)
+        self.drop_select(CustomerRecordEntity().get_contact_select("suffix"), suffix)
+        self.drop_select(CustomerRecordEntity().get_contact_select("contactRole"), contactRole)
         self.click(CustomerRecordEntity.save)
         # msg = self.get_tips_msg()
         if "successfully" in self.get_tips_msg():
@@ -236,10 +236,10 @@ class CustomerRecordPage(BasePage):
         :param : email,type,isPrimary
         :return:
         """
-        self.ctrl_all(CustomerRecordEntity.emailAddress)
-        self.type(CustomerRecordEntity.emailAddress, email)
-        self.drop_select(CustomerRecordEntity.emailType, type)
-        self.drop_select(CustomerRecordEntity.isPrimary, isPrimary)
+        self.ctrl_all(CustomerRecordEntity().get_email_input("emailAddress"))
+        self.type(CustomerRecordEntity().get_email_input("emailAddress"), email)
+        self.drop_select(CustomerRecordEntity().get_email_select("emailType"), type)
+        self.drop_select(CustomerRecordEntity().get_email_select("isPrimary"), isPrimary)
         self.click(CustomerRecordEntity.save)
         # msg = self.get_tips_msg()
         if 'successfully' in self.get_tips_msg():
@@ -253,15 +253,15 @@ class CustomerRecordPage(BasePage):
         :param : countryCode,type,areaCode,phone,exetension
         :return:
         """
-        # self.ctrl_all(CustomerRecordEntity.countryCode)
-        # self.type(CustomerRecordEntity.countryCode, countryCode)
-        self.drop_select(CustomerRecordEntity.phoneType, type)
-        self.ctrl_all(CustomerRecordEntity.areaCode)
-        self.type(CustomerRecordEntity.areaCode, areaCode)
-        self.ctrl_all(CustomerRecordEntity.phoneNumber)
-        self.type(CustomerRecordEntity.phoneNumber, phone)
-        self.ctrl_all(CustomerRecordEntity.phoneExtension)
-        self.type(CustomerRecordEntity.phoneExtension, exetension)
+        # self.ctrl_all(CustomerRecordEntity().phone_input("countryCode"))
+        # self.type(CustomerRecordEntity().phone_input("countryCode"), countryCode)
+        self.drop_select(CustomerRecordEntity().get_phone_select("phoneType"), type)
+        self.ctrl_all(CustomerRecordEntity().get_phone_input("areaCode"))
+        self.type(CustomerRecordEntity().get_phone_input("areaCode"), areaCode)
+        self.ctrl_all(CustomerRecordEntity().get_phone_input("phone"))
+        self.type(CustomerRecordEntity().get_phone_input("phone"), phone)
+        self.ctrl_all(CustomerRecordEntity().get_phone_input("extension"))
+        self.type(CustomerRecordEntity().get_phone_input("extension"), exetension)
         self.click(CustomerRecordEntity.save)
         # msg = self.get_tips_msg()
         if 'successfully' in self.get_tips_msg():

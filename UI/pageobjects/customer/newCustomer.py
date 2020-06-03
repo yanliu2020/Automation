@@ -19,14 +19,19 @@ class NewCustomerPage(BasePage):
         self.drop_select(NewCustomerEntity().get_entity("entityClass"), entityClass)
         if entityType == "Person":
             if entityClass == "Household":
+                self.ctrl_all(NewCustomerEntity().get_entity_input("fullName"))
                 self.type(NewCustomerEntity().get_entity_input("fullName"), fullName)
+                self.ctrl_all(NewCustomerEntity().get_entity_input("defaultSort"))
                 self.type(NewCustomerEntity().get_entity_input("defaultSort"), default_sort)
             else:
                 self.drop_select(NewCustomerEntity().get_entity_select("salutation"), salutation)
+                self.ctrl_all(NewCustomerEntity().get_entity_input("firstName"))
                 self.type(NewCustomerEntity().get_entity_input("firstName"), firstName)
+                self.ctrl_all(NewCustomerEntity().get_entity_input("lastName"))
                 self.type(NewCustomerEntity().get_entity_input("lastName"), lastName)
                 self.drop_select(NewCustomerEntity().get_entity_select("suffix"), suffix)
         else:
+            self.ctrl_all(NewCustomerEntity().get_entity_input("organizationName"))
             self.type(NewCustomerEntity().get_entity_input("organizationName"), organizationName)
             if entityClass == "Trust/Estate":
                 self.drop_select(NewCustomerEntity().get_entity_select("stateOfIncorporation"), stateOfIncorporation)

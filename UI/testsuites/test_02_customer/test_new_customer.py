@@ -73,9 +73,7 @@ class New_Customer(unittest.TestCase):
         CustomerRecordPage(self.driver).entity_operator("Customer Summary", "Details", "")
         self.assertTrue(CustomerRecordPage(self.driver).detail_history("Details"))
 
-        # def test_06_customer_edit(self):
-        #     u"""edit customer"""
-        #     CustomerRecordPage(self.driver).entity_operator("Customer Summary", "Edit", "")
+
 
     def test_07_customer_history(self):
         u"""show customer history"""

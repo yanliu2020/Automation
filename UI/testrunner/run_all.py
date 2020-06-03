@@ -10,10 +10,15 @@ sys.path.append(project_path)
 ##
 
 import unittest
+import threading
 from utils import HTMLTestRunner
 from utils.datetime_helper import to_number
 from utils.mail_helper import send_mail
 from utils.basepath_helper import testsuites_path,report_path
+from utils.browser_engine import  BrowserEngine
+from configparser import ConfigParser
+from utils.basepath_helper import logs_path, project_path, drivers_path, config_path,utils_path
+from utils.logger import logger
 FileName = to_number()
 
 #待执行用例的目录
@@ -27,7 +32,7 @@ def runtest():
         for test_case in test_suite:
             #添加用例到testcase
             testcase.addTest(test_case)
-    # return testcase
+    return testcase
 
     file_home= report_path + FileName + '_report.html'
     fp=open(file_home,"wb")
@@ -39,7 +44,22 @@ def runtest():
 
 
 if __name__=="__main__":
-    runtest()
+    # runtest()
+
+    data = {
+        "Firefox": "https://rralamotest.z21.web.core.windows.net/",
+        "Chrome": "https://rralamotest.z21.web.core.windows.net/"
+    }
+    threads = []
+    for browser, url in data.items():
+        # 多线程
+        t1 = threading.Thread(target=runtest, args=(browser, url))
+        threads.append(t1)
+    # 启动
+    for t2 in threads:
+        t2.start()
+        t2.join()  # 此处注释掉会同时运行。但同时运行可能会出现遮挡导致有问题哦。
+
     from utils.browser_engine import Browser
     Browser.quit_browser()
 

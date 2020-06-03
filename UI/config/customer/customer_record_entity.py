@@ -80,40 +80,55 @@ class CustomerRecordEntity(object):
     #contact记录数
     contact_list_page = "xpath=>//span[@class='glo-table-pagination']"
 
-    #contacts
-    salutation = "xpath=>//select[@name='salutation']"
-    firstName = "xpath=>//input[@name='firstName']"
-    middleName = "xpath=>//input[@name='middleName']"
-    lastName = "xpath=>//input[@name='lastName']"
-    suffix = "xpath=>//select[@name='suffix']"
-    contactRole = "xpath=>//select[@name='contactRole']"
+    #contacts:salutation,firstName，middleName，lastName，
+    contact_input = "xpath=>//input[@name='%s']"
+    def get_contact_input(self,loc):
+        return self.contact_input %loc
 
-    #email
-    emailAddress = "xpath=>//input[@name='emailAddress']"
-    emailType = "xpath=>//select[@name='emailType']"
-    isPrimary = "xpath=>//select[@name='isPrimary']"
+    #suffix, contactRole
+    contact_select = "xpath=>//select[@name='%s']"
+    def get_contact_select(self,loc):
+        return self.contact_select %loc
 
-    #phone
-    countryCode = "xpath=>//input[@name='countryCode']"
-    phoneType = "xpath=>//select[@name='phoneType']"
-    areaCode = "xpath=>//input[@name='areaCode']"
-    phoneNumber = "xpath=>//input[@name='phone']"
-    phoneExtension = "xpath=>//input[@name='extension']"
+
+    #email:emailAddress
+    email_input = "xpath=>//input[@name='%s']"
+    def get_email_input(self,loc):
+        return self.email_input %loc
+    #emailType, isPrimary
+    email_select = "xpath=>//select[@name='%s']"
+    def get_email_select(self,loc):
+        return  self.email_select %loc
+
+    #phone:countryCode,areaCode,phone,extension
+    phone_input = "xpath=>//input[@name='%s']"
+    def get_phone_input(self,loc):
+        return self.phone_input %loc
+    #phoneType
+    phone_select = "xpath=>//select[@name='%s']"
+    def get_phone_select(self,loc):
+        return  self.phone_select %loc
+
+
 
     #identifier
     identifierName = "xpath=>//select[@name='name']"
     identifier = "xpath=>//input[@name='identifier']"
 
-    #address
-    attentionLine = "xpath=>//input[@name='attentionLine']"
-    address1 = "xpath=>//input[@name='address1']"
-    address2 = "xpath=>//input[@name='address2']"
-    city = "xpath=>//input[@name='city']"
-    postalCode = "xpath=>//input[@name='postalCode']"
-    addressType = "xpath=>//select[@name='addressType']"
-    stateCode = "xpath=>//select[@name='stateCode']"
-    country = "xpath=>//select[@name='country']"
+    #address:attentionLine,address1,address2,city,postalCode
+    address_input = "xpath=>//input[@name='%s']"
+    def get_address_input(self,loc):
+        return self.address_input %loc
+    #addressType，stateCode，country
+    address_select = "xpath=>//select[@name='%s']"
+    def get_address_select(self,loc):
+        return  self.address_select %loc
 
+
+    #entityType, entityClass
+    entity = "xpath=>//select[@name='%s']"
+    def get_entity(self,loc):
+        return self.entity %loc
 
 
 
