@@ -46,7 +46,7 @@ class BrowserEngine(object):
             self.driver = webdriver.Ie(self.ie_driver_path)
             logger.info("Starting IE browser.")
         elif browser == "Edge":
-            self.driver = webdriver.Edge("C:\Windows\SysWOW64\MicrosoftWebDriver.exe")
+            self.driver = webdriver.Edge(self.edge_driver_path)
             logger.info("Starting Edge browser.")
 
         self.driver.maximize_window()

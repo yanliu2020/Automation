@@ -32,33 +32,31 @@ def runtest():
         for test_case in test_suite:
             #添加用例到testcase
             testcase.addTest(test_case)
-    return testcase
+    # return testcase
 
     file_home= report_path + FileName + '_report.html'
     fp=open(file_home,"wb")
-    runner=HTMLTestRunner.HTMLTestRunner(stream=fp,
-                                         title="UI Automation Test Report",
-                                         description="TestCase Execution:")
+    proclist = []
+    s = 0
+    for i in testcase:
+        runner = HTMLTestRunner.HTMLTestRunner(stream=fp,
+                                               title="UI Automation Test Report",
+                                               description="TestCase Execution:")
+        proc = threading.Thread(target=runner.run, args=(i,))
+        proclist.append(proc)
+        s = s + 1
+        for proc in proclist:
+            proc.start()
+        for proc in proclist:
+            proc.join()
+        fp.close()
 
-    runner.run(testcase)
+    # runner.run(testcase)
 
 
 if __name__=="__main__":
     # runtest()
 
-    data = {
-        "Firefox": "https://rralamotest.z21.web.core.windows.net/",
-        "Chrome": "https://rralamotest.z21.web.core.windows.net/"
-    }
-    threads = []
-    for browser, url in data.items():
-        # 多线程
-        t1 = threading.Thread(target=runtest, args=(browser, url))
-        threads.append(t1)
-    # 启动
-    for t2 in threads:
-        t2.start()
-        t2.join()  # 此处注释掉会同时运行。但同时运行可能会出现遮挡导致有问题哦。
 
     from utils.browser_engine import Browser
     Browser.quit_browser()

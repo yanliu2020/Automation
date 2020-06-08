@@ -288,3 +288,56 @@ JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't fin
 
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
+1591602288632	mozrunner::runner	INFO	Running command: "G:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\ELENAT~1\\AppData\\Local\\Temp\\rust_mozprofileIRSKU4"
+1591602293427	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1591602293569	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1591602293569	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1591602293569	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1591602293569	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1591602300206	Marionette	INFO	Listening on port 4972
+1591602300315	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+[GFX1-]: Failed to create DrawTarget, Type: 5 Size: Size(12800,72)
+1591602322333	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:245:13
+TimedPromise@chrome://marionette/content/sync.js:230:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:416:10
+webdriverClickElement@chrome://marionette/content/interaction.js:182:31
+JavaScript warning: http://g.alicdn.com/secdev/sufei_data/3.9.0/index.js, line 1: WebGL context was lost.
+JavaScript warning: http://g.alicdn.com/secdev/sufei_data/3.9.0/index.js, line 1: WebGL context was lost.
+JavaScript warning: http://g.alicdn.com/secdev/sufei_data/3.9.0/index.js, line 1: WebGL context was lost.
+JavaScript warning: http://g.alicdn.com/secdev/sufei_data/3.9.0/index.js, line 1: WebGL context was lost.
+JavaScript warning: http://g.alicdn.com/secdev/sufei_data/3.9.0/index.js, line 1: WebGL context was lost.
+JavaScript warning: http://g.alicdn.com/secdev/sufei_data/3.9.0/index.js, line 1: WebGL context was lost.
+1591602329946	Marionette	INFO	Stopped listening on port 4972
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+

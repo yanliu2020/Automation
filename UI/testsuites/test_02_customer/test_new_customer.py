@@ -16,12 +16,6 @@ class newCustomer(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.driver = driver
-
-        # chrome_driver_path = drivers_path + 'chromedriver.exe'
-        # driverOptions = webdriver.ChromeOptions()
-        # driverOptions.add_argument(r"user-data-dir=C:\Users\ElenaTang\AppData\Local\Google\Chrome\User Data")
-        # print(driverOptions)
-        # cls.driver = webdriver.Chrome(chrome_driver_path, 0, driverOptions)
         # TopMenuPage(cls.driver).get_url()
 
     def test_01_new_individual(self):
@@ -47,7 +41,9 @@ class newCustomer(unittest.TestCase):
     def test_03_new_company(self):
         u"""New Company"""
         # TopMenuPage(self.driver).select_multiple_menu(2, "customers", "New", "", "")
-        CustomerRecordPage(self.driver).top_operate("Actions ", "New")
+        TopMenuPage(self.driver).is_homepage()
+        HomePage(self.driver).quick_entrance("Customers", "Add New", 0)
+        # CustomerRecordPage(self.driver).top_operate("Actions ", "New")
         NewCustomerPage(self.driver).business_entity("Organization", "Company", "", "", "", "", "",
                                                      "", "UI Company", "Limited Liability Company", "AZ")
         NewCustomerPage(self.driver).contact(1, 1, "contact1", "contact1", "CPA", "Business", "test1@qq.com", "123",
