@@ -31,7 +31,7 @@ class CustomerRecordPage(BasePage):
         if section_item is None:
             logger.info(msg="sectionName %s not found!" % sectionName)
         else:
-            #self.scroll_into_view(CustomerRecordEntity().get_section_name(sectionName))
+            self.scroll_into_view(CustomerRecordEntity().get_section_name(sectionName))
             if sectionName == "Customer Summary" or buttonName == "New":
                 self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
             else:
@@ -59,7 +59,7 @@ class CustomerRecordPage(BasePage):
         if section_item is None:
             raise NoSuchElementException(msg="sectionName %s not found!" % sectionName)
         else:
-            #self.scroll_into_view(CustomerRecordEntity().get_section_name(sectionName))
+            self.scroll_into_view(CustomerRecordEntity().get_section_name(sectionName))
             if sectionName == "Contacts":
                 if buttonName != "New" and self.contact_list_page() == True:
                     if self.not_selected(section_item[0],row) == True:
@@ -278,10 +278,13 @@ class CustomerRecordPage(BasePage):
         #self.scroll_into_view(CustomerRecordEntity().get_customer_operate(buttonName))
         self.click(CustomerRecordEntity().get_customer_operate(buttonName))
         if buttonName == "History":
-            title = self.find_element(CustomerRecordEntity.entity_title).text
-            if "History" in title:
-                self.execute_script_click(CustomerRecordEntity.entity_close)
+            self.sleep(1)
+            title = self.find_element(CustomerRecordEntity.contact_title).text
+            if buttonName in title:
+                self.execute_script_click(CustomerRecordEntity.contact_close)
                 return True
+            else:
+                return False
         elif buttonName == "Delete":
             self.click(CustomerRecordEntity.delete_confirm)
             if 'successfully' in self.get_tips_msg():
@@ -291,6 +294,34 @@ class CustomerRecordPage(BasePage):
         else:
             self.click(CustomerRecordEntity().get_action(acitonName))
 
+    def edit_entity(self,entityType,entityClass,salutation,firstName,lastName,suffix,fullName,default_sort,organizationName,typeOfBusiness,stateOfIncorporation):
+        """
+        #Edit multiple type customer
+        :param  type,className
+        :param  salutation,firstName,lastName,suffix,fullName,default_sort,organizationName,typeOfBusiness,stateOfIncorporation
+        :return:
+        """
+        self.drop_select(CustomerRecordEntity().get_entity("typeName"), entityType)
+        self.drop_select(CustomerRecordEntity().get_entity("entityClass"), entityClass)
+        if entityType == "Person":
+            if entityClass == "Household":
+                self.ctrl_all(CustomerRecordEntity().get_edit_input("fullName"))
+                self.type(CustomerRecordEntity().get_edit_input("fullName"), fullName)
+                self.ctrl_all(CustomerRecordEntity().get_edit_input("defaultSort"))
+                self.type(CustomerRecordEntity().get_edit_input("defaultSort"), default_sort)
+            else:
+                self.drop_select(CustomerRecordEntity().get_edit_select("salutation"), salutation)
+                self.ctrl_all(CustomerRecordEntity().get_edit_input("firstName"))
+                self.type(CustomerRecordEntity().get_edit_input("firstName"), firstName)
+                self.ctrl_all(CustomerRecordEntity().get_edit_input("lastName"))
+                self.type(CustomerRecordEntity().get_edit_input("lastName"), lastName)
+                self.drop_select(CustomerRecordEntity().get_edit_select("suffix"), suffix)
+        else:
+            self.ctrl_all(CustomerRecordEntity().get_edit_input("organizationName"))
+            self.type(CustomerRecordEntity().get_edit_input("organizationName"), organizationName)
+            if entityClass == "Company" or entityClass == "Government":
+                self.drop_select(CustomerRecordEntity().get_edit_select("subClassName"), typeOfBusiness)
+            self.drop_select(CustomerRecordEntity().get_edit_select("stateOfIncorporation"), stateOfIncorporation)
 
 
 

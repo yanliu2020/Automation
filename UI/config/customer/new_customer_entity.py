@@ -4,7 +4,7 @@ class NewCustomerEntity(object):
     #搜索页面
     assert_title = "xpath=>//div[@class='content-container']/h1"
 
-    #entityType, entityClass
+    #typeName, entityClass
     entity = "xpath=>//select[@name='%s']"
     def get_entity(self,loc):
         return self.entity %loc

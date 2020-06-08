@@ -5,7 +5,6 @@ class CustomerRecordEntity(object):
     customer_operate = "xpath=>//div[@class='btn-toolbar']/button[text()='%s']"
     def get_customer_operate(self,loc):
         return self.customer_operate %loc
-
     #Actions下拉点击
     action = "xpath=>//div[@class='btn-toolbar show']/ul//a[text()='%s']"
     def get_action(self,loc):
@@ -18,7 +17,6 @@ class CustomerRecordEntity(object):
 
     #各页签下section
     section_list = "xpath=>//div[@class='card']//div//h4"
-
     #section名称
     section_name = "xpath=>//div[@class='card']//div//h4[text()='%s']"
     def get_section_name(self,loc):
@@ -42,7 +40,6 @@ class CustomerRecordEntity(object):
 
     #Related Leases/Lands>>Lands,Mineral Leases，Surface Leases，Surface Projects
     related_section_list = "xpath=>//div[@class='reactTable-full']/div//h3"
-
     #Related Leases/Lands下的操作按钮
     related_section_operator = "xpath=>//div[@class='reactTable-full']/div[%s]//a[text()=' %s']"
     def get_related_operator(self,loc1,loc2):
@@ -84,12 +81,10 @@ class CustomerRecordEntity(object):
     contact_input = "xpath=>//input[@name='%s']"
     def get_contact_input(self,loc):
         return self.contact_input %loc
-
     #suffix, contactRole
     contact_select = "xpath=>//select[@name='%s']"
     def get_contact_select(self,loc):
         return self.contact_select %loc
-
 
     #email:emailAddress
     email_input = "xpath=>//input[@name='%s']"
@@ -109,8 +104,6 @@ class CustomerRecordEntity(object):
     def get_phone_select(self,loc):
         return  self.phone_select %loc
 
-
-
     #identifier
     identifierName = "xpath=>//select[@name='name']"
     identifier = "xpath=>//input[@name='identifier']"
@@ -124,12 +117,18 @@ class CustomerRecordEntity(object):
     def get_address_select(self,loc):
         return  self.address_select %loc
 
-
     #entityType, entityClass
     entity = "xpath=>//select[@name='%s']"
     def get_entity(self,loc):
         return self.entity %loc
 
-
+    #firstName lastName fullName  defaultSort  organizationName,
+    entity_edit_input = "xpath=>//input[@name='%s']"
+    def get_edit_input(self,loc):
+        return self.entity_edit_input %loc
+    entity_edit_select = "xpath=>//select[@name='%s']"
+    #salutation suffix subClassName stateOfIncorporation
+    def get_edit_select(self,loc):
+        return self.entity_edit_select %loc
 
 

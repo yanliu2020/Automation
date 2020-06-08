@@ -101,6 +101,11 @@ class TopMenuPage(BasePage):
             return True
 
 
+    def is_homepage(self):
+        self.find_element_by_wait("id", TopMenuEntity.logo)
+        self.click(TopMenuEntity.logo)
+
+
 
 
 

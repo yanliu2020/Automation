@@ -10,14 +10,15 @@ from pageobjects.customer.customerRecord import CustomerRecordPage
 
 nowTime = datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S")
 
-class Contacts_Email_Phone(unittest.TestCase):
+class contacts_tab(unittest.TestCase):
 
     # 初始化，打开浏览器，并进行登录(实例化)
     @classmethod
     def setUpClass(cls):
         cls.driver = driver
-        TopMenuPage(cls.driver).get_url()
-        HomePage(cls.driver).quick_entrance("Customers","C000089009",2)
+        # TopMenuPage(cls.driver).get_url()
+        TopMenuPage(cls.driver).is_homepage()
+        HomePage(cls.driver).quick_entrance("Customers","C000089464",2)
 
     def test_01_email_new(self):
         u"""new contact email"""

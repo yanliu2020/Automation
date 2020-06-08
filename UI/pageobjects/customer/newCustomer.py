@@ -15,29 +15,22 @@ class NewCustomerPage(BasePage):
           :param  salutation,firstName,lastName,suffix,fullName,default_sort,organizationName,typeOfBusiness,stateOfIncorporation
           :return:
         """
-        self.drop_select(NewCustomerEntity().get_entity("entityType"), entityType)
+        self.drop_select(NewCustomerEntity().get_entity("typeName"), entityType)
         self.drop_select(NewCustomerEntity().get_entity("entityClass"), entityClass)
         if entityType == "Person":
             if entityClass == "Household":
-                self.ctrl_all(NewCustomerEntity().get_entity_input("fullName"))
                 self.type(NewCustomerEntity().get_entity_input("fullName"), fullName)
-                self.ctrl_all(NewCustomerEntity().get_entity_input("defaultSort"))
                 self.type(NewCustomerEntity().get_entity_input("defaultSort"), default_sort)
             else:
                 self.drop_select(NewCustomerEntity().get_entity_select("salutation"), salutation)
-                self.ctrl_all(NewCustomerEntity().get_entity_input("firstName"))
                 self.type(NewCustomerEntity().get_entity_input("firstName"), firstName)
-                self.ctrl_all(NewCustomerEntity().get_entity_input("lastName"))
                 self.type(NewCustomerEntity().get_entity_input("lastName"), lastName)
                 self.drop_select(NewCustomerEntity().get_entity_select("suffix"), suffix)
         else:
-            self.ctrl_all(NewCustomerEntity().get_entity_input("organizationName"))
             self.type(NewCustomerEntity().get_entity_input("organizationName"), organizationName)
-            if entityClass == "Trust/Estate":
-                self.drop_select(NewCustomerEntity().get_entity_select("stateOfIncorporation"), stateOfIncorporation)
-            else:
-                self.drop_select(NewCustomerEntity().get_entity_select("typeOfBusiness"), typeOfBusiness)
-                self.drop_select(NewCustomerEntity().get_entity_select("stateOfIncorporation"), stateOfIncorporation)
+            if entityClass == "Company" or entityClass == "Government":
+                self.drop_select(NewCustomerEntity().get_entity_select("subClassName"), typeOfBusiness)
+            self.drop_select(NewCustomerEntity().get_entity_select("stateOfIncorporation"), stateOfIncorporation)
 
     def add_remove(self,sectionName):
         """
@@ -54,11 +47,11 @@ class NewCustomerPage(BasePage):
         :return:
         """
         self.click(NewCustomerEntity().get_add_remove(sectionName))
-        self.drop_select(CustomerRecordEntity.addressType,addressType)
-        self.type(CustomerRecordEntity.address1,address1)
-        self.type(CustomerRecordEntity.city,city)
-        self.drop_select(CustomerRecordEntity.stateCode, stateCode)
-        self.type(CustomerRecordEntity.postalCode, postalCode)
+        self.type(CustomerRecordEntity().get_address_input("address1"), address1)
+        self.drop_select(CustomerRecordEntity().get_address_select("addressType"),addressType)
+        self.type(CustomerRecordEntity().get_address_input("city"),city)
+        self.drop_select(CustomerRecordEntity().get_address_select("stateCode"), stateCode)
+        self.type(CustomerRecordEntity().get_address_input("postalCode"), postalCode)
 
     def identifier(self,sectionName,type,identifierNo):
         """

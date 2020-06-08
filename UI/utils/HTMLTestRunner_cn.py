@@ -871,7 +871,7 @@ class _TestResult(TestResult):
 
 
 class HTMLTestRunner(Template_mixin):
-    def __init__(self, stream=sys.stdout, verbosity=1, title=None, description=None, retry=2, save_last_try=True):
+    def __init__(self, stream=sys.stdout, verbosity=1, title=None, description=None, retry=1, save_last_try=True):
         self.stream = stream
         self.retry = retry
         self.save_last_try = save_last_try
