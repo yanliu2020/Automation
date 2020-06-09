@@ -26,7 +26,7 @@ def allcase():
     # testsuite = unittest.TestSuite()
     # testsuite.addTest(discover)
     return discover
-    print (discover)
+
 
 def runcase(suite):
     filename = report_path + file_name + '_report.html'

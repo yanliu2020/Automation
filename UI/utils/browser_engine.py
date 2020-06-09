@@ -12,7 +12,7 @@ class BrowserEngine(object):
     chrome_driver_path = drivers_path + 'chromedriver.exe'
     firefox_driver_path = drivers_path + 'geckodriver.exe'
     ie_driver_path = drivers_path + 'IEDriverServer.exe'
-    edge_driver_path = drivers_path + 'MicrosoftWebDriver.exe'
+    edge_driver_path = 'C:\\Windows\\SysWOW64\\MicrosoftWebDriver.exe'
     geckodriver_path = utils_path + 'geckodriver.log'
 
     def __init__(self):
