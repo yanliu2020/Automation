@@ -34,8 +34,8 @@ def runtest():
 
 def testrun():
     runtest()
-    # from utils.browser_engine import Browser
-    # Browser.quit_browser()
+    from utils.browser_engine import Browser
+    Browser.quit_browser()
     send_mail(report_path + file_name + '_report.html')  # 发送测试报告
 
 

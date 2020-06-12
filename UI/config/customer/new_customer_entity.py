@@ -74,6 +74,9 @@ class NewCustomerEntity(object):
     def get_phone_type(self,loc1,loc2):
         return self.phone_type %(loc1,loc2)
 
+    #Contact 1 Same as Above
+    same_as = "id=>sameAs"
+
 
 
 

@@ -54,7 +54,7 @@ class TopMenuPage(BasePage):
         self.click(TopMenuEntity().get_first_menu(first_menu))
         #return second_menu
         second_menu_list = self.find_elements(TopMenuEntity.second_menu_list)
-        print(second_menu_list)
+        # print(second_menu_list)
         second_item = None
         for i, item2 in enumerate(second_menu_list):
             if second_menu == item2.text:
@@ -63,7 +63,7 @@ class TopMenuPage(BasePage):
 
         if level == 2:
             if second_item is None:
-                raise NoSuchElementException(msg="second_menu %s not found!" % second_menu)
+                logger.info(msg="second_menu %s not found!" % second_menu)
             else:
                 self.click(TopMenuEntity().get_second_menu(second_item[0]))
                 logger.info('second_menu: %s' % second_menu)
@@ -79,7 +79,7 @@ class TopMenuPage(BasePage):
                     third_item = (i + 1, item3)
                     break
             if third_item is None:
-                raise NoSuchElementException(msg="second_menu %s not found!" % third_menu)
+                logger.info(msg="third_menu %s not found!" % third_menu)
             else:
                 self.click(TopMenuEntity().get_third_menu(second_item[0], third_item[0]))
                 logger.info('third_menu: %s' % third_menu)

@@ -76,7 +76,7 @@ class NewCustomerPage(BasePage):
         else:
             return False
 
-    def contact(self,index,flag,firstName,lastName,role,emailType,email,areaCode,phone,type):
+    def contact(self,same,index,flag,firstName,lastName,role,emailType,email,areaCode,phone,type):
         """
         #Multiple Contact Information
         :param  index,flag,firstName,lastName,role,emailType,email,areaCode,phone,type
@@ -84,14 +84,18 @@ class NewCustomerPage(BasePage):
         """
         if index == 3:
             self.click(NewCustomerEntity().get_add_remove("Contact 2"))
-        self.type(NewCustomerEntity().get_contact_input(index,"firstName"),firstName)
-        self.type(NewCustomerEntity().get_contact_input(index, "lastName"), lastName)
-        self.drop_select(NewCustomerEntity().get_contact_role(index),role)
+        if same is False:
+            self.type(NewCustomerEntity().get_contact_input(index, "firstName"), firstName)
+            self.type(NewCustomerEntity().get_contact_input(index, "lastName"), lastName)
+        else:
+            self.click(NewCustomerEntity.same_as)
+        self.drop_select(NewCustomerEntity().get_contact_role(index), role)
         self.drop_select(NewCustomerEntity().get_email_type(index), emailType)
         self.type(NewCustomerEntity().get_email(index), email)
-        self.type(NewCustomerEntity().get_phone_input(index,flag,"areaCode"), areaCode)
-        self.type(NewCustomerEntity().get_phone_input(index,flag, "phone"), phone)
-        self.drop_select(NewCustomerEntity().get_phone_type(index,flag),type)
+        self.type(NewCustomerEntity().get_phone_input(index, flag, "areaCode"), areaCode)
+        self.type(NewCustomerEntity().get_phone_input(index, flag, "phone"), phone)
+        self.drop_select(NewCustomerEntity().get_phone_type(index, flag), type)
+
 
     def add_phone(self,sectionName,index,flag,areaCode,phone,type):
         """
@@ -103,6 +107,7 @@ class NewCustomerPage(BasePage):
         self.type(NewCustomerEntity().get_phone_input(index, flag, "areaCode"), areaCode)
         self.type(NewCustomerEntity().get_phone_input(index, flag, "phone"), phone)
         self.drop_select(NewCustomerEntity().get_phone_type(index, flag), type)
+
 
 
 

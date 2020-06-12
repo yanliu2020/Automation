@@ -1,0 +1,240 @@
+2020-06-12 09:37:13,099|browser_engine.py[line:27] INFO:You had select Chrome browser.
+2020-06-12 09:37:13,099|browser_engine.py[line:29] INFO:The test server url is: https://rralamotest.z21.web.core.windows.net/
+2020-06-12 09:37:16,051|browser_engine.py[line:44] INFO:Starting Chrome browser.
+2020-06-12 09:37:17,186|browser_engine.py[line:58] INFO:Maximize the current window.
+2020-06-12 09:37:43,912|browser_engine.py[line:61] INFO:Open url: https://rralamotest.z21.web.core.windows.net/
+2020-06-12 09:37:54,922|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='localAccount']//div[@class='intro']/h2
+2020-06-12 09:37:55,482|base_page.py[line:67] INFO:Had find the element ' Sign in with your existing account ' successful by xpath via value: //div[@class='localAccount']//div[@class='intro']/h2 
+2020-06-12 09:37:56,048|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-06-12 09:37:56,092|base_page.py[line:144] INFO:Clear text in input box before typing.
+2020-06-12 09:37:56,632|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-06-12 09:37:56,807|base_page.py[line:134] INFO:Had type ' yan.liu@an-chen.com ' in inputBox
+2020-06-12 09:37:57,364|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: password 
+2020-06-12 09:37:57,402|base_page.py[line:144] INFO:Clear text in input box before typing.
+2020-06-12 09:37:57,929|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: password 
+2020-06-12 09:37:58,110|base_page.py[line:134] INFO:Had type ' Lychan@2012 ' in inputBox
+2020-06-12 09:37:58,640|base_page.py[line:67] INFO:Had find the element ' Sign in ' successful by xpath via value: //div[@class='buttons']/button[text()='Sign in'] 
+2020-06-12 09:38:09,253|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@id='root']//div[@class='content-heading']
+2020-06-12 09:38:09,814|base_page.py[line:67] INFO:Had find the element ' Welcome, yanliu ' successful by xpath via value: //div[@id='root']//div[@class='content-heading'] 
+2020-06-12 09:38:09,814|login.py[line:41] INFO:login success
+2020-06-12 09:38:10,388|base_page.py[line:67] INFO:Had find the element ' CUSTOMERS ' successful by id via value: customers 
+2020-06-12 09:38:10,490|base_page.py[line:156] INFO:The element ' CUSTOMERS ' was clicked.
+2020-06-12 09:38:11,020|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //ul[@class='dropdown-menu multi-level show']/li/a 
+2020-06-12 09:38:11,639|base_page.py[line:67] INFO:Had find the element ' New ' successful by xpath via value: //ul[@class='dropdown-menu multi-level show']/li[2]/a 
+2020-06-12 09:38:11,750|base_page.py[line:156] INFO:The element ' New ' was clicked.
+2020-06-12 09:38:11,751|topMenu.py[line:69] INFO:second_menu: New
+2020-06-12 09:38:12,293|base_page.py[line:67] INFO:Had find the element ' CUSTOMERS ' successful by id via value: customers 
+2020-06-12 09:38:12,363|base_page.py[line:156] INFO:The element ' CUSTOMERS ' was clicked.
+2020-06-12 09:38:12,882|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //ul[@class='dropdown-menu multi-level show']/li/a 
+2020-06-12 09:38:13,449|base_page.py[line:67] INFO:Had find the element ' New ' successful by xpath via value: //ul[@class='dropdown-menu multi-level show']/li[2]/a 
+2020-06-12 09:38:13,571|base_page.py[line:156] INFO:The element ' New ' was clicked.
+2020-06-12 09:38:13,571|topMenu.py[line:69] INFO:second_menu: New
+2020-06-12 09:38:14,137|base_page.py[line:67] INFO:Had find the element ' Select one...
+Person
+Organization ' successful by xpath via value: //select[@name='typeName'] 
+2020-06-12 09:38:14,252|base_page.py[line:156] INFO:The element ' Select one...
+Person
+Organization ' was clicked.
+2020-06-12 09:38:14,794|base_page.py[line:67] INFO:Had find the element ' Select one...
+Person
+Organization ' successful by xpath via value: //select[@name='typeName'] 
+2020-06-12 09:38:15,434|base_page.py[line:67] INFO:Had find the element ' Select one...
+Company
+Government
+Trust/Estate ' successful by xpath via value: //select[@name='entityClass'] 
+2020-06-12 09:38:15,555|base_page.py[line:156] INFO:The element ' Select one...
+Company
+Government
+Trust/Estate ' was clicked.
+2020-06-12 09:38:16,084|base_page.py[line:67] INFO:Had find the element ' Select one...
+Company
+Government
+Trust/Estate ' successful by xpath via value: //select[@name='entityClass'] 
+2020-06-12 09:38:16,771|base_page.py[line:67] INFO:Had find the element '  ' successful by xpath via value: //form[@class='ie-fix-flex']/div[1]//input[@name='organizationName'] 
+2020-06-12 09:38:17,276|base_page.py[line:134] INFO:Had type ' UI Government ' in inputBox
+2020-06-12 09:38:17,826|base_page.py[line:67] INFO:Had find the element ' Select one...
+Federal
+State
+County
+City
+State Higher Education ' successful by xpath via value: //form[@class='ie-fix-flex']/div[1]//select[@name='subClassName'] 
+2020-06-12 09:38:17,941|base_page.py[line:156] INFO:The element ' Select one...
+Federal
+State
+County
+City
+State Higher Education ' was clicked.
+2020-06-12 09:38:18,470|base_page.py[line:67] INFO:Had find the element ' Select one...
+Federal
+State
+County
+City
+State Higher Education ' successful by xpath via value: //form[@class='ie-fix-flex']/div[1]//select[@name='subClassName'] 
+2020-06-12 09:38:19,150|base_page.py[line:67] INFO:Had find the element ' Select one...
+AK
+AL
+AR
+AZ
+CA
+CO
+CT
+DC
+DE
+FL
+GA
+HI
+IA
+ID
+IL
+IN
+KS
+KY
+LA
+MA
+MD
+ME
+MI
+MN
+MO
+MS
+MT
+NC
+ND
+NE
+NH
+NJ
+NM
+NV
+NY
+OH
+OK
+OR
+PA
+RI
+SC
+SD
+TN
+TX
+UT
+VA
+VT
+WA
+WI
+WV
+WY
+ON
+NL
+BC ' successful by xpath via value: //form[@class='ie-fix-flex']/div[1]//select[@name='stateOfIncorporation'] 
+2020-06-12 09:38:19,353|base_page.py[line:156] INFO:The element ' Select one...
+AK
+AL
+AR
+AZ
+CA
+CO
+CT
+DC
+DE
+FL
+GA
+HI
+IA
+ID
+IL
+IN
+KS
+KY
+LA
+MA
+MD
+ME
+MI
+MN
+MO
+MS
+MT
+NC
+ND
+NE
+NH
+NJ
+NM
+NV
+NY
+OH
+OK
+OR
+PA
+RI
+SC
+SD
+TN
+TX
+UT
+VA
+VT
+WA
+WI
+WV
+WY
+ON
+NL
+BC ' was clicked.
+2020-06-12 09:38:19,970|base_page.py[line:67] INFO:Had find the element ' Select one...
+AK
+AL
+AR
+AZ
+CA
+CO
+CT
+DC
+DE
+FL
+GA
+HI
+IA
+ID
+IL
+IN
+KS
+KY
+LA
+MA
+MD
+ME
+MI
+MN
+MO
+MS
+MT
+NC
+ND
+NE
+NH
+NJ
+NM
+NV
+NY
+OH
+OK
+OR
+PA
+RI
+SC
+SD
+TN
+TX
+UT
+VA
+VT
+WA
+WI
+WV
+WY
+ON
+NL
+BC ' successful by xpath via value: //form[@class='ie-fix-flex']/div[1]//select[@name='stateOfIncorporation'] 
+2020-06-12 09:38:20,668|base_page.py[line:67] INFO:Had find the element '  ' successful by xpath via value: //form[@class='ie-fix-flex']/div[2]//div[@class='col-md-8']/div[1]//input[@name='firstName'] 
+2020-06-12 09:38:20,985|base_page.py[line:134] INFO:Had type ' contact1 ' in inputBox
+2020-06-12 09:38:24,131|browser_engine.py[line:73] INFO:Now, Close and quit the browser.

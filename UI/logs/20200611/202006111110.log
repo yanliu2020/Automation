@@ -1,0 +1,5 @@
+2020-06-11 11:10:55,275|browser_engine.py[line:27] INFO:You had select Chrome browser.
+2020-06-11 11:10:55,275|browser_engine.py[line:29] INFO:The test server url is: https://rralamotest.z21.web.core.windows.net/
+2020-06-11 11:10:58,434|browser_engine.py[line:44] INFO:Starting Chrome browser.
+2020-06-11 11:10:59,589|browser_engine.py[line:58] INFO:Maximize the current window.
+2020-06-11 11:11:01,451|browser_engine.py[line:61] INFO:Open url: https://rralamotest.z21.web.core.windows.net/

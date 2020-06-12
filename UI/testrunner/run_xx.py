@@ -20,7 +20,7 @@ file_name = to_number()
 
 def runtest():
     discover01 = unittest.TestLoader().discover(
-        start_dir=testsuites_path + "test_01_logout//", pattern='test_*.py', top_level_dir=None)
+        start_dir=testsuites_path + "test_another//", pattern='test_*.py', top_level_dir=None)
 
     testsuite = unittest.TestSuite()
     testsuite.addTest(discover01)

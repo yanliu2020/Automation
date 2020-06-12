@@ -1,0 +1,19 @@
+2020-06-11 11:01:02,572|browser_engine.py[line:27] INFO:You had select Chrome browser.
+2020-06-11 11:01:02,573|browser_engine.py[line:29] INFO:The test server url is: https://rralamotest.z21.web.core.windows.net/
+2020-06-11 11:01:05,393|browser_engine.py[line:44] INFO:Starting Chrome browser.
+2020-06-11 11:01:06,529|browser_engine.py[line:58] INFO:Maximize the current window.
+2020-06-11 11:01:35,530|browser_engine.py[line:61] INFO:Open url: https://rralamotest.z21.web.core.windows.net/
+2020-06-11 11:01:46,546|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='localAccount']//div[@class='intro']/h2
+2020-06-11 11:01:47,121|base_page.py[line:67] INFO:Had find the element ' Sign in with your existing account ' successful by xpath via value: //div[@class='localAccount']//div[@class='intro']/h2 
+2020-06-11 11:01:47,662|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-06-11 11:01:47,701|base_page.py[line:144] INFO:Clear text in input box before typing.
+2020-06-11 11:01:48,239|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-06-11 11:01:48,434|base_page.py[line:134] INFO:Had type ' yan.liu@an-chen.com ' in inputBox
+2020-06-11 11:01:48,965|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: password 
+2020-06-11 11:01:49,004|base_page.py[line:144] INFO:Clear text in input box before typing.
+2020-06-11 11:01:49,536|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: password 
+2020-06-11 11:01:49,757|base_page.py[line:134] INFO:Had type ' Lychan@2012 ' in inputBox
+2020-06-11 11:01:50,289|base_page.py[line:67] INFO:Had find the element ' Sign in ' successful by xpath via value: //div[@class='buttons']/button[text()='Sign in'] 
+2020-06-11 11:02:14,522|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@id='root']//div[@class='content-heading']
+2020-06-11 11:02:39,480|base_page.py[line:67] INFO:Had find the element ' Welcome, yanliu ' successful by xpath via value: //div[@id='root']//div[@class='content-heading'] 
+2020-06-11 11:02:39,481|login.py[line:41] INFO:login success

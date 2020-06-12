@@ -55,11 +55,7 @@ def runtest():
 
 
 if __name__=="__main__":
-    # runtest()
-
-
+    runtest()
     from utils.browser_engine import Browser
     Browser.quit_browser()
-
-
     send_mail(report_path + FileName + '_report.html')  # 发送测试报告
