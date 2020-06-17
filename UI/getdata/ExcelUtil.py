@@ -3,7 +3,7 @@ import xlrd
 
 # filepath = "E:\\Automation\\UI\\testdata\\testdata.xlsx"
 # sheetName = "new_customer"
-class ExcelUtil(object):
+class excelHandle(object):
     def __init__(self, excelPath, sheetName):
         self.data = xlrd.open_workbook(excelPath)
         self.table = self.data.sheet_by_name(sheetName)
@@ -14,7 +14,7 @@ class ExcelUtil(object):
         # 获取总列数
         self.colNum = self.table.ncols
 
-    def dict_data(self):
+    def read_excel(self):
         if self.rowNum <= 1:
             print("总行数小于1")
         else:
@@ -34,6 +34,6 @@ class ExcelUtil(object):
 # if __name__ == "__main__":
 #     filepath = "E:\\Automation\\UI\\test\\test.xlsx"
 #     sheetName = "new_customer"
-#     data = ExcelUtil(filepath, sheetName).dict_data()
+#     data = excelHandle(filepath, sheetName).read_excel()
 #     print(data)
 #     print(type(data))

@@ -57,7 +57,7 @@ class CustomerRecordPage(BasePage):
                 section_item = (i+1,item)
                 break
         if section_item is None:
-            raise NoSuchElementException(msg="sectionName %s not found!" % sectionName)
+            logger.info("sectionName %s not found!" % sectionName)
         else:
             self.scroll_into_view(CustomerRecordEntity().get_section_name(sectionName))
             if sectionName == "Contacts":
@@ -73,31 +73,31 @@ class CustomerRecordPage(BasePage):
                         self.click(CustomerRecordEntity().get_entity_record(section_item[0], row))
                 self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
 
-    def related_leases_operator(self,sectionName,buttonName,row):
-        """
-        #Related Lease/Lands 查询和删除
-        :param  sectionName,buttonName,row
-        :return:
-        """
-        section_list = self.find_elements(CustomerRecordEntity.related_section_list)
-        # print(section_list)
-        section_item = None
-        for i, item in enumerate(section_list):
-            if sectionName == item.text:
-                section_item = (i + 1, item)
-                break
-        if section_item is None:
-            raise NoSuchElementException(msg="sectionName %s not found!" % sectionName)
-        else:
-            self.scroll_into_view(CustomerRecordEntity().get_section_name(sectionName))
-            if buttonName == "Delete Relationship":
-                self.click(CustomerRecordEntity().get_related_operator(section_item[0],buttonName))
-            else:
-                if self.find_elements(CustomerRecordEntity().get_related_records(section_item[0])):
-                    self.click(CustomerRecordEntity().get_related_record(section_item[0], row))
-                    self.click(CustomerRecordEntity().get_related_operator(section_item[0],buttonName))
-                else:
-                    logger.info("sectionName %s have no record!"% sectionName)
+    # def related_leases_operator(self,sectionName,buttonName,row):
+    #     """
+    #     #Related Lease/Lands 查询和删除
+    #     :param  sectionName,buttonName,row
+    #     :return:
+    #     """
+    #     section_list = self.find_elements(CustomerRecordEntity.related_section_list)
+    #     # print(section_list)
+    #     section_item = None
+    #     for i, item in enumerate(section_list):
+    #         if sectionName == item.text:
+    #             section_item = (i + 1, item)
+    #             break
+    #     if section_item is None:
+    #         raise NoSuchElementException(msg="sectionName %s not found!" % sectionName)
+    #     else:
+    #         self.scroll_into_view(CustomerRecordEntity().get_section_name(sectionName))
+    #         if buttonName == "Delete Relationship":
+    #             self.click(CustomerRecordEntity().get_related_operator(section_item[0],buttonName))
+    #         else:
+    #             if self.find_elements(CustomerRecordEntity().get_related_records(section_item[0])):
+    #                 self.click(CustomerRecordEntity().get_related_record(section_item[0], row))
+    #                 self.click(CustomerRecordEntity().get_related_operator(section_item[0],buttonName))
+    #             else:
+    #                 logger.info("sectionName %s have no record!"% sectionName)
 
     def contact_list_page(self):
         """
@@ -105,9 +105,9 @@ class CustomerRecordPage(BasePage):
          :return:
         """
         record = self.find_element(CustomerRecordEntity.contact_list_page).text
-        if "0" in record:
-            return False
+        if "total records: 0" in record:
             logger.info("have no contact record")
+            return False
         else:
             return True
 
@@ -307,8 +307,8 @@ class CustomerRecordPage(BasePage):
             if entityClass == "Household":
                 self.ctrl_all(CustomerRecordEntity().get_edit_input("fullName"))
                 self.type(CustomerRecordEntity().get_edit_input("fullName"), fullName)
-                self.ctrl_all(CustomerRecordEntity().get_edit_input("defaultSort"))
-                self.type(CustomerRecordEntity().get_edit_input("defaultSort"), default_sort)
+                self.ctrl_all(CustomerRecordEntity().get_edit_input("soundEx"))
+                self.type(CustomerRecordEntity().get_edit_input("soundEx"), default_sort)
             else:
                 self.drop_select(CustomerRecordEntity().get_edit_select("salutation"), salutation)
                 self.ctrl_all(CustomerRecordEntity().get_edit_input("firstName"))
@@ -322,6 +322,15 @@ class CustomerRecordPage(BasePage):
             if entityClass == "Company" or entityClass == "Government":
                 self.drop_select(CustomerRecordEntity().get_edit_select("subClassName"), typeOfBusiness)
             self.drop_select(CustomerRecordEntity().get_edit_select("stateOfIncorporation"), stateOfIncorporation)
+
+    def validate_records_rows(self):
+        record = self.find_element(CustomerRecordEntity.entity_history).text
+        if "total records: 1" in record:
+            return True
+        else:
+            return False
+
+
 
 
 

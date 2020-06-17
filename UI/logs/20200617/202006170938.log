@@ -1,0 +1,31 @@
+2020-06-17 09:38:35,946|browser_engine.py[line:27] INFO:You had select Chrome browser.
+2020-06-17 09:38:35,947|browser_engine.py[line:29] INFO:The test server url is: https://rr-alamo-dev.azureedge.net/
+2020-06-17 09:38:38,794|browser_engine.py[line:44] INFO:Starting Chrome browser.
+2020-06-17 09:38:40,015|browser_engine.py[line:58] INFO:Maximize the current window.
+2020-06-17 09:38:44,199|browser_engine.py[line:61] INFO:Open url: https://rr-alamo-dev.azureedge.net/
+2020-06-17 09:38:55,003|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='localAccount']//div[@class='intro']/h2
+2020-06-17 09:38:55,568|base_page.py[line:67] INFO:Had find the element ' Sign in with your existing account ' successful by xpath via value: //div[@class='localAccount']//div[@class='intro']/h2 
+2020-06-17 09:38:56,143|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-06-17 09:38:56,212|base_page.py[line:144] INFO:Clear text in input box before typing.
+2020-06-17 09:38:56,749|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-06-17 09:38:57,010|base_page.py[line:134] INFO:Had type ' yan.liu@an-chen.com ' in inputBox
+2020-06-17 09:38:57,570|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: password 
+2020-06-17 09:38:57,616|base_page.py[line:144] INFO:Clear text in input box before typing.
+2020-06-17 09:38:58,146|base_page.py[line:67] INFO:Had find the element '  ' successful by id via value: password 
+2020-06-17 09:38:58,321|base_page.py[line:134] INFO:Had type ' Lychan@2012 ' in inputBox
+2020-06-17 09:38:58,883|base_page.py[line:67] INFO:Had find the element ' Sign in ' successful by xpath via value: //div[@class='buttons']/button[text()='Sign in'] 
+2020-06-17 09:39:09,532|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@id='root']//div[@class='content-heading']
+2020-06-17 09:39:10,090|base_page.py[line:67] INFO:Had find the element ' Welcome, yanliu ' successful by xpath via value: //div[@id='root']//div[@class='content-heading'] 
+2020-06-17 09:39:10,091|login.py[line:41] INFO:login success
+2020-06-17 09:39:21,010|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='card']/form//div[@id='homeGrid']/div//h2
+2020-06-17 09:39:21,539|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']/form//div[@id='homeGrid']/div//h2 
+2020-06-17 09:39:22,167|base_page.py[line:67] INFO:Had find the element '  ' successful by xpath via value: //div[@class='card']/form//div[@id='homeGrid']/div[4]//input 
+2020-06-17 09:39:22,385|base_page.py[line:134] INFO:Had type ' C000088870 ' in inputBox
+2020-06-17 09:39:22,929|base_page.py[line:67] INFO:Had find the element ' Go ' successful by xpath via value: //div[@class='card']/form//div[@id='homeGrid']/div[4]/div/button 
+2020-06-17 09:39:23,017|base_page.py[line:156] INFO:The element ' Go ' was clicked.
+2020-06-17 09:39:23,018|homePage.py[line:50] INFO:module_name: Customers
+2020-06-17 09:39:33,912|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='card']//li/a[text()='Entity']
+2020-06-17 09:39:35,489|base_page.py[line:67] INFO:Had find the element ' Entity ' successful by xpath via value: //div[@class='card']//li/a[text()='Entity'] 
+2020-06-17 09:39:35,775|base_page.py[line:156] INFO:The element ' Entity ' was clicked.
+2020-06-17 09:39:36,294|base_page.py[line:222] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-06-17 09:39:36,355|customerRecord.py[line:32] INFO:sectionName Customer Summary not found!

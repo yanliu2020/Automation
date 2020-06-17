@@ -20,7 +20,7 @@ class NewCustomerPage(BasePage):
         if entityType == "Person":
             if entityClass == "Household":
                 self.type(NewCustomerEntity().get_entity_input("fullName"), fullName)
-                self.type(NewCustomerEntity().get_entity_input("defaultSort"), default_sort)
+                self.type(NewCustomerEntity().get_entity_input("soundEx"), default_sort)
             else:
                 self.drop_select(NewCustomerEntity().get_entity_select("salutation"), salutation)
                 self.type(NewCustomerEntity().get_entity_input("firstName"), firstName)
@@ -75,6 +75,22 @@ class NewCustomerPage(BasePage):
             return True
         else:
             return False
+        # if firstName != "":
+        #     if "Entity: " + firstName + " " + operator +" successfully" in CustomerRecordPage(self.driver).get_tips_msg():
+        #         return True
+        #     else:
+        #         return False
+        # elif fullName != "":
+        #     if "Entity: " + fullName + " created successfully" in CustomerRecordPage(self.driver).get_tips_msg():
+        #         return True
+        #     else:
+        #         return False
+        # elif organizationName != "":
+        #     if "Entity: " + organizationName + " created successfully" in CustomerRecordPage(self.driver).get_tips_msg():
+        #         return True
+        #     else:
+        #         return False
+
 
     def contact(self,same,index,flag,firstName,lastName,role,emailType,email,areaCode,phone,type):
         """
@@ -107,6 +123,8 @@ class NewCustomerPage(BasePage):
         self.type(NewCustomerEntity().get_phone_input(index, flag, "areaCode"), areaCode)
         self.type(NewCustomerEntity().get_phone_input(index, flag, "phone"), phone)
         self.drop_select(NewCustomerEntity().get_phone_type(index, flag), type)
+
+
 
 
 

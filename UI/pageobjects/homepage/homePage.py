@@ -34,7 +34,7 @@ class HomePage(BasePage):
                 module_item = (i + 1, item)
                 break
         if module_item is None:
-            raise NoSuchElementException(msg="module_name %s not found!" % module_name)
+            logger.info("module_name %s not found!" % module_name)
         #下拉框选择
         elif flag == 1:
             self.find_element(HomePageEntity().get_quick_select(module_item[0]))

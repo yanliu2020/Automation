@@ -131,4 +131,7 @@ class CustomerRecordEntity(object):
     def get_edit_select(self,loc):
         return self.entity_edit_select %loc
 
+    #history
+    entity_history = "xpath=>//div[@class='modal-content']//span[@class='glo-table-pagination']"
+
 
