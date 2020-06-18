@@ -25,17 +25,17 @@ class newCustomer(unittest.TestCase):
 
     # 加载测试数据
     @ddt.data(*data)
-    def test_newCustomer(self,data):
+    def test_addCustomer(self,data):
         u"""New Customer"""
         entityType = data['entityType']
         entityClass = data['entityClass']
         salutation = data['salutation']
-        firstName = data['firstName']
-        lastName = data['lastName']
+        firstName = data['firstName']+ nowTime
+        lastName = data['lastName']+ nowTime
         suffix = data['suffix']
-        fullName = data['fullName']
-        default_sort = data['default_sort']
-        organizationName = data['organizationName']
+        fullName = data['fullName']+ nowTime
+        default_sort = data['default_sort']+ nowTime
+        organizationName = data['organizationName']+ nowTime
         typeOfBusiness = data['typeOfBusiness']
         stateOfIncorporation = data['stateOfIncorporation']
         TopMenuPage(self.driver).select_multiple_menu(2, "customers", "New", "", "")
@@ -50,12 +50,12 @@ class newCustomer(unittest.TestCase):
         entityType = data['entityType']
         entityClass = data['entityClass']
         salutation = data['salutation']
-        firstName = data['firstName']
-        lastName = data['lastName']
+        firstName = data['firstName']+ nowTime
+        lastName = data['lastName']+ nowTime
         suffix = data['suffix']
-        fullName = data['fullName']
-        default_sort = data['default_sort']
-        organizationName = data['organizationName']
+        fullName = data['fullName']+ nowTime
+        default_sort = data['default_sort']+ nowTime
+        organizationName = data['organizationName']+ nowTime
         typeOfBusiness = data['typeOfBusiness']
         stateOfIncorporation = data['stateOfIncorporation']
         CustomerRecordPage(self.driver).top_operate("Actions ", "Edit")

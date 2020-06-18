@@ -16,19 +16,19 @@ class recordEntity(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.driver = driver
-        TopMenuPage(cls.driver).is_homepage()
-        HomePage(cls.driver).quick_entrance("Customers","C000089557",2)
+        # TopMenuPage(cls.driver).is_homepage()
+        # HomePage(cls.driver).quick_entrance("Customers","C000089954",2)
 
     def test_01_Address_new(self):
         u"""new address"""
         CustomerRecordPage(self.driver).switch_tab("Entity")
         CustomerRecordPage(self.driver).entity_operator("Addresses", "New", "")
-        self.assertTrue(CustomerRecordPage(self.driver).operator_address("Home", "Address", "changsha", "AK"))
+        self.assertTrue(CustomerRecordPage(self.driver).operator_address("Home", "Address"+ nowTime, "changsha"+ nowTime, "AK"))
 
     def test_02_Address_edit(self):
         u"""edit address"""
         CustomerRecordPage(self.driver).entity_operator("Addresses", "Edit", "1")
-        self.assertTrue(CustomerRecordPage(self.driver).operator_address("Office", "Address1", "changsha", "AK"))
+        self.assertTrue(CustomerRecordPage(self.driver).operator_address("Office", "EditAddress"+ nowTime, "changsha"+ nowTime, "AK"))
 
     def test_03_Address_delete(self):
         u"""delete address"""
