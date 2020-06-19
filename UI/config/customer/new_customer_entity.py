@@ -77,6 +77,11 @@ class NewCustomerEntity(object):
     #Contact 1 Same as Above
     same_as = "id=>sameAs"
 
+    #
+    detailField = "xpath=>//div[@class='modal-content']//input[@name='%s']"
+    def get_detailField(self,loc):
+        return self.detailField %loc
+
 
 
 

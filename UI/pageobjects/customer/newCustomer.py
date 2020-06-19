@@ -124,6 +124,12 @@ class NewCustomerPage(BasePage):
         self.type(NewCustomerEntity().get_phone_input(index, flag, "phone"), phone)
         self.drop_select(NewCustomerEntity().get_phone_type(index, flag), type)
 
+    def validation(self,fieldname):
+        self.find_element(NewCustomerEntity().get_detailField(fieldname))
+
+
+
+
 
 
 
