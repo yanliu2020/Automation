@@ -1,0 +1,617 @@
+2020-06-22 14:02:35,883|browser_engine.py[line:27] INFO:You had select Chrome browser.
+2020-06-22 14:02:35,883|browser_engine.py[line:29] INFO:The test server url is: https://rralamotest.z21.web.core.windows.net/
+2020-06-22 14:02:38,668|browser_engine.py[line:44] INFO:Starting Chrome browser.
+2020-06-22 14:02:39,816|browser_engine.py[line:58] INFO:Maximize the current window.
+2020-06-22 14:02:50,899|browser_engine.py[line:61] INFO:Open url: https://rralamotest.z21.web.core.windows.net/
+2020-06-22 14:03:01,664|base_page.py[line:70] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='localAccount']//div[@class='intro']/h2
+2020-06-22 14:03:02,230|base_page.py[line:68] INFO:Had find the element ' Sign in with your existing account ' successful by xpath via value: //div[@class='localAccount']//div[@class='intro']/h2 
+2020-06-22 14:03:02,787|base_page.py[line:68] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-06-22 14:03:02,822|base_page.py[line:145] INFO:Clear text in input box before typing.
+2020-06-22 14:03:03,361|base_page.py[line:68] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-06-22 14:03:03,514|base_page.py[line:135] INFO:Had type ' yan.liu@an-chen.com ' in inputBox
+2020-06-22 14:03:04,070|base_page.py[line:68] INFO:Had find the element '  ' successful by id via value: password 
+2020-06-22 14:03:04,119|base_page.py[line:145] INFO:Clear text in input box before typing.
+2020-06-22 14:03:04,641|base_page.py[line:68] INFO:Had find the element '  ' successful by id via value: password 
+2020-06-22 14:03:04,787|base_page.py[line:135] INFO:Had type ' Lychan@2012 ' in inputBox
+2020-06-22 14:03:05,320|base_page.py[line:68] INFO:Had find the element ' Sign in ' successful by xpath via value: //div[@class='buttons']/button[text()='Sign in'] 
+2020-06-22 14:03:15,987|base_page.py[line:70] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@id='root']//div[@class='content-heading']
+2020-06-22 14:03:16,545|base_page.py[line:68] INFO:Had find the element ' Welcome, yanliu ' successful by xpath via value: //div[@id='root']//div[@class='content-heading'] 
+2020-06-22 14:03:16,546|login.py[line:41] INFO:login success
+2020-06-22 14:03:27,559|base_page.py[line:70] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='card']/form//div[@id='homeGrid']/div//h2
+2020-06-22 14:03:28,101|base_page.py[line:223] INFO:Had find the elements successful by xpath via value: //div[@class='card']/form//div[@id='homeGrid']/div//h2 
+2020-06-22 14:03:28,739|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //div[@class='card']/form//div[@id='homeGrid']/div[4]//input 
+2020-06-22 14:03:28,914|base_page.py[line:135] INFO:Had type ' C000048473 ' in inputBox
+2020-06-22 14:03:29,472|base_page.py[line:68] INFO:Had find the element ' Go ' successful by xpath via value: //div[@class='card']/form//div[@id='homeGrid']/div[4]/div/button 
+2020-06-22 14:03:29,545|base_page.py[line:157] INFO:The element ' Go ' was clicked.
+2020-06-22 14:03:29,545|homePage.py[line:50] INFO:module_name: Customers
+2020-06-22 14:03:40,433|base_page.py[line:70] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='card']//li/a[text()='Entity']
+2020-06-22 14:03:40,975|base_page.py[line:68] INFO:Had find the element ' Entity ' successful by xpath via value: //div[@class='card']//li/a[text()='Entity'] 
+2020-06-22 14:03:41,143|base_page.py[line:157] INFO:The element ' Entity ' was clicked.
+2020-06-22 14:03:41,676|base_page.py[line:223] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-06-22 14:03:42,260|base_page.py[line:68] INFO:Had find the element ' Addresses ' successful by xpath via value: //div[@class='card']//div//h4[text()='Addresses'] 
+2020-06-22 14:03:42,838|base_page.py[line:68] INFO:Had find the element ' New ' successful by xpath via value: //div[@class='glo-row']/div[2]//button[text()=' New'] 
+2020-06-22 14:03:43,002|base_page.py[line:157] INFO:The element ' New ' was clicked.
+2020-06-22 14:03:43,565|base_page.py[line:68] INFO:Had find the element ' Select one...
+Consultant
+Home
+Office
+Mailing
+Billing-Mineral
+Unknown ' successful by xpath via value: //select[@name='addressType'] 
+2020-06-22 14:03:43,692|base_page.py[line:157] INFO:The element ' Select one...
+Consultant
+Home
+Office
+Mailing
+Billing-Mineral
+Unknown ' was clicked.
+2020-06-22 14:03:44,245|base_page.py[line:68] INFO:Had find the element ' Select one...
+Consultant
+Home
+Office
+Mailing
+Billing-Mineral
+Unknown ' successful by xpath via value: //select[@name='addressType'] 
+2020-06-22 14:03:44,890|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='address1'] 
+2020-06-22 14:03:44,986|base_page.py[line:157] INFO:The element '  ' was clicked.
+2020-06-22 14:03:45,513|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='address1'] 
+2020-06-22 14:03:46,069|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='address1'] 
+2020-06-22 14:03:46,631|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='address1'] 
+2020-06-22 14:03:46,823|base_page.py[line:135] INFO:Had type ' oMjSSE ' in inputBox
+2020-06-22 14:03:47,398|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='city'] 
+2020-06-22 14:03:47,492|base_page.py[line:157] INFO:The element '  ' was clicked.
+2020-06-22 14:03:48,042|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='city'] 
+2020-06-22 14:03:48,604|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='city'] 
+2020-06-22 14:03:49,163|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='city'] 
+2020-06-22 14:03:49,350|base_page.py[line:135] INFO:Had type ' VAFQjZ ' in inputBox
+2020-06-22 14:03:49,949|base_page.py[line:68] INFO:Had find the element ' Select one...
+AK
+AL
+AR
+AZ
+CA
+CO
+CT
+DC
+DE
+FL
+GA
+HI
+IA
+ID
+IL
+IN
+KS
+KY
+LA
+MA
+MD
+ME
+MI
+MN
+MO
+MS
+MT
+NC
+ND
+NE
+NH
+NJ
+NM
+NV
+NY
+OH
+OK
+OR
+PA
+RI
+SC
+SD
+TN
+TX
+UT
+VA
+VT
+WA
+WI
+WV
+WY
+ON
+NL
+BC ' successful by xpath via value: //select[@name='stateCode'] 
+2020-06-22 14:03:50,133|base_page.py[line:157] INFO:The element ' Select one...
+AK
+AL
+AR
+AZ
+CA
+CO
+CT
+DC
+DE
+FL
+GA
+HI
+IA
+ID
+IL
+IN
+KS
+KY
+LA
+MA
+MD
+ME
+MI
+MN
+MO
+MS
+MT
+NC
+ND
+NE
+NH
+NJ
+NM
+NV
+NY
+OH
+OK
+OR
+PA
+RI
+SC
+SD
+TN
+TX
+UT
+VA
+VT
+WA
+WI
+WV
+WY
+ON
+NL
+BC ' was clicked.
+2020-06-22 14:03:50,717|base_page.py[line:68] INFO:Had find the element ' Select one...
+AK
+AL
+AR
+AZ
+CA
+CO
+CT
+DC
+DE
+FL
+GA
+HI
+IA
+ID
+IL
+IN
+KS
+KY
+LA
+MA
+MD
+ME
+MI
+MN
+MO
+MS
+MT
+NC
+ND
+NE
+NH
+NJ
+NM
+NV
+NY
+OH
+OK
+OR
+PA
+RI
+SC
+SD
+TN
+TX
+UT
+VA
+VT
+WA
+WI
+WV
+WY
+ON
+NL
+BC ' successful by xpath via value: //select[@name='stateCode'] 
+2020-06-22 14:03:51,422|base_page.py[line:68] INFO:Had find the element ' Save ' successful by xpath via value: //button[text()='Save'] 
+2020-06-22 14:03:51,551|base_page.py[line:157] INFO:The element ' Save ' was clicked.
+2020-06-22 14:03:54,092|base_page.py[line:68] INFO:Had find the element ' Address: oMjSSE created successfully. ' successful by xpath via value: //div[@role='alert'] 
+2020-06-22 14:03:54,640|base_page.py[line:223] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-06-22 14:03:55,240|base_page.py[line:68] INFO:Had find the element ' Addresses ' successful by xpath via value: //div[@class='card']//div//h4[text()='Addresses'] 
+2020-06-22 14:03:55,800|base_page.py[line:223] INFO:Had find the elements successful by xpath via value: //div[@class='glo-row']/div[2]//div[@class='glo-row']//div[@class='rt-tr-group'] 
+2020-06-22 14:03:56,382|base_page.py[line:68] INFO:Had find the element ' oMjSSE
+VAFQjZ
+AK
+Home ' successful by xpath via value: //div[@class='glo-row']/div[2]//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-06-22 14:03:56,955|base_page.py[line:68] INFO:Had find the element ' Edit ' successful by xpath via value: //div[@class='glo-row']/div[2]//button[text()=' Edit'] 
+2020-06-22 14:03:57,129|base_page.py[line:157] INFO:The element ' Edit ' was clicked.
+2020-06-22 14:03:57,702|base_page.py[line:68] INFO:Had find the element ' Select one...
+Consultant
+Home
+Office
+Mailing
+Billing-Mineral
+Unknown ' successful by xpath via value: //select[@name='addressType'] 
+2020-06-22 14:03:57,858|base_page.py[line:157] INFO:The element ' Select one...
+Consultant
+Home
+Office
+Mailing
+Billing-Mineral
+Unknown ' was clicked.
+2020-06-22 14:03:58,409|base_page.py[line:68] INFO:Had find the element ' Select one...
+Consultant
+Home
+Office
+Mailing
+Billing-Mineral
+Unknown ' successful by xpath via value: //select[@name='addressType'] 
+2020-06-22 14:03:59,055|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='address1'] 
+2020-06-22 14:03:59,167|base_page.py[line:157] INFO:The element '  ' was clicked.
+2020-06-22 14:03:59,708|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='address1'] 
+2020-06-22 14:04:00,274|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='address1'] 
+2020-06-22 14:04:00,871|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='address1'] 
+2020-06-22 14:04:01,199|base_page.py[line:135] INFO:Had type ' g0DNTa ' in inputBox
+2020-06-22 14:04:01,738|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='city'] 
+2020-06-22 14:04:01,829|base_page.py[line:157] INFO:The element '  ' was clicked.
+2020-06-22 14:04:02,382|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='city'] 
+2020-06-22 14:04:02,987|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='city'] 
+2020-06-22 14:04:03,592|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='city'] 
+2020-06-22 14:04:03,882|base_page.py[line:135] INFO:Had type ' HISIvD ' in inputBox
+2020-06-22 14:04:04,480|base_page.py[line:68] INFO:Had find the element ' Select one...
+AK
+AL
+AR
+AZ
+CA
+CO
+CT
+DC
+DE
+FL
+GA
+HI
+IA
+ID
+IL
+IN
+KS
+KY
+LA
+MA
+MD
+ME
+MI
+MN
+MO
+MS
+MT
+NC
+ND
+NE
+NH
+NJ
+NM
+NV
+NY
+OH
+OK
+OR
+PA
+RI
+SC
+SD
+TN
+TX
+UT
+VA
+VT
+WA
+WI
+WV
+WY
+ON
+NL
+BC ' successful by xpath via value: //select[@name='stateCode'] 
+2020-06-22 14:04:04,650|base_page.py[line:157] INFO:The element ' Select one...
+AK
+AL
+AR
+AZ
+CA
+CO
+CT
+DC
+DE
+FL
+GA
+HI
+IA
+ID
+IL
+IN
+KS
+KY
+LA
+MA
+MD
+ME
+MI
+MN
+MO
+MS
+MT
+NC
+ND
+NE
+NH
+NJ
+NM
+NV
+NY
+OH
+OK
+OR
+PA
+RI
+SC
+SD
+TN
+TX
+UT
+VA
+VT
+WA
+WI
+WV
+WY
+ON
+NL
+BC ' was clicked.
+2020-06-22 14:04:05,549|base_page.py[line:68] INFO:Had find the element ' Select one...
+AK
+AL
+AR
+AZ
+CA
+CO
+CT
+DC
+DE
+FL
+GA
+HI
+IA
+ID
+IL
+IN
+KS
+KY
+LA
+MA
+MD
+ME
+MI
+MN
+MO
+MS
+MT
+NC
+ND
+NE
+NH
+NJ
+NM
+NV
+NY
+OH
+OK
+OR
+PA
+RI
+SC
+SD
+TN
+TX
+UT
+VA
+VT
+WA
+WI
+WV
+WY
+ON
+NL
+BC ' successful by xpath via value: //select[@name='stateCode'] 
+2020-06-22 14:04:06,155|base_page.py[line:68] INFO:Had find the element ' Save ' successful by xpath via value: //button[text()='Save'] 
+2020-06-22 14:04:06,369|base_page.py[line:157] INFO:The element ' Save ' was clicked.
+2020-06-22 14:04:08,911|base_page.py[line:68] INFO:Had find the element ' Address: g0DNTa updated successfully. ' successful by xpath via value: //div[@role='alert'] 
+2020-06-22 14:04:09,489|base_page.py[line:223] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-06-22 14:04:10,169|base_page.py[line:68] INFO:Had find the element ' Addresses ' successful by xpath via value: //div[@class='card']//div//h4[text()='Addresses'] 
+2020-06-22 14:04:10,701|base_page.py[line:223] INFO:Had find the elements successful by xpath via value: //div[@class='glo-row']/div[2]//div[@class='glo-row']//div[@class='rt-tr-group'] 
+2020-06-22 14:04:11,288|base_page.py[line:68] INFO:Had find the element ' g0DNTa
+HISIvD
+AK
+Office ' successful by xpath via value: //div[@class='glo-row']/div[2]//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-06-22 14:04:11,864|base_page.py[line:68] INFO:Had find the element ' Delete ' successful by xpath via value: //div[@class='glo-row']/div[2]//button[text()=' Delete'] 
+2020-06-22 14:04:11,966|base_page.py[line:157] INFO:The element ' Delete ' was clicked.
+2020-06-22 14:04:12,502|base_page.py[line:68] INFO:Had find the element ' Yes, delete it! ' successful by xpath via value: //button[text()='Yes, delete it!'] 
+2020-06-22 14:04:12,572|base_page.py[line:157] INFO:The element ' Yes, delete it! ' was clicked.
+2020-06-22 14:04:15,101|base_page.py[line:68] INFO:Had find the element ' Address: g0DNTa deleted successfully. ' successful by xpath via value: //div[@role='alert'] 
+2020-06-22 14:04:15,626|base_page.py[line:223] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-06-22 14:04:16,224|base_page.py[line:68] INFO:Had find the element ' Website ' successful by xpath via value: //div[@class='card']//div//h4[text()='Website'] 
+2020-06-22 14:04:16,792|base_page.py[line:68] INFO:Had find the element ' New ' successful by xpath via value: //div[@class='glo-row']/div[3]//button[text()=' New'] 
+2020-06-22 14:04:16,920|base_page.py[line:157] INFO:The element ' New ' was clicked.
+2020-06-22 14:04:17,458|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='url'] 
+2020-06-22 14:04:17,531|base_page.py[line:157] INFO:The element '  ' was clicked.
+2020-06-22 14:04:18,075|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='url'] 
+2020-06-22 14:04:18,644|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='url'] 
+2020-06-22 14:04:19,208|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='url'] 
+2020-06-22 14:04:19,479|base_page.py[line:135] INFO:Had type ' http://www.6cgUYt.com ' in inputBox
+2020-06-22 14:04:20,025|base_page.py[line:68] INFO:Had find the element ' Save ' successful by xpath via value: //button[text()='Save'] 
+2020-06-22 14:04:20,105|base_page.py[line:157] INFO:The element ' Save ' was clicked.
+2020-06-22 14:04:22,633|base_page.py[line:68] INFO:Had find the element ' Website: http://www.6cgUYt.com created successfully. ' successful by xpath via value: //div[@role='alert'] 
+2020-06-22 14:04:23,156|base_page.py[line:223] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-06-22 14:04:23,716|base_page.py[line:68] INFO:Had find the element ' Website ' successful by xpath via value: //div[@class='card']//div//h4[text()='Website'] 
+2020-06-22 14:04:24,252|base_page.py[line:223] INFO:Had find the elements successful by xpath via value: //div[@class='glo-row']/div[3]//div[@class='glo-row']//div[@class='rt-tr-group'] 
+2020-06-22 14:04:24,805|base_page.py[line:68] INFO:Had find the element ' http://www.6cgUYt.com ' successful by xpath via value: //div[@class='glo-row']/div[3]//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-06-22 14:04:25,395|base_page.py[line:68] INFO:Had find the element ' Edit ' successful by xpath via value: //div[@class='glo-row']/div[3]//button[text()=' Edit'] 
+2020-06-22 14:04:25,559|base_page.py[line:157] INFO:The element ' Edit ' was clicked.
+2020-06-22 14:04:26,086|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='url'] 
+2020-06-22 14:04:26,163|base_page.py[line:157] INFO:The element '  ' was clicked.
+2020-06-22 14:04:26,704|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='url'] 
+2020-06-22 14:04:27,276|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='url'] 
+2020-06-22 14:04:27,825|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='url'] 
+2020-06-22 14:04:28,108|base_page.py[line:135] INFO:Had type ' http://www.X7jvRi.com ' in inputBox
+2020-06-22 14:04:28,641|base_page.py[line:68] INFO:Had find the element ' Save ' successful by xpath via value: //button[text()='Save'] 
+2020-06-22 14:04:28,720|base_page.py[line:157] INFO:The element ' Save ' was clicked.
+2020-06-22 14:04:31,264|base_page.py[line:68] INFO:Had find the element ' Website: http://www.X7jvRi.com updated successfully. ' successful by xpath via value: //div[@role='alert'] 
+2020-06-22 14:04:31,796|base_page.py[line:223] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-06-22 14:04:32,392|base_page.py[line:68] INFO:Had find the element ' Website ' successful by xpath via value: //div[@class='card']//div//h4[text()='Website'] 
+2020-06-22 14:04:32,923|base_page.py[line:223] INFO:Had find the elements successful by xpath via value: //div[@class='glo-row']/div[3]//div[@class='glo-row']//div[@class='rt-tr-group'] 
+2020-06-22 14:04:33,470|base_page.py[line:68] INFO:Had find the element ' http://www.X7jvRi.com ' successful by xpath via value: //div[@class='glo-row']/div[3]//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-06-22 14:04:34,052|base_page.py[line:68] INFO:Had find the element ' Delete ' successful by xpath via value: //div[@class='glo-row']/div[3]//button[text()=' Delete'] 
+2020-06-22 14:04:34,152|base_page.py[line:157] INFO:The element ' Delete ' was clicked.
+2020-06-22 14:04:34,709|base_page.py[line:68] INFO:Had find the element ' Yes, delete it! ' successful by xpath via value: //button[text()='Yes, delete it!'] 
+2020-06-22 14:04:34,781|base_page.py[line:157] INFO:The element ' Yes, delete it! ' was clicked.
+2020-06-22 14:04:37,309|base_page.py[line:68] INFO:Had find the element ' Website: http://www.X7jvRi.com deleted successfully. ' successful by xpath via value: //div[@role='alert'] 
+2020-06-22 14:04:37,851|base_page.py[line:223] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-06-22 14:04:38,451|base_page.py[line:68] INFO:Had find the element ' Doing Business As (DBA) ' successful by xpath via value: //div[@class='card']//div//h4[text()='Doing Business As (DBA)'] 
+2020-06-22 14:04:39,021|base_page.py[line:68] INFO:Had find the element ' New ' successful by xpath via value: //div[@class='glo-row']/div[4]//button[text()=' New'] 
+2020-06-22 14:04:39,149|base_page.py[line:157] INFO:The element ' New ' was clicked.
+2020-06-22 14:04:39,694|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='alias'] 
+2020-06-22 14:04:39,773|base_page.py[line:157] INFO:The element '  ' was clicked.
+2020-06-22 14:04:40,320|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='alias'] 
+2020-06-22 14:04:40,897|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='alias'] 
+2020-06-22 14:04:41,446|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='alias'] 
+2020-06-22 14:04:41,555|base_page.py[line:135] INFO:Had type ' 6cnyQZg0 ' in inputBox
+2020-06-22 14:04:42,080|base_page.py[line:68] INFO:Had find the element ' Save ' successful by xpath via value: //button[text()='Save'] 
+2020-06-22 14:04:42,319|base_page.py[line:157] INFO:The element ' Save ' was clicked.
+2020-06-22 14:04:44,852|base_page.py[line:68] INFO:Had find the element ' Doing Business As DBA: 6cnyQZg0 created successfully. ' successful by xpath via value: //div[@role='alert'] 
+2020-06-22 14:04:45,384|base_page.py[line:223] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-06-22 14:04:45,975|base_page.py[line:68] INFO:Had find the element ' Doing Business As (DBA) ' successful by xpath via value: //div[@class='card']//div//h4[text()='Doing Business As (DBA)'] 
+2020-06-22 14:04:46,506|base_page.py[line:223] INFO:Had find the elements successful by xpath via value: //div[@class='glo-row']/div[4]//div[@class='glo-row']//div[@class='rt-tr-group'] 
+2020-06-22 14:04:47,056|base_page.py[line:68] INFO:Had find the element ' 6cnyQZg0 ' successful by xpath via value: //div[@class='glo-row']/div[4]//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-06-22 14:04:47,612|base_page.py[line:68] INFO:Had find the element ' Edit ' successful by xpath via value: //div[@class='glo-row']/div[4]//button[text()=' Edit'] 
+2020-06-22 14:04:47,852|base_page.py[line:157] INFO:The element ' Edit ' was clicked.
+2020-06-22 14:04:48,407|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='alias'] 
+2020-06-22 14:04:48,577|base_page.py[line:157] INFO:The element '  ' was clicked.
+2020-06-22 14:04:49,122|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='alias'] 
+2020-06-22 14:04:49,701|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='alias'] 
+2020-06-22 14:04:50,285|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='alias'] 
+2020-06-22 14:04:50,421|base_page.py[line:135] INFO:Had type ' Xeh0rpEO ' in inputBox
+2020-06-22 14:04:50,976|base_page.py[line:68] INFO:Had find the element ' Save ' successful by xpath via value: //button[text()='Save'] 
+2020-06-22 14:04:51,061|base_page.py[line:157] INFO:The element ' Save ' was clicked.
+2020-06-22 14:04:53,615|base_page.py[line:68] INFO:Had find the element ' Doing Business As DBA: Xeh0rpEO updated successfully. ' successful by xpath via value: //div[@role='alert'] 
+2020-06-22 14:04:54,143|base_page.py[line:223] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-06-22 14:04:54,737|base_page.py[line:68] INFO:Had find the element ' Doing Business As (DBA) ' successful by xpath via value: //div[@class='card']//div//h4[text()='Doing Business As (DBA)'] 
+2020-06-22 14:04:55,258|base_page.py[line:223] INFO:Had find the elements successful by xpath via value: //div[@class='glo-row']/div[4]//div[@class='glo-row']//div[@class='rt-tr-group'] 
+2020-06-22 14:04:55,838|base_page.py[line:68] INFO:Had find the element ' Xeh0rpEO ' successful by xpath via value: //div[@class='glo-row']/div[4]//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-06-22 14:04:56,384|base_page.py[line:68] INFO:Had find the element ' Delete ' successful by xpath via value: //div[@class='glo-row']/div[4]//button[text()=' Delete'] 
+2020-06-22 14:04:56,474|base_page.py[line:157] INFO:The element ' Delete ' was clicked.
+2020-06-22 14:04:57,018|base_page.py[line:68] INFO:Had find the element ' Yes, delete it! ' successful by xpath via value: //button[text()='Yes, delete it!'] 
+2020-06-22 14:04:57,088|base_page.py[line:157] INFO:The element ' Yes, delete it! ' was clicked.
+2020-06-22 14:04:59,639|base_page.py[line:68] INFO:Had find the element ' DBA: Xeh0rpEO deleted successfully. ' successful by xpath via value: //div[@role='alert'] 
+2020-06-22 14:05:00,172|base_page.py[line:223] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-06-22 14:05:00,776|base_page.py[line:68] INFO:Had find the element ' Business Identifier ' successful by xpath via value: //div[@class='card']//div//h4[text()='Business Identifier'] 
+2020-06-22 14:05:01,344|base_page.py[line:68] INFO:Had find the element ' New ' successful by xpath via value: //div[@class='glo-row']/div[5]//button[text()=' New'] 
+2020-06-22 14:05:01,544|base_page.py[line:157] INFO:The element ' New ' was clicked.
+2020-06-22 14:05:02,110|base_page.py[line:68] INFO:Had find the element ' Select one...
+BAN
+SSN
+Federal EIN
+Agency ID
+State Tax ID
+Internal GLO ID
+Unknown ' successful by xpath via value: //select[@name='name'] 
+2020-06-22 14:05:02,249|base_page.py[line:157] INFO:The element ' Select one...
+BAN
+SSN
+Federal EIN
+Agency ID
+State Tax ID
+Internal GLO ID
+Unknown ' was clicked.
+2020-06-22 14:05:02,817|base_page.py[line:68] INFO:Had find the element ' Select one...
+BAN
+SSN
+Federal EIN
+Agency ID
+State Tax ID
+Internal GLO ID
+Unknown ' successful by xpath via value: //select[@name='name'] 
+2020-06-22 14:05:03,504|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='identifier'] 
+2020-06-22 14:05:03,600|base_page.py[line:157] INFO:The element '  ' was clicked.
+2020-06-22 14:05:04,132|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='identifier'] 
+2020-06-22 14:05:04,694|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='identifier'] 
+2020-06-22 14:05:05,248|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='identifier'] 
+2020-06-22 14:05:05,519|base_page.py[line:135] INFO:Had type ' 351945211 ' in inputBox
+2020-06-22 14:05:06,078|base_page.py[line:68] INFO:Had find the element ' Save ' successful by xpath via value: //button[text()='Save'] 
+2020-06-22 14:05:06,214|base_page.py[line:157] INFO:The element ' Save ' was clicked.
+2020-06-22 14:05:08,770|base_page.py[line:68] INFO:Had find the element ' Business Identifier: 351945211 created successfully. ' successful by xpath via value: //div[@role='alert'] 
+2020-06-22 14:05:09,320|base_page.py[line:223] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-06-22 14:05:09,910|base_page.py[line:68] INFO:Had find the element ' Business Identifier ' successful by xpath via value: //div[@class='card']//div//h4[text()='Business Identifier'] 
+2020-06-22 14:05:10,442|base_page.py[line:223] INFO:Had find the elements successful by xpath via value: //div[@class='glo-row']/div[5]//div[@class='glo-row']//div[@class='rt-tr-group'] 
+2020-06-22 14:05:11,009|base_page.py[line:68] INFO:Had find the element ' SSN
+*****5211 ' successful by xpath via value: //div[@class='glo-row']/div[5]//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-06-22 14:05:11,579|base_page.py[line:68] INFO:Had find the element ' Edit ' successful by xpath via value: //div[@class='glo-row']/div[5]//button[text()=' Edit'] 
+2020-06-22 14:05:11,828|base_page.py[line:157] INFO:The element ' Edit ' was clicked.
+2020-06-22 14:05:12,369|base_page.py[line:68] INFO:Had find the element ' Select one...
+BAN
+SSN
+Federal EIN
+Agency ID
+State Tax ID
+Internal GLO ID
+Unknown ' successful by xpath via value: //select[@name='name'] 
+2020-06-22 14:05:12,530|base_page.py[line:157] INFO:The element ' Select one...
+BAN
+SSN
+Federal EIN
+Agency ID
+State Tax ID
+Internal GLO ID
+Unknown ' was clicked.
+2020-06-22 14:05:13,086|base_page.py[line:68] INFO:Had find the element ' Select one...
+BAN
+SSN
+Federal EIN
+Agency ID
+State Tax ID
+Internal GLO ID
+Unknown ' successful by xpath via value: //select[@name='name'] 
+2020-06-22 14:05:13,720|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='identifier'] 
+2020-06-22 14:05:13,915|base_page.py[line:157] INFO:The element '  ' was clicked.
+2020-06-22 14:05:14,460|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='identifier'] 
+2020-06-22 14:05:15,018|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='identifier'] 
+2020-06-22 14:05:15,606|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='identifier'] 
+2020-06-22 14:05:15,890|base_page.py[line:135] INFO:Had type ' 60050162089 ' in inputBox
+2020-06-22 14:05:16,449|base_page.py[line:68] INFO:Had find the element ' Save ' successful by xpath via value: //button[text()='Save'] 
+2020-06-22 14:05:16,544|base_page.py[line:157] INFO:The element ' Save ' was clicked.
+2020-06-22 14:05:19,094|base_page.py[line:68] INFO:Had find the element ' Business Identifier: 60050162089 updated successfully. ' successful by xpath via value: //div[@role='alert'] 
+2020-06-22 14:05:19,641|base_page.py[line:223] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-06-22 14:05:20,287|base_page.py[line:68] INFO:Had find the element ' Business Identifier ' successful by xpath via value: //div[@class='card']//div//h4[text()='Business Identifier'] 
+2020-06-22 14:05:20,825|base_page.py[line:223] INFO:Had find the elements successful by xpath via value: //div[@class='glo-row']/div[5]//div[@class='glo-row']//div[@class='rt-tr-group'] 
+2020-06-22 14:05:21,382|base_page.py[line:68] INFO:Had find the element ' State Tax ID
+*******1111 ' successful by xpath via value: //div[@class='glo-row']/div[5]//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-06-22 14:05:21,935|base_page.py[line:68] INFO:Had find the element ' Delete ' successful by xpath via value: //div[@class='glo-row']/div[5]//button[text()=' Delete'] 
+2020-06-22 14:05:22,033|base_page.py[line:157] INFO:The element ' Delete ' was clicked.
+2020-06-22 14:05:22,581|base_page.py[line:68] INFO:Had find the element ' Yes, delete it! ' successful by xpath via value: //button[text()='Yes, delete it!'] 
+2020-06-22 14:05:22,647|base_page.py[line:157] INFO:The element ' Yes, delete it! ' was clicked.
+2020-06-22 14:05:25,198|base_page.py[line:68] INFO:Had find the element ' Business Identifier: State Tax ID deleted successfully. ' successful by xpath via value: //div[@role='alert'] 

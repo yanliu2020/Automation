@@ -1,0 +1,8 @@
+2020-06-22 10:12:31,646|browser_engine.py[line:27] INFO:You had select Chrome browser.
+2020-06-22 10:12:31,647|browser_engine.py[line:29] INFO:The test server url is: https://rralamotest.z21.web.core.windows.net/
+2020-06-22 10:12:36,225|browser_engine.py[line:44] INFO:Starting Chrome browser.
+2020-06-22 10:12:37,493|browser_engine.py[line:58] INFO:Maximize the current window.
+2020-06-22 10:13:08,122|browser_engine.py[line:61] INFO:Open url: https://rralamotest.z21.web.core.windows.net/
+2020-06-22 10:13:19,097|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='localAccount']//div[@class='intro']/h2
+2020-06-22 10:13:30,033|base_page.py[line:69] ERROR:TimeoutException: selector by xpath ,value //div[@class='localAccount']//div[@class='intro']/h2
+2020-06-22 10:13:30,033|base_page.py[line:122] ERROR:NoSuchElement selector_by: xpath, selector: //div[@class='localAccount']//div[@class='intro']/h2 

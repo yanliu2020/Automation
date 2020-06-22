@@ -10,6 +10,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support.ui import Select
 from utils.basepath_helper import screenshots_path
 from utils.logger import logger
+import random
 #import win32gui
 #import win32con
 from selenium.webdriver.common.action_chains import ActionChains
@@ -377,4 +378,14 @@ class BasePage(object):
     def execute_script_click(self,selector):
         element = self.find_element(selector)
         self.driver.execute_script("arguments[0].click();", element)
+
+    def randomData(self,type,num):
+        if type == "number":
+            return "".join(random.choice("0123456789") for i in range(num))
+        elif type == "string":
+            S = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+            salt = ''
+            for i in range(num):
+                salt += random.choice(S)
+            return salt
 

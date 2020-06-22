@@ -158,7 +158,7 @@ class CustomerRecordPage(BasePage):
         else:
             return False
 
-    def operator_address(self,addressType,address1,city,stateCode):
+    def operator_address(self,addressType,stateCode):
         """
         # 新增/修改 address
         :param : type,identifierNo
@@ -166,9 +166,9 @@ class CustomerRecordPage(BasePage):
         """
         self.drop_select(CustomerRecordEntity().get_address_select("addressType"),addressType)
         self.ctrl_all(CustomerRecordEntity().get_address_input("address1"))
-        self.type(CustomerRecordEntity().get_address_input("address1"),address1)
+        self.type(CustomerRecordEntity().get_address_input("address1"),BasePage(self.driver).randomData("string", 6))
         self.ctrl_all(CustomerRecordEntity().get_address_input("city"))
-        self.type(CustomerRecordEntity().get_address_input("city"),city)
+        self.type(CustomerRecordEntity().get_address_input("city"),BasePage(self.driver).randomData("string", 6))
         self.drop_select(CustomerRecordEntity().get_address_select("stateCode"), stateCode)
         self.click(CustomerRecordEntity.save)
         # msg = self.get_tips_msg()
@@ -177,14 +177,17 @@ class CustomerRecordPage(BasePage):
         else:
             return False
 
-    def input_DBA_Website(self, name, txt):
+    def input_DBA_Website(self, name):
         """
         #输入DBA,Websites
         :param: name : alias, url
         :return:
         """
         self.ctrl_all(CustomerRecordEntity().get_input_info(name))
-        self.type(CustomerRecordEntity().get_input_info(name), txt)
+        if name == "url":
+            self.type(CustomerRecordEntity().get_input_info(name), "http://www."+ BasePage(self.driver).randomData("string", 10)+ ".com")
+        elif name == "alias":
+            self.type(CustomerRecordEntity().get_input_info(name), BasePage(self.driver).randomData("string", 20))
         self.click(CustomerRecordEntity.save)
         # msg = self.get_tips_msg()
         if "successfully" in self.get_tips_msg():
@@ -192,7 +195,7 @@ class CustomerRecordPage(BasePage):
         else:
             return False
 
-    def operator_identifier(self,type,identifierNo):
+    def operator_identifier(self,type):
         """
         # 新增/修改 identifier
         :param : type,identifierNo
@@ -200,7 +203,17 @@ class CustomerRecordPage(BasePage):
         """
         self.drop_select(CustomerRecordEntity.identifierName,type)
         self.ctrl_all(CustomerRecordEntity.identifier)
-        self.type(CustomerRecordEntity.identifier,identifierNo)
+        if type == "BAN":
+            self.drop_select()
+        elif type == "SSN" or type == "Federal EIN":
+            self.type(CustomerRecordEntity.identifier,BasePage(self.driver).randomData("number", 9))
+        elif type == "State Tax ID":
+            self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 11))
+        elif type == "Agency ID":
+            self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 4))
+        else :
+            self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 6))
+
         self.click(CustomerRecordEntity.save)
         # msg = self.get_tips_msg()
         if "successfully" in self.get_tips_msg():
@@ -208,7 +221,7 @@ class CustomerRecordPage(BasePage):
         else:
             return False
 
-    def operator_contact(self,salutation,firstName,middleName,lastName,suffix,contactRole):
+    def operator_contact(self,salutation,suffix,contactRole):
         """
         # 新增/修改 contact
         :param : salutation,firstName,middleName,lastName,suffix,contactRole
@@ -216,11 +229,11 @@ class CustomerRecordPage(BasePage):
         """
         self.drop_select(CustomerRecordEntity().get_contact_select("salutation"),salutation)
         self.ctrl_all(CustomerRecordEntity().get_contact_input("firstName"))
-        self.type(CustomerRecordEntity().get_contact_input("firstName"),firstName)
+        self.type(CustomerRecordEntity().get_contact_input("firstName"),BasePage(self.driver).randomData("string", 6))
         self.ctrl_all(CustomerRecordEntity().get_contact_input("middleName"))
-        self.type(CustomerRecordEntity().get_contact_input("middleName"),middleName)
+        self.type(CustomerRecordEntity().get_contact_input("middleName"),BasePage(self.driver).randomData("string", 6))
         self.ctrl_all(CustomerRecordEntity().get_contact_input("lastName"))
-        self.type(CustomerRecordEntity().get_contact_input("lastName"),lastName)
+        self.type(CustomerRecordEntity().get_contact_input("lastName"),BasePage(self.driver).randomData("string", 6))
         self.drop_select(CustomerRecordEntity().get_contact_select("suffix"), suffix)
         self.drop_select(CustomerRecordEntity().get_contact_select("contactRole"), contactRole)
         self.click(CustomerRecordEntity.save)
@@ -230,14 +243,15 @@ class CustomerRecordPage(BasePage):
         else:
             return False
 
-    def operator_email(self,email,type,isPrimary):
+    def operator_email(self,type,isPrimary):
         """
         # 新增/修改 contact email
         :param : email,type,isPrimary
         :return:
         """
         self.ctrl_all(CustomerRecordEntity().get_email_input("emailAddress"))
-        self.type(CustomerRecordEntity().get_email_input("emailAddress"), email)
+        self.type(CustomerRecordEntity().get_email_input("emailAddress"), BasePage(self.driver).randomData("string", 6)+"@"+
+                  BasePage(self.driver).randomData("string", 4)+".com")
         self.drop_select(CustomerRecordEntity().get_email_select("emailType"), type)
         self.drop_select(CustomerRecordEntity().get_email_select("isPrimary"), isPrimary)
         self.click(CustomerRecordEntity.save)
@@ -247,7 +261,7 @@ class CustomerRecordPage(BasePage):
         else:
             return False
 
-    def operator_phone(self,type,areaCode,phone,exetension):
+    def operator_phone(self,type):
         """
         # 新增/修改 contact phone
         :param : countryCode,type,areaCode,phone,exetension
@@ -257,11 +271,11 @@ class CustomerRecordPage(BasePage):
         # self.type(CustomerRecordEntity().phone_input("countryCode"), countryCode)
         self.drop_select(CustomerRecordEntity().get_phone_select("phoneType"), type)
         self.ctrl_all(CustomerRecordEntity().get_phone_input("areaCode"))
-        self.type(CustomerRecordEntity().get_phone_input("areaCode"), areaCode)
+        self.type(CustomerRecordEntity().get_phone_input("areaCode"), BasePage(self.driver).randomData("number", 3))
         self.ctrl_all(CustomerRecordEntity().get_phone_input("phone"))
-        self.type(CustomerRecordEntity().get_phone_input("phone"), phone)
+        self.type(CustomerRecordEntity().get_phone_input("phone"), BasePage(self.driver).randomData("number", 7))
         self.ctrl_all(CustomerRecordEntity().get_phone_input("extension"))
-        self.type(CustomerRecordEntity().get_phone_input("extension"), exetension)
+        self.type(CustomerRecordEntity().get_phone_input("extension"), BasePage(self.driver).randomData("string", 6))
         self.click(CustomerRecordEntity.save)
         # msg = self.get_tips_msg()
         if 'successfully' in self.get_tips_msg():
@@ -294,7 +308,7 @@ class CustomerRecordPage(BasePage):
         else:
             self.click(CustomerRecordEntity().get_action(acitonName))
 
-    def edit_entity(self,entityType,entityClass,salutation,firstName,lastName,suffix,fullName,default_sort,organizationName,typeOfBusiness,stateOfIncorporation):
+    def edit_entity(self,entityType,entityClass,salutation,suffix,typeOfBusiness,stateOfIncorporation):
         """
         #Edit multiple type customer
         :param  type,className
@@ -306,19 +320,19 @@ class CustomerRecordPage(BasePage):
         if entityType == "Person":
             if entityClass == "Household":
                 self.ctrl_all(CustomerRecordEntity().get_edit_input("fullName"))
-                self.type(CustomerRecordEntity().get_edit_input("fullName"), fullName)
+                self.type(CustomerRecordEntity().get_edit_input("fullName"), BasePage(self.driver).randomData("string", 6))
                 self.ctrl_all(CustomerRecordEntity().get_edit_input("soundEx"))
-                self.type(CustomerRecordEntity().get_edit_input("soundEx"), default_sort)
+                self.type(CustomerRecordEntity().get_edit_input("soundEx"), BasePage(self.driver).randomData("string", 6))
             else:
                 self.drop_select(CustomerRecordEntity().get_edit_select("salutation"), salutation)
                 self.ctrl_all(CustomerRecordEntity().get_edit_input("firstName"))
-                self.type(CustomerRecordEntity().get_edit_input("firstName"), firstName)
+                self.type(CustomerRecordEntity().get_edit_input("firstName"), BasePage(self.driver).randomData("string", 6))
                 self.ctrl_all(CustomerRecordEntity().get_edit_input("lastName"))
-                self.type(CustomerRecordEntity().get_edit_input("lastName"), lastName)
+                self.type(CustomerRecordEntity().get_edit_input("lastName"), BasePage(self.driver).randomData("string", 6))
                 self.drop_select(CustomerRecordEntity().get_edit_select("suffix"), suffix)
         else:
             self.ctrl_all(CustomerRecordEntity().get_edit_input("organizationName"))
-            self.type(CustomerRecordEntity().get_edit_input("organizationName"), organizationName)
+            self.type(CustomerRecordEntity().get_edit_input("organizationName"), BasePage(self.driver).randomData("string", 6))
             if entityClass == "Company" or entityClass == "Government":
                 self.drop_select(CustomerRecordEntity().get_edit_select("subClassName"), typeOfBusiness)
             self.drop_select(CustomerRecordEntity().get_edit_select("stateOfIncorporation"), stateOfIncorporation)

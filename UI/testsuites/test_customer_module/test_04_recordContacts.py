@@ -17,20 +17,18 @@ class recordContacts(unittest.TestCase):
     def setUpClass(cls):
         cls.driver = driver
         # TopMenuPage(cls.driver).is_homepage()
-        # HomePage(cls.driver).quick_entrance("Customers","C000089464",2)
-
-
+        # HomePage(cls.driver).quick_entrance("Customers","C000048473",2)
+        CustomerRecordPage(cls.driver).switch_tab("Contacts")
 
     def test_01_email_new(self):
         u"""new contact email"""
-        CustomerRecordPage(self.driver).switch_tab("Contacts")
         CustomerRecordPage(self.driver).contact_operator("Email", "New","")
-        self.assertTrue(CustomerRecordPage(self.driver).operator_email("uiautomation@qq.com","Business","false"))
+        self.assertTrue(CustomerRecordPage(self.driver).operator_email("Business","false"))
 
     def test_02_email_edit(self):
         u"""edit contact email"""
         CustomerRecordPage(self.driver).contact_operator("Email", "Edit","1")
-        self.assertTrue(CustomerRecordPage(self.driver).operator_email("uiautomationEdit@qq.com", "Company", "true"))
+        self.assertTrue(CustomerRecordPage(self.driver).operator_email("Company", "true"))
 
     def test_03_email_delete(self):
         u"""delete contact email"""
@@ -40,12 +38,12 @@ class recordContacts(unittest.TestCase):
     def test_04_phone_new(self):
         u"""new contact phone"""
         CustomerRecordPage(self.driver).contact_operator("Phone", "New","")
-        self.assertTrue(CustomerRecordPage(self.driver).operator_phone("Fax","111","1234567","extension"))
+        self.assertTrue(CustomerRecordPage(self.driver).operator_phone("Fax"))
 
     def test_05_phone_edit(self):
         u"""edit contact phone"""
         CustomerRecordPage(self.driver).contact_operator("Phone", "Edit","1")
-        self.assertTrue(CustomerRecordPage(self.driver).operator_phone("Home", "666", "6666666", "edit"))
+        self.assertTrue(CustomerRecordPage(self.driver).operator_phone("Home"))
 
     def test_06_phone_delete(self):
         u"""delete contact phone"""
@@ -56,12 +54,12 @@ class recordContacts(unittest.TestCase):
         u"""new a contact"""
         CustomerRecordPage(self.driver).switch_tab("Contacts")
         CustomerRecordPage(self.driver).contact_operator("Contacts", "New", "")
-        self.assertTrue(CustomerRecordPage(self.driver).operator_contact("Mr.", "UI"+ nowTime, "", "", "Trustee", "Accountant"))
+        self.assertTrue(CustomerRecordPage(self.driver).operator_contact("Mr.", "Trustee", "Accountant"))
 
     def test_08_contacts_edit(self):
         u"""edit contact"""
         CustomerRecordPage(self.driver).contact_operator("Contacts", "Edit", "1")
-        self.assertTrue(CustomerRecordPage(self.driver).operator_contact("Miss", "UIedit"+ nowTime, "", "", "et ux", "CPA"))
+        self.assertTrue(CustomerRecordPage(self.driver).operator_contact("Miss", "et ux", "CPA"))
 
     def test_09_contacts_delete(self):
         u"""delete contacts"""

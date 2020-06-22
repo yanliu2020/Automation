@@ -30,18 +30,11 @@ class newCustomer(unittest.TestCase):
         entityType = data['entityType']
         entityClass = data['entityClass']
         salutation = data['salutation']
-        firstName = data['firstName']+ nowTime
-        lastName = data['lastName']+ nowTime
         suffix = data['suffix']
-        fullName = data['fullName']+ nowTime
-        default_sort = data['default_sort']+ nowTime
-        organizationName = data['organizationName']+ nowTime
         typeOfBusiness = data['typeOfBusiness']
         stateOfIncorporation = data['stateOfIncorporation']
         TopMenuPage(self.driver).select_multiple_menu(2, "customers", "New", "", "")
-        NewCustomerPage(self.driver).business_entity(entityType, entityClass, salutation, firstName, lastName, suffix,
-                                                     fullName, default_sort, organizationName, typeOfBusiness,
-                                                     stateOfIncorporation)
+        NewCustomerPage(self.driver).business_entity(entityType, entityClass, salutation,suffix,typeOfBusiness,stateOfIncorporation)
         self.assertTrue(NewCustomerPage(self.driver).save())
 
     @ddt.data(*data)
@@ -50,16 +43,9 @@ class newCustomer(unittest.TestCase):
         entityType = data['entityType']
         entityClass = data['entityClass']
         salutation = data['salutation']
-        firstName = data['firstName']+ nowTime
-        lastName = data['lastName']+ nowTime
         suffix = data['suffix']
-        fullName = data['fullName']+ nowTime
-        default_sort = data['default_sort']+ nowTime
-        organizationName = data['organizationName']+ nowTime
         typeOfBusiness = data['typeOfBusiness']
         stateOfIncorporation = data['stateOfIncorporation']
         CustomerRecordPage(self.driver).top_operate("Actions ", "Edit")
-        CustomerRecordPage(self.driver).edit_entity(entityType, entityClass, salutation, firstName, lastName, suffix,
-                                                     fullName, default_sort, organizationName, typeOfBusiness,
-                                                     stateOfIncorporation)
+        CustomerRecordPage(self.driver).edit_entity(entityType, entityClass, salutation,suffix,typeOfBusiness,stateOfIncorporation)
         self.assertTrue(NewCustomerPage(self.driver).save())

@@ -17,18 +17,18 @@ class recordEntity(unittest.TestCase):
     def setUpClass(cls):
         cls.driver = driver
         # TopMenuPage(cls.driver).is_homepage()
-        # HomePage(cls.driver).quick_entrance("Customers","C000089954",2)
+        # HomePage(cls.driver).quick_entrance("Customers", "C000048473", 2)
+        CustomerRecordPage(cls.driver).switch_tab("Entity")
 
     def test_01_Address_new(self):
         u"""new address"""
-        CustomerRecordPage(self.driver).switch_tab("Entity")
         CustomerRecordPage(self.driver).entity_operator("Addresses", "New", "")
-        self.assertTrue(CustomerRecordPage(self.driver).operator_address("Home", "Address"+ nowTime, "changsha"+ nowTime, "AK"))
+        self.assertTrue(CustomerRecordPage(self.driver).operator_address("Home", "AK"))
 
     def test_02_Address_edit(self):
         u"""edit address"""
         CustomerRecordPage(self.driver).entity_operator("Addresses", "Edit", "1")
-        self.assertTrue(CustomerRecordPage(self.driver).operator_address("Office", "EditAddress"+ nowTime, "changsha"+ nowTime, "AK"))
+        self.assertTrue(CustomerRecordPage(self.driver).operator_address("Office", "AZ"))
 
     def test_03_Address_delete(self):
         u"""delete address"""
@@ -38,12 +38,12 @@ class recordEntity(unittest.TestCase):
     def test_04_Websites_new(self):
         u"""new Websites"""
         CustomerRecordPage(self.driver).entity_operator("Website", "New", "")
-        self.assertTrue(CustomerRecordPage(self.driver).input_DBA_Website("url", "http://www.uiautomation.com"))
+        self.assertTrue(CustomerRecordPage(self.driver).input_DBA_Website("url"))
 
     def test_05_Websites_edit(self):
         u"""edit Websites"""
         CustomerRecordPage(self.driver).entity_operator("Website", "Edit", "1")
-        self.assertTrue(CustomerRecordPage(self.driver).input_DBA_Website("url", "http://www.uiautomationEdit.com"))
+        self.assertTrue(CustomerRecordPage(self.driver).input_DBA_Website("url"))
 
     def test_06_Websites_delete(self):
         u"""delete Websites"""
@@ -53,12 +53,12 @@ class recordEntity(unittest.TestCase):
     def test_07_DBA_new(self):
         u"""new a DBA"""
         CustomerRecordPage(self.driver).entity_operator("Doing Business As (DBA)", "New", "")
-        self.assertTrue(CustomerRecordPage(self.driver).input_DBA_Website("alias", "UIAutomation" + nowTime))
+        self.assertTrue(CustomerRecordPage(self.driver).input_DBA_Website("alias"))
 
     def test_08_DBA_edit(self):
         u"""edit DBA"""
         CustomerRecordPage(self.driver).entity_operator("Doing Business As (DBA)", "Edit", "1")
-        self.assertTrue(CustomerRecordPage(self.driver).input_DBA_Website("alias", "UIAutomationEdit" + nowTime))
+        self.assertTrue(CustomerRecordPage(self.driver).input_DBA_Website("alias"))
 
     def test_09_DBA_delete(self):
         u"""delete DBA"""
@@ -68,12 +68,12 @@ class recordEntity(unittest.TestCase):
     def test_10_Identifier_new(self):
         u"""new identifier"""
         CustomerRecordPage(self.driver).entity_operator("Business Identifier", "New", "")
-        self.assertTrue(CustomerRecordPage(self.driver).operator_identifier("SSN", "123456789"))
+        self.assertTrue(CustomerRecordPage(self.driver).operator_identifier("SSN"))
 
     def test_11_Identifier_edit(self):
         u"""edit identifier"""
         CustomerRecordPage(self.driver).entity_operator("Business Identifier", "Edit", "1")
-        self.assertTrue(CustomerRecordPage(self.driver).operator_identifier("State Tax ID", "11111111111"))
+        self.assertTrue(CustomerRecordPage(self.driver).operator_identifier("State Tax ID"))
 
     def test_12_Identifier_delete(self):
         u"""delete identifier"""
