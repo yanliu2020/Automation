@@ -6,11 +6,10 @@ from getdata.ExcelUtil import  excelHandle
 from pageobjects.common.topMenu import TopMenuPage
 from utils.browser_engine import driver
 from pageobjects.customer.newCustomer import  NewCustomerPage
-from utils.base_page import BasePage
+from utils.basepath_helper import excel_path
 
 nowTime = datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S")
-nowTime1 = datetime.datetime.now().strftime("%Y/%m/%d")
-filepath = "E:\\Automation\\UI\\getdata\\test.xlsx"
+filepath = excel_path +"test.xlsx"
 sheetName = "two_contact"
 @ddt.ddt
 class newCustomerRelaInfo(unittest.TestCase):

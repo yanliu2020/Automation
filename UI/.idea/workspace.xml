@@ -14,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/UI$Unittests_in_test_01_customerNew_py.coverage" NAME="Unittests in test_01_customerNew.py Coverage Results" MODIFIED="1592809943544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_customer_module" />
+    <SUITE FILE_PATH="coverage/UI$Unittests_in_test_01_customerNew_py.coverage" NAME="Unittests in test_01_customerNew.py Coverage Results" MODIFIED="1592813312368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_customer_module" />
     <SUITE FILE_PATH="coverage/UI$Unittests_in_test_customer_record_entity_py.coverage" NAME="Unittests in test_customer_record_entity.py Coverage Results" MODIFIED="1589158751948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_03_customer_record" />
     <SUITE FILE_PATH="coverage/UI$run_appoint.coverage" NAME="run_appoint Coverage Results" MODIFIED="1584411399396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testrunner" />
     <SUITE FILE_PATH="coverage/UI$Unittests_in_test_logout_py.coverage" NAME="Unittests in test_logout.py Coverage Results" MODIFIED="1589784936627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_01_logout" />
@@ -64,42 +64,7 @@
     <favorites_list name="UI" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test_01_customerNew.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testsuites/test_customer_module/test_01_customerNew.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="49" column="45" lean-forward="false" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
-              <folding>
-                <element signature="e#23#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="customerRecord.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pageobjects/customer/customerRecord.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-111">
-              <caret line="310" column="8" lean-forward="false" selection-start-line="310" selection-start-column="8" selection-end-line="310" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="newCustomer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pageobjects/customer/newCustomer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="24" column="123" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="123" />
-              <folding>
-                <element signature="e#24#62#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -110,7 +75,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>show</find>
       <find>style</find>
       <find>hide_img</find>
       <find>script&gt;</find>
@@ -140,6 +104,7 @@
       <find>Automation Test Report</find>
       <find>//div[@class='card']/form//div[@id='homeGrid']/div//h2</find>
       <find>save</find>
+      <find>file_path</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -156,7 +121,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/testdata/111.py" />
         <option value="$PROJECT_DIR$/testdata/ExcelUtil.py" />
         <option value="$PROJECT_DIR$/testdata/222.py" />
         <option value="$PROJECT_DIR$/testrunner/run_all.py" />
@@ -202,11 +166,12 @@
         <option value="$PROJECT_DIR$/testsuites/test_customer_module/test_01_newCust.py" />
         <option value="$PROJECT_DIR$/utils/base_page.py" />
         <option value="$PROJECT_DIR$/pageobjects/customer/customerRecord.py" />
-        <option value="$PROJECT_DIR$/testsuites/test_customer_module/test_01_customerNew.py" />
-        <option value="$PROJECT_DIR$/testsuites/test_customer_module/test_02_newCustomerRelaInfo.py" />
         <option value="$PROJECT_DIR$/testsuites/test_customer_module/test_03_recordEntity.py" />
         <option value="$PROJECT_DIR$/testsuites/test_customer_module/test_04_recordContacts.py" />
         <option value="$PROJECT_DIR$/pageobjects/customer/newCustomer.py" />
+        <option value="$PROJECT_DIR$/utils/basepath_helper.py" />
+        <option value="$PROJECT_DIR$/testsuites/test_customer_module/test_01_customerNew.py" />
+        <option value="$PROJECT_DIR$/testsuites/test_customer_module/test_02_newCustomerRelaInfo.py" />
       </list>
     </option>
   </component>
@@ -334,7 +299,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.run_all_cn">
+  <component name="RunManager" selected="Python tests.Unittests in test_01_customerNew.py">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -457,9 +422,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.run_all_cn" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_02_newCustomerRelaInfo.py" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in test_01_customerNew.py" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test_01_customerNew.py" />
+        <item index="1" class="java.lang.String" itemvalue="Python.run_all_cn" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in test_02_newCustomerRelaInfo.py" />
         <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in test_03_recordEntity.py" />
         <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in test_04_recordContacts.py" />
       </list>
@@ -519,6 +484,9 @@
     <history-entry file="Unittests_in_test_01_customerNew_py - 2020.06.22 at 15h 17m 02s.xml">
       <configuration name="Unittests in test_01_customerNew.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_test_01_customerNew_py - 2020.06.22 at 16h 10m 04s.xml">
+      <configuration name="Unittests in test_01_customerNew.py" configurationId="tests" />
+    </history-entry>
     <history-entry file="Unittests_in_test_02_newCustomerRelaInfo_py - 2020.06.22 at 15h 21m 20s.xml">
       <configuration name="Unittests in test_02_newCustomerRelaInfo.py" configurationId="tests" />
     </history-entry>
@@ -536,9 +504,6 @@
     </history-entry>
     <history-entry file="Unittests_in_test_03_recordEntity_py - 2020.06.22 at 14h 49m 44s.xml">
       <configuration name="Unittests in test_03_recordEntity.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_04_recordContacts_py - 2020.06.22 at 14h 15m 37s.xml">
-      <configuration name="Unittests in test_04_recordContacts.py" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_test_04_recordContacts_py - 2020.06.22 at 14h 19m 35s.xml">
       <configuration name="Unittests in test_04_recordContacts.py" configurationId="tests" />
@@ -559,12 +524,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.022206305" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="300" height="677" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19594595" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19594595" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13243243" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -811,24 +775,8 @@
         <state relative-caret-position="675">
           <caret line="27" column="16" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
           <folding>
-            <element signature="e#23#38#0" expanded="true" />
+            <element signature="e#23#38#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/browser_engine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1149">
-          <caret line="14" column="70" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/basepath_helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -840,28 +788,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/base_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="753">
-          <caret line="391" column="0" lean-forward="true" selection-start-line="391" selection-start-column="0" selection-end-line="391" selection-end-column="0" />
-          <folding>
-            <element signature="e#23#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testsuites/test_customer_module/test_04_recordContacts.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-700">
           <caret line="20" column="30" lean-forward="false" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testrunner/run_all_cn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="38" column="65" lean-forward="true" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
           <folding />
         </state>
       </provider>
@@ -874,41 +804,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testsuites/test_customer_module/test_02_newCustomerRelaInfo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="66" column="42" lean-forward="false" selection-start-line="66" selection-start-column="42" selection-end-line="66" selection-end-column="42" />
-          <folding>
-            <element signature="e#23#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pageobjects/customer/newCustomer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="24" column="123" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="123" />
+          <caret line="24" column="123" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="123" />
           <folding>
-            <element signature="e#24#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testsuites/test_customer_module/test_01_customerNew.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="49" column="45" lean-forward="false" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
-          <folding>
-            <element signature="e#23#38#0" expanded="true" />
+            <element signature="e#24#62#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pageobjects/customer/customerRecord.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-111">
+        <state relative-caret-position="2214">
           <caret line="310" column="8" lean-forward="false" selection-start-line="310" selection-start-column="8" selection-end-line="310" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testrunner/run_all_cn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="45" lean-forward="false" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+          <folding>
+            <element signature="e#50#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/base_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="391" column="0" lean-forward="true" selection-start-line="391" selection-start-column="0" selection-end-line="391" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/browser_engine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/basepath_helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="53" column="10" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testsuites/test_customer_module/test_01_customerNew.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="5" column="44" lean-forward="false" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testsuites/test_customer_module/test_02_newCustomerRelaInfo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="15" />
+          <folding>
+            <element signature="e#23#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

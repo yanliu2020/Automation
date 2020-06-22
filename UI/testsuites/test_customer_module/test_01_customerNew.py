@@ -3,13 +3,14 @@ import datetime
 import unittest
 import  ddt
 from getdata.ExcelUtil import  excelHandle
+from utils.basepath_helper import excel_path
 from pageobjects.common.topMenu import TopMenuPage
 from utils.browser_engine import driver
 from pageobjects.customer.newCustomer import  NewCustomerPage
 from pageobjects.customer.customerRecord import  CustomerRecordPage
 
 nowTime = datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S")
-filepath = "E:\\Automation\\UI\\getdata\\test.xlsx"
+filepath = excel_path +"test.xlsx"
 sheetName = "new_customer"
 @ddt.ddt
 class newCustomer(unittest.TestCase):
