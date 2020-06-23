@@ -15,7 +15,7 @@
         <collectionProp name="HeaderManager.headers">
           <elementProp name="" elementType="Header">
             <stringProp name="Header.name">Authorization</stringProp>
-            <stringProp name="Header.value">Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ilg1ZVhrNHh5b2pORnVtMWtsMll0djhkbE5QNC1jNTdkTzZRR1RWQndhTmsifQ.eyJleHAiOjE1OTI0NDQzNTMsIm5iZiI6MTU5MjQ0MDc1MywidmVyIjoiMS4wIiwiaXNzIjoiaHR0cHM6Ly9yZWRyaXZlcmdsb2FsYW1vLmIyY2xvZ2luLmNvbS9hMTdmMDgyNC0wNGNhLTQ2YjktOTczZS1iM2ZjODQyYjY3YjYvdjIuMC8iLCJzdWIiOiI5NzEzMWE2Zi04MzdiLTQ2N2UtODk1My1kNGFlY2ViZWUwYTgiLCJhdWQiOiJlOTg1ZmU3Mi05OTllLTQwYzctYjM2Yi0yZGJlNmQ5NjZiNmMiLCJub25jZSI6ImRlZmF1bHROb25jZSIsImlhdCI6MTU5MjQ0MDc1MywiYXV0aF90aW1lIjoxNTkyNDQwNzUzLCJvaWQiOiI5NzEzMWE2Zi04MzdiLTQ2N2UtODk1My1kNGFlY2ViZWUwYTgiLCJuYW1lIjoieWFubGl1IiwiZ2l2ZW5fbmFtZSI6ImNoYW4iLCJ0ZnAiOiJCMkNfMV9BTEFNT19QUk9UT1RZUEVfU0lHTklOX1NJR05VUCIsImF0X2hhc2giOiI3RTltcFpWcVR0Q3IyNHJrM3ljUEtRIn0.tBDz9R3-1rIljbHoEpMWJwnzVkDUfDNyTHLCVz3AH87MbtGSiFYXjfhXP673ulcz0ilr2H7hYfxz6WpfKJc5ZQaq9PoOsvKjrmKn-KsmUXaQTb9_hCvBs-w7S52ph4bxKNceLtgIXOVxLrkj-bXIMsaUSj1v1R3yNFHPJUSRNbSpUz4C_5DDZJeUL7ee3TjkVBYeyl3kFU0isB010m-DwEVaNMDOAnY28IRdHIQ-oY8yH5mdIsm5v12hmTM8wbB45O0bvqGI9GxW8rSTQv8HLZKg2Aob_dgd7QTBfhp_FnlRZaJechpnJ_BlkJ0JFmsZw9jFQ62OIhdReqxh65pxvA</stringProp>
+            <stringProp name="Header.value">Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ilg1ZVhrNHh5b2pORnVtMWtsMll0djhkbE5QNC1jNTdkTzZRR1RWQndhTmsifQ.eyJleHAiOjE1OTI4OTUwMjgsIm5iZiI6MTU5Mjg5MTQyOCwidmVyIjoiMS4wIiwiaXNzIjoiaHR0cHM6Ly9yZWRyaXZlcmdsb2FsYW1vLmIyY2xvZ2luLmNvbS9hMTdmMDgyNC0wNGNhLTQ2YjktOTczZS1iM2ZjODQyYjY3YjYvdjIuMC8iLCJzdWIiOiI5NzEzMWE2Zi04MzdiLTQ2N2UtODk1My1kNGFlY2ViZWUwYTgiLCJhdWQiOiJlOTg1ZmU3Mi05OTllLTQwYzctYjM2Yi0yZGJlNmQ5NjZiNmMiLCJub25jZSI6ImRlZmF1bHROb25jZSIsImlhdCI6MTU5Mjg5MTQyOCwiYXV0aF90aW1lIjoxNTkyODkxNDI4LCJvaWQiOiI5NzEzMWE2Zi04MzdiLTQ2N2UtODk1My1kNGFlY2ViZWUwYTgiLCJuYW1lIjoieWFubGl1IiwiZ2l2ZW5fbmFtZSI6ImNoYW4iLCJ0ZnAiOiJCMkNfMV9BTEFNT19QUk9UT1RZUEVfU0lHTklOX1NJR05VUCIsImF0X2hhc2giOiJfWnZvMnhmS3VsLU1OQjZWTzhuRzdnIn0.Vw51RrTv7Yvepop7RsKgkIYwEWb596gzzFDH1A3eYIOZjxhIB59rl7NpUpu8dlC-HJeunUZDiUU--_apZdX1aobj3j5YvsEUlB_8gaeUpv9QNlcX4QssejXzOBImtJwGixGfAPHyhiZPUzf_2ojvyzWCEjx55wX0Ifqn9F0ACfIH-oSFMImAaV4GcCGvmqJrm8hpAEdy3oRaj0lh6w2U2I8lqMrjx0Ofgxaz7KwGW6Ljs6yoMtM8N6V38YsMmREXf6DsQI37WoSYrJcyZ-gYBTnIl3FVDyrjjIbAjHAfSTwS4ukepQEPl4PD15Syv5aRQDzLL9uzTrSxyAeh5yP1ZA</stringProp>
           </elementProp>
           <elementProp name="" elementType="Header">
             <stringProp name="Header.name">Content-Type</stringProp>
@@ -1611,13 +1611,13 @@
                 <stringProp name="Argument.value">{&#xd;
          &quot;employmentStatus&quot;: &quot;Active&quot;,&#xd;
          &quot;division&quot;: &quot;Uplands Leasing&quot;,&#xd;
-         &quot;emailAddress&quot;: &quot;${__Random(1000,9999,id)}@an-chen.com&quot;,&#xd;
+         &quot;emailAddress&quot;: &quot;${__Random(1000,9999,id)}@automation.com&quot;,&#xd;
          &quot;officeSite&quot;: &quot;Changsha&quot;,&#xd;
          &quot;programArea&quot;: &quot;Professional Services&quot;,&#xd;
          &quot;userName&quot;: &quot;test&quot;,&#xd;
          &quot;jobTitle&quot;: &quot;unknown&quot;,&#xd;
-         &quot;firstName&quot;: &quot;API&quot;,&#xd;
-         &quot;lastName&quot;: &quot;API&quot;,&#xd;
+         &quot;firstName&quot;: &quot;API${__Random(1000,9999,id)}&quot;,&#xd;
+         &quot;lastName&quot;: &quot;API${__Random(1000,9999,id)}&quot;,&#xd;
          &quot;officePhone&quot;: &quot;(123) 456-7890&quot;&#xd;
  }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
@@ -1662,6 +1662,44 @@
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">usermanagement-api/users/${userId}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Modify a user" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+         &quot;employmentStatus&quot;: &quot;Active&quot;,&#xd;
+         &quot;division&quot;: &quot;Uplands Leasing&quot;,&#xd;
+         &quot;emailAddress&quot;: &quot;${__Random(1000,9999,id)}@modify.com&quot;,&#xd;
+         &quot;officeSite&quot;: &quot;Changsha&quot;,&#xd;
+         &quot;programArea&quot;: &quot;Professional Services&quot;,&#xd;
+         &quot;userName&quot;: &quot;test&quot;,&#xd;
+         &quot;jobTitle&quot;: &quot;unknown&quot;,&#xd;
+         &quot;firstName&quot;: &quot;API&quot;,&#xd;
+         &quot;lastName&quot;: &quot;API&quot;,&#xd;
+         &quot;officePhone&quot;: &quot;(123) 456-7890&quot;&#xd;
+ }</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">usermanagement-api/users/${userId}</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
@@ -1762,6 +1800,36 @@
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">usermanagement-api/roles/${roleId}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Modify a role" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;description&quot;: &quot;API-modify&quot;,&#xd;
+  &quot;name&quot;: &quot;${__Random(1000,9999,id)}API&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">usermanagement-api/roles/${roleId}</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
