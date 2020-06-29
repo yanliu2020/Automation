@@ -2,7 +2,8 @@
 import datetime
 import unittest
 import  ddt
-from getdata.ExcelUtil import  excelHandle
+from utils.connect_sql import dbConnect
+from getdata.ExcelUtil import excelHandle
 from pageobjects.common.topMenu import TopMenuPage
 from utils.browser_engine import driver
 from pageobjects.customer.newCustomer import  NewCustomerPage
@@ -26,17 +27,19 @@ class newCustomerRelaInfo(unittest.TestCase):
     def test_01_Same_Above(self, data):
         u"""New Customer"""
         entityType = data['entityType']
-        entityClass = data['entityClass']
         salutation = data['salutation']
+        entityClass = data['entityClass']
         suffix = data['suffix']
         typeOfBusiness = data['typeOfBusiness']
         stateOfIncorporation = data['stateOfIncorporation']
         emailType = data['emailType']
-        type1 = data['type1']
+        phoneType = data['type1']
+
         TopMenuPage(self.driver).select_multiple_menu(2, "customers", "New", "", "")
         # CustomerRecordPage(self.driver).top_operate("Actions ", "New")
-        NewCustomerPage(self.driver).business_entity(entityType, entityClass, salutation,suffix,typeOfBusiness,stateOfIncorporation)
-        NewCustomerPage(self.driver).contact(True, 1, 1,"", emailType,type1)
+        NewCustomerPage(self.driver).business_entity(entityType, entityClass, salutation, suffix, typeOfBusiness,
+                                                     stateOfIncorporation)
+        NewCustomerPage(self.driver).contact(True, 1, 1,"", emailType, phoneType)
         self.assertTrue(NewCustomerPage(self.driver).save())
 
     # 加载测试数据
@@ -51,19 +54,24 @@ class newCustomerRelaInfo(unittest.TestCase):
         stateOfIncorporation = data['stateOfIncorporation']
         role = data['role']
         emailType = data['emailType']
-        type1 = data['type1']
-        type2 = data['type2']
-        type3 = data['type3']
+        phoneType1 = data['type1']
+        phoneType2 = data['type2']
+        phoneType3 = data['type3']
+        addressType = dbConnect().getdata('MCDH', 'addressType')
+        stateCode = dbConnect().getdata('ALAMO', 'stateCode')
+        type = dbConnect().getdata('MCDH', 'identifierName')
+
         TopMenuPage(self.driver).select_multiple_menu(2, "customers", "New", "", "")
         # CustomerRecordPage(self.driver).top_operate("Actions ", "New")
-        NewCustomerPage(self.driver).business_entity(entityType, entityClass, salutation,suffix,typeOfBusiness,stateOfIncorporation)
-        NewCustomerPage(self.driver).contact(False, 1, 1, role,emailType,type1)
-        NewCustomerPage(self.driver).add_phone("Phone 2", 1, 3,type2)
-        NewCustomerPage(self.driver).add_phone("Phone 3", 1, 5,type3)
-        NewCustomerPage(self.driver).contact(False, 3, 1, role,emailType,type1)
-        NewCustomerPage(self.driver).add_phone("Phone 2", 3, 3,type2)
-        NewCustomerPage(self.driver).add_phone("Phone 3", 3, 5,type3)
-        NewCustomerPage(self.driver).address("Address", "Home", "AK")
-        NewCustomerPage(self.driver).identifier("Identifier", "SSN")
+        NewCustomerPage(self.driver).business_entity(entityType, entityClass, salutation, suffix,
+                                                     typeOfBusiness, stateOfIncorporation)
+        NewCustomerPage(self.driver).contact(False, 1, 1, role, emailType, phoneType1)
+        NewCustomerPage(self.driver).add_phone("Phone 2", 1, 3, phoneType2)
+        NewCustomerPage(self.driver).add_phone("Phone 3", 1, 5, phoneType3)
+        NewCustomerPage(self.driver).contact(False, 3, 1, role, emailType, phoneType1)
+        NewCustomerPage(self.driver).add_phone("Phone 2", 3, 3, phoneType2)
+        NewCustomerPage(self.driver).add_phone("Phone 3", 3, 5, phoneType3)
+        NewCustomerPage(self.driver).address("Address", addressType, stateCode)
+        NewCustomerPage(self.driver).identifier("Identifier", type)
         self.assertTrue(NewCustomerPage(self.driver).save())
 

@@ -2,8 +2,9 @@
 
 from  utils.base_page import  BasePage
 from config.customer.customer_record_entity import CustomerRecordEntity
-from selenium.common.exceptions import  NoSuchElementException
 from utils.logger import logger
+
+
 class CustomerRecordPage(BasePage):
 
     def switch_tab(self,tabName):
@@ -195,24 +196,40 @@ class CustomerRecordPage(BasePage):
         else:
             return False
 
-    def operator_identifier(self,type):
+    def operator_identifier(self,flag,type):
         """
         # 新增/修改 identifier
         :param : type,identifierNo
         :return:
         """
-        self.drop_select(CustomerRecordEntity.identifierName,type)
-        self.ctrl_all(CustomerRecordEntity.identifier)
-        if type == "BAN":
-            self.drop_select()
-        elif type == "SSN" or type == "Federal EIN":
-            self.type(CustomerRecordEntity.identifier,BasePage(self.driver).randomData("number", 9))
-        elif type == "State Tax ID":
-            self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 11))
-        elif type == "Agency ID":
-            self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 4))
-        else :
-            self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 6))
+        if flag == "edit":
+            if self.find_element(CustomerRecordEntity().get_identifier_name(1)).text == "BAN":
+                pass
+            elif self.find_element(CustomerRecordEntity().get_identifier_name(1)).text == "State Tax ID":
+                self.ctrl_all(CustomerRecordEntity.identifier)
+                self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 11))
+            else:
+                self.drop_select(CustomerRecordEntity.identifierName, type)
+                if type == "SSN" or type == "Federal EIN":
+                    self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 9))
+                elif type == "State Tax ID":
+                    self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 11))
+                elif type == "Agency ID":
+                    self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 4))
+                else:
+                    self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 6))
+        elif flag == "new":
+            self.drop_select(CustomerRecordEntity.identifierName, type)
+            if type == "BAN":
+                self.drop_select()
+            elif type == "SSN" or type == "Federal EIN":
+                self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 9))
+            elif type == "State Tax ID":
+                self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 11))
+            elif type == "Agency ID":
+                self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 4))
+            else:
+                self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 6))
 
         self.click(CustomerRecordEntity.save)
         # msg = self.get_tips_msg()

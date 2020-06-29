@@ -134,4 +134,10 @@ class CustomerRecordEntity(object):
     #history
     entity_history = "xpath=>//div[@class='modal-content']//span[@class='glo-table-pagination']"
 
+    #判断已选择identifierName的类型
+    identifierName_row = "xpath=>//div[@class='glo-row']/div[5]//div[@class='glo-row']//div[@class='rt-tr-group'][%s]/div/div"
+    def get_identifier_name(self,loc):
+        return self.identifierName_row %loc
+
+
 

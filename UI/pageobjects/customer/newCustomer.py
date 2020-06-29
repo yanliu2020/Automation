@@ -79,13 +79,14 @@ class NewCustomerPage(BasePage):
         :return:
         """
         self.click(NewCustomerEntity.save)
+        self.sleep(1)
         if "successfully" in CustomerRecordPage(self.driver).get_tips_msg():
             return True
         else:
             return False
 
 
-    def contact(self,same,index,flag,role,emailType,type):
+    def contact(self,same,index,flag,role,emailType,phoneType):
         """
         #Multiple Contact Information
         :param  index,flag,firstName,lastName,role,emailType,email,areaCode,phone,type
@@ -104,7 +105,7 @@ class NewCustomerPage(BasePage):
                   BasePage(self.driver).randomData("string", 4)+".com")
         self.type(NewCustomerEntity().get_phone_input(index, flag, "areaCode"), BasePage(self.driver).randomData("number", 3))
         self.type(NewCustomerEntity().get_phone_input(index, flag, "phone"), BasePage(self.driver).randomData("number", 7))
-        self.drop_select(NewCustomerEntity().get_phone_type(index, flag), type)
+        self.drop_select(NewCustomerEntity().get_phone_type(index, flag), phoneType)
 
 
     def add_phone(self,sectionName,index,flag,type):
