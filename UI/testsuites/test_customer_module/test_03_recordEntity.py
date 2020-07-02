@@ -1,9 +1,9 @@
 #-*- coding: UTF-8 -*-
-
 import datetime
 import unittest
 from utils.connect_sql import dbConnect
 from utils.browser_engine import driver
+from pageobjects.common.topMenu import TopMenuPage
 from pageobjects.homepage.homePage import  HomePage
 from pageobjects.customer.customerRecord import CustomerRecordPage
 nowTime = datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S")
@@ -16,6 +16,7 @@ class recordEntity(unittest.TestCase):
         cls.driver = driver
         # TopMenuPage(cls.driver).is_homepage()
         # HomePage(cls.driver).quick_entrance("Customers", "C000048473", 2)
+        # CustomerRecordPage(cls.driver).switch_tab("Entity")
 
     def test_01_Address_new(self):
         u"""new address"""
@@ -76,14 +77,14 @@ class recordEntity(unittest.TestCase):
 
     def test_11_Identifier_edit(self):
         u"""edit identifier"""
-        type = dbConnect().getdata('MCDH', 'identifierName')
+        type = dbConnect().getdata('MCDH', 'identifierNameWithoutBan')
         CustomerRecordPage(self.driver).entity_operator("Business Identifier", "Edit", "1")
         self.assertTrue(CustomerRecordPage(self.driver).operator_identifier("edit",type))
 
     def test_12_Identifier_delete(self):
         u"""delete identifier"""
         CustomerRecordPage(self.driver).entity_operator("Business Identifier", "Delete", "1")
-        self.assertTrue(CustomerRecordPage(self.driver).delete())
+        self.assertTrue(CustomerRecordPage(self.driver).operator_identifier("Delete",""))
 
 
 

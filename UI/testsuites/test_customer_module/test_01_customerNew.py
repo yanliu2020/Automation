@@ -2,7 +2,6 @@
 import datetime
 import unittest
 import  ddt
-from utils.connect_sql import dbConnect
 from getdata.ExcelUtil import  excelHandle
 from utils.basepath_helper import excel_path
 from pageobjects.common.topMenu import TopMenuPage
@@ -23,9 +22,8 @@ class newCustomer(unittest.TestCase):
         #browser = BrowserEngine(cls)
         cls.driver = driver
 
-    data = excelHandle(filepath, sheetName).read_excel()
-
     # 加载测试数据
+    data = excelHandle(filepath, sheetName).read_excel()
     @ddt.data(*data)
     def test_addCustomer(self,data):
         u"""New Customer"""
@@ -40,7 +38,7 @@ class newCustomer(unittest.TestCase):
         self.assertTrue(NewCustomerPage(self.driver).save())
 
     @ddt.data(*data)
-    def test_updateCustomer(self, data):
+    def test_updateCustomer(self,data):
         u"""New Customer"""
         entityType = data['entityType']
         entityClass = data['entityClass']

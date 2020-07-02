@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
-
 from  utils.base_page import  BasePage
 from config.customer.customer_record_entity import CustomerRecordEntity
 from utils.logger import logger
-
+from utils.connect_sql import dbConnect
 
 class CustomerRecordPage(BasePage):
 
@@ -39,7 +38,10 @@ class CustomerRecordPage(BasePage):
                 if self.find_elements(CustomerRecordEntity().get_entity_records(section_item[0])):
                     if self.not_selected(section_item[0], row) == True:
                         self.click(CustomerRecordEntity().get_entity_record(section_item[0], row))
-                    self.click(CustomerRecordEntity().get_section_operator(section_item[0],buttonName))
+                    if self.find_element(CustomerRecordEntity().get_identifier_name(1)).text == "BAN" and (buttonName == "Edit" or buttonName == "Delete"):
+                        pass
+                    else:
+                        self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
                 else:
                     logger.info("sectionName %s have no record!"% sectionName)
 
@@ -74,31 +76,6 @@ class CustomerRecordPage(BasePage):
                         self.click(CustomerRecordEntity().get_entity_record(section_item[0], row))
                 self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
 
-    # def related_leases_operator(self,sectionName,buttonName,row):
-    #     """
-    #     #Related Lease/Lands 查询和删除
-    #     :param  sectionName,buttonName,row
-    #     :return:
-    #     """
-    #     section_list = self.find_elements(CustomerRecordEntity.related_section_list)
-    #     # print(section_list)
-    #     section_item = None
-    #     for i, item in enumerate(section_list):
-    #         if sectionName == item.text:
-    #             section_item = (i + 1, item)
-    #             break
-    #     if section_item is None:
-    #         raise NoSuchElementException(msg="sectionName %s not found!" % sectionName)
-    #     else:
-    #         self.scroll_into_view(CustomerRecordEntity().get_section_name(sectionName))
-    #         if buttonName == "Delete Relationship":
-    #             self.click(CustomerRecordEntity().get_related_operator(section_item[0],buttonName))
-    #         else:
-    #             if self.find_elements(CustomerRecordEntity().get_related_records(section_item[0])):
-    #                 self.click(CustomerRecordEntity().get_related_record(section_item[0], row))
-    #                 self.click(CustomerRecordEntity().get_related_operator(section_item[0],buttonName))
-    #             else:
-    #                 logger.info("sectionName %s have no record!"% sectionName)
 
     def contact_list_page(self):
         """
@@ -134,18 +111,18 @@ class CustomerRecordPage(BasePage):
         self.sleep(2)
         return  self.find_element(CustomerRecordEntity.tips_msg).text
 
-    def detail_history(self,title):
-        """
-        #详情页,历史页
-        :param : title
-        :return:
-        """
-        title = self.find_element(CustomerRecordEntity.contact_title).text
-        if title in title:
-            self.execute_script_click(CustomerRecordEntity.contact_close)
-            return True
-        else:
-            return False
+    # def detail_history(self,title):
+    #     """
+    #     #详情页,历史页
+    #     :param : title
+    #     :return:
+    #     """
+    #     title = self.find_element(CustomerRecordEntity.contact_title).text
+    #     if title in title:
+    #         self.execute_script_click(CustomerRecordEntity.contact_close)
+    #         return True
+    #     else:
+    #         return False
 
     def delete(self):
         """
@@ -198,45 +175,61 @@ class CustomerRecordPage(BasePage):
 
     def operator_identifier(self,flag,type):
         """
-        # 新增/修改 identifier
-        :param : type,identifierNo
+        # 新增/修改/删除 identifier
+        :param : flag,type
         :return:
         """
         if flag == "edit":
             if self.find_element(CustomerRecordEntity().get_identifier_name(1)).text == "BAN":
-                pass
+                return True
             elif self.find_element(CustomerRecordEntity().get_identifier_name(1)).text == "State Tax ID":
                 self.ctrl_all(CustomerRecordEntity.identifier)
                 self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 11))
+                self.click(CustomerRecordEntity.save)
+                if "successfully" in self.get_tips_msg():
+                    return True
+                else:
+                    return False
             else:
                 self.drop_select(CustomerRecordEntity.identifierName, type)
-                if type == "SSN" or type == "Federal EIN":
-                    self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 9))
-                elif type == "State Tax ID":
-                    self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 11))
-                elif type == "Agency ID":
-                    self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 4))
+                self.ctrl_all(CustomerRecordEntity.identifier)
+                self.identifier_not_BAN_input(type)
+                self.click(CustomerRecordEntity.save)
+                if "successfully" in self.get_tips_msg():
+                    return True
                 else:
-                    self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 6))
+                    return False
         elif flag == "new":
-            self.drop_select(CustomerRecordEntity.identifierName, type)
             if type == "BAN":
-                self.drop_select()
-            elif type == "SSN" or type == "Federal EIN":
-                self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 9))
-            elif type == "State Tax ID":
-                self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 11))
-            elif type == "Agency ID":
-                self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 4))
+                if self.without_BAN() == True:
+                    type = dbConnect().getdata('MCDH', 'identifierNameWithoutBan')
+                    self.drop_select(CustomerRecordEntity.identifierName,type)
+                    self.identifier_not_BAN_input(type)
+                else:
+                    self.drop_select(CustomerRecordEntity.identifierName, "State Tax ID")
+                    self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 11))
+                    self.click(CustomerRecordEntity.save)
+                    self.find_elements_by_wait("xpath", CustomerRecordEntity().get_section_operator(5, "New"))
+                    self.click(CustomerRecordEntity().get_section_operator(5, "New"))
+                    self.drop_select(CustomerRecordEntity.identifierName, type)
+                    self.drop_select_index(CustomerRecordEntity.select_tax, 1)
             else:
-                self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 6))
-
-        self.click(CustomerRecordEntity.save)
-        # msg = self.get_tips_msg()
-        if "successfully" in self.get_tips_msg():
-            return True
-        else:
-            return False
+                self.drop_select(CustomerRecordEntity.identifierName, type)
+                self.identifier_not_BAN_input(type)
+            self.click(CustomerRecordEntity.save)
+            if "successfully" in self.get_tips_msg():
+                return True
+            else:
+                return False
+        elif flag == "Delete":
+            if self.find_element(CustomerRecordEntity().get_identifier_name(1)).text == "BAN":
+                return  True
+            else:
+                self.click(CustomerRecordEntity.delete_confirm)
+                if "successfully" in self.get_tips_msg():
+                    return True
+                else:
+                    return False
 
     def operator_contact(self,salutation,suffix,contactRole):
         """
@@ -360,6 +353,40 @@ class CustomerRecordPage(BasePage):
             return True
         else:
             return False
+
+    def without_BAN(self):
+        """
+        # 判断Identifier Name下拉框是否有BAN选项
+        :param :
+        :return:
+        """
+        identifierNameList = self.find_elements(CustomerRecordEntity.identifierNameList)
+        name_item = None
+        for i, item in enumerate(identifierNameList):
+            if "BAN" == item.get_attribute("value"):
+                name_item = (i + 1, item)
+                break
+        if name_item is None:
+            logger.info("Without BAN type!")
+            return True
+        else:
+            return  False
+
+    def identifier_not_BAN_input(self,type):
+        """
+        # Identifier Name非BAN类型的输入
+        :param : type
+        :return:
+        """
+        if type == "SSN" or type == "Federal EIN":
+            self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 9))
+        elif type == "State Tax ID":
+            self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 11))
+        elif type == "Agency ID":
+            self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 4))
+        elif type == "Internal GLO ID" or type == "Unknown":
+            self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 6))
+
 
 
 

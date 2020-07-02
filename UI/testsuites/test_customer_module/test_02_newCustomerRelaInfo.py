@@ -22,10 +22,9 @@ class newCustomerRelaInfo(unittest.TestCase):
         cls.driver = driver
 
     data = excelHandle(filepath, sheetName).read_excel()
-
     @ddt.data(*data)
     def test_01_Same_Above(self, data):
-        u"""New Customer"""
+        u"""New Customer selected same as above"""
         entityType = data['entityType']
         salutation = data['salutation']
         entityClass = data['entityClass']
@@ -44,8 +43,8 @@ class newCustomerRelaInfo(unittest.TestCase):
 
     # 加载测试数据
     @ddt.data(*data)
-    def test_02_addRelateInfo(self,data):
-        u"""New Customer"""
+    def test_02_two_contact(self,data):
+        u"""New Customer with two contact,address,identifier"""
         entityType = data['entityType']
         entityClass = data['entityClass']
         salutation = data['salutation']
@@ -59,7 +58,7 @@ class newCustomerRelaInfo(unittest.TestCase):
         phoneType3 = data['type3']
         addressType = dbConnect().getdata('MCDH', 'addressType')
         stateCode = dbConnect().getdata('ALAMO', 'stateCode')
-        type = dbConnect().getdata('MCDH', 'identifierName')
+        type = dbConnect().getdata('MCDH', 'identifierNameWithoutBan')
 
         TopMenuPage(self.driver).select_multiple_menu(2, "customers", "New", "", "")
         # CustomerRecordPage(self.driver).top_operate("Actions ", "New")

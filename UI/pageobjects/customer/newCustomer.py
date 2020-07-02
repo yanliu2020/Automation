@@ -60,9 +60,7 @@ class NewCustomerPage(BasePage):
         """
         self.click(NewCustomerEntity().get_add_remove(sectionName))
         self.drop_select(CustomerRecordEntity.identifierName,type)
-        if type == "BAN":
-            self.drop_select()
-        elif type == "SSN" or type == "Federal EIN":
+        if type == "SSN" or type == "Federal EIN":
             self.type(CustomerRecordEntity.identifier,BasePage(self.driver).randomData("number", 9))
         elif type == "State Tax ID":
             self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 11))

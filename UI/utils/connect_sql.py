@@ -25,7 +25,10 @@ class dbConnect(object):
             elif fieldName == "addressType":
                 sqlvalue = "SELECT varAddressType FROM ltblAddressType"
             elif fieldName == "identifierName":
+                sqlvalue = "SELECT varIdentifierName FROM ltblIdentifierName "
+            elif fieldName == "identifierNameWithoutBan":
                 sqlvalue = "SELECT varIdentifierName FROM vewLookupIdentifierNameWithoutBan"
+
             cur.execute(sqlvalue)
             results = cur.fetchall()
             testData = random.choice(results)[0]
@@ -37,6 +40,6 @@ class dbConnect(object):
         self.connect.close()
 
 # if __name__ == '__main__':
-#     res = dbConnect().getdata('MCDH','roleType')
+#     res = dbConnect().getdata('MCDH','identifierName')
 #     # data = random.choice(res)[0]
 #     # print(data)

@@ -107,6 +107,8 @@ class CustomerRecordEntity(object):
     #identifier
     identifierName = "xpath=>//select[@name='name']"
     identifier = "xpath=>//input[@name='identifier']"
+    select_tax = "xpath=>//select[@name='stateTaxID']"
+    identifierNameList = "xpath=>//select[@name='name']/option"
 
     #address:attentionLine,address1,address2,city,postalCode
     address_input = "xpath=>//input[@name='%s']"

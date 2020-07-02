@@ -1,5 +1,4 @@
 #-*- coding: UTF-8 -*-
-
 import datetime
 import unittest
 from utils.browser_engine import driver
@@ -7,8 +6,6 @@ from pageobjects.homepage.homePage import  HomePage
 from pageobjects.common.topMenu import TopMenuPage
 from utils.connect_sql import dbConnect
 from pageobjects.customer.customerRecord import CustomerRecordPage
-
-nowTime = datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S")
 
 class recordContacts(unittest.TestCase):
 
