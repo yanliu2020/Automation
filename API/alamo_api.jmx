@@ -15,7 +15,7 @@
         <collectionProp name="HeaderManager.headers">
           <elementProp name="" elementType="Header">
             <stringProp name="Header.name">Authorization</stringProp>
-            <stringProp name="Header.value">Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ilg1ZVhrNHh5b2pORnVtMWtsMll0djhkbE5QNC1jNTdkTzZRR1RWQndhTmsifQ.eyJleHAiOjE1OTI4OTUwMjgsIm5iZiI6MTU5Mjg5MTQyOCwidmVyIjoiMS4wIiwiaXNzIjoiaHR0cHM6Ly9yZWRyaXZlcmdsb2FsYW1vLmIyY2xvZ2luLmNvbS9hMTdmMDgyNC0wNGNhLTQ2YjktOTczZS1iM2ZjODQyYjY3YjYvdjIuMC8iLCJzdWIiOiI5NzEzMWE2Zi04MzdiLTQ2N2UtODk1My1kNGFlY2ViZWUwYTgiLCJhdWQiOiJlOTg1ZmU3Mi05OTllLTQwYzctYjM2Yi0yZGJlNmQ5NjZiNmMiLCJub25jZSI6ImRlZmF1bHROb25jZSIsImlhdCI6MTU5Mjg5MTQyOCwiYXV0aF90aW1lIjoxNTkyODkxNDI4LCJvaWQiOiI5NzEzMWE2Zi04MzdiLTQ2N2UtODk1My1kNGFlY2ViZWUwYTgiLCJuYW1lIjoieWFubGl1IiwiZ2l2ZW5fbmFtZSI6ImNoYW4iLCJ0ZnAiOiJCMkNfMV9BTEFNT19QUk9UT1RZUEVfU0lHTklOX1NJR05VUCIsImF0X2hhc2giOiJfWnZvMnhmS3VsLU1OQjZWTzhuRzdnIn0.Vw51RrTv7Yvepop7RsKgkIYwEWb596gzzFDH1A3eYIOZjxhIB59rl7NpUpu8dlC-HJeunUZDiUU--_apZdX1aobj3j5YvsEUlB_8gaeUpv9QNlcX4QssejXzOBImtJwGixGfAPHyhiZPUzf_2ojvyzWCEjx55wX0Ifqn9F0ACfIH-oSFMImAaV4GcCGvmqJrm8hpAEdy3oRaj0lh6w2U2I8lqMrjx0Ofgxaz7KwGW6Ljs6yoMtM8N6V38YsMmREXf6DsQI37WoSYrJcyZ-gYBTnIl3FVDyrjjIbAjHAfSTwS4ukepQEPl4PD15Syv5aRQDzLL9uzTrSxyAeh5yP1ZA</stringProp>
+            <stringProp name="Header.value">Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ilg1ZVhrNHh5b2pORnVtMWtsMll0djhkbE5QNC1jNTdkTzZRR1RWQndhTmsifQ.eyJleHAiOjE1OTQwOTM5NTksIm5iZiI6MTU5NDA5MDM1OSwidmVyIjoiMS4wIiwiaXNzIjoiaHR0cHM6Ly9yZWRyaXZlcmdsb2FsYW1vLmIyY2xvZ2luLmNvbS9hMTdmMDgyNC0wNGNhLTQ2YjktOTczZS1iM2ZjODQyYjY3YjYvdjIuMC8iLCJzdWIiOiI5NzEzMWE2Zi04MzdiLTQ2N2UtODk1My1kNGFlY2ViZWUwYTgiLCJhdWQiOiJlOTg1ZmU3Mi05OTllLTQwYzctYjM2Yi0yZGJlNmQ5NjZiNmMiLCJub25jZSI6ImRlZmF1bHROb25jZSIsImlhdCI6MTU5NDA5MDM1OSwiYXV0aF90aW1lIjoxNTk0MDkwMzU5LCJvaWQiOiI5NzEzMWE2Zi04MzdiLTQ2N2UtODk1My1kNGFlY2ViZWUwYTgiLCJuYW1lIjoieWFubGl1IiwiZ2l2ZW5fbmFtZSI6ImNoYW4iLCJlbWFpbHMiOlsieWFuLmxpdUBhbi1jaGVuLmNvbSJdLCJ0ZnAiOiJCMkNfMV9BTEFNT19QUk9UT1RZUEVfU0lHTklOX1NJR05VUCIsImF0X2hhc2giOiI4cTRhUVF2TXJTWGJ0djBIQm1sYllRIn0.N9_gibVs3CVBQ3S38EGbq3h4ELQwrEKIBlO9oLUuFATROpvb8oyA39mtgx0wfAmZUentFdV02yBzFuHG15wYPGu8gB7mxyJ8KSf1ACxd5yViNrnBAYPYqiJ4qJSM7-VXjPOgwFvFyBkpsks7h0ZKnMaN1VcRicLH7gtWUK-4CaoI3dyPnGErPLoSF3u2O-l8BfvdfM7vfERnlcemQXtapzC7wpAn4q56pZBdxEhv4LwDZYGuS0Re6-0ZGADLXPCvwdVaD4aHzzzSoTh2-ED4cwXx6wz_nijZE9q8ds6nIqNW08uVz5r0eCHHo2p08zxrZi7rt5s5D7uLH3RMslquDw</stringProp>
           </elementProp>
           <elementProp name="" elementType="Header">
             <stringProp name="Header.name">Content-Type</stringProp>
@@ -1905,7 +1905,29 @@
         </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get all capabilities" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
-            <collectionProp name="Arguments.arguments"/>
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="sort" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">sort</stringProp>
+              </elementProp>
+              <elementProp name="page" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">page</stringProp>
+              </elementProp>
+              <elementProp name="size" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">10</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">size</stringProp>
+              </elementProp>
+            </collectionProp>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${host}</stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
@@ -1915,6 +1937,41 @@
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">usermanagement-api/capabilities</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Modify a permission" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;canCreate&quot;: false,&#xd;
+  &quot;canDelete&quot;: false,&#xd;
+  &quot;canMassUpdate&quot;: false,&#xd;
+  &quot;canRead&quot;: true,&#xd;
+  &quot;canUpdate&quot;: true,&#xd;
+  &quot;capability&quot;: &quot;Business Entity&quot;,&#xd;
+  &quot;roleId&quot;: ${roleId}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">usermanagement-api/permissions/${permissionId}</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
@@ -1934,6 +1991,34 @@
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
           <stringProp name="HTTPSampler.path">usermanagement-api/permissions/106</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get the permissions of the requested capability" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="action" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">action</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">usermanagement-api/currentuser/permissions/Business Entity</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -2002,15 +2087,8 @@
         </HTTPSamplerProxy>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get roles assigned to a user" enabled="true">
-          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-            <collectionProp name="Arguments.arguments">
-              <elementProp name="" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value"></stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-            </collectionProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${host}</stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
@@ -2070,7 +2148,29 @@
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get all permissions" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
-            <collectionProp name="Arguments.arguments"/>
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="sort" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">sort</stringProp>
+              </elementProp>
+              <elementProp name="page" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">page</stringProp>
+              </elementProp>
+              <elementProp name="size" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">10</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">size</stringProp>
+              </elementProp>
+            </collectionProp>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${host}</stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
@@ -2177,26 +2277,6 @@
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">usermanagement-api/roles/${roleId}</stringProp>
-          <stringProp name="HTTPSampler.method">DELETE</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <boolProp name="HTTPSampler.monitor">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-        </HTTPSamplerProxy>
-        <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Delete a user" enabled="false">
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
-            <collectionProp name="Arguments.arguments"/>
-          </elementProp>
-          <stringProp name="HTTPSampler.domain">${host}</stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
-          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">usermanagement-api/users/${userId}</stringProp>
           <stringProp name="HTTPSampler.method">DELETE</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
