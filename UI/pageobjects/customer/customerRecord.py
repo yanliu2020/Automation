@@ -38,7 +38,7 @@ class CustomerRecordPage(BasePage):
                 if self.find_elements(CustomerRecordEntity().get_entity_records(section_item[0])):
                     if self.not_selected(section_item[0], row) == True:
                         self.click(CustomerRecordEntity().get_entity_record(section_item[0], row))
-                    if self.find_element(CustomerRecordEntity().get_identifier_name(1)).text == "BAN" and (buttonName == "Edit" or buttonName == "Delete"):
+                    if sectionName == "Business Identifier" and self.find_element(CustomerRecordEntity().get_identifier_name(1)).text == "BAN" and (buttonName == "Edit" or buttonName == "Delete"):
                         pass
                     else:
                         self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
@@ -386,6 +386,27 @@ class CustomerRecordPage(BasePage):
             self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 4))
         elif type == "Internal GLO ID" or type == "Unknown":
             self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 6))
+
+    def delete_related(self,section):
+        """
+        #执行删除操作
+         :return:
+        """
+        self.click(CustomerRecordEntity.delete_confirm)
+        if section == "Customer" and "Reassign links before C000048473 can be deleted" in self.get_tips_msg():
+            return True
+        if section == "Address" and "Reassign links before this site can be deleted" in self.get_tips_msg():
+            return True
+        if section == "Contact" and "Reassign links before this contact can be deleted" in self.get_tips_msg():
+            return True
+        if section == "Email" and "Reassign links before this contact email can be deleted" in self.get_tips_msg():
+            return  True
+        if section == "Phone" and "Reassign links before this contact phone can be deleted" in self.get_tips_msg():
+             return  True
+        else :
+             return  False
+
+
 
 
 

@@ -17,5 +17,21 @@ class USM(unittest.TestCase):
 
     def test_01_role_new(self):
         u"""new role"""
-        # UsmPage(self.driver).switch_tab("Roles")
-        UsmPage(self.driver).operator("Roles", "Details","1")
+        UsmPage(self.driver).click_button("Roles", "New","")
+        self.assertTrue(UsmPage(self.driver).operation("Roles","New"))
+
+    def test_02_role_edit(self):
+        u"""edit role"""
+        UsmPage(self.driver).click_button("Roles", "Edit","1")
+        self.assertTrue(UsmPage(self.driver).operation("Roles","Edit"))
+
+    # def test_03_role_inactivate(self):
+    #     u"""inactivate role"""
+    #     UsmPage(self.driver).click_button("Roles", "inactivate","1")
+    #     self.assertTrue(UsmPage(self.driver).operation("inactivate"))
+
+    def test_04_user_edit(self):
+        u"""edit a user"""
+        UsmPage(self.driver).switch_tab("Users")
+        UsmPage(self.driver).click_button("Users", "Edit","1")
+        self.assertTrue(UsmPage(self.driver).operation("Users","Edit"))

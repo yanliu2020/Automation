@@ -77,6 +77,11 @@ class NewCustomerEntity(object):
     #Contact 1 Same as Above
     same_as = "id=>sameAs"
 
+    #customerID
+    value = "xpath=>//input[@name='%s']"
+    def get_value(self,loc):
+        return self.value %loc
+
 
 
 

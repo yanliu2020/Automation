@@ -40,6 +40,7 @@ class newCustomerRelaInfo(unittest.TestCase):
                                                      stateOfIncorporation)
         NewCustomerPage(self.driver).contact(True, 1, 1,"", emailType, phoneType)
         self.assertTrue(NewCustomerPage(self.driver).save())
+        self.assertTrue(NewCustomerPage(self.driver).validation_data())
 
     # 加载测试数据
     @ddt.data(*data)
@@ -56,9 +57,9 @@ class newCustomerRelaInfo(unittest.TestCase):
         phoneType1 = data['type1']
         phoneType2 = data['type2']
         phoneType3 = data['type3']
-        addressType = dbConnect().getdata('MCDH', 'addressType')
-        stateCode = dbConnect().getdata('ALAMO', 'stateCode')
-        type = dbConnect().getdata('MCDH', 'identifierNameWithoutBan')
+        addressType = dbConnect().getdata('MCDH', 'addressType','')
+        stateCode = dbConnect().getdata('ALAMO', 'stateCode','')
+        type = dbConnect().getdata('MCDH', 'identifierNameWithoutBan','')
 
         TopMenuPage(self.driver).select_multiple_menu(2, "customers", "New", "", "")
         # CustomerRecordPage(self.driver).top_operate("Actions ", "New")
@@ -73,4 +74,5 @@ class newCustomerRelaInfo(unittest.TestCase):
         NewCustomerPage(self.driver).address("Address", addressType, stateCode)
         NewCustomerPage(self.driver).identifier("Identifier", type)
         self.assertTrue(NewCustomerPage(self.driver).save())
+        self.assertTrue(NewCustomerPage(self.driver).validation_data())
 

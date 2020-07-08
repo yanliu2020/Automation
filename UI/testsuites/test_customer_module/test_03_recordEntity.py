@@ -20,9 +20,9 @@ class recordEntity(unittest.TestCase):
 
     def test_01_Address_new(self):
         u"""new address"""
-        addressType = dbConnect().getdata('MCDH', 'addressType')
+        addressType = dbConnect().getdata('MCDH', 'addressType','')
         CustomerRecordPage(self.driver).switch_tab("Entity")
-        stateCode = dbConnect().getdata('ALAMO', 'stateCode')
+        stateCode = dbConnect().getdata('ALAMO', 'stateCode','')
         CustomerRecordPage(self.driver).entity_operator("Addresses", "New", "")
         self.assertTrue(CustomerRecordPage(self.driver).operator_address(addressType,stateCode))
 
@@ -30,8 +30,8 @@ class recordEntity(unittest.TestCase):
         u"""edit address"""
 
         CustomerRecordPage(self.driver).entity_operator("Addresses", "Edit", "1")
-        addressType = dbConnect().getdata('MCDH', 'addressType')
-        stateCode = dbConnect().getdata('ALAMO', 'stateCode')
+        addressType = dbConnect().getdata('MCDH', 'addressType','')
+        stateCode = dbConnect().getdata('ALAMO', 'stateCode','')
         self.assertTrue(CustomerRecordPage(self.driver).operator_address(addressType,stateCode))
 
     def test_03_Address_delete(self):
@@ -71,13 +71,13 @@ class recordEntity(unittest.TestCase):
 
     def test_10_Identifier_new(self):
         u"""new identifier"""
-        type = dbConnect().getdata('MCDH', 'identifierName')
+        type = dbConnect().getdata('MCDH', 'identifierName','')
         CustomerRecordPage(self.driver).entity_operator("Business Identifier", "New", "")
         self.assertTrue(CustomerRecordPage(self.driver).operator_identifier("new",type))
 
     def test_11_Identifier_edit(self):
         u"""edit identifier"""
-        type = dbConnect().getdata('MCDH', 'identifierNameWithoutBan')
+        type = dbConnect().getdata('MCDH', 'identifierNameWithoutBan','')
         CustomerRecordPage(self.driver).entity_operator("Business Identifier", "Edit", "1")
         self.assertTrue(CustomerRecordPage(self.driver).operator_identifier("edit",type))
 

@@ -11,8 +11,6 @@ from selenium.webdriver.support.ui import Select
 from utils.basepath_helper import screenshots_path
 from utils.logger import logger
 import random
-#import win32gui
-#import win32con
 from selenium.webdriver.common.action_chains import ActionChains
 
 
@@ -376,7 +374,7 @@ class BasePage(object):
         Select(self.find_element(selector)).select_by_index(index)
 
     def ctrl_all(self,selector):
-        """全选操作
+        """全选清除操作
         :param selector
         :return:
         """
@@ -385,10 +383,18 @@ class BasePage(object):
         self.find_element(selector).send_keys(Keys.BACKSPACE)
 
     def execute_script_click(self,selector):
+        """脚本点击
+        :param selector
+        :return:
+        """
         element = self.find_element(selector)
         self.driver.execute_script("arguments[0].click();", element)
 
     def randomData(self,type,num):
+        """随机生成字符串和数字
+        :param type,num
+        :return:
+        """
         if type == "number":
             return "".join(random.choice("0123456789") for i in range(num))
         elif type == "string":

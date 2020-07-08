@@ -3,8 +3,10 @@ import pymssql
 import  random
 
 class dbConnect(object):
-    def getdata(self,dbName,fieldName):
-        connect = pymssql.connect('rralamosqltest.southcentralus.cloudapp.azure.com', 'yan.liu', 'Lychan@202005',
+    def getdata(self,dbName,fieldName,param):
+        # connect = pymssql.connect('rralamosqltest.southcentralus.cloudapp.azure.com', 'yan.liu', 'Lychan@202007',
+        #                           dbName)
+        connect = pymssql.connect('rralamosqldev.southcentralus.cloudapp.azure.com', 'Chris.Guo', 'Alamo617*',
                                   dbName)
         cur = connect.cursor()
         # sql = "SELECT varAddressType FROM ltblAddressType"
@@ -28,7 +30,10 @@ class dbConnect(object):
                 sqlvalue = "SELECT varIdentifierName FROM ltblIdentifierName "
             elif fieldName == "identifierNameWithoutBan":
                 sqlvalue = "SELECT varIdentifierName FROM vewLookupIdentifierNameWithoutBan"
-
+            elif fieldName == "CustomerId_Organization":
+                sqlvalue = "SELECT varBusinessEntityId from tblBusinessEntity where varOrganizationName = '%s' and datInactiveDate is NULL" %(param)
+            elif fieldName == "CustomerId_Person":
+                sqlvalue = "SELECT varBusinessEntityId from tblBusinessEntity where varFullName = '%s' and datInactiveDate is NULL" %(param)
             cur.execute(sqlvalue)
             results = cur.fetchall()
             testData = random.choice(results)[0]
@@ -40,6 +45,6 @@ class dbConnect(object):
         self.connect.close()
 
 # if __name__ == '__main__':
-#     res = dbConnect().getdata('MCDH','identifierName')
+#     res = dbConnect().getdata('MCDH','CustomerId_Person','Miss I4JyD5 QNWCnb OfT3Jz Sr.')
 #     # data = random.choice(res)[0]
 #     # print(data)

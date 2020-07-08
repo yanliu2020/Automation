@@ -3,6 +3,8 @@ from  utils.base_page import  BasePage
 from config.customer.new_customer_entity import  NewCustomerEntity
 from config.customer.customer_record_entity import CustomerRecordEntity
 from pageobjects.customer.customerRecord import CustomerRecordPage
+from utils.connect_sql import dbConnect
+from utils.logger import logger
 
 class NewCustomerPage(BasePage):
 
@@ -69,7 +71,6 @@ class NewCustomerPage(BasePage):
         else :
             self.type(CustomerRecordEntity.identifier, BasePage(self.driver).randomData("number", 6))
 
-
     def save(self):
         """
         #保存校验
@@ -105,7 +106,6 @@ class NewCustomerPage(BasePage):
         self.type(NewCustomerEntity().get_phone_input(index, flag, "phone"), BasePage(self.driver).randomData("number", 7))
         self.drop_select(NewCustomerEntity().get_phone_type(index, flag), phoneType)
 
-
     def add_phone(self,sectionName,index,flag,type):
         """
         #Multiple Phone Information
@@ -117,7 +117,24 @@ class NewCustomerPage(BasePage):
         self.type(NewCustomerEntity().get_phone_input(index, flag, "phone"), BasePage(self.driver).randomData("number", 7))
         self.drop_select(NewCustomerEntity().get_phone_type(index, flag), type)
 
-
+    def validation_data(self):
+        """
+        #validate the data accuracy
+        :param
+        :return:
+        """
+        customerId = self.find_element(NewCustomerEntity().get_value("customer-id")).get_attribute('value')
+        organizationName = self.find_element(NewCustomerEntity().get_value("organization-name")).get_attribute('value')
+        entityType = self.find_element(NewCustomerEntity().get_value("entity-type")).get_attribute('value')
+        if entityType == "Person":
+            CustomerId = dbConnect().getdata('MCDH', 'CustomerId_Person', organizationName)
+        elif entityType == "Organization":
+            CustomerId = dbConnect().getdata('MCDH', 'CustomerId_Organization', organizationName)
+        if customerId == CustomerId:
+            return True
+        else:
+            logger.info("customerId %s new customer failed!"% customerId)
+            return False
 
 
 
