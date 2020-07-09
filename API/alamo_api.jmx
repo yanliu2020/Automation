@@ -15,7 +15,7 @@
         <collectionProp name="HeaderManager.headers">
           <elementProp name="" elementType="Header">
             <stringProp name="Header.name">Authorization</stringProp>
-            <stringProp name="Header.value">Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ilg1ZVhrNHh5b2pORnVtMWtsMll0djhkbE5QNC1jNTdkTzZRR1RWQndhTmsifQ.eyJleHAiOjE1OTQwOTM5NTksIm5iZiI6MTU5NDA5MDM1OSwidmVyIjoiMS4wIiwiaXNzIjoiaHR0cHM6Ly9yZWRyaXZlcmdsb2FsYW1vLmIyY2xvZ2luLmNvbS9hMTdmMDgyNC0wNGNhLTQ2YjktOTczZS1iM2ZjODQyYjY3YjYvdjIuMC8iLCJzdWIiOiI5NzEzMWE2Zi04MzdiLTQ2N2UtODk1My1kNGFlY2ViZWUwYTgiLCJhdWQiOiJlOTg1ZmU3Mi05OTllLTQwYzctYjM2Yi0yZGJlNmQ5NjZiNmMiLCJub25jZSI6ImRlZmF1bHROb25jZSIsImlhdCI6MTU5NDA5MDM1OSwiYXV0aF90aW1lIjoxNTk0MDkwMzU5LCJvaWQiOiI5NzEzMWE2Zi04MzdiLTQ2N2UtODk1My1kNGFlY2ViZWUwYTgiLCJuYW1lIjoieWFubGl1IiwiZ2l2ZW5fbmFtZSI6ImNoYW4iLCJlbWFpbHMiOlsieWFuLmxpdUBhbi1jaGVuLmNvbSJdLCJ0ZnAiOiJCMkNfMV9BTEFNT19QUk9UT1RZUEVfU0lHTklOX1NJR05VUCIsImF0X2hhc2giOiI4cTRhUVF2TXJTWGJ0djBIQm1sYllRIn0.N9_gibVs3CVBQ3S38EGbq3h4ELQwrEKIBlO9oLUuFATROpvb8oyA39mtgx0wfAmZUentFdV02yBzFuHG15wYPGu8gB7mxyJ8KSf1ACxd5yViNrnBAYPYqiJ4qJSM7-VXjPOgwFvFyBkpsks7h0ZKnMaN1VcRicLH7gtWUK-4CaoI3dyPnGErPLoSF3u2O-l8BfvdfM7vfERnlcemQXtapzC7wpAn4q56pZBdxEhv4LwDZYGuS0Re6-0ZGADLXPCvwdVaD4aHzzzSoTh2-ED4cwXx6wz_nijZE9q8ds6nIqNW08uVz5r0eCHHo2p08zxrZi7rt5s5D7uLH3RMslquDw</stringProp>
+            <stringProp name="Header.value">Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ilg1ZVhrNHh5b2pORnVtMWtsMll0djhkbE5QNC1jNTdkTzZRR1RWQndhTmsifQ.eyJleHAiOjE1OTQyNzY3MTAsIm5iZiI6MTU5NDI3MzExMCwidmVyIjoiMS4wIiwiaXNzIjoiaHR0cHM6Ly9yZWRyaXZlcmdsb2FsYW1vLmIyY2xvZ2luLmNvbS9hMTdmMDgyNC0wNGNhLTQ2YjktOTczZS1iM2ZjODQyYjY3YjYvdjIuMC8iLCJzdWIiOiI5NzEzMWE2Zi04MzdiLTQ2N2UtODk1My1kNGFlY2ViZWUwYTgiLCJhdWQiOiJlOTg1ZmU3Mi05OTllLTQwYzctYjM2Yi0yZGJlNmQ5NjZiNmMiLCJub25jZSI6ImRlZmF1bHROb25jZSIsImlhdCI6MTU5NDI3MzExMCwiYXV0aF90aW1lIjoxNTk0MjczMTEwLCJvaWQiOiI5NzEzMWE2Zi04MzdiLTQ2N2UtODk1My1kNGFlY2ViZWUwYTgiLCJuYW1lIjoieWFubGl1IiwiZ2l2ZW5fbmFtZSI6ImNoYW4iLCJlbWFpbHMiOlsieWFuLmxpdUBhbi1jaGVuLmNvbSJdLCJ0ZnAiOiJCMkNfMV9BTEFNT19QUk9UT1RZUEVfU0lHTklOX1NJR05VUCIsImF0X2hhc2giOiJvTTgzck9LUkJmS3ctNk8zaGxRWkJBIn0.VudMHBb69z2nJ_ez2tQ4oXwWUJ2rQUDB-TS33SJDNG0UtOjgJkHWDWoaxfZpBQhS0ZBuU-eCmyDPv7tpvq8w0Fd4q0k0p9eLycWnePnrGZru1SycAzRIWgzUu14wdAe3-K2QdAQGRe-xSGMy-iuqwLoSYZj3jv2A14Hv9dYcf4FS11f_Ksoi7f5G8jHMD0PJkUHcNCDWzK5NvfE0p2aQIRv4N_QgBpZEWGNPLfUWVToDMGAa2gKcsWTFpDTaiz_fh6KekneBE25D5jkj7fY2Jj5CqICq8NZ_Upjia65UhYisGJLEUBls4ixlF_7McK4VGVAdJsrSXHIZjnvUz-yjUA</stringProp>
           </elementProp>
           <elementProp name="" elementType="Header">
             <stringProp name="Header.name">Content-Type</stringProp>
@@ -44,7 +44,7 @@
         </collectionProp>
       </Arguments>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Customer Service" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Customer Service" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1870,8 +1870,7 @@
   &quot;canMassUpdate&quot;: true,&#xd;
   &quot;canRead&quot;: true,&#xd;
   &quot;canUpdate&quot;: true,&#xd;
-  &quot;capability&quot;: &quot;TblLand&quot;,&#xd;
-  &quot;roleId&quot;: 2&#xd;
+  &quot;capability&quot;: &quot;Business Entity&quot;&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
@@ -1883,7 +1882,7 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">usermanagement-api/permissions</stringProp>
+          <stringProp name="HTTPSampler.path">usermanagement-api/roles/${roleId}/permissions</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -1896,7 +1895,7 @@
           <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="get permission" enabled="true">
             <stringProp name="RegexExtractor.useHeaders">true</stringProp>
             <stringProp name="RegexExtractor.refname">permissionId</stringProp>
-            <stringProp name="RegexExtractor.regex">Location: https://rr-alamo-test.azurewebsites.net/usermanagement-api/permissions/(.*)</stringProp>
+            <stringProp name="RegexExtractor.regex">Location: https://rr-alamo-test.azurewebsites.net/usermanagement-api/roles/(.*)/permissions/yan.liu@an-chen.com</stringProp>
             <stringProp name="RegexExtractor.template">$1$</stringProp>
             <stringProp name="RegexExtractor.default">ERR</stringProp>
             <stringProp name="RegexExtractor.match_number"></stringProp>
@@ -1957,8 +1956,7 @@
   &quot;canMassUpdate&quot;: false,&#xd;
   &quot;canRead&quot;: true,&#xd;
   &quot;canUpdate&quot;: true,&#xd;
-  &quot;capability&quot;: &quot;Business Entity&quot;,&#xd;
-  &quot;roleId&quot;: ${roleId}&#xd;
+  &quot;capability&quot;: &quot;Business Entity&quot;&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
@@ -1970,7 +1968,7 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-          <stringProp name="HTTPSampler.path">usermanagement-api/permissions/${permissionId}</stringProp>
+          <stringProp name="HTTPSampler.path">usermanagement-api/roles/${roleId}/permissions/${permissionId}</stringProp>
           <stringProp name="HTTPSampler.method">PUT</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -1990,7 +1988,7 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-          <stringProp name="HTTPSampler.path">usermanagement-api/permissions/106</stringProp>
+          <stringProp name="HTTPSampler.path">usermanagement-api/roles/${roleId}/permissions/${permissionId}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -2256,7 +2254,7 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">usermanagement-api/permissions/${permissionId}</stringProp>
+          <stringProp name="HTTPSampler.path">usermanagement-api/roles/${roleId}/permissions/${permissionId}</stringProp>
           <stringProp name="HTTPSampler.method">DELETE</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
