@@ -7,7 +7,6 @@ from utils.basepath_helper import logs_path, project_path, drivers_path, config_
 from utils.logger import logger
 from utils.base_page import BasePage
 
-
 class BrowserEngine(object):
     chrome_driver_path = drivers_path + 'chromedriver.exe'
     firefox_driver_path = drivers_path + 'geckodriver.exe'
@@ -27,7 +26,6 @@ class BrowserEngine(object):
         logger.info("You had select %s browser." % browser)
         url = config.get("testServer", "URL")
         logger.info("The test server url is: %s" % url)
-
 
         if browser == "Firefox":
             profile = webdriver.FirefoxProfile()
@@ -72,6 +70,7 @@ class BrowserEngine(object):
     def quit_browser(self):
         logger.info("Now, Close and quit the browser.")
         self.driver.quit()
+
 
 
 Browser = BrowserEngine()

@@ -129,6 +129,7 @@ class CustomerRecordPage(BasePage):
         # 执行删除操作
         :return:
         """
+        self.find_element_by_wait("xpath",CustomerRecordEntity.delete_confirm)
         self.click(CustomerRecordEntity.delete_confirm)
         # msg = self.get_tips_msg()
         if "successfully" in self.get_tips_msg():
@@ -392,6 +393,7 @@ class CustomerRecordPage(BasePage):
         #执行删除操作
          :return:
         """
+        self.find_element_by_wait("xpath",CustomerRecordEntity.delete_confirm)
         self.click(CustomerRecordEntity.delete_confirm)
         if section == "Customer" and "Reassign links before C000048473 can be deleted" in self.get_tips_msg():
             return True
@@ -405,6 +407,17 @@ class CustomerRecordPage(BasePage):
              return  True
         else :
              return  False
+
+
+    def validate_permission(self):
+        """
+        #校验无权限
+         :return:
+        """
+        if 'Access not Granted' in self.get_tips_msg():
+            return True
+        else:
+            return False
 
 
 

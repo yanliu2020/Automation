@@ -32,8 +32,8 @@ class excelHandle(object):
 
 
 # if __name__ == "__main__":
-#     filepath = "E:\\Automation\\UI\\test\\test.xlsx"
-#     sheetName = "new_customer"
+#     filepath = "E:\\Automation\\UI\\getdata\\test.xlsx"
+#     sheetName = "account"
 #     data = excelHandle(filepath, sheetName).read_excel()
-#     print(data)
-#     print(type(data))
+    # print(data)
+    # print(type(data))

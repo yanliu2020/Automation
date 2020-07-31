@@ -39,7 +39,7 @@ class UsmPage(BasePage):
             self.type(UsmEntity().get_input_textbox("name"), BasePage(self.driver).randomData("string", 6))
             self.ctrl_all(UsmEntity().get_input_textbox("description"))
             self.type(UsmEntity().get_input_textbox("description"), BasePage(self.driver).randomData("string", 6))
-            # self.click(UsmEntity().get_capability(1,"canRead"))
+            self.click(UsmEntity().get_capability(1,"canRead"))
             if buttonName == "New":
                 self.click(UsmEntity().get_button("Next"))
                 self.type(UsmEntity.filter, self.find_element(UsmEntity().get_list_value("availableUsersSelected", "1")).text)

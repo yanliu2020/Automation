@@ -4,10 +4,10 @@ import  random
 
 class dbConnect(object):
     def getdata(self,dbName,fieldName,param):
-        # connect = pymssql.connect('rralamosqltest.southcentralus.cloudapp.azure.com', 'yan.liu', 'Lychan@202007',
-        #                           dbName)
-        connect = pymssql.connect('rralamosqldev.southcentralus.cloudapp.azure.com', 'Chris.Guo', 'Alamo617*',
+        connect = pymssql.connect('rralamosqltest.southcentralus.cloudapp.azure.com', 'yan.liu', 'Lychan@202007',
                                   dbName)
+        # connect = pymssql.connect('rralamosqldev.southcentralus.cloudapp.azure.com', 'Chris.Guo', 'Alamo617*',
+        #                           dbName)
         cur = connect.cursor()
         # sql = "SELECT varAddressType FROM ltblAddressType"
         # sqlvalue = sql  # "select * from user"
@@ -42,9 +42,9 @@ class dbConnect(object):
 
         except:
             print('Error:unable to fetch data')
-        self.connect.close()
+        # self.connect.close()
 
 # if __name__ == '__main__':
 #     res = dbConnect().getdata('MCDH','CustomerId_Person','Miss I4JyD5 QNWCnb OfT3Jz Sr.')
-#     # data = random.choice(res)[0]
+    # data = random.choice(res)[0]
 #     # print(data)

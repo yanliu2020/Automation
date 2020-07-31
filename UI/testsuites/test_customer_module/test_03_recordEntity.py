@@ -7,7 +7,6 @@ from pageobjects.common.topMenu import TopMenuPage
 from pageobjects.homepage.homePage import  HomePage
 from pageobjects.customer.customerRecord import CustomerRecordPage
 nowTime = datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S")
-
 class recordEntity(unittest.TestCase):
 
     # 初始化，打开浏览器，并进行登录(实例化)
@@ -28,7 +27,6 @@ class recordEntity(unittest.TestCase):
 
     def test_02_Address_edit(self):
         u"""edit address"""
-
         CustomerRecordPage(self.driver).entity_operator("Addresses", "Edit", "1")
         addressType = dbConnect().getdata('MCDH', 'addressType','')
         stateCode = dbConnect().getdata('ALAMO', 'stateCode','')

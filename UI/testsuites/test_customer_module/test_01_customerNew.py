@@ -8,7 +8,6 @@ from pageobjects.common.topMenu import TopMenuPage
 from utils.browser_engine import driver
 from pageobjects.customer.newCustomer import  NewCustomerPage
 from pageobjects.customer.customerRecord import  CustomerRecordPage
-
 nowTime = datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S")
 filepath = excel_path +"test.xlsx"
 sheetName = "new_customer"

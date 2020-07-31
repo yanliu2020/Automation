@@ -14,7 +14,6 @@ filepath = excel_path +"test.xlsx"
 sheetName = "two_contact"
 @ddt.ddt
 class newCustomerRelaInfo(unittest.TestCase):
-
     # 初始化，打开浏览器，并进行登录(实例化)
     @classmethod
     def setUpClass(cls):
@@ -57,6 +56,9 @@ class newCustomerRelaInfo(unittest.TestCase):
         phoneType1 = data['type1']
         phoneType2 = data['type2']
         phoneType3 = data['type3']
+        # addressType = data['addressType']
+        # stateCode = data['stateCode']
+        # type = data['identifierName']
         addressType = dbConnect().getdata('MCDH', 'addressType','')
         stateCode = dbConnect().getdata('ALAMO', 'stateCode','')
         type = dbConnect().getdata('MCDH', 'identifierNameWithoutBan','')

@@ -9,7 +9,7 @@ from utils.logger import logger
 class HomePage(BasePage):
     #校验进入首页
     def is_visibility_homepage(self):
-        self.find_element_by_wait("xpath",HomePageEntity.default_text)
+        # self.find_element_by_wait("xpath",HomePageEntity.default_text)
         return bool(self.find_element(HomePageEntity.default_text))
 
     #点击login

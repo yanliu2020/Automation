@@ -44,4 +44,25 @@ class SystemLogin(BasePage):
             logger.error('login fail')
             return False
 
+    def logout(self):
+        """
+        # 退出账号
+        :return:
+        """
+        self.find_element_by_wait('xpath',LoginEntity.user_logo)
+        self.click(LoginEntity.user_logo)
+        self.click(LoginEntity.logout_user)
+        if SystemLogin(self.driver).is_login_page():
+            logger.info('logout success')
+            return True
+        else:
+            logger.error('logout fail')
+            return False
+
+    def switch_account(self,username,password):
+        self.logout()
+        self.find_element_by_wait('xpath', LoginEntity.login_title)
+        self.user_login(username, password)
+
+
 
