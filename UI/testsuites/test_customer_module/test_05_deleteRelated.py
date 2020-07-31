@@ -12,7 +12,6 @@ class deleteRelated(unittest.TestCase):
     def setUpClass(cls):
         cls.driver = driver
         # TopMenuPage(cls.driver).is_homepage()
-        SystemLogin(cls.driver).user_login('yan.liu@an-chen.com', 'Lychan@2012')
         HomePage(cls.driver).quick_entrance("Customers","C000048473",2)
 
     def test_01_customer_delete(self):

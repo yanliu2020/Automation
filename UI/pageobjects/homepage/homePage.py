@@ -27,7 +27,7 @@ class HomePage(BasePage):
         """
         self.find_element_by_wait("xpath",HomePageEntity.module_list)
         module_list = self.find_elements(HomePageEntity.module_list)
-        print(module_list)
+        # print(module_list)
         module_item = None
         for i, item in enumerate(module_list):
             if module_name == item.text:

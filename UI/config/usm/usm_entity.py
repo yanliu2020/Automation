@@ -51,7 +51,8 @@ class UsmEntity(object):
     # def get_capability(self,loc):
     #     return self.capability %loc
 
-    capability= "xpath=>//div[@class='modal fade show']//div[@class='card']//div[@class='rt-tr-group'][%s]//div[@class='rt-td']//input[@name='%s']"
+    capability= "xpath=>//div[@class='modal fade show']//div[@class='glo-row']//input[@id='can%s_%s']"
+    #canRead_0,canUpdate_0,canCreate_0,canDelete_0,canMassUpdate_0
     def get_capability(self,loc1,loc2):
         return self.capability %(loc1,loc2)
 
