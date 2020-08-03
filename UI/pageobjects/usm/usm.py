@@ -8,7 +8,7 @@ from utils.logger import logger
 class UsmPage(BasePage):
     def switch_tab(self,tabName):
         """
-        #切换tab页
+        #Switch Tab
         :param  tabName : Roles，Users
         :return:
         """
@@ -17,7 +17,7 @@ class UsmPage(BasePage):
 
     def click_button(self,tabName,buttonName,row):
         """
-        #点击操作按钮
+        #Click button
         :param tabName,buttonName,row
         :return:
         """
@@ -30,7 +30,7 @@ class UsmPage(BasePage):
 
     def operation(self,section,buttonName):
         """
-           #增删改查
+           #Operation
            :param section,buttonName,value
            :return:
            """

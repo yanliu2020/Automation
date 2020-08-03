@@ -8,7 +8,6 @@ from pageobjects.customer.customerRecord import CustomerRecordPage
 
 class recordContacts(unittest.TestCase):
 
-    # 初始化，打开浏览器，并进行登录(实例化)
     @classmethod
     def setUpClass(cls):
         cls.driver = driver

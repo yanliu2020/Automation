@@ -3,13 +3,11 @@ import unittest
 from utils.browser_engine import driver
 from pageobjects.homepage.homePage import  HomePage
 from pageobjects.common.topMenu import TopMenuPage
-from utils.connect_sql import dbConnect
 from pageobjects.customer.customerRecord import CustomerRecordPage
 from pageobjects.login.login import SystemLogin
 
 class deleteRelated(unittest.TestCase):
 
-    # 初始化，打开浏览器，并进行登录(实例化)
     @classmethod
     def setUpClass(cls):
         cls.driver = driver

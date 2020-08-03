@@ -14,10 +14,9 @@ filepath = excel_path +"test.xlsx"
 sheetName = "two_contact"
 @ddt.ddt
 class newCustomerRelaInfo(unittest.TestCase):
-    # 初始化，打开浏览器，并进行登录(实例化)
+
     @classmethod
     def setUpClass(cls):
-        # open browser
         cls.driver = driver
 
     data = excelHandle(filepath, sheetName).read_excel()
@@ -41,7 +40,6 @@ class newCustomerRelaInfo(unittest.TestCase):
         self.assertTrue(NewCustomerPage(self.driver).save())
         self.assertTrue(NewCustomerPage(self.driver).validation_data())
 
-    # 加载测试数据
     @ddt.data(*data)
     def test_02_two_contact(self,data):
         u"""New Customer with two contact,address,identifier"""

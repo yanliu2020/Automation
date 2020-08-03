@@ -8,7 +8,7 @@ class CustomerRecordPage(BasePage):
 
     def switch_tab(self,tabName):
         """
-        #Customer Record 切换tab页
+        #Customer Record Switch Tab
         :param  tabName : Summary，Entity，Contacts，Related Lease/Lands
         :return:
         """
@@ -17,7 +17,7 @@ class CustomerRecordPage(BasePage):
 
     def entity_operator(self,sectionName,buttonName,row):
         """
-        #Entity页签增删改查
+        #Entity Tab
         :param sectionName,buttonName,row
         :return:
         """
@@ -47,14 +47,13 @@ class CustomerRecordPage(BasePage):
 
     def contact_operator(self,sectionName,buttonName,row):
         """
-        #Contacts页签下增删改查
+        #Contacts Tab
         :param sectionName,buttonName,row
         :return:
         """
         section_list = self.find_elements(CustomerRecordEntity.section_list)
         # print(section_list)
         section_item = None
-        #根据传入的section名获取section_item
         for i, item in enumerate(section_list):
             if sectionName == item.text:
                 section_item = (i+1,item)
@@ -79,7 +78,7 @@ class CustomerRecordPage(BasePage):
 
     def contact_list_page(self):
         """
-         # contact list是否有记录
+         # contact list record
          :return:
         """
         record = self.find_element(CustomerRecordEntity.contact_list_page).text
@@ -91,7 +90,7 @@ class CustomerRecordPage(BasePage):
 
     def not_selected(self,section,row):
         """
-        # 未选中状态
+        # Not selected record
         :param : section
         :param : row
         :return:
@@ -105,7 +104,7 @@ class CustomerRecordPage(BasePage):
 
     def get_tips_msg(self):
         """
-        # 获取页面提示消息
+        # get the msg
         :return:
         """
         self.sleep(2)
@@ -113,7 +112,7 @@ class CustomerRecordPage(BasePage):
 
     # def detail_history(self,title):
     #     """
-    #     #详情页,历史页
+    #     #History & Details
     #     :param : title
     #     :return:
     #     """
@@ -126,7 +125,7 @@ class CustomerRecordPage(BasePage):
 
     def delete(self):
         """
-        # 执行删除操作
+        # Execute delete
         :return:
         """
         self.find_element_by_wait("xpath",CustomerRecordEntity.delete_confirm)
@@ -139,7 +138,7 @@ class CustomerRecordPage(BasePage):
 
     def operator_address(self,addressType,stateCode):
         """
-        # 新增/修改 address
+        # Address
         :param : type,identifierNo
         :return:
         """
@@ -158,7 +157,7 @@ class CustomerRecordPage(BasePage):
 
     def input_DBA_Website(self, name):
         """
-        #输入DBA,Websites
+        #DBA,Websites
         :param: name : alias, url
         :return:
         """
@@ -176,7 +175,7 @@ class CustomerRecordPage(BasePage):
 
     def operator_identifier(self,flag,type):
         """
-        # 新增/修改/删除 identifier
+        # Identifier
         :param : flag,type
         :return:
         """
@@ -234,7 +233,7 @@ class CustomerRecordPage(BasePage):
 
     def operator_contact(self,salutation,suffix,contactRole):
         """
-        # 新增/修改 contact
+        # Contact
         :param : salutation,firstName,middleName,lastName,suffix,contactRole
         :return:
         """
@@ -256,7 +255,7 @@ class CustomerRecordPage(BasePage):
 
     def operator_email(self,type,isPrimary):
         """
-        # 新增/修改 contact email
+        # Contact Email
         :param : email,type,isPrimary
         :return:
         """
@@ -274,7 +273,7 @@ class CustomerRecordPage(BasePage):
 
     def operator_phone(self,type):
         """
-        # 新增/修改 contact phone
+        # Contact Phone
         :param : countryCode,type,areaCode,phone,exetension
         :return:
         """
@@ -296,7 +295,7 @@ class CustomerRecordPage(BasePage):
 
     def top_operate(self,buttonName,acitonName):
         """
-        # Action区域快捷操作
+        # Action Drop List
         :param : buttonName，acitonName
         :return:
         """
@@ -357,7 +356,7 @@ class CustomerRecordPage(BasePage):
 
     def without_BAN(self):
         """
-        # 判断Identifier Name下拉框是否有BAN选项
+        # Identifier Name Without BAN
         :param :
         :return:
         """
@@ -375,7 +374,7 @@ class CustomerRecordPage(BasePage):
 
     def identifier_not_BAN_input(self,type):
         """
-        # Identifier Name非BAN类型的输入
+        # Identifier Name Without BAN input
         :param : type
         :return:
         """
@@ -390,7 +389,7 @@ class CustomerRecordPage(BasePage):
 
     def delete_related(self,section):
         """
-        #执行删除操作
+        #Execute Delete for Related module
          :return:
         """
         self.find_element_by_wait("xpath",CustomerRecordEntity.delete_confirm)
@@ -411,7 +410,7 @@ class CustomerRecordPage(BasePage):
 
     def validate_permission(self):
         """
-        #校验无权限
+        #Validation Permission
          :return:
         """
         if 'Access not Granted' in self.get_tips_msg():

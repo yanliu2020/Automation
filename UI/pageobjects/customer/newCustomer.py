@@ -73,7 +73,7 @@ class NewCustomerPage(BasePage):
 
     def save(self):
         """
-        #保存校验
+        #Save validation
         :param
         :return:
         """

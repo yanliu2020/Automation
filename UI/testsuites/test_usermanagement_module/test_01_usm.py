@@ -9,7 +9,6 @@ nowTime = datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S")
 
 class USM(unittest.TestCase):
 
-    # 初始化，打开浏览器，并进行登录(实例化)
     @classmethod
     def setUpClass(cls):
         cls.driver = driver

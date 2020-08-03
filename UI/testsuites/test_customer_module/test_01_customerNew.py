@@ -14,14 +14,11 @@ sheetName = "new_customer"
 @ddt.ddt
 class newCustomer(unittest.TestCase):
 
-    # 初始化，打开浏览器，并进行登录(实例化)
     @classmethod
     def setUpClass(cls):
-        # open browser
         #browser = BrowserEngine(cls)
         cls.driver = driver
 
-    # 加载测试数据
     data = excelHandle(filepath, sheetName).read_excel()
     @ddt.data(*data)
     def test_addCustomer(self,data):

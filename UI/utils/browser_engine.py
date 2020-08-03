@@ -63,7 +63,7 @@ class BrowserEngine(object):
 
         BasePage(self.driver).find_element_by_wait('xpath',LoginEntity.login_title)
 
-        #传入登陆用户名和密码
+        #input login account
         SystemLogin(self.driver).user_login('yan.liu@an-chen.com','Lychan@2012')
         return self.driver
 

@@ -6,10 +6,10 @@ from utils.browser_engine import driver
 from pageobjects.common.topMenu import TopMenuPage
 from pageobjects.homepage.homePage import  HomePage
 from pageobjects.customer.customerRecord import CustomerRecordPage
+from utils.base_page import BasePage
 nowTime = datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S")
 class recordEntity(unittest.TestCase):
 
-    # 初始化，打开浏览器，并进行登录(实例化)
     @classmethod
     def setUpClass(cls):
         cls.driver = driver
@@ -54,6 +54,7 @@ class recordEntity(unittest.TestCase):
 
     def test_07_DBA_new(self):
         u"""new a DBA"""
+        BasePage(self.driver).refresh_page()
         CustomerRecordPage(self.driver).entity_operator("Doing Business As (DBA)", "New", "")
         self.assertTrue(CustomerRecordPage(self.driver).input_DBA_Website("alias"))
 
