@@ -51,6 +51,7 @@ class TopMenuPage(BasePage):
         :param level
         :return:
         """
+        self.sleep(2)
         self.click(TopMenuEntity().get_first_menu(first_menu))
         #return second_menu
         second_menu_list = self.find_elements(TopMenuEntity.second_menu_list)

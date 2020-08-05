@@ -17,12 +17,14 @@ class USM(unittest.TestCase):
     def test_01_role_new(self):
         u"""new role"""
         UsmPage(self.driver).click_button("Roles", "New","")
-        self.assertTrue(UsmPage(self.driver).operation("Roles","New"))
+        capabilityNamelist = ['Business Entity','Business Entity Contact']
+        self.assertTrue(UsmPage(self.driver).operation("Roles","New",capabilityNamelist))
 
     def test_02_role_edit(self):
         u"""edit role"""
         UsmPage(self.driver).click_button("Roles", "Edit","1")
-        self.assertTrue(UsmPage(self.driver).operation("Roles","Edit"))
+        capabilityNamelist = ['Business Entity', 'Business Entity Alias']
+        self.assertTrue(UsmPage(self.driver).operation("Roles","Edit",capabilityNamelist))
 
     # def test_03_role_inactivate(self):
     #     u"""inactivate role"""

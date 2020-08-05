@@ -82,6 +82,9 @@ class NewCustomerEntity(object):
     def get_value(self,loc):
         return self.value %loc
 
+    #提示消息
+    msg_list = "xpath=>//div[@role='alert']/div[@class='summaryMessage']"
+
 
 
 

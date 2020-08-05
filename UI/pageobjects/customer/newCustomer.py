@@ -136,6 +136,78 @@ class NewCustomerPage(BasePage):
             logger.info("customerId %s new customer failed!"% customerId)
             return False
 
+    def get_required_msg(self):
+        """
+        # get the required msg
+        :return:
+        """
+        msg_list = self.find_elements(NewCustomerEntity.msg_list)
+        string_list = []
+        msg = ''
+        for i, item in enumerate(msg_list):
+            msg= msg + item.text
+            # string_list.append(item.text)
+        # msg = "".join(string_list)
+        message = msg.replace('\n', '').replace('\r', '')
+        return message
+
+    def validate_required(self,entityType,entityClass,flag):
+        self.drop_select(NewCustomerEntity().get_entity("typeName"), entityType)
+        self.drop_select(NewCustomerEntity().get_entity("entityClass"), entityClass)
+        if flag == "Business Entity":
+            self.click(NewCustomerEntity.save)
+            self.sleep(1)
+            if entityType == "Person":
+                if entityClass == "Household":
+                    if "Required but Missing Fields:Business Entity:Full Name, Default Sort" in self.get_required_msg():
+                        return True
+                    else:
+                        return False
+                else:
+                    if "Required but Missing Fields:Business Entity:First Name, Last Name" in self.get_required_msg():
+                        return True
+                    else:
+                        return False
+            else:
+                if "Required but Missing Fields:Business Entity:Organization Name" in self.get_required_msg():
+                    return True
+                else:
+                    return False
+        else:
+            self.type(NewCustomerEntity().get_entity_input("firstName"), BasePage(self.driver).randomData("string", 6))
+            self.type(NewCustomerEntity().get_entity_input("lastName"), BasePage(self.driver).randomData("string", 6))
+            if flag == "Contact":
+                self.drop_select(NewCustomerEntity().get_contact_select(1,"salutation"),"Ms.")
+                self.drop_select(NewCustomerEntity().get_email_type(1), "Personal")
+                self.type(NewCustomerEntity().get_phone_input(1, 1, "ext"),BasePage(self.driver).randomData("string", 6))
+                self.click(NewCustomerEntity.save)
+                self.sleep(1)
+                if "Required but Missing Fields:Contact 1:First Name, Last Name, Contact RoleContact 1 Email:Email AddressContact 1 Phone 1:Area Code, Phone, Phone Type" \
+                        in self.get_required_msg():
+                    return True
+                else:
+                    return False
+            elif flag == "Address&Identifier":
+                self.click(NewCustomerEntity().get_add_remove("Address"))
+                self.drop_select(CustomerRecordEntity().get_address_select("country"), "USA")
+                self.click(NewCustomerEntity().get_add_remove("Identifier"))
+                self.drop_select(CustomerRecordEntity.identifierName, "SSN")
+                self.click(NewCustomerEntity.save)
+                self.sleep(1)
+                if "Required but Missing Fields:Address:Address1, Address Type, CityIdentifier:Identifier" in self.get_required_msg():
+                    return True
+                else:
+                    return False
+
+
+
+
+
+
+
+
+
+
 
 
 

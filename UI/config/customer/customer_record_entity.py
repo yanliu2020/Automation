@@ -74,6 +74,7 @@ class CustomerRecordEntity(object):
 
     #提示消息
     tips_msg = "xpath=>//div[@role='alert']"
+    required_msg = "xpath=>//div[@role='alert']/div[@class='summaryMessage']"
     #contact记录数
     contact_list_page = "xpath=>//span[@class='glo-table-pagination']"
 

@@ -3,7 +3,6 @@ import unittest
 from utils.browser_engine import driver
 from pageobjects.homepage.homePage import  HomePage
 from pageobjects.customer.customerRecord import CustomerRecordPage
-from pageobjects.login.login import SystemLogin
 
 class deleteRelated(unittest.TestCase):
 

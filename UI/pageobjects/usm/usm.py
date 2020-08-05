@@ -21,6 +21,7 @@ class UsmPage(BasePage):
         :param tabName,buttonName,row
         :return:
         """
+        self.sleep(1)
         if (tabName == "Roles" and buttonName != "New") or tabName == "Users":
             if "background" not in self.find_element(
             UsmEntity().get_select_record(row)).get_attribute('style'):
@@ -28,22 +29,30 @@ class UsmPage(BasePage):
         # self.find_elements_by_wait("xpath", UsmEntity().get_select_record(row))
         self.click(UsmEntity().get_operator(buttonName))
 
-    def operation(self,section,buttonName):
+    def operation(self,section,buttonName,capabilityNamelist=[]):
         """
-           #Operation
-           :param section,buttonName,value
-           :return:
-           """
+        :param section,buttonName,capabilityNamelist=[]
+        :return:
+        """
         if buttonName == "New" or ( section == "Roles" and buttonName == "Edit"):
             self.ctrl_all(UsmEntity().get_input_textbox("name"))
             self.type(UsmEntity().get_input_textbox("name"), BasePage(self.driver).randomData("string", 6))
             self.ctrl_all(UsmEntity().get_input_textbox("description"))
             self.type(UsmEntity().get_input_textbox("description"), BasePage(self.driver).randomData("string", 6))
-            self.click(UsmEntity().get_capability("Read",0))
-            self.click(UsmEntity().get_capability("Update",0))
-            self.click(UsmEntity().get_capability("Create",0))
-            self.click(UsmEntity().get_capability("Delete",0))
-            self.click(UsmEntity().get_capability("MassUpdate",0))
+            permission_list = ["Read","Update","Create","Delete","MassUpdate"]
+            capability_list = self.find_elements(UsmEntity.capabilitity_list)
+            capability_item = None
+            capability_index = []
+            for i in capabilityNamelist:
+                for j, item in enumerate(capability_list):
+                    if i == item.text:
+                        capability_item = j
+                        capability_index.append(capability_item)
+                if capability_item is None:
+                    logger.info(msg="capabilityName %s not found!" % i)
+            for a in capability_index:
+                for b in permission_list:
+                    self.click(UsmEntity().get_capability(b, a))
             if buttonName == "New":
                 self.click(UsmEntity().get_button("Next"))
                 self.type(UsmEntity.filter, self.find_element(UsmEntity().get_list_value("availableUsersSelected", "1")).text)
@@ -52,7 +61,7 @@ class UsmPage(BasePage):
                 self.click(UsmEntity().get_button("Finish"))
             elif buttonName == "Edit":
                 self.click(UsmEntity().get_switch_tab("Users"))
-                Select(self.find_element(UsmEntity().get_two_list("assignedUsers"))).select_by_index(0)
+                Select(self.find_element(UsmEntity().get_two_list("assignedUsersSelected"))).select_by_index(0)
                 self.click(UsmEntity().get_button("Remove"))
                 self.click(UsmEntity().get_button("Finish"))
         elif  buttonName == "Inactivate":
@@ -69,10 +78,25 @@ class UsmPage(BasePage):
             Select(self.find_element(UsmEntity().get_two_list("availableRolesSelected"))).select_by_index(0)
             self.click(UsmEntity().get_button("Add"))
             self.click(UsmEntity().get_button("Finish"))
+        self.sleep(2)
         if "successfully" in CustomerRecordPage(self.driver).get_tips_msg():
             return True
         else:
             return False
+
+    def get_capability(self,capabilityNamelist=[]):
+        capability_list= self.find_elements(UsmEntity.capabilitity_list)
+        capability_index = None
+        for i in capabilityNamelist:
+            for j, item in enumerate(capability_list):
+                if i == item.text:
+                    capability_index = (j, item)
+                    break
+            if capability_index is None:
+                logger.info(msg="capabilityName %s not found!" % i)
+
+
+
 
 
 

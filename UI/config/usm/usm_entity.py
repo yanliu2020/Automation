@@ -22,7 +22,7 @@ class UsmEntity(object):
         return self.input_textbox %loc
 
     #Capabilities/Users
-    switch_tab = "xpath=>//div[@class='modal-body']//li/a[text()='%s']"
+    switch_tab = "xpath=>//div[@class='mb-0 card']//li/a[text()='%s']"
     def get_switch_tab(self,loc):
         return self.switch_tab %loc
 
@@ -55,6 +55,8 @@ class UsmEntity(object):
     #canRead_0,canUpdate_0,canCreate_0,canDelete_0,canMassUpdate_0
     def get_capability(self,loc1,loc2):
         return self.capability %(loc1,loc2)
+
+    capabilitity_list = "xpath=>//div[@class='mb-0 card']//div[@class='rt-table']/div[@class='rt-tbody']//div[@class='rt-td']"
 
 
 
