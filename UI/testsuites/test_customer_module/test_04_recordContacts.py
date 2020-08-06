@@ -11,7 +11,7 @@ class recordContacts(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.driver = driver
-        # TopMenuPage(cls.driver).is_homepage()
+        TopMenuPage(cls.driver).is_homepage()
         # HomePage(cls.driver).quick_entrance("Customers","C000048473",2)
 
     def test_01_contacts_new(self):

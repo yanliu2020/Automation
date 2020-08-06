@@ -1,0 +1,124 @@
+2020-08-06 14:14:28,417|browser_engine.py[line:26] INFO:You had select Chrome browser.
+2020-08-06 14:14:28,417|browser_engine.py[line:28] INFO:The test server url is: https://rr-alamo-test.azureedge.net
+2020-08-06 14:14:31,220|browser_engine.py[line:42] INFO:Starting Chrome browser.
+2020-08-06 14:14:32,366|browser_engine.py[line:56] INFO:Maximize the current window.
+2020-08-06 14:15:07,278|browser_engine.py[line:59] INFO:Open url: https://rr-alamo-test.azureedge.net
+2020-08-06 14:15:18,264|base_page.py[line:68] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='localAccount']//div[@class='intro']/h2
+2020-08-06 14:15:18,817|base_page.py[line:66] INFO:Had find the element ' Sign in with your existing account ' successful by xpath via value: //div[@class='localAccount']//div[@class='intro']/h2 
+2020-08-06 14:15:19,382|base_page.py[line:66] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-08-06 14:15:19,447|base_page.py[line:143] INFO:Clear text in input box before typing.
+2020-08-06 14:15:19,977|base_page.py[line:66] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-08-06 14:15:20,227|base_page.py[line:133] INFO:Had type ' yan.liu@an-chen.com ' in inputBox
+2020-08-06 14:15:20,786|base_page.py[line:66] INFO:Had find the element '  ' successful by id via value: password 
+2020-08-06 14:15:20,823|base_page.py[line:143] INFO:Clear text in input box before typing.
+2020-08-06 14:15:21,345|base_page.py[line:66] INFO:Had find the element '  ' successful by id via value: password 
+2020-08-06 14:15:21,563|base_page.py[line:133] INFO:Had type ' Lychan@2012 ' in inputBox
+2020-08-06 14:15:22,117|base_page.py[line:66] INFO:Had find the element ' Sign in ' successful by xpath via value: //div[@class='buttons']/button[text()='Sign in'] 
+2020-08-06 14:15:26,623|base_page.py[line:66] INFO:Had find the element ' Welcome, yanliu ' successful by xpath via value: //div[@id='root']//div[@class='content-heading'] 
+2020-08-06 14:15:26,623|login.py[line:41] INFO:login success
+2020-08-06 14:15:29,253|base_page.py[line:66] INFO:Had find the element ' MANAGE ' successful by id via value: manage 
+2020-08-06 14:15:29,328|base_page.py[line:155] INFO:The element ' MANAGE ' was clicked.
+2020-08-06 14:15:29,842|base_page.py[line:221] INFO:Had find the elements successful by xpath via value: //ul[@class='dropdown-menu multi-level show']/li/a 
+2020-08-06 14:15:30,388|base_page.py[line:66] INFO:Had find the element ' Authorization Management ' successful by xpath via value: //ul[@class='dropdown-menu multi-level show']/li[1]/a 
+2020-08-06 14:15:30,610|base_page.py[line:155] INFO:The element ' Authorization Management ' was clicked.
+2020-08-06 14:15:30,611|topMenu.py[line:70] INFO:second_menu: Authorization Management
+2020-08-06 14:15:32,153|base_page.py[line:66] INFO:Had find the element ' New ' successful by xpath via value: //div[@class='card']//button[text()=' New'] 
+2020-08-06 14:15:32,309|base_page.py[line:155] INFO:The element ' New ' was clicked.
+2020-08-06 14:15:32,874|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //input[@name='name'] 
+2020-08-06 14:15:33,138|base_page.py[line:155] INFO:The element '  ' was clicked.
+2020-08-06 14:15:33,667|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //input[@name='name'] 
+2020-08-06 14:15:34,238|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //input[@name='name'] 
+2020-08-06 14:15:36,782|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //input[@name='name'] 
+2020-08-06 14:15:39,120|base_page.py[line:133] INFO:Had type ' X721ud ' in inputBox
+2020-08-06 14:15:40,031|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //input[@name='description'] 
+2020-08-06 14:15:40,184|base_page.py[line:155] INFO:The element '  ' was clicked.
+2020-08-06 14:15:40,712|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //input[@name='description'] 
+2020-08-06 14:15:41,279|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //input[@name='description'] 
+2020-08-06 14:15:41,837|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //input[@name='description'] 
+2020-08-06 14:15:44,012|base_page.py[line:133] INFO:Had type ' 6IoHWs ' in inputBox
+2020-08-06 14:15:44,580|base_page.py[line:221] INFO:Had find the elements successful by xpath via value: //div[@class='mb-0 card']//div[@class='rt-table']/div[@class='rt-tbody']//div[@class='rt-td'] 
+2020-08-06 14:16:05,239|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //div[@class='modal fade show']//div[@class='glo-row']//input[@id='canRead_139'] 
+2020-08-06 14:16:05,777|base_page.py[line:155] INFO:The element '  ' was clicked.
+2020-08-06 14:16:06,348|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //div[@class='modal fade show']//div[@class='glo-row']//input[@id='canUpdate_139'] 
+2020-08-06 14:16:06,779|base_page.py[line:155] INFO:The element '  ' was clicked.
+2020-08-06 14:16:07,347|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //div[@class='modal fade show']//div[@class='glo-row']//input[@id='canCreate_139'] 
+2020-08-06 14:16:07,765|base_page.py[line:155] INFO:The element '  ' was clicked.
+2020-08-06 14:16:08,335|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //div[@class='modal fade show']//div[@class='glo-row']//input[@id='canDelete_139'] 
+2020-08-06 14:16:08,746|base_page.py[line:155] INFO:The element '  ' was clicked.
+2020-08-06 14:16:09,315|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //div[@class='modal fade show']//div[@class='glo-row']//input[@id='canMassUpdate_139'] 
+2020-08-06 14:16:09,686|base_page.py[line:155] INFO:The element '  ' was clicked.
+2020-08-06 14:16:10,259|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //div[@class='modal fade show']//div[@class='glo-row']//input[@id='canRead_141'] 
+2020-08-06 14:16:10,655|base_page.py[line:155] INFO:The element '  ' was clicked.
+2020-08-06 14:16:11,234|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //div[@class='modal fade show']//div[@class='glo-row']//input[@id='canUpdate_141'] 
+2020-08-06 14:16:11,614|base_page.py[line:155] INFO:The element '  ' was clicked.
+2020-08-06 14:16:12,180|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //div[@class='modal fade show']//div[@class='glo-row']//input[@id='canCreate_141'] 
+2020-08-06 14:16:12,559|base_page.py[line:155] INFO:The element '  ' was clicked.
+2020-08-06 14:16:13,131|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //div[@class='modal fade show']//div[@class='glo-row']//input[@id='canDelete_141'] 
+2020-08-06 14:16:13,486|base_page.py[line:155] INFO:The element '  ' was clicked.
+2020-08-06 14:16:14,056|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //div[@class='modal fade show']//div[@class='glo-row']//input[@id='canMassUpdate_141'] 
+2020-08-06 14:16:14,498|base_page.py[line:155] INFO:The element '  ' was clicked.
+2020-08-06 14:16:15,049|base_page.py[line:66] INFO:Had find the element ' Next ' successful by xpath via value: //button[contains(text(),'Next')] 
+2020-08-06 14:16:15,270|base_page.py[line:155] INFO:The element ' Next ' was clicked.
+2020-08-06 14:16:15,820|base_page.py[line:66] INFO:Had find the element ' ljc7ua ' successful by xpath via value: //select[@name='availableUsersSelected']/option[1] 
+2020-08-06 14:16:16,413|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //input[@class='form-control'] 
+2020-08-06 14:16:16,775|base_page.py[line:133] INFO:Had type ' ljc7ua ' in inputBox
+2020-08-06 14:16:17,345|base_page.py[line:66] INFO:Had find the element ' ljc7ua ' successful by xpath via value: //select[@name='availableUsersSelected'] 
+2020-08-06 14:16:18,009|base_page.py[line:66] INFO:Had find the element '     Add     ' successful by xpath via value: //button[contains(text(),'Add')] 
+2020-08-06 14:16:18,086|base_page.py[line:155] INFO:The element '     Add     ' was clicked.
+2020-08-06 14:16:18,641|base_page.py[line:66] INFO:Had find the element ' Finish ' successful by xpath via value: //button[contains(text(),'Finish')] 
+2020-08-06 14:16:18,740|base_page.py[line:155] INFO:The element ' Finish ' was clicked.
+2020-08-06 14:16:23,310|base_page.py[line:66] INFO:Had find the element ' Role: X721ud created successfully. ' successful by xpath via value: //div[@role='alert'] 
+2020-08-06 14:16:24,894|base_page.py[line:66] INFO:Had find the element ' 1235
+X721ud
+6IoHWs ' successful by xpath via value: //div[@class='card']//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-08-06 14:16:25,458|base_page.py[line:66] INFO:Had find the element ' 1235
+X721ud
+6IoHWs ' successful by xpath via value: //div[@class='card']//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-08-06 14:16:25,574|base_page.py[line:155] INFO:The element ' 1235
+X721ud
+6IoHWs ' was clicked.
+2020-08-06 14:16:26,124|base_page.py[line:66] INFO:Had find the element ' Edit ' successful by xpath via value: //div[@class='card']//button[text()=' Edit'] 
+2020-08-06 14:16:28,000|base_page.py[line:155] INFO:The element ' Edit ' was clicked.
+2020-08-06 14:16:28,884|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //input[@name='name'] 
+2020-08-06 14:16:29,740|base_page.py[line:155] INFO:The element '  ' was clicked.
+2020-08-06 14:16:30,276|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //input[@name='name'] 
+2020-08-06 14:16:30,872|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //input[@name='name'] 
+2020-08-06 14:16:32,007|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //input[@name='name'] 
+2020-08-06 14:16:34,711|base_page.py[line:133] INFO:Had type ' XsJvYm ' in inputBox
+2020-08-06 14:16:35,274|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //input[@name='description'] 
+2020-08-06 14:16:35,389|base_page.py[line:155] INFO:The element '  ' was clicked.
+2020-08-06 14:16:35,928|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //input[@name='description'] 
+2020-08-06 14:16:36,493|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //input[@name='description'] 
+2020-08-06 14:16:37,415|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //input[@name='description'] 
+2020-08-06 14:16:39,821|base_page.py[line:133] INFO:Had type ' c5orks ' in inputBox
+2020-08-06 14:16:40,416|base_page.py[line:221] INFO:Had find the elements successful by xpath via value: //div[@class='mb-0 card']//div[@class='rt-table']/div[@class='rt-tbody']//div[@class='rt-td'] 
+2020-08-06 14:17:03,377|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //div[@class='modal fade show']//div[@class='glo-row']//input[@id='canRead_139'] 
+2020-08-06 14:17:03,994|base_page.py[line:155] INFO:The element '  ' was clicked.
+2020-08-06 14:17:04,559|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //div[@class='modal fade show']//div[@class='glo-row']//input[@id='canUpdate_139'] 
+2020-08-06 14:17:05,070|base_page.py[line:155] INFO:The element '  ' was clicked.
+2020-08-06 14:17:05,634|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //div[@class='modal fade show']//div[@class='glo-row']//input[@id='canCreate_139'] 
+2020-08-06 14:17:06,087|base_page.py[line:155] INFO:The element '  ' was clicked.
+2020-08-06 14:17:06,651|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //div[@class='modal fade show']//div[@class='glo-row']//input[@id='canDelete_139'] 
+2020-08-06 14:17:07,088|base_page.py[line:155] INFO:The element '  ' was clicked.
+2020-08-06 14:17:07,646|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //div[@class='modal fade show']//div[@class='glo-row']//input[@id='canMassUpdate_139'] 
+2020-08-06 14:17:08,087|base_page.py[line:155] INFO:The element '  ' was clicked.
+2020-08-06 14:17:08,660|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //div[@class='modal fade show']//div[@class='glo-row']//input[@id='canRead_140'] 
+2020-08-06 14:17:09,137|base_page.py[line:155] INFO:The element '  ' was clicked.
+2020-08-06 14:17:09,690|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //div[@class='modal fade show']//div[@class='glo-row']//input[@id='canUpdate_140'] 
+2020-08-06 14:17:10,109|base_page.py[line:155] INFO:The element '  ' was clicked.
+2020-08-06 14:17:10,680|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //div[@class='modal fade show']//div[@class='glo-row']//input[@id='canCreate_140'] 
+2020-08-06 14:17:11,108|base_page.py[line:155] INFO:The element '  ' was clicked.
+2020-08-06 14:17:11,668|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //div[@class='modal fade show']//div[@class='glo-row']//input[@id='canDelete_140'] 
+2020-08-06 14:17:12,062|base_page.py[line:155] INFO:The element '  ' was clicked.
+2020-08-06 14:17:12,638|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //div[@class='modal fade show']//div[@class='glo-row']//input[@id='canMassUpdate_140'] 
+2020-08-06 14:17:13,043|base_page.py[line:155] INFO:The element '  ' was clicked.
+2020-08-06 14:17:13,590|base_page.py[line:66] INFO:Had find the element ' Users ' successful by xpath via value: //div[@class='mb-0 card']//li/a[text()='Users'] 
+2020-08-06 14:17:13,783|base_page.py[line:155] INFO:The element ' Users ' was clicked.
+2020-08-06 14:17:14,369|base_page.py[line:66] INFO:Had find the element ' ljc7ua ' successful by xpath via value: //select[@name='assignedUsersSelected'] 
+2020-08-06 14:17:15,051|base_page.py[line:66] INFO:Had find the element ' Remove ' successful by xpath via value: //button[contains(text(),'Remove')] 
+2020-08-06 14:17:15,158|base_page.py[line:155] INFO:The element ' Remove ' was clicked.
+2020-08-06 14:17:15,719|base_page.py[line:66] INFO:Had find the element ' Finish ' successful by xpath via value: //button[contains(text(),'Finish')] 
+2020-08-06 14:17:15,807|base_page.py[line:155] INFO:The element ' Finish ' was clicked.
+2020-08-06 14:17:20,364|base_page.py[line:66] INFO:Had find the element ' UNPROCESSABLE_ENTITY undefined ' successful by xpath via value: //div[@role='alert'] 
+2020-08-06 14:17:31,154|base_page.py[line:68] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='card']//li/a[text()='Users']
+2020-08-06 14:17:31,708|base_page.py[line:66] INFO:Had find the element ' Users ' successful by xpath via value: //div[@class='card']//li/a[text()='Users'] 

@@ -26,7 +26,6 @@ class UsmPage(BasePage):
             if "background" not in self.find_element(
             UsmEntity().get_select_record(row)).get_attribute('style'):
                 self.click(UsmEntity().get_select_record(row))
-        # self.find_elements_by_wait("xpath", UsmEntity().get_select_record(row))
         self.click(UsmEntity().get_operator(buttonName))
 
     def operation(self,section,buttonName,capabilityNamelist=[]):
