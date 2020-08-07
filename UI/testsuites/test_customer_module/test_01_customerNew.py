@@ -32,7 +32,7 @@ class newCustomer(unittest.TestCase):
         stateOfIncorporation = data['stateOfIncorporation']
         TopMenuPage(self.driver).select_multiple_menu(2, "customers", "New", "", "")
         NewCustomerPage(self.driver).business_entity(entityType, entityClass, salutation,suffix,typeOfBusiness,stateOfIncorporation)
-        self.assertTrue(NewCustomerPage(self.driver).save())
+        NewCustomerPage(self.driver).saveClick()
         self.assertTrue(NewCustomerPage(self.driver).validation_data())
 
     @ddt.data(*data)

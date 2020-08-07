@@ -129,7 +129,7 @@ class CustomerRecordPage(BasePage):
         :return:
         """
         # self.find_element_by_wait("xpath",CustomerRecordEntity.delete_confirm)
-        self.sleep(2)
+        self.sleep(1)
         self.click(CustomerRecordEntity.delete_confirm)
         # msg = self.get_tips_msg()
         if "successfully" in self.get_tips_msg():

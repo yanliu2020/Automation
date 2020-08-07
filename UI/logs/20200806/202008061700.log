@@ -1,4 +1,0 @@
-2020-08-06 17:00:32,016|browser_engine.py[line:26] INFO:You had select Chrome browser.
-2020-08-06 17:00:32,017|browser_engine.py[line:28] INFO:The test server url is: https://rr-alamo-test.azureedge.net
-2020-08-06 17:00:35,766|browser_engine.py[line:42] INFO:Starting Chrome browser.
-2020-08-06 17:00:36,922|browser_engine.py[line:56] INFO:Maximize the current window.

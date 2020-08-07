@@ -84,6 +84,15 @@ class NewCustomerPage(BasePage):
         else:
             return False
 
+    def saveClick(self):
+        """
+        #Save validation
+        :param
+        :return:
+        """
+        self.click(NewCustomerEntity.save)
+        self.sleep(3)
+
 
     def contact(self,same,index,flag,role,emailType,phoneType):
         """
