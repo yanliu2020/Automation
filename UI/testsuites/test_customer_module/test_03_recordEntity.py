@@ -13,7 +13,6 @@ class recordEntity(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.driver = driver
-        TopMenuPage(cls.driver).is_homepage()
         # HomePage(cls.driver).quick_entrance("Customers", "C000048473", 2)
         # CustomerRecordPage(cls.driver).switch_tab("Entity")
 

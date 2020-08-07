@@ -83,16 +83,6 @@ class UsmPage(BasePage):
         else:
             return False
 
-    def get_capability(self,capabilityNamelist=[]):
-        capability_list= self.find_elements(UsmEntity.capabilitity_list)
-        capability_index = None
-        for i in capabilityNamelist:
-            for j, item in enumerate(capability_list):
-                if i == item.text:
-                    capability_index = (j, item)
-                    break
-            if capability_index is None:
-                logger.info(msg="capabilityName %s not found!" % i)
 
 
 

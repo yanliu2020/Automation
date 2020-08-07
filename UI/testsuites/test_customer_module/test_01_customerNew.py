@@ -17,8 +17,8 @@ class newCustomer(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         #browser = BrowserEngine(cls)
-        TopMenuPage(cls.driver).is_homepage()
         cls.driver = driver
+
 
     data = excelHandle(filepath, sheetName).read_excel()
     @ddt.data(*data)

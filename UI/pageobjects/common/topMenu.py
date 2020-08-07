@@ -100,6 +100,7 @@ class TopMenuPage(BasePage):
             self.click(TopMenuEntity().get_four_menu(second_item[0],third_item[0],four_menu))
             logger.info('four_menu: %s' % four_menu)
             return True
+        self.sleep(2)
 
 
     def is_homepage(self):
