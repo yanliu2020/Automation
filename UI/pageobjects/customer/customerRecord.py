@@ -34,6 +34,8 @@ class CustomerRecordPage(BasePage):
             self.scroll_into_view(CustomerRecordEntity().get_section_name(sectionName))
             if sectionName == "Customer Summary" or buttonName == "New":
                 self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
+            elif buttonName == "List":
+                self.drag_and_drop(CustomerRecordEntity().get_drag_column(section_item[0],"City"),CustomerRecordEntity().get_drag_column(section_item[0],"Attention To Line"))
             else:
                 if self.find_elements(CustomerRecordEntity().get_entity_records(section_item[0])):
                     if self.not_selected(section_item[0], row) == True:
@@ -418,6 +420,8 @@ class CustomerRecordPage(BasePage):
             return True
         else:
             return False
+
+
 
 
 

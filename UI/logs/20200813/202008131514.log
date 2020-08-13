@@ -1,0 +1,8 @@
+2020-08-13 15:14:31,993|browser_engine.py[line:26] INFO:You had select Chrome browser.
+2020-08-13 15:14:31,993|browser_engine.py[line:28] INFO:The test server url is: https://rr-alamo-test.azureedge.net
+2020-08-13 15:14:35,818|browser_engine.py[line:42] INFO:Starting Chrome browser.
+2020-08-13 15:14:36,973|browser_engine.py[line:56] INFO:Maximize the current window.
+2020-08-13 15:14:39,136|browser_engine.py[line:59] INFO:Open url: https://rr-alamo-test.azureedge.net
+2020-08-13 15:14:49,977|base_page.py[line:70] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='localAccount']//div[@class='intro']/h2
+2020-08-13 15:15:01,018|base_page.py[line:70] ERROR:TimeoutException: selector by xpath ,value //div[@class='localAccount']//div[@class='intro']/h2
+2020-08-13 15:15:01,018|base_page.py[line:123] ERROR:NoSuchElement selector_by: xpath, selector: //div[@class='localAccount']//div[@class='intro']/h2 

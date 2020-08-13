@@ -28,7 +28,7 @@ class UsmPage(BasePage):
                 self.click(UsmEntity().get_select_record(row))
         self.click(UsmEntity().get_operator(buttonName))
 
-    def operation(self,section,buttonName,capabilityNamelist=[]):
+    def operation(self,flag,index,section,buttonName,capabilityNamelist=[]):
         """
         :param section,buttonName,capabilityNamelist=[]
         :return:
@@ -52,16 +52,27 @@ class UsmPage(BasePage):
             for a in capability_index:
                 for b in permission_list:
                     self.click(UsmEntity().get_capability(b, a))
-            if buttonName == "New":
-                self.click(UsmEntity().get_button("Next"))
-                self.type(UsmEntity.filter, self.find_element(UsmEntity().get_list_value("availableUsersSelected", "1")).text)
-                Select(self.find_element(UsmEntity().get_two_list("availableUsersSelected"))).select_by_index(0)
-                self.click(UsmEntity().get_button("Add"))
-                self.click(UsmEntity().get_button("Finish"))
-            elif buttonName == "Edit":
-                self.click(UsmEntity().get_switch_tab("Users"))
-                Select(self.find_element(UsmEntity().get_two_list("assignedUsersSelected"))).select_by_index(0)
-                self.click(UsmEntity().get_button("Remove"))
+            if buttonName == "New" or buttonName == "Edit":
+                if flag == "add":
+                    if  index == 1:
+                        self.click(UsmEntity().get_button("Next"))
+                        self.type(UsmEntity.filter,
+                                  self.find_element(UsmEntity().get_list_value("availableUsersSelected", "1")).text)
+                        Select(self.find_element(UsmEntity().get_two_list("availableUsersSelected"))).select_by_index(0)
+                    else:
+                        self.click(UsmEntity().get_switch_tab("Users"))
+                        self.ctrl_multiSelect(UsmEntity().get_list_value("availableUsersSelected", "1"),
+                                    UsmEntity().get_list_value("availableUsersSelected", "2"))
+                    self.click(UsmEntity().get_button("Add"))
+                elif flag == "remove":
+                    if index == 1:
+                        self.click(UsmEntity().get_switch_tab("Users"))
+                        Select(self.find_element(UsmEntity().get_two_list("assignedUsersSelected"))).select_by_index(0)
+                    else:
+                        self.click(UsmEntity().get_button("Next"))
+                        self.ctrl_multiSelect(UsmEntity().get_list_value("assignedUsersSelected", "1"),
+                                    UsmEntity().get_list_value("assignedUsersSelected", "2"))
+                    self.click(UsmEntity().get_button("Remove"))
                 self.click(UsmEntity().get_button("Finish"))
         elif  buttonName == "Inactivate":
                 self.click(UsmEntity.confirm_delete)

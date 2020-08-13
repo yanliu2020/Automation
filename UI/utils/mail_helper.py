@@ -42,7 +42,7 @@ def send_mail(file_new):
 
     # 编写 HTML类型的邮件正文
     msg = MIMEMultipart()
-    msg['Subject'] = Header(u"UI Automation Test Report(" + url + ")("+ browser +")", 'utf-8')
+    msg['Subject'] = Header(u"UI Automation(" + url + ")("+ browser +")", 'utf-8')
     msg["From"] = "{}".format(sender)
     # 判断totest=1  接收方为to_list1中的收件人  非1为to_list2中的收件人
     if totest == 2:

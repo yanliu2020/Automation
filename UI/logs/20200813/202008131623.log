@@ -1,0 +1,16 @@
+2020-08-13 16:23:17,732|browser_engine.py[line:26] INFO:You had select Chrome browser.
+2020-08-13 16:23:17,732|browser_engine.py[line:28] INFO:The test server url is: https://rr-alamo-test.azureedge.net
+2020-08-13 16:23:21,015|browser_engine.py[line:42] INFO:Starting Chrome browser.
+2020-08-13 16:23:22,160|browser_engine.py[line:56] INFO:Maximize the current window.
+2020-08-13 16:23:55,303|browser_engine.py[line:59] INFO:Open url: https://rr-alamo-test.azureedge.net
+2020-08-13 16:24:06,136|base_page.py[line:71] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='localAccount']//div[@class='intro']/h2
+2020-08-13 16:24:06,702|base_page.py[line:69] INFO:Had find the element ' Sign in with your existing account ' successful by xpath via value: //div[@class='localAccount']//div[@class='intro']/h2 
+2020-08-13 16:24:07,275|base_page.py[line:69] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-08-13 16:24:07,319|base_page.py[line:146] INFO:Clear text in input box before typing.
+2020-08-13 16:24:07,847|base_page.py[line:69] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-08-13 16:24:08,072|base_page.py[line:136] INFO:Had type ' yan.liu@an-chen.com ' in inputBox
+2020-08-13 16:24:08,623|base_page.py[line:69] INFO:Had find the element '  ' successful by id via value: password 
+2020-08-13 16:24:08,679|base_page.py[line:146] INFO:Clear text in input box before typing.
+2020-08-13 16:24:09,225|base_page.py[line:69] INFO:Had find the element '  ' successful by id via value: password 
+2020-08-13 16:24:09,816|base_page.py[line:136] INFO:Had type ' Lychan@2012 ' in inputBox
+2020-08-13 16:24:10,398|base_page.py[line:69] INFO:Had find the element ' Sign in ' successful by xpath via value: //div[@class='buttons']/button[text()='Sign in'] 

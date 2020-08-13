@@ -17,18 +17,19 @@ class NewCustomerPage(BasePage):
         """
         self.drop_select(NewCustomerEntity().get_entity("typeName"), entityType)
         self.drop_select(NewCustomerEntity().get_entity("entityClass"), entityClass)
+        randomData = BasePage(self.driver).randomData("string",6)
         if entityType == "Person":
             if entityClass == "Household":
-                self.type(NewCustomerEntity().get_entity_input("fullName"), BasePage(self.driver).randomData("string",6))
-                self.type(NewCustomerEntity().get_entity_input("soundEx"), BasePage(self.driver).randomData("string",6))
+                self.type(NewCustomerEntity().get_entity_input("fullName"), randomData)
+                self.type(NewCustomerEntity().get_entity_input("soundEx"), randomData)
             else:
                 self.drop_select(NewCustomerEntity().get_entity_select("salutation"), salutation)
-                self.type(NewCustomerEntity().get_entity_input("firstName"), BasePage(self.driver).randomData("string",6))
-                self.type(NewCustomerEntity().get_entity_input("middleName"),BasePage(self.driver).randomData("string", 6))
-                self.type(NewCustomerEntity().get_entity_input("lastName"), BasePage(self.driver).randomData("string",6))
+                self.type(NewCustomerEntity().get_entity_input("firstName"), randomData)
+                self.type(NewCustomerEntity().get_entity_input("middleName"),randomData)
+                self.type(NewCustomerEntity().get_entity_input("lastName"), randomData)
                 self.drop_select(NewCustomerEntity().get_entity_select("suffix"), suffix)
         else:
-            self.type(NewCustomerEntity().get_entity_input("organizationName"), BasePage(self.driver).randomData("string",6))
+            self.type(NewCustomerEntity().get_entity_input("organizationName"), randomData)
             if entityClass == "Company" or entityClass == "Government":
                 self.drop_select(NewCustomerEntity().get_entity_select("subClassName"), typeOfBusiness)
             self.drop_select(NewCustomerEntity().get_entity_select("stateOfIncorporation"), stateOfIncorporation)
@@ -207,6 +208,9 @@ class NewCustomerPage(BasePage):
                     return True
                 else:
                     return False
+
+
+
 
 
 

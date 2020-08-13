@@ -1,0 +1,32 @@
+2020-08-12 14:48:48,682|browser_engine.py[line:26] INFO:You had select Chrome browser.
+2020-08-12 14:48:48,682|browser_engine.py[line:28] INFO:The test server url is: https://rr-alamo-test.azureedge.net
+2020-08-12 14:48:51,523|browser_engine.py[line:42] INFO:Starting Chrome browser.
+2020-08-12 14:48:52,664|browser_engine.py[line:56] INFO:Maximize the current window.
+2020-08-12 14:49:13,263|browser_engine.py[line:59] INFO:Open url: https://rr-alamo-test.azureedge.net
+2020-08-12 14:49:23,927|base_page.py[line:68] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='localAccount']//div[@class='intro']/h2
+2020-08-12 14:49:24,484|base_page.py[line:66] INFO:Had find the element ' Sign in with your existing account ' successful by xpath via value: //div[@class='localAccount']//div[@class='intro']/h2 
+2020-08-12 14:49:25,057|base_page.py[line:66] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-08-12 14:49:25,106|base_page.py[line:143] INFO:Clear text in input box before typing.
+2020-08-12 14:49:25,645|base_page.py[line:66] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-08-12 14:49:25,843|base_page.py[line:133] INFO:Had type ' yan.liu@an-chen.com ' in inputBox
+2020-08-12 14:49:26,401|base_page.py[line:66] INFO:Had find the element '  ' successful by id via value: password 
+2020-08-12 14:49:26,442|base_page.py[line:143] INFO:Clear text in input box before typing.
+2020-08-12 14:49:26,963|base_page.py[line:66] INFO:Had find the element '  ' successful by id via value: password 
+2020-08-12 14:49:27,169|base_page.py[line:133] INFO:Had type ' Lychan@2012 ' in inputBox
+2020-08-12 14:49:27,727|base_page.py[line:66] INFO:Had find the element ' Sign in ' successful by xpath via value: //div[@class='buttons']/button[text()='Sign in'] 
+2020-08-12 14:49:32,216|base_page.py[line:66] INFO:Had find the element ' Welcome, yanliu ' successful by xpath via value: //div[@id='root']//div[@class='content-heading'] 
+2020-08-12 14:49:32,216|login.py[line:41] INFO:login success
+2020-08-12 14:49:43,157|base_page.py[line:68] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='card']/form//div[@id='homeGrid']/div//h2
+2020-08-12 14:49:43,686|base_page.py[line:221] INFO:Had find the elements successful by xpath via value: //div[@class='card']/form//div[@id='homeGrid']/div//h2 
+2020-08-12 14:49:44,318|base_page.py[line:66] INFO:Had find the element '  ' successful by xpath via value: //div[@class='card']/form//div[@id='homeGrid']/div[4]//input 
+2020-08-12 14:49:44,545|base_page.py[line:133] INFO:Had type ' C000048473 ' in inputBox
+2020-08-12 14:49:45,101|base_page.py[line:66] INFO:Had find the element ' Go ' successful by xpath via value: //div[@class='card']/form//div[@id='homeGrid']/div[4]/div/button 
+2020-08-12 14:49:45,183|base_page.py[line:155] INFO:The element ' Go ' was clicked.
+2020-08-12 14:49:45,184|homePage.py[line:50] INFO:module_name: Customers
+2020-08-12 14:49:56,061|base_page.py[line:68] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='card']//li/a[text()='Entity']
+2020-08-12 14:50:03,693|base_page.py[line:66] INFO:Had find the element ' Entity ' successful by xpath via value: //div[@class='card']//li/a[text()='Entity'] 
+2020-08-12 14:50:04,280|base_page.py[line:155] INFO:The element ' Entity ' was clicked.
+2020-08-12 14:50:04,806|base_page.py[line:221] INFO:Had find the elements successful by xpath via value: //div[@class='card']//div//h4 
+2020-08-12 14:50:05,409|base_page.py[line:66] INFO:Had find the element ' Addresses ' successful by xpath via value: //div[@class='card']//div//h4[text()='Addresses'] 
+2020-08-12 14:50:05,966|base_page.py[line:66] INFO:Had find the element ' City ' successful by xpath via value: //div[@class='glo-row']/div[2]//div[@class='glo-row']//span[text()='City'] 
+2020-08-12 14:50:06,505|base_page.py[line:66] INFO:Had find the element ' Attention To Line ' successful by xpath via value: //div[@class='glo-row']/div[2]//div[@class='glo-row']//span[text()='Attention To Line'] 

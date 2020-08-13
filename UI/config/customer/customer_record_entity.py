@@ -142,5 +142,15 @@ class CustomerRecordEntity(object):
     def get_identifier_name(self,loc):
         return self.identifierName_row %loc
 
+    #resize
+    resize = "xpath=//div[@class='glo-row']/div[%s]//div[@class='glo-row']//div[@role='columnheader'][%s]/div[@class='rt-resizer']"
+    def get_resize_column(self,loc1,loc2):
+        return self.resize %(loc1,loc2)
+
+    #drag and drop
+    drag_drop = "xpath=>//div[@class='glo-row']/div[%s]//div[@class='glo-row']//span[text()='%s']"
+    def get_drag_column(self,loc1,loc2):
+        return self.drag_drop %(loc1,loc2)
+
 
 

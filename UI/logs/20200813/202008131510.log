@@ -1,0 +1,51 @@
+2020-08-13 15:10:40,868|browser_engine.py[line:26] INFO:You had select Chrome browser.
+2020-08-13 15:10:40,869|browser_engine.py[line:28] INFO:The test server url is: https://rr-alamo-test.azureedge.net
+2020-08-13 15:10:44,519|browser_engine.py[line:42] INFO:Starting Chrome browser.
+2020-08-13 15:10:45,665|browser_engine.py[line:56] INFO:Maximize the current window.
+2020-08-13 15:11:07,343|browser_engine.py[line:59] INFO:Open url: https://rr-alamo-test.azureedge.net
+2020-08-13 15:11:18,254|base_page.py[line:70] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='localAccount']//div[@class='intro']/h2
+2020-08-13 15:11:18,793|base_page.py[line:68] INFO:Had find the element ' Sign in with your existing account ' successful by xpath via value: //div[@class='localAccount']//div[@class='intro']/h2 
+2020-08-13 15:11:19,340|base_page.py[line:68] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-08-13 15:11:19,380|base_page.py[line:145] INFO:Clear text in input box before typing.
+2020-08-13 15:11:20,416|base_page.py[line:68] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-08-13 15:11:20,628|base_page.py[line:135] INFO:Had type ' yan.liu@an-chen.com ' in inputBox
+2020-08-13 15:11:21,183|base_page.py[line:68] INFO:Had find the element '  ' successful by id via value: password 
+2020-08-13 15:11:21,222|base_page.py[line:145] INFO:Clear text in input box before typing.
+2020-08-13 15:11:21,925|base_page.py[line:68] INFO:Had find the element '  ' successful by id via value: password 
+2020-08-13 15:11:22,164|base_page.py[line:135] INFO:Had type ' Lychan@2012 ' in inputBox
+2020-08-13 15:11:22,707|base_page.py[line:68] INFO:Had find the element ' Sign in ' successful by xpath via value: //div[@class='buttons']/button[text()='Sign in'] 
+2020-08-13 15:11:27,454|base_page.py[line:68] INFO:Had find the element ' Welcome, yanliu ' successful by xpath via value: //div[@id='root']//div[@class='content-heading'] 
+2020-08-13 15:11:27,454|login.py[line:41] INFO:login success
+2020-08-13 15:11:30,194|base_page.py[line:68] INFO:Had find the element ' MANAGE ' successful by id via value: manage 
+2020-08-13 15:11:30,276|base_page.py[line:157] INFO:The element ' MANAGE ' was clicked.
+2020-08-13 15:11:30,805|base_page.py[line:223] INFO:Had find the elements successful by xpath via value: //ul[@class='dropdown-menu multi-level show']/li/a 
+2020-08-13 15:11:31,385|base_page.py[line:68] INFO:Had find the element ' Authorization Management ' successful by xpath via value: //ul[@class='dropdown-menu multi-level show']/li[1]/a 
+2020-08-13 15:11:31,535|base_page.py[line:157] INFO:The element ' Authorization Management ' was clicked.
+2020-08-13 15:11:31,536|topMenu.py[line:70] INFO:second_menu: Authorization Management
+2020-08-13 15:11:33,099|base_page.py[line:68] INFO:Had find the element ' New ' successful by xpath via value: //div[@class='card']//button[text()=' New'] 
+2020-08-13 15:11:33,243|base_page.py[line:157] INFO:The element ' New ' was clicked.
+2020-08-13 15:11:33,778|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='name'] 
+2020-08-13 15:11:33,878|base_page.py[line:157] INFO:The element '  ' was clicked.
+2020-08-13 15:11:34,401|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='name'] 
+2020-08-13 15:11:34,991|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='name'] 
+2020-08-13 15:11:36,464|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='name'] 
+2020-08-13 15:11:38,276|base_page.py[line:135] INFO:Had type ' bdS7sa ' in inputBox
+2020-08-13 15:11:38,825|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='description'] 
+2020-08-13 15:11:38,923|base_page.py[line:157] INFO:The element '  ' was clicked.
+2020-08-13 15:11:39,451|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='description'] 
+2020-08-13 15:11:40,026|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='description'] 
+2020-08-13 15:11:40,593|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@name='description'] 
+2020-08-13 15:11:42,572|base_page.py[line:135] INFO:Had type ' IAmsb0 ' in inputBox
+2020-08-13 15:11:43,125|base_page.py[line:223] INFO:Had find the elements successful by xpath via value: //div[@class='mb-0 card']//div[@class='rt-table']/div[@class='rt-tbody']//div[@class='rt-td'] 
+2020-08-13 15:11:54,587|usm.py[line:51] INFO:capabilityName  not found!
+2020-08-13 15:11:55,308|base_page.py[line:68] INFO:Had find the element ' Next ' successful by xpath via value: //button[contains(text(),'Next')] 
+2020-08-13 15:11:55,795|base_page.py[line:157] INFO:The element ' Next ' was clicked.
+2020-08-13 15:11:56,359|base_page.py[line:68] INFO:Had find the element ' ljc7ua ' successful by xpath via value: //select[@name='availableUsersSelected']/option[1] 
+2020-08-13 15:11:56,940|base_page.py[line:68] INFO:Had find the element '  ' successful by xpath via value: //input[@class='form-control'] 
+2020-08-13 15:11:57,152|base_page.py[line:135] INFO:Had type ' ljc7ua ' in inputBox
+2020-08-13 15:11:57,697|base_page.py[line:68] INFO:Had find the element ' ljc7ua ' successful by xpath via value: //select[@name='availableUsersSelected'] 
+2020-08-13 15:11:58,364|base_page.py[line:68] INFO:Had find the element '     Add     ' successful by xpath via value: //button[contains(text(),'Add')] 
+2020-08-13 15:11:58,439|base_page.py[line:157] INFO:The element '     Add     ' was clicked.
+2020-08-13 15:11:59,002|base_page.py[line:68] INFO:Had find the element ' Finish ' successful by xpath via value: //button[contains(text(),'Finish')] 
+2020-08-13 15:11:59,126|base_page.py[line:157] INFO:The element ' Finish ' was clicked.
+2020-08-13 15:12:03,854|base_page.py[line:68] INFO:Had find the element ' Role: bdS7sa created successfully. ' successful by xpath via value: //div[@role='alert'] 

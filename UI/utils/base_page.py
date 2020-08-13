@@ -9,6 +9,9 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support.ui import Select
 from utils.basepath_helper import screenshots_path
+from utils.basepath_helper import utils_path
+from selenium.webdriver.common.action_chains import ActionChains
+from utils.drag_drop import HTML5
 from utils.logger import logger
 import random
 from selenium.webdriver.common.action_chains import ActionChains
@@ -347,13 +350,22 @@ class BasePage(object):
                 self.driver.switch_to.window(windows[0])
 
     def drag_and_drop(self,source_selector,target_selector):
-        """拖拽
+        """拖拽:不支持html5，使用js必须传入id
         :param source_selector,target_selector:
         :return:
         """
         source = self.find_element(source_selector)
         target = self.find_element(target_selector)
-        ActionChains(self.driver).drag_and_drop(source, target).perform()
+        HTML5.drag_and_drop(self.driver, draggable=source, droppable=target)
+        # ActionChains(self.driver).drag_and_drop(source, target).perform()
+        # filepath = utils_path + "drag_and_drop_helper.js"
+        # with open(filepath) as f:
+        # with open(filepath) as f:
+        #     drag_and_drop_js = f.read()
+        # source = self.find_element(source_selector)
+        # target = self.find_element(target_selector)
+        # self.driver.execute_script(drag_and_drop_js + "$('#{source}').simulateDragDrop({ dropTarget:
+        #                                     '#{target}'});")
 
     def drop_select(self,selector,value):
         """下拉框选择by option value
@@ -381,6 +393,19 @@ class BasePage(object):
         self.click(selector)
         self.find_element(selector).send_keys(Keys.CONTROL,'a')
         self.find_element(selector).send_keys(Keys.BACKSPACE)
+
+    def ctrl_multiSelect(self,selector1,selector2):
+        """多选操作
+        :param selector
+        :return:
+        """
+        selector_list = [selector1,selector2]
+        ActionChains(self.driver).key_down(Keys.CONTROL).perform()
+        for selector in selector_list:
+            element = self.find_element(selector)
+            self.driver.execute_script("arguments[0].scrollIntoView(true);", element)
+            self.click(selector)
+        ActionChains(self.driver).key_down(Keys.CONTROL).perform()
 
     def execute_script_click(self,selector):
         """脚本点击
