@@ -30,7 +30,7 @@ class UsmPage(BasePage):
 
     def operation(self,flag,index,section,buttonName,capabilityNamelist=[]):
         """
-        :param section,buttonName,capabilityNamelist=[]
+        :param flag,index,section,buttonName,capabilityNamelist=[]
         :return:
         """
         if buttonName == "New" or ( section == "Roles" and buttonName == "Edit"):
@@ -52,55 +52,52 @@ class UsmPage(BasePage):
             for a in capability_index:
                 for b in permission_list:
                     self.click(UsmEntity().get_capability(b, a))
-            if buttonName == "New" or buttonName == "Edit":
-                if flag == "add":
-                    if  index == 1:
-                        self.click(UsmEntity().get_button("Next"))
-                        self.type(UsmEntity.filter,
-                                  self.find_element(UsmEntity().get_list_value("availableUsersSelected", "1")).text)
-                        Select(self.find_element(UsmEntity().get_two_list("availableUsersSelected"))).select_by_index(0)
-                    else:
-                        self.click(UsmEntity().get_switch_tab("Users"))
-                        self.ctrl_multiSelect(UsmEntity().get_list_value("availableUsersSelected", "1"),
-                                    UsmEntity().get_list_value("availableUsersSelected", "2"))
-                    self.click(UsmEntity().get_button("Add"))
-                elif flag == "remove":
-                    if index == 1:
-                        self.click(UsmEntity().get_switch_tab("Users"))
-                        Select(self.find_element(UsmEntity().get_two_list("assignedUsersSelected"))).select_by_index(0)
-                    else:
-                        self.click(UsmEntity().get_button("Next"))
-                        self.ctrl_multiSelect(UsmEntity().get_list_value("assignedUsersSelected", "1"),
-                                    UsmEntity().get_list_value("assignedUsersSelected", "2"))
-                    self.click(UsmEntity().get_button("Remove"))
-                self.click(UsmEntity().get_button("Finish"))
-        elif  buttonName == "Inactivate":
-                self.click(UsmEntity.confirm_delete)
         elif section == "Users":
             self.ctrl_all(UsmEntity().get_input_textbox("userName"))
-            self.type(UsmEntity().get_input_textbox("userName"),BasePage(self.driver).randomData("string", 6))
+            self.type(UsmEntity().get_input_textbox("userName"), BasePage(self.driver).randomData("string", 6))
             self.ctrl_all(UsmEntity().get_input_textbox("firstName"))
             self.type(UsmEntity().get_input_textbox("firstName"), BasePage(self.driver).randomData("string", 6))
             self.ctrl_all(UsmEntity().get_input_textbox("lastName"))
             self.type(UsmEntity().get_input_textbox("lastName"), BasePage(self.driver).randomData("string", 6))
-            self.type(UsmEntity.filter,
-                      self.find_element(UsmEntity().get_list_value("availableRolesSelected", "1")).text)
-            Select(self.find_element(UsmEntity().get_two_list("availableRolesSelected"))).select_by_index(0)
-            self.click(UsmEntity().get_button("Add"))
+        elif buttonName == "Inactivate":
+            self.click(UsmEntity.confirm_delete)
+        if buttonName == "New" or buttonName == "Edit":
+            if index == 1:
+                if section == "Roles":
+                    self.click(UsmEntity().get_button("Next"))
+                    list = "Users"
+                else:
+                    list = "Roles"
+                if flag == "add":
+                    self.type(UsmEntity.filter,
+                              self.find_element(UsmEntity().get_list_value("available" + list + "Selected", "1")).text)
+                    Select(
+                        self.find_element(UsmEntity().get_two_list("available" + list + "Selected"))).select_by_index(0)
+                    self.click(UsmEntity().get_button("Add"))
+                elif flag == "remove":
+                    Select(self.find_element(UsmEntity().get_two_list("assigned" + list + "Selected"))).select_by_index(
+                        0)
+                    self.click(UsmEntity().get_button("Remove"))
+            else:
+                if section == "Roles":
+                    self.click(UsmEntity().get_switch_tab("Users"))
+                    list = "Users"
+                else:
+                    list = "Roles"
+                if flag == "add":
+                    self.ctrl_multiSelect(UsmEntity().get_list_value("available" + list + "Selected", "1"),
+                                          UsmEntity().get_list_value("available" + list + "Selected", "2"))
+                    self.click(UsmEntity().get_button("Add"))
+                elif flag == "remove":
+                    self.ctrl_multiSelect(UsmEntity().get_list_value("assigned" + list + "Selected", "1"),
+                                          UsmEntity().get_list_value("assigned" + list + "Selected", "2"))
+                    self.click(UsmEntity().get_button("Remove"))
             self.click(UsmEntity().get_button("Finish"))
         self.sleep(2)
         if "successfully" in CustomerRecordPage(self.driver).get_tips_msg():
             return True
         else:
             return False
-
-
-
-
-
-
-
-
 
 
 
