@@ -22,12 +22,12 @@ def runtest():
     discover01 = unittest.TestLoader().discover(
         start_dir=testsuites_path + "test_usermanagement_module//", pattern='test_*.py', top_level_dir=None)
 
-    # discover02 = unittest.TestLoader().discover(
-    #     start_dir=testsuites_path + "test_validate_permission//", pattern='test_*.py', top_level_dir=None)
+    discover02 = unittest.TestLoader().discover(
+        start_dir=testsuites_path + "test_validate_permission//", pattern='test_*.py', top_level_dir=None)
 
     testsuite = unittest.TestSuite()
     testsuite.addTest(discover01)
-    # testsuite.addTest(discover02)
+    testsuite.addTest(discover02)
 
     filename = report_path + file_name + '_report.html'
 

@@ -335,7 +335,7 @@ class BasePage(object):
         ActionChains(self.driver).move_to_element_with_offset(element, 0, y).perform()
         ActionChains(self.driver).move_to_element(element).perform()
 
-    def swith_to_handle(self,flag):
+    def switch_to_handle(self,flag):
         """
         # 新窗口打开,切换至新窗口操作
         :param window,flag:

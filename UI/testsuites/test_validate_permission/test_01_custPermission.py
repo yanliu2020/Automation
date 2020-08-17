@@ -11,11 +11,11 @@ class custPermission(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.driver = driver
-        SystemLogin(cls.driver).switch_account('1925719012@qq.com', 'Abc1234%')
-        TopMenuPage(cls.driver).is_homepage()
 
     def test_01_customer_query(self):
         u"""validate have no access for customer record page"""
+        SystemLogin(self.driver).switch_account('1925719012@qq.com', 'Abc1234%')
+        TopMenuPage(self.driver).is_homepage()
         HomePage(self.driver).quick_entrance("Customers", "C000048473", 2)
         self.assertTrue(CustomerRecordPage(self.driver).validate_permission())
 

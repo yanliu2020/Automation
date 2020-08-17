@@ -44,7 +44,7 @@ class UsmEntity(object):
         return self.button %loc
 
     #confirm delete
-    confirm_delete = "xpath=>//button[text()='Yes, Inactivate it!]"
+    confirm_delete = "xpath=>//button[text()='Yes, Inactivate it!']"
 
     #Capabilities
     # capability = "xpath=>//div[@class='modal fade show']//div[@class='card']//div[@class='rt-tr-group']//div[text()='%s']"

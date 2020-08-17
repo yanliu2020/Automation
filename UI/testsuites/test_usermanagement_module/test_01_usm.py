@@ -1,8 +1,10 @@
 #-*- coding: UTF-8 -*-
 import unittest
 from utils.browser_engine import driver
-from pageobjects.common.topMenu import TopMenuPage
 from pageobjects.usm.usm import UsmPage
+from pageobjects.common.topMenu import TopMenuPage
+
+
 
 class USM(unittest.TestCase):
     @classmethod
@@ -36,8 +38,9 @@ class USM(unittest.TestCase):
 
     def test_05_role_inactivate(self):
         u"""inactivate role"""
-        UsmPage(self.driver).click_button("Roles", "inactivate","1")
-        self.assertTrue(UsmPage(self.driver).operation("inactivate"))
+        UsmPage(self.driver).click_button("Roles", "Inactivate","1")
+        capabilityNamelist = ['']
+        self.assertTrue(UsmPage(self.driver).operation("","","Roles","Inactivate",capabilityNamelist))
 
     def test_06_user_assign1Role(self):
         u"""edit a user"""
@@ -66,3 +69,4 @@ class USM(unittest.TestCase):
         UsmPage(self.driver).click_button("Users", "Edit","1")
         capabilityNamelist = ['']
         self.assertTrue(UsmPage(self.driver).operation("remove","","Users","Edit",capabilityNamelist))
+
