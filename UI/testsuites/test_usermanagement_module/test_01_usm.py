@@ -34,10 +34,10 @@ class USM(unittest.TestCase):
         capabilityNamelist = ['Business Entity', 'Business Entity Alias']
         self.assertTrue(UsmPage(self.driver).operation("remove","","Roles","Edit",capabilityNamelist))
 
-    # def test_05_role_inactivate(self):
-    #     u"""inactivate role"""
-    #     UsmPage(self.driver).click_button("Roles", "inactivate","1")
-    #     self.assertTrue(UsmPage(self.driver).operation("inactivate"))
+    def test_05_role_inactivate(self):
+        u"""inactivate role"""
+        UsmPage(self.driver).click_button("Roles", "inactivate","1")
+        self.assertTrue(UsmPage(self.driver).operation("inactivate"))
 
     def test_06_user_assign1Role(self):
         u"""edit a user"""
