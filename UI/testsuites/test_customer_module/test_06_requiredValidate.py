@@ -25,7 +25,7 @@ class requiredFields(unittest.TestCase):
         TopMenuPage(self.driver).select_multiple_menu(2, "customers", "New", "", "")
         self.assertTrue(NewCustomerPage(self.driver).validate_required(entityType, entityClass,"Business Entity"))
 
-    def test_contact_required(self):
+    def test_02_contact_required(self):
         u"""new customer page validate contact required fields"""
         TopMenuPage(self.driver).select_multiple_menu(2, "customers", "New", "", "")
         self.assertTrue(NewCustomerPage(self.driver).validate_required("Person","Sole Proprietor","Contact"))
