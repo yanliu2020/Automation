@@ -39,19 +39,24 @@ class UsmPage(BasePage):
             self.ctrl_all(UsmEntity().get_input_textbox("description"))
             self.type(UsmEntity().get_input_textbox("description"), BasePage(self.driver).randomData("string", 6))
             permission_list = ["Read","Update","Create","Delete","MassUpdate"]
-            capability_list = self.find_elements(UsmEntity.capabilitity_list)
+            # capability_list = self.find_elements(UsmEntity.capabilitity_list)
             capability_item = None
             capability_index = []
             for i in capabilityNamelist:
+                self.ctrl_all(UsmEntity.filter)
+                self.type(UsmEntity.filter,i)
+                capability_list = self.find_elements(UsmEntity.capabilitity_list)
                 for j, item in enumerate(capability_list):
                     if i == item.text:
                         capability_item = j
                         capability_index.append(capability_item)
+                        for b in permission_list:
+                            self.click(UsmEntity().get_capability(b, capability_index[0]))
                 if capability_item is None:
                     logger.info(msg="capabilityName %s not found!" % i)
-            for a in capability_index:
-                for b in permission_list:
-                    self.click(UsmEntity().get_capability(b, a))
+            # for a in capability_index:
+            #     for b in permission_list:
+            #         self.click(UsmEntity().get_capability(b, a))
         elif section == "Users":
             self.ctrl_all(UsmEntity().get_input_textbox("userName"))
             self.type(UsmEntity().get_input_textbox("userName"), BasePage(self.driver).randomData("string", 6))
