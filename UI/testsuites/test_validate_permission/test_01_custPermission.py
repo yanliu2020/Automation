@@ -5,6 +5,7 @@ from pageobjects.homepage.homePage import  HomePage
 from pageobjects.common.topMenu import TopMenuPage
 from pageobjects.customer.customerRecord import CustomerRecordPage
 from pageobjects.login.login import SystemLogin
+from utils.base_page import BasePage
 
 class custPermission(unittest.TestCase):
 
@@ -14,8 +15,9 @@ class custPermission(unittest.TestCase):
 
     def test_01_customer_query(self):
         u"""validate have no access for customer record page"""
-        SystemLogin(self.driver).switch_account('1925719012@qq.com', 'Abc1234%')
+        BasePage(self.driver).refresh_page()
         TopMenuPage(self.driver).is_homepage()
+        SystemLogin(self.driver).switch_account('1925719012@qq.com', 'Abc1234%')
         HomePage(self.driver).quick_entrance("Customers", "C000048473", 2)
         self.assertTrue(CustomerRecordPage(self.driver).validate_permission())
 

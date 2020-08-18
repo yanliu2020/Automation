@@ -4,8 +4,6 @@ from utils.browser_engine import driver
 from pageobjects.usm.usm import UsmPage
 from pageobjects.common.topMenu import TopMenuPage
 
-
-
 class USM(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -69,4 +67,5 @@ class USM(unittest.TestCase):
         UsmPage(self.driver).click_button("Users", "Edit","1")
         capabilityNamelist = ['']
         self.assertTrue(UsmPage(self.driver).operation("remove","","Users","Edit",capabilityNamelist))
+        TopMenuPage(self.driver).is_homepage()
 
