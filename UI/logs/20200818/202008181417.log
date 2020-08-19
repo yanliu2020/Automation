@@ -1,0 +1,77 @@
+2020-08-18 14:17:16,196|browser_engine.py[line:26] INFO:You had select Chrome browser.
+2020-08-18 14:17:16,196|browser_engine.py[line:28] INFO:The test server url is: https://rr-alamo-test.azureedge.net
+2020-08-18 14:17:20,753|browser_engine.py[line:42] INFO:Starting Chrome browser.
+2020-08-18 14:17:21,920|browser_engine.py[line:56] INFO:Maximize the current window.
+2020-08-18 14:18:34,436|browser_engine.py[line:59] INFO:Open url: https://rr-alamo-test.azureedge.net
+2020-08-18 14:18:45,020|base_page.py[line:71] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='localAccount']//div[@class='intro']/h2
+2020-08-18 14:18:45,596|base_page.py[line:69] INFO:Had find the element ' Sign in with your existing account ' successful by xpath via value: //div[@class='localAccount']//div[@class='intro']/h2 
+2020-08-18 14:18:46,162|base_page.py[line:69] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-08-18 14:18:46,227|base_page.py[line:146] INFO:Clear text in input box before typing.
+2020-08-18 14:18:46,770|base_page.py[line:69] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-08-18 14:18:47,024|base_page.py[line:136] INFO:Had type ' yan.liu@an-chen.com ' in inputBox
+2020-08-18 14:18:47,569|base_page.py[line:69] INFO:Had find the element '  ' successful by id via value: password 
+2020-08-18 14:18:47,623|base_page.py[line:146] INFO:Clear text in input box before typing.
+2020-08-18 14:18:48,161|base_page.py[line:69] INFO:Had find the element '  ' successful by id via value: password 
+2020-08-18 14:18:48,500|base_page.py[line:136] INFO:Had type ' Lychan@2012 ' in inputBox
+2020-08-18 14:18:49,044|base_page.py[line:69] INFO:Had find the element ' Sign in ' successful by xpath via value: //div[@class='buttons']/button[text()='Sign in'] 
+2020-08-18 14:18:55,002|base_page.py[line:69] INFO:Had find the element ' Welcome, yanliu ' successful by xpath via value: //div[@id='root']//div[@class='content-heading'] 
+2020-08-18 14:18:55,003|login.py[line:41] INFO:login success
+2020-08-18 14:18:57,651|base_page.py[line:69] INFO:Had find the element ' MANAGE ' successful by id via value: manage 
+2020-08-18 14:18:57,774|base_page.py[line:158] INFO:The element ' MANAGE ' was clicked.
+2020-08-18 14:18:58,302|base_page.py[line:224] INFO:Had find the elements successful by xpath via value: //ul[@class='dropdown-menu multi-level show']/li/a 
+2020-08-18 14:18:58,871|base_page.py[line:69] INFO:Had find the element ' Authorization Management ' successful by xpath via value: //ul[@class='dropdown-menu multi-level show']/li[1]/a 
+2020-08-18 14:18:59,038|base_page.py[line:158] INFO:The element ' Authorization Management ' was clicked.
+2020-08-18 14:18:59,039|topMenu.py[line:70] INFO:second_menu: Authorization Management
+2020-08-18 14:19:00,628|base_page.py[line:69] INFO:Had find the element ' New ' successful by xpath via value: //div[@class='card']//button[text()=' New'] 
+2020-08-18 14:19:01,067|base_page.py[line:158] INFO:The element ' New ' was clicked.
+2020-08-18 14:19:01,612|base_page.py[line:69] INFO:Had find the element '  ' successful by xpath via value: //input[@name='name'] 
+2020-08-18 14:19:01,967|base_page.py[line:158] INFO:The element '  ' was clicked.
+2020-08-18 14:19:02,647|base_page.py[line:69] INFO:Had find the element '  ' successful by xpath via value: //input[@name='name'] 
+2020-08-18 14:19:03,231|base_page.py[line:69] INFO:Had find the element '  ' successful by xpath via value: //input[@name='name'] 
+2020-08-18 14:19:03,799|base_page.py[line:69] INFO:Had find the element '  ' successful by xpath via value: //input[@name='name'] 
+2020-08-18 14:19:04,228|base_page.py[line:136] INFO:Had type ' eVOsQa ' in inputBox
+2020-08-18 14:19:04,785|base_page.py[line:69] INFO:Had find the element '  ' successful by xpath via value: //input[@name='description'] 
+2020-08-18 14:19:04,914|base_page.py[line:158] INFO:The element '  ' was clicked.
+2020-08-18 14:19:05,462|base_page.py[line:69] INFO:Had find the element '  ' successful by xpath via value: //input[@name='description'] 
+2020-08-18 14:19:06,056|base_page.py[line:69] INFO:Had find the element '  ' successful by xpath via value: //input[@name='description'] 
+2020-08-18 14:19:06,659|base_page.py[line:69] INFO:Had find the element '  ' successful by xpath via value: //input[@name='description'] 
+2020-08-18 14:19:06,925|base_page.py[line:136] INFO:Had type ' w9IsBk ' in inputBox
+2020-08-18 14:19:07,489|base_page.py[line:69] INFO:Had find the element '  ' successful by xpath via value: //input[@class='form-control'] 
+2020-08-18 14:19:07,578|base_page.py[line:158] INFO:The element '  ' was clicked.
+2020-08-18 14:19:08,130|base_page.py[line:69] INFO:Had find the element '  ' successful by xpath via value: //input[@class='form-control'] 
+2020-08-18 14:19:08,698|base_page.py[line:69] INFO:Had find the element '  ' successful by xpath via value: //input[@class='form-control'] 
+2020-08-18 14:19:09,252|base_page.py[line:69] INFO:Had find the element '  ' successful by xpath via value: //input[@class='form-control'] 
+2020-08-18 14:19:09,306|base_page.py[line:136] INFO:Had type '  ' in inputBox
+2020-08-18 14:19:12,906|base_page.py[line:224] INFO:Had find the elements successful by xpath via value: //div[@class='mb-0 card']//div[@class='rt-table']/div[@class='rt-tbody']//div[@class='rt-td'] 
+2020-08-18 14:19:19,616|usm.py[line:56] INFO:capabilityName  not found!
+2020-08-18 14:19:20,180|base_page.py[line:69] INFO:Had find the element ' Next ' successful by xpath via value: //button[contains(text(),'Next')] 
+2020-08-18 14:19:20,356|base_page.py[line:158] INFO:The element ' Next ' was clicked.
+2020-08-18 14:19:31,338|base_page.py[line:71] ERROR:TimeoutException: selector by xpath ,value //select[@name='availableUsersSelected']/option[1]
+2020-08-18 14:19:31,338|base_page.py[line:124] ERROR:NoSuchElement selector_by: xpath, selector: //select[@name='availableUsersSelected']/option[1] 
+2020-08-18 14:19:32,906|base_page.py[line:69] INFO:Had find the element ' 1340
+j1wqmA
+7yeizX ' successful by xpath via value: //div[@class='card']//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-08-18 14:19:33,462|base_page.py[line:69] INFO:Had find the element ' 1340
+j1wqmA
+7yeizX ' successful by xpath via value: //div[@class='card']//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-08-18 14:19:36,185|base_page.py[line:69] INFO:Had find the element ' New ' successful by xpath via value: //div[@class='card']//button[text()=' New'] 
+2020-08-18 14:19:38,846|base_page.py[line:69] INFO:Had find the element ' 1340
+j1wqmA
+7yeizX ' successful by xpath via value: //div[@class='card']//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-08-18 14:19:39,400|base_page.py[line:69] INFO:Had find the element ' 1340
+j1wqmA
+7yeizX ' successful by xpath via value: //div[@class='card']//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-08-18 14:19:42,122|base_page.py[line:69] INFO:Had find the element ' 1340
+j1wqmA
+7yeizX ' successful by xpath via value: //div[@class='card']//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-08-18 14:19:42,755|base_page.py[line:69] INFO:Had find the element ' 1340
+j1wqmA
+7yeizX ' successful by xpath via value: //div[@class='card']//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-08-18 14:19:54,665|base_page.py[line:71] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='card']//li/a[text()='Users']
+2020-08-18 14:19:55,219|base_page.py[line:69] INFO:Had find the element ' Users ' successful by xpath via value: //div[@class='card']//li/a[text()='Users'] 
+2020-08-18 14:20:07,221|base_page.py[line:71] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='card']//li/a[text()='Users']
+2020-08-18 14:20:07,758|base_page.py[line:69] INFO:Had find the element ' Users ' successful by xpath via value: //div[@class='card']//li/a[text()='Users'] 
+2020-08-18 14:20:19,682|base_page.py[line:71] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='card']//li/a[text()='Users']
+2020-08-18 14:20:20,222|base_page.py[line:69] INFO:Had find the element ' Users ' successful by xpath via value: //div[@class='card']//li/a[text()='Users'] 
+2020-08-18 14:20:32,252|base_page.py[line:71] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='card']//li/a[text()='Users']
+2020-08-18 14:20:32,792|base_page.py[line:69] INFO:Had find the element ' Users ' successful by xpath via value: //div[@class='card']//li/a[text()='Users'] 

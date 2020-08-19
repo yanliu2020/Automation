@@ -1,0 +1,67 @@
+2020-08-18 08:44:28,646|browser_engine.py[line:26] INFO:You had select Chrome browser.
+2020-08-18 08:44:28,647|browser_engine.py[line:28] INFO:The test server url is: https://rr-alamo-test.azureedge.net
+2020-08-18 08:44:34,099|browser_engine.py[line:42] INFO:Starting Chrome browser.
+2020-08-18 08:44:35,415|browser_engine.py[line:56] INFO:Maximize the current window.
+2020-08-18 08:44:38,669|browser_engine.py[line:59] INFO:Open url: https://rr-alamo-test.azureedge.net
+2020-08-18 08:44:49,495|base_page.py[line:71] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='localAccount']//div[@class='intro']/h2
+2020-08-18 08:44:50,177|base_page.py[line:69] INFO:Had find the element ' Sign in with your existing account ' successful by xpath via value: //div[@class='localAccount']//div[@class='intro']/h2 
+2020-08-18 08:44:50,754|base_page.py[line:69] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-08-18 08:44:50,816|base_page.py[line:146] INFO:Clear text in input box before typing.
+2020-08-18 08:44:51,345|base_page.py[line:69] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-08-18 08:44:51,589|base_page.py[line:136] INFO:Had type ' yan.liu@an-chen.com ' in inputBox
+2020-08-18 08:44:52,149|base_page.py[line:69] INFO:Had find the element '  ' successful by id via value: password 
+2020-08-18 08:44:52,218|base_page.py[line:146] INFO:Clear text in input box before typing.
+2020-08-18 08:44:52,745|base_page.py[line:69] INFO:Had find the element '  ' successful by id via value: password 
+2020-08-18 08:44:52,906|base_page.py[line:136] INFO:Had type ' Lychan@2012 ' in inputBox
+2020-08-18 08:44:53,458|base_page.py[line:69] INFO:Had find the element ' Sign in ' successful by xpath via value: //div[@class='buttons']/button[text()='Sign in'] 
+2020-08-18 08:44:57,419|base_page.py[line:69] INFO:Had find the element ' Welcome, yanliu ' successful by xpath via value: //div[@id='root']//div[@class='content-heading'] 
+2020-08-18 08:44:57,419|login.py[line:41] INFO:login success
+2020-08-18 08:44:59,985|base_page.py[line:69] INFO:Had find the element ' MANAGE ' successful by id via value: manage 
+2020-08-18 08:45:00,067|base_page.py[line:158] INFO:The element ' MANAGE ' was clicked.
+2020-08-18 08:45:00,599|base_page.py[line:224] INFO:Had find the elements successful by xpath via value: //ul[@class='dropdown-menu multi-level show']/li/a 
+2020-08-18 08:45:01,165|base_page.py[line:69] INFO:Had find the element ' Authorization Management ' successful by xpath via value: //ul[@class='dropdown-menu multi-level show']/li[1]/a 
+2020-08-18 08:45:01,322|base_page.py[line:158] INFO:The element ' Authorization Management ' was clicked.
+2020-08-18 08:45:01,323|topMenu.py[line:70] INFO:second_menu: Authorization Management
+2020-08-18 08:45:12,231|base_page.py[line:71] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='card']//li/a[text()='Users']
+2020-08-18 08:45:12,791|base_page.py[line:69] INFO:Had find the element ' Users ' successful by xpath via value: //div[@class='card']//li/a[text()='Users'] 
+2020-08-18 08:45:12,924|base_page.py[line:158] INFO:The element ' Users ' was clicked.
+2020-08-18 08:45:24,823|base_page.py[line:71] ERROR:TimeoutException: selector by xpath ,value //div[@class='card']//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div
+2020-08-18 08:45:24,823|base_page.py[line:124] ERROR:NoSuchElement selector_by: xpath, selector: //div[@class='card']//div[@class='glo-row']//div[@class='rt-tr-group'][1]/div 
+2020-08-18 08:45:36,909|base_page.py[line:71] ERROR:TimeoutException: selector by id ,value id=>alano-glo-brand-logo
+2020-08-18 08:45:37,455|base_page.py[line:69] INFO:Had find the element '  ' successful by id via value: alano-glo-brand-logo 
+2020-08-18 08:45:37,608|base_page.py[line:158] INFO:The element '  ' was clicked.
+2020-08-18 08:45:48,492|base_page.py[line:71] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='header-badge-glo']
+2020-08-18 08:45:49,038|base_page.py[line:69] INFO:Had find the element ' Y ' successful by xpath via value: //div[@class='header-badge-glo'] 
+2020-08-18 08:45:49,125|base_page.py[line:158] INFO:The element ' Y ' was clicked.
+2020-08-18 08:45:49,689|base_page.py[line:69] INFO:Had find the element ' Logout ' successful by xpath via value: //a[text()='Logout'] 
+2020-08-18 08:45:51,388|base_page.py[line:158] INFO:The element ' Logout ' was clicked.
+2020-08-18 08:45:53,037|base_page.py[line:69] INFO:Had find the element ' Sign in with your existing account ' successful by xpath via value: //div[@class='localAccount']//div[@class='intro']/h2 
+2020-08-18 08:45:53,053|login.py[line:56] INFO:logout success
+2020-08-18 08:46:03,978|base_page.py[line:71] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='localAccount']//div[@class='intro']/h2
+2020-08-18 08:46:04,513|base_page.py[line:69] INFO:Had find the element ' Sign in with your existing account ' successful by xpath via value: //div[@class='localAccount']//div[@class='intro']/h2 
+2020-08-18 08:46:05,091|base_page.py[line:69] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-08-18 08:46:05,166|base_page.py[line:146] INFO:Clear text in input box before typing.
+2020-08-18 08:46:05,704|base_page.py[line:69] INFO:Had find the element '  ' successful by id via value: logonIdentifier 
+2020-08-18 08:46:05,861|base_page.py[line:136] INFO:Had type ' 1925719012@qq.com ' in inputBox
+2020-08-18 08:46:06,421|base_page.py[line:69] INFO:Had find the element '  ' successful by id via value: password 
+2020-08-18 08:46:06,462|base_page.py[line:146] INFO:Clear text in input box before typing.
+2020-08-18 08:46:06,981|base_page.py[line:69] INFO:Had find the element '  ' successful by id via value: password 
+2020-08-18 08:46:07,087|base_page.py[line:136] INFO:Had type ' Abc1234% ' in inputBox
+2020-08-18 08:46:07,649|base_page.py[line:69] INFO:Had find the element ' Sign in ' successful by xpath via value: //div[@class='buttons']/button[text()='Sign in'] 
+2020-08-18 08:46:10,559|base_page.py[line:69] INFO:Had find the element ' Welcome, puff ' successful by xpath via value: //div[@id='root']//div[@class='content-heading'] 
+2020-08-18 08:46:10,559|login.py[line:41] INFO:login success
+2020-08-18 08:46:21,149|base_page.py[line:71] ERROR:TimeoutException: selector by xpath ,value xpath=>//div[@class='card']/form//div[@id='homeGrid']/div//h2
+2020-08-18 08:46:21,678|base_page.py[line:224] INFO:Had find the elements successful by xpath via value: //div[@class='card']/form//div[@id='homeGrid']/div//h2 
+2020-08-18 08:46:22,318|base_page.py[line:69] INFO:Had find the element '  ' successful by xpath via value: //div[@class='card']/form//div[@id='homeGrid']/div[4]//input 
+2020-08-18 08:46:22,518|base_page.py[line:136] INFO:Had type ' C000048473 ' in inputBox
+2020-08-18 08:46:23,103|base_page.py[line:69] INFO:Had find the element ' Go ' successful by xpath via value: //div[@class='card']/form//div[@id='homeGrid']/div[4]/div/button 
+2020-08-18 08:46:23,182|base_page.py[line:158] INFO:The element ' Go ' was clicked.
+2020-08-18 08:46:23,182|homePage.py[line:50] INFO:module_name: Customers
+2020-08-18 08:46:36,063|base_page.py[line:71] ERROR:TimeoutException: selector by xpath ,value //div[@role='alert']
+2020-08-18 08:46:36,063|base_page.py[line:124] ERROR:NoSuchElement selector_by: xpath, selector: //div[@role='alert'] 
+2020-08-18 08:46:38,962|base_page.py[line:69] INFO:Had find the element ' CUSTOMERS ' successful by id via value: customers 
+2020-08-18 08:46:39,089|base_page.py[line:158] INFO:The element ' CUSTOMERS ' was clicked.
+2020-08-18 08:46:39,608|base_page.py[line:224] INFO:Had find the elements successful by xpath via value: //ul[@class='dropdown-menu multi-level show']/li/a 
+2020-08-18 08:46:40,233|base_page.py[line:69] INFO:Had find the element ' New ' successful by xpath via value: //ul[@class='dropdown-menu multi-level show']/li[2]/a 
+2020-08-18 08:46:40,331|base_page.py[line:158] INFO:The element ' New ' was clicked.
+2020-08-18 08:46:40,331|topMenu.py[line:70] INFO:second_menu: New

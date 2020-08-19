@@ -4,7 +4,7 @@ import  random
 
 class dbConnect(object):
     def getdata(self,dbName,fieldName,param):
-        connect = pymssql.connect('rralamosqltest.southcentralus.cloudapp.azure.com', 'yan.liu', 'Lychan@202007',
+        connect = pymssql.connect('rralamosqltest.southcentralus.cloudapp.azure.com', 'yan.liu', 'Lychan@202008',
                                   dbName)
         # connect = pymssql.connect('rralamosqldev.southcentralus.cloudapp.azure.com', 'Chris.Guo', 'Alamo617*',
         #                           dbName)
