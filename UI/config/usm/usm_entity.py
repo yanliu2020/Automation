@@ -27,7 +27,8 @@ class UsmEntity(object):
         return self.switch_tab %loc
 
     #Filter
-    filter = "xpath=>//input[@class='form-control']"
+    filter = "xpath=>//div[@class='modal fade show']//input[@class='form-control']"
+    list_filter = "xpath=>//div[@class='card']//input[@class='form-control']"
 
     # availableUsersSelected/assignedUsers/availableRolesSelected/assignedRolesSelected
     two_list = "xpath=>//select[@name='%s']"
@@ -45,11 +46,6 @@ class UsmEntity(object):
 
     #confirm delete
     confirm_delete = "xpath=>//button[text()='Yes, Inactivate it!']"
-
-    #Capabilities
-    # capability = "xpath=>//div[@class='modal fade show']//div[@class='card']//div[@class='rt-tr-group']//div[text()='%s']"
-    # def get_capability(self,loc):
-    #     return self.capability %loc
 
     capability= "xpath=>//div[@class='modal fade show']//div[@class='glo-row']//input[@id='can%s_%s']"
     #canRead_0,canUpdate_0,canCreate_0,canDelete_0,canMassUpdate_0

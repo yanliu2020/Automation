@@ -13,7 +13,7 @@ class USM(unittest.TestCase):
     def test_01_noCapability_assignOneUser(self):
         u"""new role: noCapability_assignOneUser"""
         UsmPage(self.driver).click_button("Roles", "New","")
-        capabilityNamelist = ['']
+        capabilityNamelist = []
         self.assertTrue(UsmPage(self.driver).operation("add",1,"Roles","New",capabilityNamelist))
 
     def test_02_cancelCapability_removeOneUser(self):
@@ -37,35 +37,35 @@ class USM(unittest.TestCase):
     def test_05_role_inactivate(self):
         u"""inactivate role"""
         UsmPage(self.driver).click_button("Roles", "Inactivate","1")
-        capabilityNamelist = ['']
+        capabilityNamelist = []
         self.assertTrue(UsmPage(self.driver).operation("","","Roles","Inactivate",capabilityNamelist))
 
     def test_06_user_assign1Role(self):
         u"""edit a user"""
         UsmPage(self.driver).switch_tab("Users")
         UsmPage(self.driver).click_button("Users", "Edit","1")
-        capabilityNamelist = ['']
+        capabilityNamelist = []
         self.assertTrue(UsmPage(self.driver).operation("add",1,"Users","Edit",capabilityNamelist))
 
     def test_07_user_remove1Role(self):
         u"""edit a user"""
         UsmPage(self.driver).switch_tab("Users")
         UsmPage(self.driver).click_button("Users", "Edit","1")
-        capabilityNamelist = ['']
+        capabilityNamelist = []
         self.assertTrue(UsmPage(self.driver).operation("remove",1,"Users","Edit",capabilityNamelist))
 
     def test_08_user_assgin2Role(self):
         u"""edit a user"""
         UsmPage(self.driver).switch_tab("Users")
         UsmPage(self.driver).click_button("Users", "Edit","1")
-        capabilityNamelist = ['']
+        capabilityNamelist = []
         self.assertTrue(UsmPage(self.driver).operation("add","","Users","Edit",capabilityNamelist))
 
     def test_09_user_remove2Role(self):
         u"""edit a user"""
         UsmPage(self.driver).switch_tab("Users")
         UsmPage(self.driver).click_button("Users", "Edit","1")
-        capabilityNamelist = ['']
+        capabilityNamelist = []
         self.assertTrue(UsmPage(self.driver).operation("remove","","Users","Edit",capabilityNamelist))
 
 

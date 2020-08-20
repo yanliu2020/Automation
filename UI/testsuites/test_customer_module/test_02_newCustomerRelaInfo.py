@@ -7,6 +7,7 @@ from getdata.ExcelUtil import excelHandle
 from pageobjects.common.topMenu import TopMenuPage
 from utils.browser_engine import driver
 from pageobjects.customer.newCustomer import  NewCustomerPage
+from pageobjects.customer.customerRecord import  CustomerRecordPage
 from utils.basepath_helper import excel_path
 
 nowTime = datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S")
@@ -39,6 +40,7 @@ class newCustomerRelaInfo(unittest.TestCase):
         NewCustomerPage(self.driver).contact(True, 1, 1,"", emailType, phoneType)
         self.assertTrue(NewCustomerPage(self.driver).save())
         self.assertTrue(NewCustomerPage(self.driver).validation_data())
+        CustomerRecordPage(self.driver).top_operate("Actions ", "Delete")
 
     @ddt.data(*data)
     def test_02_two_contact(self,data):

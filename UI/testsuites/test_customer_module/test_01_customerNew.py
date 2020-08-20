@@ -34,6 +34,7 @@ class newCustomer(unittest.TestCase):
         NewCustomerPage(self.driver).business_entity(entityType, entityClass, salutation,suffix,typeOfBusiness,stateOfIncorporation)
         NewCustomerPage(self.driver).saveClick()
         self.assertTrue(NewCustomerPage(self.driver).validation_data())
+        CustomerRecordPage(self.driver).top_operate("Actions ", "Delete")
 
     @ddt.data(*data)
     def test_updateCustomer(self,data):
@@ -48,3 +49,4 @@ class newCustomer(unittest.TestCase):
         CustomerRecordPage(self.driver).edit_entity(entityType, entityClass, salutation,suffix,typeOfBusiness,stateOfIncorporation)
         self.assertTrue(NewCustomerPage(self.driver).save())
         self.assertTrue(NewCustomerPage(self.driver).validation_data())
+        CustomerRecordPage(self.driver).top_operate("Actions ", "Delete")

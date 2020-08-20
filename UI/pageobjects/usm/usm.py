@@ -23,6 +23,7 @@ class UsmPage(BasePage):
         """
         self.sleep(1)
         if (tabName == "Roles" and buttonName != "New") or tabName == "Users":
+            self.type(UsmEntity.list_filter,self.find_element(UsmEntity().get_select_record(row)).text)
             if "background" not in self.find_element(
             UsmEntity().get_select_record(row)).get_attribute('style'):
                 self.click(UsmEntity().get_select_record(row))
@@ -38,6 +39,7 @@ class UsmPage(BasePage):
             self.type(UsmEntity().get_input_textbox("name"), BasePage(self.driver).randomData("string", 6))
             self.ctrl_all(UsmEntity().get_input_textbox("description"))
             self.type(UsmEntity().get_input_textbox("description"), BasePage(self.driver).randomData("string", 6))
+            self.sleep(2)
             permission_list = ["Read","Update","Create","Delete","MassUpdate"]
             # capability_list = self.find_elements(UsmEntity.capabilitity_list)
             capability_item = None
@@ -78,10 +80,12 @@ class UsmPage(BasePage):
                               self.find_element(UsmEntity().get_list_value("available" + list + "Selected", "1")).text)
                     Select(
                         self.find_element(UsmEntity().get_two_list("available" + list + "Selected"))).select_by_index(0)
+                    self.sleep(1)
                     self.click(UsmEntity().get_button("Add"))
                 elif flag == "remove":
                     Select(self.find_element(UsmEntity().get_two_list("assigned" + list + "Selected"))).select_by_index(
                         0)
+                    self.sleep(1)
                     self.click(UsmEntity().get_button("Remove"))
             else:
                 if section == "Roles":
@@ -92,10 +96,12 @@ class UsmPage(BasePage):
                 if flag == "add":
                     self.ctrl_multiSelect(UsmEntity().get_list_value("available" + list + "Selected", "1"),
                                           UsmEntity().get_list_value("available" + list + "Selected", "2"))
+                    self.sleep(1)
                     self.click(UsmEntity().get_button("Add"))
                 elif flag == "remove":
                     self.ctrl_multiSelect(UsmEntity().get_list_value("assigned" + list + "Selected", "1"),
                                           UsmEntity().get_list_value("assigned" + list + "Selected", "2"))
+                    self.sleep(1)
                     self.click(UsmEntity().get_button("Remove"))
             self.click(UsmEntity().get_button("Finish"))
         self.sleep(2)
