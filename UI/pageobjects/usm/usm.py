@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
+import datetime
 from  utils.base_page import  BasePage
 from config.usm.usm_entity import  UsmEntity
 from pageobjects.customer.customerRecord import CustomerRecordPage
 from selenium.webdriver.support.ui import Select
 from utils.logger import logger
+nowTime = datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S")
 
 class UsmPage(BasePage):
     def is_usm_page(self):
@@ -27,14 +29,16 @@ class UsmPage(BasePage):
         :return:
         """
         if self.is_usm_page() == True:
-            self.sleep(1)
+            self.sleep(2)
             if (tabName == "Roles" and buttonName != "New") or tabName == "Users":
-                self.type(UsmEntity.list_filter, self.find_element(UsmEntity().get_select_column(row,column)).text)
+                self.ctrl_all(UsmEntity.list_filter)
+                self.type(UsmEntity.list_filter, "automation")
+                # self.type(UsmEntity.list_filter, self.find_element(UsmEntity().get_select_column(row,column)).text)
+                self.sleep(2)
                 if "background" not in self.find_element(
                         UsmEntity().get_select_record(row)).get_attribute('style'):
                     self.click(UsmEntity().get_select_record(row))
             self.click(UsmEntity().get_operator(buttonName))
-
 
     def operation(self,flag,index,section,buttonName,capabilityNamelist=[]):
         """
@@ -44,7 +48,7 @@ class UsmPage(BasePage):
         if self.is_usm_page() == True:
             if buttonName == "New" or (section == "Roles" and buttonName == "Edit"):
                 self.ctrl_all(UsmEntity().get_input_textbox("name"))
-                self.type(UsmEntity().get_input_textbox("name"), BasePage(self.driver).randomData("string", 6))
+                self.type(UsmEntity().get_input_textbox("name"), "UI automation" + nowTime)
                 self.ctrl_all(UsmEntity().get_input_textbox("description"))
                 self.type(UsmEntity().get_input_textbox("description"), BasePage(self.driver).randomData("string", 6))
                 self.sleep(2)
