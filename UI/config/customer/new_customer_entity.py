@@ -4,6 +4,9 @@ class NewCustomerEntity(object):
     #搜索页面
     assert_title = "xpath=>//div[@class='content-container']/h1"
 
+    #判断new customer页面
+    default_text = "xpath=>//div[@id='root']//div[contains(text(),'New Business Entity')]"
+
     #typeName, entityClass
     entity = "xpath=>//select[@name='%s']"
     def get_entity(self,loc):

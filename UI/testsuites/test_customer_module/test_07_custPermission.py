@@ -26,7 +26,12 @@ class custPermission(unittest.TestCase):
         TopMenuPage(self.driver).select_multiple_menu(2, "customers", "New", "", "")
         self.assertTrue(CustomerRecordPage(self.driver).validate_permission())
 
-    def test_03_customer_address(self):
+    def test_03_usm(self):
+        u"""validate have no access for user management"""
+        TopMenuPage(self.driver).select_multiple_menu(2, "manage", "Authorization Management", "", "")
+        self.assertTrue(CustomerRecordPage(self.driver).validate_permission())
+
+    def test_04_customer_address(self):
         u"""validate have no access for new/edit/delete entity"""
         SystemLogin(self.driver).switch_account('tangjiu2020@163.com', 'Abc1234%')
         HomePage(self.driver).quick_entrance("Customers", "C000048473", 2)

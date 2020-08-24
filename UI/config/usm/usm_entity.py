@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 class UsmEntity(object):
+    #default
+    default_text = "xpath=>//div[@id='root']//div[contains(text(),'Authorization Management')]"
     #tab页签
     record_tab = "xpath=>//div[@class='card']//li/a[text()='%s']"
     def get_record_tab(self, loc):
@@ -15,6 +17,11 @@ class UsmEntity(object):
     select_record = "xpath=>//div[@class='card']//div[@class='glo-row']//div[@class='rt-tr-group'][%s]/div"
     def get_select_record(self,loc):
         return  self.select_record %loc
+
+   #选中列
+    select_column = "xpath=>//div[@class='card']//div[@class='glo-row']//div[@class='rt-tr-group'][%s]/div/div[%s]"
+    def get_select_column(self,loc1,loc2):
+        return  self.select_column %(loc1,loc2)
 
     #roleName, roleDescription
     input_textbox = "xpath=>//input[@name='%s']"

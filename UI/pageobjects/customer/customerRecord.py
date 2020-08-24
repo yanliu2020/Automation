@@ -5,6 +5,11 @@ from utils.logger import logger
 from utils.connect_sql import dbConnect
 
 class CustomerRecordPage(BasePage):
+    def is_customer_record_page(self):
+        if self.find_element(CustomerRecordEntity.default_text):
+            return True
+        else:
+            return False
 
     def switch_tab(self,tabName):
         """
@@ -12,8 +17,9 @@ class CustomerRecordPage(BasePage):
         :param  tabName : Summary，Entity，Contacts，Related Lease/Lands
         :return:
         """
-        self.find_element_by_wait("xpath",CustomerRecordEntity().get_record_tab(tabName))
-        self.click(CustomerRecordEntity().get_record_tab(tabName))
+        if self.is_customer_record_page() == True:
+            self.find_element_by_wait("xpath", CustomerRecordEntity().get_record_tab(tabName))
+            self.click(CustomerRecordEntity().get_record_tab(tabName))
 
     def entity_operator(self,sectionName,buttonName,row):
         """
@@ -21,31 +27,36 @@ class CustomerRecordPage(BasePage):
         :param sectionName,buttonName,row
         :return:
         """
-        section_list = self.find_elements(CustomerRecordEntity.section_list)
-        # print(section_list)
-        section_item = None
-        for i, item in enumerate(section_list):
-            if sectionName == item.text:
-                section_item = (i+1,item)
-                break
-        if section_item is None:
-            logger.info(msg="sectionName %s not found!" % sectionName)
-        else:
-            self.scroll_into_view(CustomerRecordEntity().get_section_name(sectionName))
-            if sectionName == "Customer Summary" or buttonName == "New":
-                self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
-            elif buttonName == "List":
-                self.drag_and_drop(CustomerRecordEntity().get_drag_column(section_item[0],"City"),CustomerRecordEntity().get_drag_column(section_item[0],"Attention To Line"))
+        if self.is_customer_record_page() == True:
+            section_list = self.find_elements(CustomerRecordEntity.section_list)
+            # print(section_list)
+            section_item = None
+            for i, item in enumerate(section_list):
+                if sectionName == item.text:
+                    section_item = (i + 1, item)
+                    break
+            if section_item is None:
+                logger.info(msg="sectionName %s not found!" % sectionName)
             else:
-                if self.find_elements(CustomerRecordEntity().get_entity_records(section_item[0])):
-                    if self.not_selected(section_item[0], row) == True:
-                        self.click(CustomerRecordEntity().get_entity_record(section_item[0], row))
-                    if sectionName == "Business Identifier" and self.find_element(CustomerRecordEntity().get_identifier_name(1)).text == "BAN" and (buttonName == "Edit" or buttonName == "Delete"):
-                        pass
-                    else:
-                        self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
+                self.scroll_into_view(CustomerRecordEntity().get_section_name(sectionName))
+                if sectionName == "Customer Summary" or buttonName == "New":
+                    self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
+                elif buttonName == "List":
+                    self.drag_and_drop(CustomerRecordEntity().get_drag_column(section_item[0], "City"),
+                                       CustomerRecordEntity().get_drag_column(section_item[0], "Attention To Line"))
                 else:
-                    logger.info("sectionName %s have no record!"% sectionName)
+                    if self.find_elements(CustomerRecordEntity().get_entity_records(section_item[0])):
+                        if self.not_selected(section_item[0], row) == True:
+                            self.click(CustomerRecordEntity().get_entity_record(section_item[0], row))
+                        if sectionName == "Business Identifier" and self.find_element(
+                                CustomerRecordEntity().get_identifier_name(1)).text == "BAN" and (
+                                buttonName == "Edit" or buttonName == "Delete"):
+                            pass
+                        else:
+                            self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
+                    else:
+                        logger.info("sectionName %s have no record!" % sectionName)
+
 
     def contact_operator(self,sectionName,buttonName,row):
         """
@@ -53,30 +64,31 @@ class CustomerRecordPage(BasePage):
         :param sectionName,buttonName,row
         :return:
         """
-        section_list = self.find_elements(CustomerRecordEntity.section_list)
-        # print(section_list)
-        section_item = None
-        for i, item in enumerate(section_list):
-            if sectionName == item.text:
-                section_item = (i+1,item)
-                break
-        if section_item is None:
-            logger.info("sectionName %s not found!" % sectionName)
-        else:
-            self.scroll_into_view(CustomerRecordEntity().get_section_name(sectionName))
-            if sectionName == "Contacts":
-                if buttonName != "New" and self.contact_list_page() == True:
-                    if self.not_selected(section_item[0],row) == True:
-                        self.click(CustomerRecordEntity().get_entity_record(section_item[0], row))
-                self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
-            elif self.contact_list_page() == True:
-                if self.not_selected(1, 1) == True:
-                    self.click(CustomerRecordEntity().get_entity_record(1, 1))
-                if buttonName != "New" and self.find_elements(CustomerRecordEntity().get_entity_records(section_item[0])):
-                    if self.not_selected(section_item[0],row) == True:
-                        self.click(CustomerRecordEntity().get_entity_record(section_item[0], row))
-                self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
-
+        if self.is_customer_record_page() == True:
+            section_list = self.find_elements(CustomerRecordEntity.section_list)
+            # print(section_list)
+            section_item = None
+            for i, item in enumerate(section_list):
+                if sectionName == item.text:
+                    section_item = (i + 1, item)
+                    break
+            if section_item is None:
+                logger.info("sectionName %s not found!" % sectionName)
+            else:
+                self.scroll_into_view(CustomerRecordEntity().get_section_name(sectionName))
+                if sectionName == "Contacts":
+                    if buttonName != "New" and self.contact_list_page() == True:
+                        if self.not_selected(section_item[0], row) == True:
+                            self.click(CustomerRecordEntity().get_entity_record(section_item[0], row))
+                    self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
+                elif self.contact_list_page() == True:
+                    if self.not_selected(1, 1) == True:
+                        self.click(CustomerRecordEntity().get_entity_record(1, 1))
+                    if buttonName != "New" and self.find_elements(
+                            CustomerRecordEntity().get_entity_records(section_item[0])):
+                        if self.not_selected(section_item[0], row) == True:
+                            self.click(CustomerRecordEntity().get_entity_record(section_item[0], row))
+                    self.click(CustomerRecordEntity().get_section_operator(section_item[0], buttonName))
 
     def contact_list_page(self):
         """
@@ -303,23 +315,20 @@ class CustomerRecordPage(BasePage):
         :return:
         """
         #self.scroll_into_view(CustomerRecordEntity().get_customer_operate(buttonName))
-        self.click(CustomerRecordEntity().get_customer_operate(buttonName))
-        if buttonName == "History":
-            self.sleep(1)
-            title = self.find_element(CustomerRecordEntity.contact_title).text
-            if buttonName in title:
-                self.execute_script_click(CustomerRecordEntity.contact_close)
-                return True
+        if self.is_customer_record_page() == True:
+            self.click(CustomerRecordEntity().get_customer_operate(buttonName))
+            if buttonName == "History":
+                self.sleep(1)
+                title = self.find_element(CustomerRecordEntity.contact_title).text
+                if buttonName in title:
+                    self.execute_script_click(CustomerRecordEntity.contact_close)
+                    return True
+                else:
+                    return False
             else:
-                return False
-        elif buttonName == "Delete":
-            self.click(CustomerRecordEntity.delete_confirm)
-            if 'successfully' in self.get_tips_msg():
-                return True
-            else:
-                return False
-        else:
-            self.click(CustomerRecordEntity().get_action(acitonName))
+                self.click(CustomerRecordEntity().get_action(acitonName))
+
+
 
     def edit_entity(self,entityType,entityClass,salutation,suffix,typeOfBusiness,stateOfIncorporation):
         """
@@ -328,27 +337,34 @@ class CustomerRecordPage(BasePage):
         :param  salutation,firstName,lastName,suffix,fullName,default_sort,organizationName,typeOfBusiness,stateOfIncorporation
         :return:
         """
-        self.drop_select(CustomerRecordEntity().get_entity("typeName"), entityType)
-        self.drop_select(CustomerRecordEntity().get_entity("entityClass"), entityClass)
-        if entityType == "Person":
-            if entityClass == "Household":
-                self.ctrl_all(CustomerRecordEntity().get_edit_input("fullName"))
-                self.type(CustomerRecordEntity().get_edit_input("fullName"), BasePage(self.driver).randomData("string", 6))
-                self.ctrl_all(CustomerRecordEntity().get_edit_input("soundEx"))
-                self.type(CustomerRecordEntity().get_edit_input("soundEx"), BasePage(self.driver).randomData("string", 6))
+        if self.is_customer_record_page() == True:
+            self.drop_select(CustomerRecordEntity().get_entity("typeName"), entityType)
+            self.drop_select(CustomerRecordEntity().get_entity("entityClass"), entityClass)
+            if entityType == "Person":
+                if entityClass == "Household":
+                    self.ctrl_all(CustomerRecordEntity().get_edit_input("fullName"))
+                    self.type(CustomerRecordEntity().get_edit_input("fullName"),
+                              BasePage(self.driver).randomData("string", 6))
+                    self.ctrl_all(CustomerRecordEntity().get_edit_input("soundEx"))
+                    self.type(CustomerRecordEntity().get_edit_input("soundEx"),
+                              BasePage(self.driver).randomData("string", 6))
+                else:
+                    self.drop_select(CustomerRecordEntity().get_edit_select("salutation"), salutation)
+                    self.ctrl_all(CustomerRecordEntity().get_edit_input("firstName"))
+                    self.type(CustomerRecordEntity().get_edit_input("firstName"),
+                              BasePage(self.driver).randomData("string", 6))
+                    self.ctrl_all(CustomerRecordEntity().get_edit_input("lastName"))
+                    self.type(CustomerRecordEntity().get_edit_input("lastName"),
+                              BasePage(self.driver).randomData("string", 6))
+                    self.drop_select(CustomerRecordEntity().get_edit_select("suffix"), suffix)
             else:
-                self.drop_select(CustomerRecordEntity().get_edit_select("salutation"), salutation)
-                self.ctrl_all(CustomerRecordEntity().get_edit_input("firstName"))
-                self.type(CustomerRecordEntity().get_edit_input("firstName"), BasePage(self.driver).randomData("string", 6))
-                self.ctrl_all(CustomerRecordEntity().get_edit_input("lastName"))
-                self.type(CustomerRecordEntity().get_edit_input("lastName"), BasePage(self.driver).randomData("string", 6))
-                self.drop_select(CustomerRecordEntity().get_edit_select("suffix"), suffix)
-        else:
-            self.ctrl_all(CustomerRecordEntity().get_edit_input("organizationName"))
-            self.type(CustomerRecordEntity().get_edit_input("organizationName"), BasePage(self.driver).randomData("string", 6))
-            if entityClass == "Company" or entityClass == "Government":
-                self.drop_select(CustomerRecordEntity().get_edit_select("subClassName"), typeOfBusiness)
-            self.drop_select(CustomerRecordEntity().get_edit_select("stateOfIncorporation"), stateOfIncorporation)
+                self.ctrl_all(CustomerRecordEntity().get_edit_input("organizationName"))
+                self.type(CustomerRecordEntity().get_edit_input("organizationName"),
+                          BasePage(self.driver).randomData("string", 6))
+                if entityClass == "Company" or entityClass == "Government":
+                    self.drop_select(CustomerRecordEntity().get_edit_select("subClassName"), typeOfBusiness)
+                self.drop_select(CustomerRecordEntity().get_edit_select("stateOfIncorporation"), stateOfIncorporation)
+
 
     def validate_records_rows(self):
         record = self.find_element(CustomerRecordEntity.entity_history).text
@@ -409,7 +425,6 @@ class CustomerRecordPage(BasePage):
              return  True
         else :
              return  False
-
 
     def validate_permission(self):
         """

@@ -26,23 +26,19 @@ class SystemLogin(BasePage):
         text = self.find_element(LoginEntity.login_title).text
         if text == 'Sign in with your existing account':
             return True
-            print("return true")
         return False
 
      #登录操作
     def user_login(self, username, password):
         if not self.is_login_page():
             logger.error('not in login page')
-            raise NameError('not in login page')
         self.input_username(username)
         self.input_password(password)
         self.click_login()
-        if HomePage(self.driver).is_visibility_homepage():
+        if HomePage(self.driver).is_visibility_homepage() == True:
             logger.info('login success')
-            return True
         else:
             logger.error('login fail')
-            return False
 
     def logout(self):
         """

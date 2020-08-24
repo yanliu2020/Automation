@@ -40,7 +40,6 @@ class newCustomerRelaInfo(unittest.TestCase):
         NewCustomerPage(self.driver).contact(True, 1, 1,"", emailType, phoneType)
         self.assertTrue(NewCustomerPage(self.driver).save())
         self.assertTrue(NewCustomerPage(self.driver).validation_data())
-        CustomerRecordPage(self.driver).top_operate("Actions ", "Delete")
 
     @ddt.data(*data)
     def test_02_two_contact(self,data):

@@ -2,7 +2,7 @@
 
 class HomePageEntity(object):
     # 欢迎语
-    default_text = "xpath=>//div[@id='root']//div[@class='content-heading']"
+    default_text = "xpath=>//div[@id='root']//div[contains(text(),'Welcome')]"
 
     #module_list
     module_list="xpath=>//div[@class='card']/form//div[@id='homeGrid']/div//h2"

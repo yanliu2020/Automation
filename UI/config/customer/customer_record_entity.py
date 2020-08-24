@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 
 class CustomerRecordEntity(object):
+    #customer detail page
+    default_text = "xpath=>//div[@id='root']//div[contains(text(),'Entity - ')]"
+
     #Actions和History
     customer_operate = "xpath=>//div[@class='btn-toolbar']/button[text()='%s']"
     def get_customer_operate(self,loc):
