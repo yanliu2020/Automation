@@ -3,13 +3,14 @@ import unittest
 from utils.browser_engine import driver
 from pageobjects.homepage.homePage import  HomePage
 from pageobjects.customer.customerRecord import CustomerRecordPage
+from pageobjects.common.topMenu import TopMenuPage
 
 class deleteRelated(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
         cls.driver = driver
-        # TopMenuPage(cls.driver).is_homepage()
+        TopMenuPage(cls.driver).is_homepage()
         HomePage(cls.driver).quick_entrance("Customers","C000048473",2)
 
     def test_01_customer_delete(self):
