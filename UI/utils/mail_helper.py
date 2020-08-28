@@ -23,7 +23,7 @@ sender = '1925719012@qq.com'
 
 # 多个接收邮箱，单个收件人的话，直接是receiver='XXX@126.com'
 to_list1 = ['Alice.Tang@an-chen.com']
-to_list2 = ['Shelly Chen <shelly.chen@redriver.com>','Yan.Liu <Yan.Liu@an-chen.com>','Alice.Tang@an-chen.com']
+to_list2 = ['Alice.Tang@an-chen.com','Yan.Liu <Yan.Liu@an-chen.com>','chen fiona <fiona.chen@an-chen.com>','Shelly Chen <shelly.chen@redriver.com>']
 
 config = ConfigParser()
 file_path = config_path + 'config.ini'
@@ -35,7 +35,7 @@ browser = config.get("browserType","browserName")
 
 def send_mail(file_new):
     # 设置totest的值
-    totest = 1
+    totest = 2
     f = open(file_new, 'rb')              # 打开文件
     mail_body = f.read()                  # 读取文件内容
     f.close()                             # 关闭文件
