@@ -11,8 +11,8 @@ from pageobjects.customer.customerRecord import  CustomerRecordPage
 from utils.basepath_helper import excel_path
 
 nowTime = datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S")
-filepath = excel_path +"test.xlsx"
-sheetName = "two_contact"
+filepath = excel_path +"TestData.xlsx"
+sheetName = "Customer_Relate"
 @ddt.ddt
 class newCustomerRelaInfo(unittest.TestCase):
 

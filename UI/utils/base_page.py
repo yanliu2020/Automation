@@ -341,13 +341,21 @@ class BasePage(object):
         :param window,flag:
         :return:
         """
-        window = self.driver.current_window_handle()
-        windows = self.driver.window_handles()
-        for current_window in windows:
-            if current_window != window and flag == 1:
-                self.driver.switch_to.window(current_window)
+        self.sleep(10)
+        now_handle = self.driver.current_window_handle
+        # print(now_handle)
+        # print(self.driver.title)
+        all_handles = self.driver.window_handles
+        # print(all_handles)
+        for handles in all_handles:
+            if now_handle != handles:
+                self.driver.switch_to.window(handles)
             elif flag == 0:
-                self.driver.switch_to.window(windows[0])
+                self.driver.close()
+                self.driver.switch_to.window(all_handles[0])
+
+        # print(self.driver.title)  # 获取切换后的标题
+        time.sleep(3)
 
     def drag_and_drop(self,source_selector,target_selector):
         """拖拽:不支持html5，使用js必须传入id
@@ -374,6 +382,7 @@ class BasePage(object):
         :return:
         """
         self.click(selector)
+        self.sleep(2)
         Select(self.find_element(selector)).select_by_value(value)
 
     def drop_select_index(self, selector, index):

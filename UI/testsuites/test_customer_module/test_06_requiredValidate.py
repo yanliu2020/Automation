@@ -6,9 +6,9 @@ from utils.basepath_helper import excel_path
 from pageobjects.common.topMenu import TopMenuPage
 from utils.browser_engine import driver
 from pageobjects.customer.newCustomer import  NewCustomerPage
-
-filepath = excel_path +"test.xlsx"
-sheetName = "new_customer"
+from utils.base_page import BasePage
+filepath = excel_path +"TestData.xlsx"
+sheetName = "Customer"
 @ddt.ddt
 class requiredFields(unittest.TestCase):
 

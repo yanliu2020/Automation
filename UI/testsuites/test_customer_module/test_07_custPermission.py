@@ -35,6 +35,7 @@ class custPermission(unittest.TestCase):
         u"""validate have no access for new/edit/delete entity"""
         SystemLogin(self.driver).switch_account('tangjiu2020@163.com', 'Abc1234%')
         HomePage(self.driver).quick_entrance("Customers", "C000048473", 2)
+        BasePage(self.driver).switch_to_handle(1)
         CustomerRecordPage(self.driver).switch_tab("Entity")
         CustomerRecordPage(self.driver).entity_operator("Addresses", "New", "")
         self.assertTrue(CustomerRecordPage(self.driver).validate_permission())

@@ -48,18 +48,17 @@ class HomePage(BasePage):
             self.drop_select(HomePageEntity().get_quick_select(module_item[0]),Name)
             self.click(HomePageEntity().get_quick_select_go(module_item[0]))
             logger.info('module_name: %s' % module_name)
-            return True
         #输入文本
         elif flag == 2:
             self.type(HomePageEntity().get_quick_search(module_item[0]),Name)
             self.click(HomePageEntity().get_quick_search_go(module_item[0]))
             logger.info('module_name: %s' % module_name)
-            return True
         #点击按钮
         else:
             self.click(HomePageEntity().get_module_operator(module_item[0],Name))
             logger.info('module_name: %s' % module_name)
-            return True
+
+
 
 
 

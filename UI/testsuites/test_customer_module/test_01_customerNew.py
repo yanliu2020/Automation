@@ -9,8 +9,8 @@ from utils.browser_engine import driver
 from pageobjects.customer.newCustomer import  NewCustomerPage
 from pageobjects.customer.customerRecord import  CustomerRecordPage
 
-filepath = excel_path +"test.xlsx"
-sheetName = "new_customer"
+filepath = excel_path +"TestData.xlsx"
+sheetName = "Customer"
 @ddt.ddt
 class newCustomer(unittest.TestCase):
 

@@ -1,50 +1,13 @@
 # -*- coding: utf-8 -*-
-from configparser import ConfigParser
-from selenium.common.exceptions import NoSuchElementException
+from  utils.base_page import  BasePage
+from config.land.land_download_entity import DownLoadEntity
 from config.common.topmenu_entity import TopMenuEntity
-from utils.base_page import BasePage
 from utils.basepath_helper import config_path
 from utils.logger import logger
 from pageobjects.login.login import SystemLogin
 
-class TopMenuPage(BasePage):
-
-    def get_url(self):
-        """
-        # 重新访问服务器
-        :return:
-        """
-        config = ConfigParser()
-        file_path = config_path + 'config.ini'
-        config.read(file_path)
-        base_url = config.get("testServer", "URL")
-        self.driver.get(base_url)
-        # try:
-        #     self.sleep(5)
-        #     self.find_element_by_wait('xpath',HomepageEntity.default_text)
-        #     #self.find_element(HomepageEntity.default_text)
-        # except NoSuchElementException:
-        #     pass
-        # else:
-        #     logger.info('页面加载完成')
-
-    def logout(self):
-        """
-        # 退出账号
-        :return:
-        """
-        self.find_element_by_wait('xpath',TopMenuEntity.user_logo)
-        self.click(TopMenuEntity.user_logo)
-        self.click(TopMenuEntity.logout_user)
-        if SystemLogin(self.driver).is_login_page():
-            logger.info('logout success')
-            return True
-        else:
-            logger.error('logout fail')
-            return False
-
-
-    def select_multiple_menu(self,level,first_menu,second_menu,third_menu,four_menu):
+class LandDownLoad(BasePage):
+    def download(self,level,first_menu,second_menu,third_menu,four_menu,url):
         """
         #导航多级菜单选择
         :param first_menu,second_menu,third_menu,four_menu
@@ -82,9 +45,11 @@ class TopMenuPage(BasePage):
             if third_item is None:
                 logger.info(msg="third_menu %s not found!" % third_menu)
             else:
-                self.click(TopMenuEntity().get_third_menu(second_item[0], third_item[0]))
-                logger.info('third_menu: %s' % third_menu)
-                return True
+                if self.find_element(TopMenuEntity().get_third_menu(second_item[0], third_item[0])).get_attribute('href')== url:
+                    self.click(TopMenuEntity().get_third_menu(second_item[0], third_item[0]))
+                    return True
+                else:
+                    return False
 
         elif level ==4:
             # return third_menu
@@ -99,20 +64,11 @@ class TopMenuPage(BasePage):
                 logger.info(msg="third_menu %s not found!" % third_menu)
             else:
                 self.click(TopMenuEntity().get_third_menu(second_item[0], third_item[0]))
-                #choose four menu
-                self.click(TopMenuEntity().get_four_menu(second_item[0],third_item[0],four_menu))
-                logger.info('four_menu: %s' % four_menu)
-                return True
+                if self.find_element(TopMenuEntity().get_four_menu(second_item[0],third_item[0],four_menu)).get_attribute(
+                    'href') == url:
+                    # choose four menu
+                    self.click(TopMenuEntity().get_four_menu(second_item[0], third_item[0], four_menu))
+                    return True
+                else:
+                    return False
         self.sleep(2)
-
-
-    def is_homepage(self):
-        self.find_element_by_wait("id", TopMenuEntity.logo)
-        self.click(TopMenuEntity.logo)
-
-
-
-
-
-
-

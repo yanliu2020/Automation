@@ -22,7 +22,7 @@ class UsmPage(BasePage):
             self.find_element_by_wait("xpath", UsmEntity().get_record_tab(tabName))
             self.click(UsmEntity().get_record_tab(tabName))
 
-    def click_button(self,tabName,buttonName,row,column):
+    def click_button(self,buttonName,row):
         """
         #Click button
         :param tabName,buttonName,row
@@ -30,7 +30,7 @@ class UsmPage(BasePage):
         """
         if self.is_usm_page() == True:
             self.sleep(2)
-            if (tabName == "Roles" and buttonName != "New") or tabName == "Users":
+            if buttonName != "New":
                 self.ctrl_all(UsmEntity.list_filter)
                 self.type(UsmEntity.list_filter, "automation")
                 # self.type(UsmEntity.list_filter, self.find_element(UsmEntity().get_select_column(row,column)).text)
