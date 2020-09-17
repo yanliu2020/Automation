@@ -19,22 +19,24 @@ base_path = os.path.dirname(utils_path) + os.path.sep
 
 # \test_fz_auto\fangzhou\screenshots\
 screenshots_path = base_path + 'screenshots' + os.path.sep
-
 if not os.path.exists(screenshots_path):
     os.makedirs(screenshots_path)
 
 # \test_fz_auto\fangzhou\report\
 report_path = base_path + 'report' + os.path.sep
-
 if not os.path.exists(report_path):
     os.makedirs(report_path)
+
+#\test_fz_auto\fangzhou\download\
+download_path = base_path + 'download' + os.path.sep
+if not os.path.exists(download_path):
+    os.makedirs(download_path)
 
 # \test_fz_auto\fangzhou\drivers\
 drivers_path = base_path + 'drivers' + os.path.sep
 
 # \test_fz_auto\fangzhou\logs\
 logs_path = base_path + 'logs' + os.path.sep
-
 if not os.path.exists(logs_path):
     os.makedirs(logs_path)
 
