@@ -30,6 +30,7 @@ class custPermission(unittest.TestCase):
         u"""validate have no access for user management"""
         TopMenuPage(self.driver).select_multiple_menu(2, "manage", "Authorization Management", "", "")
         self.assertTrue(CustomerRecordPage(self.driver).validate_permission())
+        BasePage(self.driver).close_current_window()
 
     def test_04_customer_address(self):
         u"""validate have no access for new/edit/delete entity"""
@@ -43,4 +44,5 @@ class custPermission(unittest.TestCase):
         self.assertTrue(CustomerRecordPage(self.driver).validate_permission())
         CustomerRecordPage(self.driver).entity_operator("Addresses", "Delete", "1")
         self.assertTrue(CustomerRecordPage(self.driver).validate_permission())
+        BasePage(self.driver).close_current_window()
 

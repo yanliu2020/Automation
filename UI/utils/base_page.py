@@ -337,25 +337,33 @@ class BasePage(object):
 
     def switch_to_handle(self,flag):
         """
-        # 新窗口打开,切换至新窗口操作
+        # 新窗口打开,切换至新窗口
         :param window,flag:
         :return:
         """
         self.sleep(10)
         now_handle = self.driver.current_window_handle
-        # print(now_handle)
         # print(self.driver.title)
         all_handles = self.driver.window_handles
-        # print(all_handles)
-        for handles in all_handles:
-            if now_handle != handles:
-                self.driver.switch_to.window(handles)
-            elif flag == 0:
-                self.driver.close()
-                self.driver.switch_to.window(all_handles[0])
-
-        # print(self.driver.title)  # 获取切换后的标题
+        if len(all_handles)>1:
+            for handles in all_handles:
+                if now_handle != handles:
+                    self.driver.switch_to.window(handles)
+                elif flag == 0:
+                    self.driver.switch_to.window(all_handles[0])
         time.sleep(3)
+
+    def close_current_window(self):
+        """
+         # 关闭当前window
+         :return:
+        """
+        now_handle = self.driver.current_window_handle
+        all_handles = self.driver.window_handles
+        if len(all_handles) > 1:
+            self.driver.close()
+            self.sleep(5)
+            self.driver.switch_to.window(all_handles[0])
 
     def drag_and_drop(self,source_selector,target_selector):
         """拖拽:不支持html5，使用js必须传入id

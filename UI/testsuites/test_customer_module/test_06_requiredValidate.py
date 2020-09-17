@@ -15,6 +15,8 @@ class requiredFields(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.driver = driver
+        BasePage(cls.driver).close_current_window()
+
 
     data = excelHandle(filepath,sheetName).read_excel()
     @ddt.data(*data)

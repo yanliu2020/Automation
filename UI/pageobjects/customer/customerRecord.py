@@ -411,7 +411,7 @@ class CustomerRecordPage(BasePage):
         #Execute Delete for Related module
          :return:
         """
-        self.find_element_by_wait("xpath",CustomerRecordEntity.delete_confirm)
+        self.sleep(2)
         self.click(CustomerRecordEntity.delete_confirm)
         if section == "Customer" and "Reassign links before C000048473 can be deleted" in self.get_tips_msg():
             return True

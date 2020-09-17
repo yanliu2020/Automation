@@ -35,7 +35,7 @@ browser = config.get("browserType","browserName")
 
 def send_mail(file_new):
     # 设置totest的值
-    totest = 1
+    totest = 2
     f = open(file_new, 'rb')              # 打开文件
     mail_body = f.read()                  # 读取文件内容
     f.close()                             # 关闭文件
