@@ -5,6 +5,7 @@ from pageobjects.homepage.homePage import  HomePage
 from pageobjects.common.topMenu import TopMenuPage
 from utils.connect_sql import dbConnect
 from pageobjects.customer.customerRecord import CustomerRecordPage
+from utils.base_page import BasePage
 
 class recordContacts(unittest.TestCase):
 
@@ -12,6 +13,7 @@ class recordContacts(unittest.TestCase):
     def setUpClass(cls):
         cls.driver = driver
         # HomePage(cls.driver).quick_entrance("Customers","C000048473",2)
+        # BasePage(cls.driver).switch_to_handle(1)
 
     def test_01_contacts_new(self):
         u"""new a contact"""

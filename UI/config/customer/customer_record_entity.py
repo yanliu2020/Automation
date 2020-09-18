@@ -58,10 +58,15 @@ class CustomerRecordEntity(object):
     def get_related_record(self,loc):
         return self.related_record %loc
 
-    #DBA和Websites输入框
-    input_info = "xpath=>//input[@name='%s']"
-    def get_input_info(self,loc):
-        return self.input_info %loc
+    # input fields
+    field_input = "xpath=>//input[@name='%s']"
+    def get_field_input(self, loc):
+        return self.field_input % loc
+
+    # select fields
+    field_select = "xpath=>//select[@name='%s']"
+    def get_field_select(self, loc):
+        return self.field_select % loc
 
     #点击保存
     save = "xpath=>//button[text()='Save']"
@@ -69,6 +74,8 @@ class CustomerRecordEntity(object):
     contact_close = "xpath=>//button[@class='close']"
     #弹窗标题
     contact_title = "xpath=>//h4[@class='modal-title']"
+    #contact记录数
+    contact_list_page = "xpath=>//span[@class='glo-table-pagination']"
     #确认删除
     delete_confirm = "xpath=>//button[text()='Yes, delete it!']"
 
@@ -78,35 +85,6 @@ class CustomerRecordEntity(object):
     #提示消息
     tips_msg = "xpath=>//div[@role='alert']"
     required_msg = "xpath=>//div[@role='alert']/div[@class='summaryMessage']"
-    #contact记录数
-    contact_list_page = "xpath=>//span[@class='glo-table-pagination']"
-
-    #contacts:salutation,firstName，middleName，lastName，
-    contact_input = "xpath=>//input[@name='%s']"
-    def get_contact_input(self,loc):
-        return self.contact_input %loc
-    #suffix, contactRole
-    contact_select = "xpath=>//select[@name='%s']"
-    def get_contact_select(self,loc):
-        return self.contact_select %loc
-
-    #email:emailAddress
-    email_input = "xpath=>//input[@name='%s']"
-    def get_email_input(self,loc):
-        return self.email_input %loc
-    #emailType, isPrimary
-    email_select = "xpath=>//select[@name='%s']"
-    def get_email_select(self,loc):
-        return  self.email_select %loc
-
-    #phone:countryCode,areaCode,phone,extension
-    phone_input = "xpath=>//input[@name='%s']"
-    def get_phone_input(self,loc):
-        return self.phone_input %loc
-    #phoneType
-    phone_select = "xpath=>//select[@name='%s']"
-    def get_phone_select(self,loc):
-        return  self.phone_select %loc
 
     #identifier
     identifierName = "xpath=>//select[@name='name']"
@@ -114,36 +92,13 @@ class CustomerRecordEntity(object):
     select_tax = "xpath=>//select[@name='stateTaxID']"
     identifierNameList = "xpath=>//select[@name='name']/option"
 
-    #address:attentionLine,address1,address2,city,postalCode
-    address_input = "xpath=>//input[@name='%s']"
-    def get_address_input(self,loc):
-        return self.address_input %loc
-    #addressType，stateCode，country
-    address_select = "xpath=>//select[@name='%s']"
-    def get_address_select(self,loc):
-        return  self.address_select %loc
-
-    #entityType, entityClass
-    entity = "xpath=>//select[@name='%s']"
-    def get_entity(self,loc):
-        return self.entity %loc
-
-    #firstName lastName fullName  defaultSort  organizationName,
-    entity_edit_input = "xpath=>//input[@name='%s']"
-    def get_edit_input(self,loc):
-        return self.entity_edit_input %loc
-    entity_edit_select = "xpath=>//select[@name='%s']"
-    #salutation suffix subClassName stateOfIncorporation
-    def get_edit_select(self,loc):
-        return self.entity_edit_select %loc
+    # 判断已选择identifierName的类型
+    identifierName_row = "xpath=>//div[@class='glo-row']/div[5]//div[@class='glo-row']//div[@class='rt-tr-group'][%s]/div/div"
+    def get_identifier_name(self, loc):
+        return self.identifierName_row % loc
 
     #history
     entity_history = "xpath=>//div[@class='modal-content']//span[@class='glo-table-pagination']"
-
-    #判断已选择identifierName的类型
-    identifierName_row = "xpath=>//div[@class='glo-row']/div[5]//div[@class='glo-row']//div[@class='rt-tr-group'][%s]/div/div"
-    def get_identifier_name(self,loc):
-        return self.identifierName_row %loc
 
     #resize
     resize = "xpath=//div[@class='glo-row']/div[%s]//div[@class='glo-row']//div[@role='columnheader'][%s]/div[@class='rt-resizer']"

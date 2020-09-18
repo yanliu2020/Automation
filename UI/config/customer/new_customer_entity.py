@@ -7,10 +7,15 @@ class NewCustomerEntity(object):
     #判断new customer页面
     default_text = "xpath=>//div[@id='root']//div[contains(text(),'New Business Entity')]"
 
-    #typeName, entityClass
-    entity = "xpath=>//select[@name='%s']"
-    def get_entity(self,loc):
-        return self.entity %loc
+    # input fields
+    field_input = "xpath=>//input[@name='%s']"
+    def get_field_input(self, loc):
+        return self.field_input % loc
+
+    # select fields
+    field_select = "xpath=>//select[@name='%s']"
+    def get_field_select(self, loc):
+        return self.field_select % loc
 
     #section列表
     section_list = "xpath=>//div[@class='card']//div//h4"
@@ -18,17 +23,6 @@ class NewCustomerEntity(object):
     section_name = "xpath=>//div[@class='card']//div//h4[text()='%s']"
     def get_section_name(self,loc):
         return self.section_name %loc
-
-    #Business Entity
-    #salutation,suffix,typeOfBusiness,stateOfIncorporation
-    entity_select = "xpath=>//form[@class='ie-fix-flex']/div[1]//select[@name='%s']"
-    def get_entity_select(self,loc):
-        return self.entity_select %loc
-
-    #firstName,middleName,lastName,fullName,defaultSort,organizationName,
-    entity_input = "xpath=>//form[@class='ie-fix-flex']/div[1]//input[@name='%s']"
-    def get_entity_input(self,loc):
-        return self.entity_input %loc
 
     # 增加移除按钮
     add_remove = "xpath=>//p[text()='%s']"
@@ -79,11 +73,6 @@ class NewCustomerEntity(object):
 
     #Contact 1 Same as Above
     same_as = "id=>sameAs"
-
-    #customerID
-    value = "xpath=>//input[@name='%s']"
-    def get_value(self,loc):
-        return self.value %loc
 
     #提示消息
     msg_list = "xpath=>//div[@role='alert']/div[@class='summaryMessage']"

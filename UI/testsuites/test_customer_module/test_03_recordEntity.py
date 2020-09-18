@@ -14,6 +14,7 @@ class recordEntity(unittest.TestCase):
     def setUpClass(cls):
         cls.driver = driver
         # HomePage(cls.driver).quick_entrance("Customers", "C000048473", 2)
+        # BasePage(cls.driver).switch_to_handle(1)
         # CustomerRecordPage(cls.driver).switch_tab("Entity")
 
     def test_01_Address_new(self):

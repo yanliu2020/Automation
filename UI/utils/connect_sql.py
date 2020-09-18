@@ -45,6 +45,9 @@ class dbConnect(object):
         # self.connect.close()
 
 # if __name__ == '__main__':
-#     res = dbConnect().getdata('MCDH','CustomerId_Person','Miss I4JyD5 QNWCnb OfT3Jz Sr.')
+    # res = dbConnect().getdata('MCDH','CustomerId_Person','Miss I4JyD5 QNWCnb OfT3Jz Sr.')
     # data = random.choice(res)[0]
-#     # print(data)
+    # print(data)
+    # import time
+    # b = time.strftime('%m/%d/%Y', time.localtime(time.time()))
+    # print(b)

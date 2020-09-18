@@ -28,15 +28,15 @@ class downLoad(unittest.TestCase):
         url = data['url']
         self.assertTrue(LandDownLoad(self.driver).download(4, first_menu, second_menu, third_menu, four_menu, url))
 
-    # data2 = excelHandle(filepath, sheetName2).read_excel()
-    # @ddt.data(*data2)
-    # def test_Reports(self, data):
-    #     u"""download reports"""
-    #     first_menu = data['first_menu']
-    #     second_menu = data['second_menu']
-    #     third_menu = data['third_menu']
-    #     url = data['url']
-    #     self.assertTrue(
-    #         LandDownLoad(self.driver).download(3,first_menu,second_menu, third_menu,"", url))
-    #     BasePage(self.driver).switch_to_handle(1)
-    #     BasePage(self.driver).close_current_window()
+    data2 = excelHandle(filepath, sheetName2).read_excel()
+    @ddt.data(*data2)
+    def test_Reports(self, data):
+        u"""download reports"""
+        first_menu = data['first_menu']
+        second_menu = data['second_menu']
+        third_menu = data['third_menu']
+        url = data['url']
+        self.assertTrue(
+            LandDownLoad(self.driver).download(3,first_menu,second_menu, third_menu,"", url))
+        BasePage(self.driver).switch_to_handle(1)
+        BasePage(self.driver).close_current_window()

@@ -157,12 +157,12 @@ class CustomerRecordPage(BasePage):
         :param : type,identifierNo
         :return:
         """
-        self.drop_select(CustomerRecordEntity().get_address_select("addressType"),addressType)
-        self.ctrl_all(CustomerRecordEntity().get_address_input("address1"))
-        self.type(CustomerRecordEntity().get_address_input("address1"),BasePage(self.driver).randomData("string", 6))
-        self.ctrl_all(CustomerRecordEntity().get_address_input("city"))
-        self.type(CustomerRecordEntity().get_address_input("city"),BasePage(self.driver).randomData("string", 6))
-        self.drop_select(CustomerRecordEntity().get_address_select("stateCode"), stateCode)
+        self.drop_select(CustomerRecordEntity().get_field_select("addressType"),addressType)
+        self.ctrl_all(CustomerRecordEntity().get_field_input("address1"))
+        self.type(CustomerRecordEntity().get_field_input("address1"),BasePage(self.driver).randomData("string", 6))
+        self.ctrl_all(CustomerRecordEntity().get_field_input("city"))
+        self.type(CustomerRecordEntity().get_field_input("city"),BasePage(self.driver).randomData("string", 6))
+        self.drop_select(CustomerRecordEntity().get_field_select("stateCode"), stateCode)
         self.click(CustomerRecordEntity.save)
         # msg = self.get_tips_msg()
         if "successfully" in self.get_tips_msg():
@@ -176,11 +176,11 @@ class CustomerRecordPage(BasePage):
         :param: name : alias, url
         :return:
         """
-        self.ctrl_all(CustomerRecordEntity().get_input_info(name))
+        self.ctrl_all(CustomerRecordEntity().get_field_input(name))
         if name == "url":
-            self.type(CustomerRecordEntity().get_input_info(name), "http://www."+ BasePage(self.driver).randomData("string", 10)+ ".com")
+            self.type(CustomerRecordEntity().get_field_input(name), "http://www."+ BasePage(self.driver).randomData("string", 10)+ ".com")
         elif name == "alias":
-            self.type(CustomerRecordEntity().get_input_info(name), BasePage(self.driver).randomData("string", 20))
+            self.type(CustomerRecordEntity().get_field_input(name), BasePage(self.driver).randomData("string", 20))
         self.click(CustomerRecordEntity.save)
         # msg = self.get_tips_msg()
         if "successfully" in self.get_tips_msg():
@@ -252,15 +252,15 @@ class CustomerRecordPage(BasePage):
         :param : salutation,firstName,middleName,lastName,suffix,contactRole
         :return:
         """
-        self.drop_select(CustomerRecordEntity().get_contact_select("salutation"),salutation)
-        self.ctrl_all(CustomerRecordEntity().get_contact_input("firstName"))
-        self.type(CustomerRecordEntity().get_contact_input("firstName"),BasePage(self.driver).randomData("string", 6))
-        self.ctrl_all(CustomerRecordEntity().get_contact_input("middleName"))
-        self.type(CustomerRecordEntity().get_contact_input("middleName"),BasePage(self.driver).randomData("string", 6))
-        self.ctrl_all(CustomerRecordEntity().get_contact_input("lastName"))
-        self.type(CustomerRecordEntity().get_contact_input("lastName"),BasePage(self.driver).randomData("string", 6))
-        self.drop_select(CustomerRecordEntity().get_contact_select("suffix"), suffix)
-        self.drop_select(CustomerRecordEntity().get_contact_select("contactRole"), contactRole)
+        self.drop_select(CustomerRecordEntity().get_field_select("salutation"),salutation)
+        self.ctrl_all(CustomerRecordEntity().get_field_input("firstName"))
+        self.type(CustomerRecordEntity().get_field_input("firstName"),BasePage(self.driver).randomData("string", 6))
+        self.ctrl_all(CustomerRecordEntity().get_field_input("middleName"))
+        self.type(CustomerRecordEntity().get_field_input("middleName"),BasePage(self.driver).randomData("string", 6))
+        self.ctrl_all(CustomerRecordEntity().get_field_input("lastName"))
+        self.type(CustomerRecordEntity().get_field_input("lastName"),BasePage(self.driver).randomData("string", 6))
+        self.drop_select(CustomerRecordEntity().get_field_select("suffix"), suffix)
+        self.drop_select(CustomerRecordEntity().get_field_select("contactRole"), contactRole)
         self.click(CustomerRecordEntity.save)
         # msg = self.get_tips_msg()
         if "successfully" in self.get_tips_msg():
@@ -274,11 +274,11 @@ class CustomerRecordPage(BasePage):
         :param : email,type,isPrimary
         :return:
         """
-        self.ctrl_all(CustomerRecordEntity().get_email_input("emailAddress"))
-        self.type(CustomerRecordEntity().get_email_input("emailAddress"), BasePage(self.driver).randomData("string", 6)+"@"+
+        self.ctrl_all(CustomerRecordEntity().get_field_input("emailAddress"))
+        self.type(CustomerRecordEntity().get_field_input("emailAddress"), BasePage(self.driver).randomData("string", 6)+"@"+
                   BasePage(self.driver).randomData("string", 4)+".com")
-        self.drop_select(CustomerRecordEntity().get_email_select("emailType"), type)
-        self.drop_select(CustomerRecordEntity().get_email_select("isPrimary"), isPrimary)
+        self.drop_select(CustomerRecordEntity().get_field_select("emailType"), type)
+        self.drop_select(CustomerRecordEntity().get_field_select("isPrimary"), isPrimary)
         self.click(CustomerRecordEntity.save)
         # msg = self.get_tips_msg()
         if 'successfully' in self.get_tips_msg():
@@ -294,13 +294,13 @@ class CustomerRecordPage(BasePage):
         """
         # self.ctrl_all(CustomerRecordEntity().phone_input("countryCode"))
         # self.type(CustomerRecordEntity().phone_input("countryCode"), countryCode)
-        self.drop_select(CustomerRecordEntity().get_phone_select("phoneType"), type)
-        self.ctrl_all(CustomerRecordEntity().get_phone_input("areaCode"))
-        self.type(CustomerRecordEntity().get_phone_input("areaCode"), BasePage(self.driver).randomData("number", 3))
-        self.ctrl_all(CustomerRecordEntity().get_phone_input("phone"))
-        self.type(CustomerRecordEntity().get_phone_input("phone"), BasePage(self.driver).randomData("number", 7))
-        self.ctrl_all(CustomerRecordEntity().get_phone_input("extension"))
-        self.type(CustomerRecordEntity().get_phone_input("extension"), BasePage(self.driver).randomData("string", 6))
+        self.drop_select(CustomerRecordEntity().get_field_select("phoneType"), type)
+        self.ctrl_all(CustomerRecordEntity().get_field_input("areaCode"))
+        self.type(CustomerRecordEntity().get_field_input("areaCode"), BasePage(self.driver).randomData("number", 3))
+        self.ctrl_all(CustomerRecordEntity().get_field_input("phone"))
+        self.type(CustomerRecordEntity().get_field_input("phone"), BasePage(self.driver).randomData("number", 7))
+        self.ctrl_all(CustomerRecordEntity().get_field_input("extension"))
+        self.type(CustomerRecordEntity().get_field_input("extension"), BasePage(self.driver).randomData("string", 6))
         self.click(CustomerRecordEntity.save)
         # msg = self.get_tips_msg()
         if 'successfully' in self.get_tips_msg():
@@ -338,32 +338,32 @@ class CustomerRecordPage(BasePage):
         :return:
         """
         if self.is_customer_record_page() == True:
-            self.drop_select(CustomerRecordEntity().get_entity("typeName"), entityType)
-            self.drop_select(CustomerRecordEntity().get_entity("entityClass"), entityClass)
+            self.drop_select(CustomerRecordEntity().get_field_select("typeName"), entityType)
+            self.drop_select(CustomerRecordEntity().get_field_select("entityClass"), entityClass)
             if entityType == "Person":
                 if entityClass == "Household":
-                    self.ctrl_all(CustomerRecordEntity().get_edit_input("fullName"))
-                    self.type(CustomerRecordEntity().get_edit_input("fullName"),
+                    self.ctrl_all(CustomerRecordEntity().get_field_input("fullName"))
+                    self.type(CustomerRecordEntity().get_field_input("fullName"),
                               BasePage(self.driver).randomData("string", 6))
-                    self.ctrl_all(CustomerRecordEntity().get_edit_input("soundEx"))
-                    self.type(CustomerRecordEntity().get_edit_input("soundEx"),
+                    self.ctrl_all(CustomerRecordEntity().get_field_input("soundEx"))
+                    self.type(CustomerRecordEntity().get_field_input("soundEx"),
                               BasePage(self.driver).randomData("string", 6))
                 else:
-                    self.drop_select(CustomerRecordEntity().get_edit_select("salutation"), salutation)
-                    self.ctrl_all(CustomerRecordEntity().get_edit_input("firstName"))
-                    self.type(CustomerRecordEntity().get_edit_input("firstName"),
+                    self.drop_select(CustomerRecordEntity().get_field_select("salutation"), salutation)
+                    self.ctrl_all(CustomerRecordEntity().get_field_input("firstName"))
+                    self.type(CustomerRecordEntity().get_field_input("firstName"),
                               BasePage(self.driver).randomData("string", 6))
-                    self.ctrl_all(CustomerRecordEntity().get_edit_input("lastName"))
-                    self.type(CustomerRecordEntity().get_edit_input("lastName"),
+                    self.ctrl_all(CustomerRecordEntity().get_field_input("lastName"))
+                    self.type(CustomerRecordEntity().get_field_input("lastName"),
                               BasePage(self.driver).randomData("string", 6))
-                    self.drop_select(CustomerRecordEntity().get_edit_select("suffix"), suffix)
+                    self.drop_select(CustomerRecordEntity().get_field_select("suffix"), suffix)
             else:
-                self.ctrl_all(CustomerRecordEntity().get_edit_input("organizationName"))
-                self.type(CustomerRecordEntity().get_edit_input("organizationName"),
+                self.ctrl_all(CustomerRecordEntity().get_field_input("organizationName"))
+                self.type(CustomerRecordEntity().get_field_input("organizationName"),
                           BasePage(self.driver).randomData("string", 6))
                 if entityClass == "Company" or entityClass == "Government":
-                    self.drop_select(CustomerRecordEntity().get_edit_select("subClassName"), typeOfBusiness)
-                self.drop_select(CustomerRecordEntity().get_edit_select("stateOfIncorporation"), stateOfIncorporation)
+                    self.drop_select(CustomerRecordEntity().get_field_select("subClassName"), typeOfBusiness)
+                self.drop_select(CustomerRecordEntity().get_field_select("stateOfIncorporation"), stateOfIncorporation)
 
 
     def validate_records_rows(self):

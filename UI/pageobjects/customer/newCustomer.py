@@ -21,24 +21,24 @@ class NewCustomerPage(BasePage):
           :return:
         """
         if self.is_newCustomer_page()== True:
-            self.drop_select(NewCustomerEntity().get_entity("typeName"), entityType)
-            self.drop_select(NewCustomerEntity().get_entity("entityClass"), entityClass)
+            self.drop_select(NewCustomerEntity().get_field_select("typeName"), entityType)
+            self.drop_select(NewCustomerEntity().get_field_select("entityClass"), entityClass)
             randomData = BasePage(self.driver).randomData("string", 6)
             if entityType == "Person":
                 if entityClass == "Household":
-                    self.type(NewCustomerEntity().get_entity_input("fullName"), randomData)
-                    self.type(NewCustomerEntity().get_entity_input("soundEx"), randomData)
+                    self.type(NewCustomerEntity().get_field_input("fullName"), randomData)
+                    self.type(NewCustomerEntity().get_field_input("soundEx"), randomData)
                 else:
-                    self.drop_select(NewCustomerEntity().get_entity_select("salutation"), salutation)
-                    self.type(NewCustomerEntity().get_entity_input("firstName"), randomData)
-                    self.type(NewCustomerEntity().get_entity_input("middleName"), randomData)
-                    self.type(NewCustomerEntity().get_entity_input("lastName"), randomData)
-                    self.drop_select(NewCustomerEntity().get_entity_select("suffix"), suffix)
+                    self.drop_select(NewCustomerEntity().get_field_select("salutation"), salutation)
+                    self.type(NewCustomerEntity().get_field_input("firstName"), randomData)
+                    self.type(NewCustomerEntity().get_field_input("middleName"), randomData)
+                    self.type(NewCustomerEntity().get_field_input("lastName"), randomData)
+                    self.drop_select(NewCustomerEntity().get_field_select("suffix"), suffix)
             else:
-                self.type(NewCustomerEntity().get_entity_input("organizationName"), randomData)
+                self.type(NewCustomerEntity().get_field_input("organizationName"), randomData)
                 if entityClass == "Company" or entityClass == "Government":
-                    self.drop_select(NewCustomerEntity().get_entity_select("subClassName"), typeOfBusiness)
-                self.drop_select(NewCustomerEntity().get_entity_select("stateOfIncorporation"), stateOfIncorporation)
+                    self.drop_select(NewCustomerEntity().get_field_select("subClassName"), typeOfBusiness)
+                self.drop_select(NewCustomerEntity().get_field_select("stateOfIncorporation"), stateOfIncorporation)
 
 
     def add_remove(self,sectionName):
@@ -56,11 +56,11 @@ class NewCustomerPage(BasePage):
         :return:
         """
         self.click(NewCustomerEntity().get_add_remove(sectionName))
-        self.type(CustomerRecordEntity().get_address_input("address1"), BasePage(self.driver).randomData("string", 6))
-        self.drop_select(CustomerRecordEntity().get_address_select("addressType"),addressType)
-        self.type(CustomerRecordEntity().get_address_input("city"),BasePage(self.driver).randomData("string", 6))
-        self.drop_select(CustomerRecordEntity().get_address_select("stateCode"), stateCode)
-        self.type(CustomerRecordEntity().get_address_input("postalCode"), BasePage(self.driver).randomData("number", 5))
+        self.type(CustomerRecordEntity().get_field_input("address1"), BasePage(self.driver).randomData("string", 6))
+        self.drop_select(CustomerRecordEntity().get_field_select("addressType"),addressType)
+        self.type(CustomerRecordEntity().get_field_input("city"),BasePage(self.driver).randomData("string", 6))
+        self.drop_select(CustomerRecordEntity().get_field_select("stateCode"), stateCode)
+        self.type(CustomerRecordEntity().get_field_input("postalCode"), BasePage(self.driver).randomData("number", 5))
 
     def identifier(self,sectionName,type):
         """
@@ -141,10 +141,10 @@ class NewCustomerPage(BasePage):
         :return:
         """
         if CustomerRecordPage(self.driver).is_customer_record_page():
-            customerId = self.find_element(NewCustomerEntity().get_value("customer-id")).get_attribute('value')
-            organizationName = self.find_element(NewCustomerEntity().get_value("organization-name")).get_attribute(
+            customerId = self.find_element(NewCustomerEntity().get_field_input("customer-id")).get_attribute('value')
+            organizationName = self.find_element(NewCustomerEntity().get_field_input("organization-name")).get_attribute(
                 'value')
-            entityType = self.find_element(NewCustomerEntity().get_value("entity-type")).get_attribute('value')
+            entityType = self.find_element(NewCustomerEntity().get_field_input("entity-type")).get_attribute('value')
             if entityType == "Person":
                 CustomerId = dbConnect().getdata('MCDH', 'CustomerId_Person', organizationName)
             elif entityType == "Organization":
@@ -173,8 +173,8 @@ class NewCustomerPage(BasePage):
 
     def validate_required(self,entityType,entityClass,flag):
         if self.is_newCustomer_page():
-            self.drop_select(NewCustomerEntity().get_entity("typeName"), entityType)
-            self.drop_select(NewCustomerEntity().get_entity("entityClass"), entityClass)
+            self.drop_select(NewCustomerEntity().get_field_select("typeName"), entityType)
+            self.drop_select(NewCustomerEntity().get_field_select("entityClass"), entityClass)
             if flag == "Business Entity":
                 self.click(NewCustomerEntity.save)
                 self.sleep(1)
@@ -195,9 +195,9 @@ class NewCustomerPage(BasePage):
                     else:
                         return False
             else:
-                self.type(NewCustomerEntity().get_entity_input("firstName"),
+                self.type(NewCustomerEntity().get_field_input("firstName"),
                           BasePage(self.driver).randomData("string", 6))
-                self.type(NewCustomerEntity().get_entity_input("lastName"),
+                self.type(NewCustomerEntity().get_field_input("lastName"),
                           BasePage(self.driver).randomData("string", 6))
                 if flag == "Contact":
                     self.drop_select(NewCustomerEntity().get_contact_select(1, "salutation"), "Ms.")
@@ -213,7 +213,7 @@ class NewCustomerPage(BasePage):
                         return False
                 elif flag == "Address&Identifier":
                     self.click(NewCustomerEntity().get_add_remove("Address"))
-                    self.drop_select(CustomerRecordEntity().get_address_select("country"), "USA")
+                    self.drop_select(CustomerRecordEntity().get_field_select("country"), "USA")
                     self.click(NewCustomerEntity().get_add_remove("Identifier"))
                     self.drop_select(CustomerRecordEntity.identifierName, "SSN")
                     self.click(NewCustomerEntity.save)
