@@ -69,3 +69,21 @@ class SummaryPage(BasePage):
             return True
         else:
             return False
+
+    def locationCountySeat(self,direction,deviation):
+        self.drop_select(LandCommonEntity().get_field_select("direction"), direction)
+        self.ctrl_all(LandCommonEntity().get_field_input("distance"))
+        self.type(LandCommonEntity().get_field_input("distance"), BasePage(self.driver).randomData("number", 2))
+        self.drop_select(LandCommonEntity().get_field_select("deviation"), deviation)
+        self.ctrl_all(LandCommonEntity().get_field_input("degree"))
+        self.type(LandCommonEntity().get_field_input("degree"), BasePage(self.driver).randomData("number", 2))
+        self.click(LandCommonEntity().get_land_button("Save"))
+        if 'successfully' in LandCommonPage(self.driver).get_tips_msg():
+            return True
+        else:
+            return False
+
+    def location(self,city,legalAccess,withinCity):
+        # self.drop_select(LandCommonEntity().get_field_select("city"), city)
+        self.drop_select(LandCommonEntity().get_field_select("legalAccess"), legalAccess)
+        self.drop_select(LandCommonEntity().get_field_select("withinCity"), withinCity)

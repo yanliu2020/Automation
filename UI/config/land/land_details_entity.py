@@ -32,9 +32,9 @@ class LandDetailsEntity(object):
         return self.section_operator % (loc1, loc2)
 
      # Location的操作按钮
-    location_operator = "xpath=>//div[@role='tabpanel']/div/div[%s]//button[text()=' %s']"
-    def get_location_operator(self, loc1, loc2):
-        return self.location_operator % (loc1, loc2)
+    specail_operator = "xpath=>//div[@role='tabpanel']/div/div[%s]//button[text()=' %s']"
+    def get_specail_operator(self, loc1, loc2):
+        return self.specail_operator % (loc1, loc2)
 
     # 每个section下的记录数
     section_records = "xpath=>//div[@role='tabpanel']/div[%s]//div[@class='glo-row']//div[@class='rt-tr-group']"
@@ -70,3 +70,11 @@ class LandDetailsEntity(object):
     select_history_value= "xpath=>//div[@class='modal-body']//div[@class='rt-tr-group'][%s]/div/div"
     def get_history_value(self,loc):
         return self.select_history_value %loc
+
+    #fields value on section
+    section_values = "xpath=>//div[@role='tabpanel']/div/div[%s]//div[@class='glo-field row']//input"
+    def get_section_value(self,loc):
+        return self.section_values %loc
+
+    #location
+    special_section_list ="xpath=>//div[@role='tabpanel']/div[@class='glo-row']//span"

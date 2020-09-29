@@ -3,7 +3,6 @@ from  utils.base_page import  BasePage
 from config.land.land_details_entity import LandDetailsEntity
 from config.land.land_common_entity import LandCommonEntity
 from utils.logger import logger
-from utils.connect_sql import dbConnect
 
 class LandCommonPage(BasePage):
     def is_land_details_page(self):
@@ -62,21 +61,20 @@ class LandCommonPage(BasePage):
                 logger.info(msg="sectionName %s not found!" % sectionName)
             else:
                 # self.scroll_into_view(LandDetailsEntity().get_section_name(sectionName))
-                if sectionName in ("Location From County Seat", "Locations", "Characteristics", "Management", "Uplands",
-                                   "Survey") or buttonName in ("New", "Relate"):
+                if buttonName in ("New", "Relate"):
                     pass
                 elif self.find_elements(LandDetailsEntity().get_section_records(section_item[0])):
                     if self.not_selected(section_item[0], row) == True:
                         self.click(LandDetailsEntity().get_select_record(section_item[0], row))
-                    if buttonName in ("Details","History"):
+                    if buttonName in ("Details", "History"):
                         table = []
-                        table_list = self.find_elements(LandDetailsEntity().get_column_value(section_item[0],row))
+                        table_list = self.find_elements(LandDetailsEntity().get_column_value(section_item[0], row))
                         for i, item in enumerate(table_list):
                             value = item.text
                             table.append(value)
-                        # print("#####")
-                        # print(table)
-                        # print("#####")
+                        print("#####")
+                        print(table)
+                        print("#####")
                         self.click(LandDetailsEntity().get_section_operator(section_item[0], buttonName))
                         s = []
                         if buttonName == "Details":
@@ -93,9 +91,9 @@ class LandCommonPage(BasePage):
                             for a, item in enumerate(history_list):
                                 value = item.text
                                 s.append(value)
-                        # print("!!!!")
-                        # print(s)
-                        # print("!!!!")
+                        print("!!!!")
+                        print(s)
+                        print("!!!!")
                         self.sleep(2)
                         self.execute_script_click(LandCommonEntity.close)
                         if set(table) < set(s) or set(s) < set(table) or table == s:
@@ -103,6 +101,56 @@ class LandCommonPage(BasePage):
                         else:
                             return False
                 self.click(LandDetailsEntity().get_section_operator(section_item[0], buttonName))
+
+
+    def special_operator(self,sectionName,buttonName,row):
+        """
+        #Tabs
+        :param sectionName,buttonName,row
+        :return:
+        """
+        if self.is_land_details_page() == True:
+            special_section_list = self.find_elements(LandDetailsEntity.special_section_list)
+            # print(special_section_list)
+            section_item = None
+            for i, item in enumerate(special_section_list):
+                if sectionName == item.text:
+                    section_item = (i + 1, item)
+                    break
+            if section_item is None:
+                logger.info(msg="sectionName %s not found!" % sectionName)
+            else:
+                # self.scroll_into_view(LandDetailsEntity().get_section_name(sectionName))
+                if sectionName in ("Location From County Seat", "Locations", "Characteristics", "Management", "Uplands",
+                                   "Survey"):
+                    if buttonName == "History":
+                        seciton_value_list = []
+                        field_list = self.find_elements(LandDetailsEntity().get_section_value(section_item[0]))
+                        for a, item in enumerate(field_list):
+                            value = item.get_attribute('value')
+                            seciton_value_list.append(value)
+                        print("#####")
+                        print(seciton_value_list)
+                        print("#####")
+                        self.click(LandDetailsEntity().get_specail_operator(section_item[0], buttonName))
+                        s = []
+                        history_list = self.find_elements(LandDetailsEntity().get_history_value(row))
+                        for a, item in enumerate(history_list):
+                            value = item.text
+                            s.append(value)
+                        print("!!!!")
+                        print(s)
+                        print("!!!!")
+                        self.sleep(2)
+                        self.execute_script_click(LandCommonEntity.close)
+                        if set(seciton_value_list) < set(s) or set(s) < set(
+                                seciton_value_list) or seciton_value_list == s:
+                            return True
+                        else:
+                            return False
+                    self.click(LandDetailsEntity().get_specail_operator(section_item[0], buttonName))
+                    self.sleep(2)
+
 
     def delete(self):
         """
@@ -118,25 +166,26 @@ class LandCommonPage(BasePage):
             return False
 
     def required_validation(self):
+        self.sleep(1)
         required_list = self.find_elements(LandCommonEntity.required_field)
         field_name_list = []
         msg_required_list = []
         for i,item in enumerate(required_list):
-            if "*" == item.text:
+            if item.text == "*":
                 field_name_list.append((self.find_element(LandCommonEntity().get_field_name(i+1)).text).rstrip('*') + " is required.")
-        # print("!!!!!")
-        # print(field_name_list)
-        # print("!!!!!")
-        self.sleep(3)
+        print("!!!!!")
+        print(field_name_list)
+        print("!!!!!")
+        self.sleep(1)
         self.click(LandCommonEntity().get_land_button("Save"))
         required_message_list = self.find_elements(LandCommonEntity.required_field_message)
         for i,item in enumerate(required_message_list):
             value = item.text
             msg_required_list.append(value)
-        # print("#####")
-        # print(msg_required_list)
-        # print("#####")
-        self.sleep(3)
+        print("#####")
+        print(msg_required_list)
+        print("#####")
+        self.sleep(1)
         self.execute_script_click(LandCommonEntity.close)
         if  field_name_list == msg_required_list:
             return True
