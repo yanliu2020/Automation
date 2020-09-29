@@ -27,7 +27,7 @@ class LandDetailsEntity(object):
         return self.section_name % loc
 
     # Summay/Utilization/Comment/Related Leases/Related Land/Appraisal/Sale/Acquisition/Cutomers的操作按钮
-    section_operator = "xpath=>//div[@class='glo-row']/div[%s]//button[text()=' %s']"
+    section_operator = "xpath=>//div[@role='tabpanel']/div[%s]//button[text()=' %s']"
     def get_section_operator(self, loc1, loc2):
         return self.section_operator % (loc1, loc2)
 
@@ -50,3 +50,23 @@ class LandDetailsEntity(object):
     tips_msg = "xpath=>//div[@role='alert']"
     # 确认删除
     delete_confirm = "xpath=>//button[text()='Yes, delete it!']"
+
+    #reservations 复选框
+    reservations = "xpath=>//div[@title='reservations']/label"
+    reservation = "xpath=>//div[@title='reservations']/label[%s]"
+    def get_reservation(self,loc):
+        return self.reservation %loc
+
+    #fields value of detail page
+    input_value = "xpath=>//div[@class='row form-group']//input"
+    textarea_value = "xpath=>//div[@class='row form-group']//textarea"
+
+    #fields value of table
+    select_column_value = "xpath=>//div[@role='tabpanel']/div[%s]//div[@class='glo-row']//div[@class='rt-tr-group'][%s]/div/div"
+    def get_column_value(self, loc1, loc2):
+        return self.select_column_value % (loc1, loc2)
+
+    #fields value of history dialog
+    select_history_value= "xpath=>//div[@class='modal-body']//div[@class='rt-tr-group'][%s]/div/div"
+    def get_history_value(self,loc):
+        return self.select_history_value %loc

@@ -446,3 +446,10 @@ class BasePage(object):
                 salt += random.choice(S)
             return salt
 
+    def is_checked(self,selector):
+        if self.find_element(selector).is_selected():
+            print("SSSSSS")
+            return True
+        else:
+            print("FFFF")
+            return False
