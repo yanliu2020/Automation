@@ -5,7 +5,7 @@ import  random
 
 class dbConnect(object):
     def getdata(self,fielName,dbName,table,varField):
-        connect = pymssql.connect('rralamosqltest.southcentralus.cloudapp.azure.com', 'yan.liu', 'Lychan@202008',
+        connect = pymssql.connect('rralamosqltest.southcentralus.cloudapp.azure.com', 'yan.liu', 'Lychan@202009',
                                   dbName)
         # connect = pymssql.connect('rralamosqldev.southcentralus.cloudapp.azure.com', 'Chris.Guo', 'Alamo617*',
         #                           dbName)
@@ -20,9 +20,9 @@ class dbConnect(object):
                 # 拆开一层嵌套列表元组
                 rows = functools.reduce(lambda x, y: x + y, results)
                 testData = rows[random.randint(0, len(rows) - 1)]
-                # print("#######")
-                # print(testData)
-                # print("#######")
+                print("#######")
+                print(testData)
+                print("#######")
                 return testData
         except:
             print('Error:unable to fetch data')

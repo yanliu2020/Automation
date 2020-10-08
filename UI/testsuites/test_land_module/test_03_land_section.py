@@ -10,7 +10,7 @@ from pageobjects.land.Summary import SummaryPage
 
 filepath = "E:\\Automation\\UI\\getdata\\TestData.xlsx"
 sheetName = "LandDictionaryList"
-class landRecord(unittest.TestCase):
+class landSection(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
