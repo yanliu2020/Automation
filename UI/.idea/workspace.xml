@@ -94,36 +94,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="connect_sql.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/connect_sql.py">
+      <file leaf-file-name="test_07_custPermission.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/testsuites/test_customer_module/test_07_custPermission.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="15" column="69" lean-forward="true" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
-              <folding>
-                <marker date="1602122011055" expanded="true" signature="654:694" ph="SELECT varSa... ltblSalutation" />
-                <marker date="1602122011055" expanded="true" signature="764:796" ph="SELECT varSu... ltblSuffix" />
-                <marker date="1602122011055" expanded="true" signature="908:943" ph="SELECT varSt... vewLookupState" />
-                <marker date="1602122011055" expanded="true" signature="1016:1054" ph="SELECT varEm... ltblEmailType" />
-                <marker date="1602122011055" expanded="true" signature="1127:1165" ph="SELECT varPh... ltblPhoneType" />
-                <marker date="1602122011055" expanded="true" signature="1237:1323" ph="select top(1... ltblContactRole" />
-                <marker date="1602122011055" expanded="true" signature="1398:1440" ph="SELECT varAd... ltblAddressType" />
-                <marker date="1602122011055" expanded="true" signature="1518:1566" ph="SELECT varId... ltblIdentifierName" />
-                <marker date="1602122011055" expanded="true" signature="1655:1718" ph="SELECT varId... vewLookupIdentifierNameWithoutBan" />
-                <marker date="1602122011055" expanded="true" signature="1805:1915" ph="SELECT varBu... tblBusinessEntity" />
-                <marker date="1602122011055" expanded="true" signature="2005:2107" ph="SELECT varBu... tblBusinessEntity" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="query_sql.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/utils/query_sql.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-              <folding>
-                <marker date="1602122021043" expanded="true" signature="668:683" ph="SELECT missi... missing_value" />
-              </folding>
+            <state relative-caret-position="540">
+              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -186,7 +162,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/utils/jquery_load_helper.js" />
         <option value="$PROJECT_DIR$/utils/drag_drop.py" />
         <option value="$PROJECT_DIR$/testsuites/test_validate_permission/test_01_custPermission.py" />
         <option value="$PROJECT_DIR$/testrunner/run_usm.py" />
@@ -215,8 +190,6 @@
         <option value="$PROJECT_DIR$/pageobjects/customer/newCustomer.py" />
         <option value="$PROJECT_DIR$/config/customer/new_customer_entity.py" />
         <option value="$PROJECT_DIR$/config/customer/customer_record_entity.py" />
-        <option value="$PROJECT_DIR$/testsuites/test_customer_module/test_06_requiredValidate.py" />
-        <option value="$PROJECT_DIR$/testsuites/test_customer_module/test_05_deleteRelated.py" />
         <option value="$PROJECT_DIR$/pageobjects/land/LandSummary.py" />
         <option value="$PROJECT_DIR$/pageobjects/land/landDetails.py" />
         <option value="$PROJECT_DIR$/getdata/ExcelUtil.py" />
@@ -237,6 +210,9 @@
         <option value="$PROJECT_DIR$/testsuites/test_land_module/test_03_land_section.py" />
         <option value="$PROJECT_DIR$/utils/connect_sql.py" />
         <option value="$PROJECT_DIR$/utils/query_sql.py" />
+        <option value="$PROJECT_DIR$/testsuites/test_customer_module/test_05_deleteRelated.py" />
+        <option value="$PROJECT_DIR$/testsuites/test_customer_module/test_06_requiredValidate.py" />
+        <option value="$PROJECT_DIR$/testrunner/run_customerUM.py" />
       </list>
     </option>
   </component>
@@ -268,6 +244,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -299,7 +276,19 @@
               <item name="UI" type="b2602c69:ProjectViewProjectNode" />
               <item name="UI" type="462c0819:PsiDirectoryNode" />
               <item name="testsuites" type="462c0819:PsiDirectoryNode" />
+              <item name="test_customer_module" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="testsuites" type="462c0819:PsiDirectoryNode" />
               <item name="test_land_module" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="testsuites" type="462c0819:PsiDirectoryNode" />
+              <item name="test_usermanagement_module" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UI" type="b2602c69:ProjectViewProjectNode" />
@@ -311,7 +300,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -565,6 +553,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -573,7 +562,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10810811" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22421204" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2299427" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11318052" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -631,6 +620,20 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/utils/connect_sql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/query_sql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/testsuites/test_land_module/test_03_land_section.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -799,13 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testrunner/run_customerUM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="28" column="49" lean-forward="false" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/config.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -876,33 +872,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/connect_sql.py">
+    <entry file="file://$PROJECT_DIR$/utils/query_sql.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="15" column="69" lean-forward="true" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
-          <folding>
-            <marker date="1602122011055" expanded="true" signature="654:694" ph="SELECT varSa... ltblSalutation" />
-            <marker date="1602122011055" expanded="true" signature="764:796" ph="SELECT varSu... ltblSuffix" />
-            <marker date="1602122011055" expanded="true" signature="908:943" ph="SELECT varSt... vewLookupState" />
-            <marker date="1602122011055" expanded="true" signature="1016:1054" ph="SELECT varEm... ltblEmailType" />
-            <marker date="1602122011055" expanded="true" signature="1127:1165" ph="SELECT varPh... ltblPhoneType" />
-            <marker date="1602122011055" expanded="true" signature="1237:1323" ph="select top(1... ltblContactRole" />
-            <marker date="1602122011055" expanded="true" signature="1398:1440" ph="SELECT varAd... ltblAddressType" />
-            <marker date="1602122011055" expanded="true" signature="1518:1566" ph="SELECT varId... ltblIdentifierName" />
-            <marker date="1602122011055" expanded="true" signature="1655:1718" ph="SELECT varId... vewLookupIdentifierNameWithoutBan" />
-            <marker date="1602122011055" expanded="true" signature="1805:1915" ph="SELECT varBu... tblBusinessEntity" />
-            <marker date="1602122011055" expanded="true" signature="2005:2107" ph="SELECT varBu... tblBusinessEntity" />
-          </folding>
+        <state relative-caret-position="450">
+          <caret line="20" column="68" lean-forward="true" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/query_sql.py">
+    <entry file="file://$PROJECT_DIR$/utils/connect_sql.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-          <folding>
-            <marker date="1602122021043" expanded="true" signature="668:683" ph="SELECT missi... missing_value" />
-          </folding>
+        <state relative-caret-position="25">
+          <caret line="15" column="69" lean-forward="false" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testrunner/run_customerUM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testsuites/test_customer_module/test_05_deleteRelated.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="42" column="80" lean-forward="true" selection-start-line="42" selection-start-column="80" selection-end-line="42" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testsuites/test_customer_module/test_06_requiredValidate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="22" column="57" lean-forward="true" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testsuites/test_customer_module/test_07_custPermission.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

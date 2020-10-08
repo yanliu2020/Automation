@@ -18,18 +18,18 @@ class requiredFields(unittest.TestCase):
         BasePage(cls.driver).close_current_window()
 
     data = excelHandle(filepath,sheetName).read_excel()
-    # @ddt.data(*data)
-    # def test_01_businessEntity_required(self,data):
-    #     u"""new customer page validate required fields"""
-    #     entityType = data['entityType']
-    #     entityClass = data['entityClass']
-    #     TopMenuPage(self.driver).select_multiple_menu(2, "customers", "New", "", "")
-    #     self.assertTrue(NewCustomerPage(self.driver).validate_required(entityType, entityClass,"Business Entity"))
-    #
-    # def test_02_contact_required(self):
-    #     u"""new customer page validate contact required fields"""
-    #     TopMenuPage(self.driver).select_multiple_menu(2, "customers", "New", "", "")
-    #     self.assertTrue(NewCustomerPage(self.driver).validate_required("Person","Sole Proprietor","Contact"))
+    @ddt.data(*data)
+    def test_01_businessEntity_required(self,data):
+        u"""new customer page validate required fields"""
+        entityType = data['entityType']
+        entityClass = data['entityClass']
+        TopMenuPage(self.driver).select_multiple_menu(2, "customers", "New", "", "")
+        self.assertTrue(NewCustomerPage(self.driver).validate_required(entityType, entityClass,"Business Entity"))
+
+    def test_02_contact_required(self):
+        u"""new customer page validate contact required fields"""
+        TopMenuPage(self.driver).select_multiple_menu(2, "customers", "New", "", "")
+        self.assertTrue(NewCustomerPage(self.driver).validate_required("Person","Sole Proprietor","Contact"))
 
     def test_03_addressIdentifier_required(self):
         u"""new customer page validate address/identifier required fields"""
