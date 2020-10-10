@@ -1,6 +1,7 @@
 #-*- coding: UTF-8 -*-
 import unittest
 from getdata.ExcelPointer import excelHandle
+from utils.basepath_helper import excel_path
 from utils.query_sql import dbConnect
 from utils.browser_engine import driver
 from pageobjects.homepage.homePage import  HomePage
@@ -8,7 +9,7 @@ from utils.base_page import BasePage
 from pageobjects.land.landCommon import LandCommonPage
 from pageobjects.land.Summary import SummaryPage
 
-filepath = "E:\\Automation\\UI\\getdata\\TestData.xlsx"
+filepath = excel_path +"TestData.xlsx"
 sheetName = "LandDictionaryList"
 class landRecord(unittest.TestCase):
 
