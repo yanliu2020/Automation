@@ -215,6 +215,7 @@ class CustomerRecordPage(BasePage):
                 else:
                     return False
         elif flag == "new":
+            self.sleep(1)
             if type == "BAN":
                 if self.without_BAN() == True:
                     type = dbConnect().getdata('MCDH', 'identifierNameWithoutBan')
@@ -414,17 +415,23 @@ class CustomerRecordPage(BasePage):
         self.sleep(2)
         self.click(CustomerRecordEntity.delete_confirm)
         if section == "Customer" and "Reassign links before C000048473 can be deleted" in self.get_tips_msg():
+            self.click(CustomerRecordEntity.close_msg)
             return True
         if section == "Address" and "Reassign links before this site can be deleted" in self.get_tips_msg():
+            self.click(CustomerRecordEntity.close_msg)
             return True
         if section == "Contact" and "Reassign links before this contact can be deleted" in self.get_tips_msg():
+            self.click(CustomerRecordEntity.close_msg)
             return True
         if section == "Email" and "Reassign links before this contact email can be deleted" in self.get_tips_msg():
+            self.click(CustomerRecordEntity.close_msg)
             return  True
         if section == "Phone" and "Reassign links before this contact phone can be deleted" in self.get_tips_msg():
-             return  True
+            self.click(CustomerRecordEntity.close_msg)
+            return  True
         else :
-             return  False
+            self.click(CustomerRecordEntity.close_msg)
+            return  False
 
     def validate_permission(self):
         """

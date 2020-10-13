@@ -75,7 +75,7 @@ class CustomerRecordEntity(object):
     #弹窗标题
     contact_title = "xpath=>//h4[@class='modal-title']"
     #contact记录数
-    contact_list_page = "xpath=>//span[@class='glo-table-pagination']"
+    contact_list_page = "xpath=>//span[@class='glo-table-pagination pr-1 pl-1']"
     #确认删除
     delete_confirm = "xpath=>//button[text()='Yes, delete it!']"
 
@@ -85,6 +85,7 @@ class CustomerRecordEntity(object):
     #提示消息
     tips_msg = "xpath=>//div[@role='alert']"
     required_msg = "xpath=>//div[@role='alert']/div[@class='summaryMessage']"
+    close_msg = "xpath=>//button[@aria-label='close']"
 
     #identifier
     identifierName = "xpath=>//select[@name='name']"
