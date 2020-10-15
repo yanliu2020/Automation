@@ -34,6 +34,7 @@ class SystemLogin(BasePage):
             logger.error('not in login page')
         self.input_username(username)
         self.input_password(password)
+        self.sleep(5)
         self.click_login()
         if HomePage(self.driver).is_visibility_homepage() == True:
             logger.info('login success')

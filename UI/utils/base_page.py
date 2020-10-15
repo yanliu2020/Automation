@@ -389,7 +389,7 @@ class BasePage(object):
         :param value: option value=
         :return:
         """
-        self.execute_script_click(selector)
+        self.click(selector)
         self.sleep(2)
         Select(self.find_element(selector)).select_by_value(value)
 
@@ -412,7 +412,7 @@ class BasePage(object):
         :param selector
         :return:
         """
-        self.execute_script_click(selector)
+        self.click(selector)
         self.find_element(selector).send_keys(Keys.CONTROL,'a')
         self.find_element(selector).send_keys(Keys.BACKSPACE)
 
@@ -458,3 +458,52 @@ class BasePage(object):
         else:
             print("FFFF")
             return False
+
+    def exist_element(self, selector):
+        """
+         这个地方为什么是根据=>来切割字符串，请看页面里定位元素的方法
+         submit_btn = "id=>su"
+         login_lnk = "xpath => //*[@id='u1']/a[7]"  # 百度首页登录链接定位
+         如果采用等号，结果很多xpath表达式中包含一个=，这样会造成切割不准确，影响元素定位
+        :param selector:
+        :return: element
+        """
+        element = None
+        if '=>' not in selector:
+            element = self.find_element_by_wait(By.ID, selector)
+            if element is None:
+                return False
+            else:
+                return element
+        selector_by = selector.split('=>')[0]
+        selector_value = selector.split('=>')[1]
+        # 通过8中方式对元素进行定位
+        if selector_by == "i" or selector_by == 'id':
+            element = self.find_element_by_wait(By.ID, selector_value)
+
+        elif selector_by == "n" or selector_by == 'name':
+            element = self.find_element_by_wait(By.NAME, selector_value)
+
+        elif selector_by == "c" or selector_by == 'class_name':
+            element = self.find_element_by_wait(By.CLASS_NAME, selector_value)
+
+        elif selector_by == "l" or selector_by == 'link_text':
+            element = self.find_element_by_wait(By.LINK_TEXT, selector_value)
+
+        elif selector_by == "p" or selector_by == 'partial_link_text':
+            element = self.find_element_by_wait(By.PARTIAL_LINK_TEXT, selector_value)
+
+        elif selector_by == "t" or selector_by == 'tag_name':
+            element = self.find_element_by_wait(By.TAG_NAME, selector_value)
+
+        elif selector_by == "x" or selector_by == 'xpath':
+            element = self.find_element_by_wait(By.XPATH, selector_value)
+
+        elif selector_by == "css" or selector_by == 'css_selector':
+            element = self.find_element_by_wait(By.CSS_SELECTOR, selector_value)
+        else:
+            raise NameError("Please enter a valid type of targeting elements.")
+        if element is None:
+            return False
+        else:
+            return element

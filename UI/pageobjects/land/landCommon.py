@@ -121,7 +121,7 @@ class LandCommonPage(BasePage):
                 logger.info(msg="sectionName %s not found!" % sectionName)
             else:
                 # self.scroll_into_view(LandDetailsEntity().get_section_name(sectionName))
-                if sectionName in ("Location From County Seat", "Locations", "Characteristics", "Management", "Uplands",
+                if sectionName in ("Location From County Seat", "Location", "Characteristics", "Management", "Uplands",
                                    "Survey"):
                     if buttonName == "History":
                         seciton_value_list = []
@@ -152,7 +152,6 @@ class LandCommonPage(BasePage):
                     self.click(LandDetailsEntity().get_specail_operator(section_item[0], buttonName))
                     self.sleep(2)
 
-
     def delete(self):
         """
         # Execute delete
@@ -168,21 +167,11 @@ class LandCommonPage(BasePage):
 
     def required_validation(self):
         self.sleep(1)
-        # required_list = self.find_elements(LandCommonEntity.required_field)
         field_name_list = []
         msg_required_list = []
-        # for i,item in enumerate(required_list):
-        #     if item.text == "*":
-        #         field_name_list.append((self.find_element(LandCommonEntity().get_field_name(i+1)).text).rstrip('*') + " is required.")
-        print("1111")
-        print(len(self.find_elements(LandCommonEntity.field_section)))
-        print("1111")
-        for i in range(1,len(self.find_elements(LandCommonEntity.field_section))):
-            print("222")
-            print(len(self.find_elements(LandCommonEntity().get_fields_of_section(i))))
-            for j in range(1,len(self.find_elements(LandCommonEntity().get_fields_of_section(i)))):
-                if  self.find_element(LandCommonEntity().get_required_name(i,j)):
-                    print(len(self.find_elements(LandCommonEntity().get_fields_of_section(i))))
+        for i in range(1,len(self.find_elements(LandCommonEntity.field_section))+1):
+            for j in range(1,len(self.find_elements(LandCommonEntity().get_fields_of_section(i)))+1):
+                if  self.exist_element(LandCommonEntity().get_required_name(i,j)) != False:
                     field_name_list.append((self.find_element(LandCommonEntity().get_fields_name(i,j)).text).rstrip(
                         '*') + " is required.")
         print("!!!!!")
