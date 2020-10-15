@@ -130,7 +130,7 @@ class BasePage(object):
     def type(self, selector, text):
 
         el = self.find_element(selector)
-        el.clear()
+        # el.clear()
         try:
             el.send_keys(text)
             logger.info("Had type \' %s \' in inputBox" % text)
@@ -389,7 +389,7 @@ class BasePage(object):
         :param value: option value=
         :return:
         """
-        self.click(selector)
+        self.execute_script_click(selector)
         self.sleep(2)
         Select(self.find_element(selector)).select_by_value(value)
 
@@ -402,12 +402,17 @@ class BasePage(object):
         self.click(selector)
         Select(self.find_element(selector)).select_by_index(index)
 
+    def drop_select_click(self,selector1,selector2):
+        self.click(selector1)
+        self.move_to_element(selector2)
+        self.click(selector2)
+
     def ctrl_all(self,selector):
         """全选清除操作
         :param selector
         :return:
         """
-        self.click(selector)
+        self.execute_script_click(selector)
         self.find_element(selector).send_keys(Keys.CONTROL,'a')
         self.find_element(selector).send_keys(Keys.BACKSPACE)
 

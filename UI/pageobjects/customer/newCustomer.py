@@ -225,6 +225,20 @@ class NewCustomerPage(BasePage):
 
 
 
+    def switch_page(self):
+        """
+         # switch page
+         :return:
+         """
+        if self.find_element(NewCustomerEntity.confirm_dialog).text in "Are you sure you want to navigate away from this page? Doing so will lose any unsaved data.":
+            self.execute_script_click(NewCustomerEntity.get_leave("Yes"))
+
+
+
+
+
+
+
 
 
 

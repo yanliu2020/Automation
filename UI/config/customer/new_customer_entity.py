@@ -36,6 +36,12 @@ class NewCustomerEntity(object):
 
     #save
     save = "xpath=>//button[text()='Save']"
+    #leave
+    leave = "xpath=>//button[text()='%s']"
+    def get_leave(self,loc):
+        return  self.leave %loc
+    #confirm dialog
+    confirm_dialog = "xpath=>//div[@class='swal-text']"
 
     #Contact：1和3 ，name：salutation和suffix
     contact_select = "xpath=>//form[@class='ie-fix-flex']/div[2]//div[@class='col-md-8']/div[%s]//select[@name='%s']"

@@ -148,6 +148,7 @@ class LandCommonPage(BasePage):
                             return True
                         else:
                             return False
+                    self.sleep(2)
                     self.click(LandDetailsEntity().get_specail_operator(section_item[0], buttonName))
                     self.sleep(2)
 
@@ -167,12 +168,23 @@ class LandCommonPage(BasePage):
 
     def required_validation(self):
         self.sleep(1)
-        required_list = self.find_elements(LandCommonEntity.required_field)
+        # required_list = self.find_elements(LandCommonEntity.required_field)
         field_name_list = []
         msg_required_list = []
-        for i,item in enumerate(required_list):
-            if item.text == "*":
-                field_name_list.append((self.find_element(LandCommonEntity().get_field_name(i+1)).text).rstrip('*') + " is required.")
+        # for i,item in enumerate(required_list):
+        #     if item.text == "*":
+        #         field_name_list.append((self.find_element(LandCommonEntity().get_field_name(i+1)).text).rstrip('*') + " is required.")
+        print("1111")
+        print(len(self.find_elements(LandCommonEntity.field_section)))
+        print("1111")
+        for i in range(1,len(self.find_elements(LandCommonEntity.field_section))):
+            print("222")
+            print(len(self.find_elements(LandCommonEntity().get_fields_of_section(i))))
+            for j in range(1,len(self.find_elements(LandCommonEntity().get_fields_of_section(i)))):
+                if  self.find_element(LandCommonEntity().get_required_name(i,j)):
+                    print(len(self.find_elements(LandCommonEntity().get_fields_of_section(i))))
+                    field_name_list.append((self.find_element(LandCommonEntity().get_fields_name(i,j)).text).rstrip(
+                        '*') + " is required.")
         print("!!!!!")
         print(field_name_list)
         print("!!!!!")

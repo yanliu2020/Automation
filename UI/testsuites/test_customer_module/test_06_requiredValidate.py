@@ -16,6 +16,7 @@ class requiredFields(unittest.TestCase):
     def setUpClass(cls):
         cls.driver = driver
         BasePage(cls.driver).close_current_window()
+        TopMenuPage(cls.driver).select_multiple_menu(2, "customers", "New", "", "")
 
     data = excelHandle(filepath,sheetName).read_excel()
     @ddt.data(*data)
@@ -23,15 +24,12 @@ class requiredFields(unittest.TestCase):
         u"""new customer page validate required fields"""
         entityType = data['entityType']
         entityClass = data['entityClass']
-        TopMenuPage(self.driver).select_multiple_menu(2, "customers", "New", "", "")
         self.assertTrue(NewCustomerPage(self.driver).validate_required(entityType, entityClass,"Business Entity"))
 
     def test_02_contact_required(self):
         u"""new customer page validate contact required fields"""
-        TopMenuPage(self.driver).select_multiple_menu(2, "customers", "New", "", "")
         self.assertTrue(NewCustomerPage(self.driver).validate_required("Person","Sole Proprietor","Contact"))
 
     def test_03_addressIdentifier_required(self):
         u"""new customer page validate address/identifier required fields"""
-        TopMenuPage(self.driver).select_multiple_menu(2, "customers", "New", "", "")
         self.assertTrue(NewCustomerPage(self.driver).validate_required("Person","Individual","Address&Identifier"))
