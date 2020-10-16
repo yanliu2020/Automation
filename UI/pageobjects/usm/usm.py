@@ -30,7 +30,7 @@ class UsmPage(BasePage):
         """
         if self.is_usm_page() == True:
             self.sleep(2)
-            if buttonName != "New":
+            if buttonName in ("Edit","Inactivate"):
                 self.ctrl_all(UsmEntity.list_filter)
                 self.type(UsmEntity.list_filter, "automation")
                 # self.type(UsmEntity.list_filter, self.find_element(UsmEntity().get_select_column(row,column)).text)

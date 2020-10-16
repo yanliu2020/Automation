@@ -28,6 +28,7 @@ class UsmEntity(object):
     def get_input_textbox(self,loc):
         return self.input_textbox %loc
 
+
     #Capabilities/Users
     switch_tab = "xpath=>//div[@class='mb-0 card']//li/a[text()='%s']"
     def get_switch_tab(self,loc):
