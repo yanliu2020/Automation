@@ -415,6 +415,7 @@ class BasePage(object):
         self.click(selector)
         self.find_element(selector).send_keys(Keys.CONTROL,'a')
         self.find_element(selector).send_keys(Keys.BACKSPACE)
+        # self.find_element(selector).send_keys(Keys.DELETE)
 
     def ctrl_multiSelect(self,selector1,selector2):
         """多选操作
@@ -507,3 +508,12 @@ class BasePage(object):
             return False
         else:
             return element
+
+    def js_clear(self,selector):
+        element = self.find_element(selector)
+        # self.driver.execute_script("arguments[0].value = ''",element)
+        self.driver.execute_script("arguments[0].value = '';", element)
+        self.sleep(2)
+        print("###########")
+        self.driver.execute_script("arguments[0].value = '';", element)
+

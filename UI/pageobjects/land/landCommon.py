@@ -169,8 +169,8 @@ class LandCommonPage(BasePage):
         self.sleep(1)
         field_name_list = []
         msg_required_list = []
-        for i in range(1,len(self.find_elements(LandCommonEntity.field_section))+1):
-            for j in range(1,len(self.find_elements(LandCommonEntity().get_fields_of_section(i)))+1):
+        for i in range(len(self.find_elements(LandCommonEntity.field_section))+1):
+            for j in range(len(self.find_elements(LandCommonEntity().get_fields_of_section(i)))+1):
                 if  self.exist_element(LandCommonEntity().get_required_name(i,j)) != False:
                     field_name_list.append((self.find_element(LandCommonEntity().get_fields_name(i,j)).text).rstrip(
                         '*') + " is required.")

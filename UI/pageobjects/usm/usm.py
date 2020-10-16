@@ -18,9 +18,8 @@ class UsmPage(BasePage):
         :param  tabName : Roles，Users
         :return:
         """
-        if self.is_usm_page() == True:
-            self.find_element_by_wait("xpath", UsmEntity().get_record_tab(tabName))
-            self.click(UsmEntity().get_record_tab(tabName))
+        self.find_element_by_wait("xpath", UsmEntity().get_record_tab(tabName))
+        self.click(UsmEntity().get_record_tab(tabName))
 
     def click_button(self,buttonName,row):
         """
@@ -33,8 +32,7 @@ class UsmPage(BasePage):
             if buttonName in ("Edit","Inactivate"):
                 self.ctrl_all(UsmEntity.list_filter)
                 self.type(UsmEntity.list_filter, "automation")
-                # self.type(UsmEntity.list_filter, self.find_element(UsmEntity().get_select_column(row,column)).text)
-                self.sleep(2)
+                self.sleep(5)
                 if "background" not in self.find_element(
                         UsmEntity().get_select_record(row)).get_attribute('style'):
                     self.click(UsmEntity().get_select_record(row))

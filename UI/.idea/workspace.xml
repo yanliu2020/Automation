@@ -31,7 +31,7 @@
     <SUITE FILE_PATH="coverage/UI$Unittests_in_test_new_customer_py.coverage" NAME="Unittests in test_new_customer.py Coverage Results" MODIFIED="1591605205238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_02_customer" />
     <SUITE FILE_PATH="coverage/UI$Unittests_in_ddt_test_py.coverage" NAME="Unittests in ddt_test.py Coverage Results" MODIFIED="1591844904372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_other" />
     <SUITE FILE_PATH="coverage/UI$Unittests_in_test_01_newCustomer_py.coverage" NAME="Unittests in test_01_newCustomer.py Coverage Results" MODIFIED="1591926028181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_other" />
-    <SUITE FILE_PATH="coverage/UI$Unittests_in_test_01_usm_py.coverage" NAME="Unittests in test_01_usm.py Coverage Results" MODIFIED="1602816144178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_usermanagement_module" />
+    <SUITE FILE_PATH="coverage/UI$Unittests_in_test_01_usm_py.coverage" NAME="Unittests in test_01_usm.py Coverage Results" MODIFIED="1602836634230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_usermanagement_module" />
     <SUITE FILE_PATH="coverage/UI$Unittests_in_test_scroll_py.coverage" NAME="Unittests in test_scroll.py Coverage Results" MODIFIED="1584761092499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_02_user" />
     <SUITE FILE_PATH="coverage/UI$run_all_case.coverage" NAME="run_all_case Coverage Results" MODIFIED="1584708858286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testrunner" />
     <SUITE FILE_PATH="coverage/UI$Unittests_in_test_entity_tab__py.coverage" NAME="Unittests in test_entity_tab_.py Coverage Results" MODIFIED="1591172563356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_03_customer_record" />
@@ -93,30 +93,7 @@
     <favorites_list name="UI" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test_01_usm.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/testsuites/test_usermanagement_module/test_01_usm.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-125">
-              <caret line="22" column="65" lean-forward="false" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
-              <folding>
-                <element signature="e#23#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="usm.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pageobjects/usm/usm.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1243">
-              <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -214,16 +191,16 @@
         <option value="$PROJECT_DIR$/testsuites/test_land_module/test_02_land_record.py" />
         <option value="$PROJECT_DIR$/testsuites/test_land_module/test_03_land_section.py" />
         <option value="$PROJECT_DIR$/pageobjects/land/Summary.py" />
-        <option value="$PROJECT_DIR$/testsuites/test_land_module/test_03_land_special.py" />
         <option value="$PROJECT_DIR$/config/land/land_common_entity.py" />
         <option value="$PROJECT_DIR$/config/customer/new_customer_entity.py" />
         <option value="$PROJECT_DIR$/pageobjects/customer/newCustomer.py" />
         <option value="$PROJECT_DIR$/testsuites/test_customer_module/test_06_requiredValidate.py" />
-        <option value="$PROJECT_DIR$/pageobjects/land/landCommon.py" />
         <option value="$PROJECT_DIR$/pageobjects/login/login.py" />
         <option value="$PROJECT_DIR$/config/usm/usm_entity.py" />
-        <option value="$PROJECT_DIR$/utils/base_page.py" />
+        <option value="$PROJECT_DIR$/pageobjects/land/landCommon.py" />
+        <option value="$PROJECT_DIR$/testsuites/test_land_module/test_03_land_special.py" />
         <option value="$PROJECT_DIR$/pageobjects/usm/usm.py" />
+        <option value="$PROJECT_DIR$/utils/base_page.py" />
         <option value="$PROJECT_DIR$/testsuites/test_usermanagement_module/test_01_usm.py" />
       </list>
     </option>
@@ -276,35 +253,13 @@
             <path>
               <item name="UI" type="b2602c69:ProjectViewProjectNode" />
               <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="testrunner" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
               <item name="testsuites" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="testsuites" type="462c0819:PsiDirectoryNode" />
-              <item name="test_customer_module" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="testsuites" type="462c0819:PsiDirectoryNode" />
-              <item name="test_land_module" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UI" type="b2602c69:ProjectViewProjectNode" />
               <item name="UI" type="462c0819:PsiDirectoryNode" />
               <item name="testsuites" type="462c0819:PsiDirectoryNode" />
               <item name="test_usermanagement_module" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -324,19 +279,19 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="SQL Server (Microsoft)" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Automation\UI\testsuites\test_customer_module" />
-      <recent name="E:\Automation\UI\testsuites\other" />
-      <recent name="E:\Automation\UI\getdata" />
-      <recent name="E:\Automation\UI\testsuites\test_other" />
-      <recent name="E:\Automation\UI\testsuites\others" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Automation\UI\getdata" />
       <recent name="E:\Automation\UI\utils" />
       <recent name="E:\Automation\UI\testrunner" />
       <recent name="E:\Automation\UI\testdata" />
       <recent name="E:\Automation\UI\testsuites\test_02_customer" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Automation\UI\testsuites\test_customer_module" />
+      <recent name="E:\Automation\UI\testsuites\other" />
+      <recent name="E:\Automation\UI\getdata" />
+      <recent name="E:\Automation\UI\testsuites\test_other" />
+      <recent name="E:\Automation\UI\testsuites\others" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -511,35 +466,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_01_usm_py - 2020.10.16 at 09h 05m 18s.xml">
+    <history-entry file="Unittests_in_test_01_usm_py - 2020.10.16 at 15h 56m 09s.xml">
       <configuration name="Unittests in test_01_usm.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_01_usm_py - 2020.10.16 at 10h 00m 22s.xml">
+    <history-entry file="Unittests_in_test_01_usm_py - 2020.10.16 at 15h 57m 18s.xml">
       <configuration name="Unittests in test_01_usm.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_01_usm_py - 2020.10.16 at 10h 15m 36s.xml">
+    <history-entry file="Unittests_in_test_01_usm_py - 2020.10.16 at 16h 01m 05s.xml">
       <configuration name="Unittests in test_01_usm.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_01_usm_py - 2020.10.16 at 10h 43m 15s.xml">
+    <history-entry file="Unittests_in_test_01_usm_py - 2020.10.16 at 16h 05m 57s.xml">
       <configuration name="Unittests in test_01_usm.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_02_land_record_py - 2020.10.15 at 15h 38m 40s.xml">
-      <configuration name="Unittests in test_02_land_record.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_01_usm_py - 2020.10.16 at 16h 10m 15s.xml">
+      <configuration name="Unittests in test_01_usm.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_02_land_record_py - 2020.10.15 at 15h 40m 51s.xml">
-      <configuration name="Unittests in test_02_land_record.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_01_usm_py - 2020.10.16 at 16h 11m 54s.xml">
+      <configuration name="Unittests in test_01_usm.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_02_land_record_py - 2020.10.15 at 15h 41m 47s.xml">
-      <configuration name="Unittests in test_02_land_record.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_01_usm_py - 2020.10.16 at 16h 15m 42s.xml">
+      <configuration name="Unittests in test_01_usm.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_02_land_record_py - 2020.10.15 at 15h 43m 33s.xml">
-      <configuration name="Unittests in test_02_land_record.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_01_usm_py - 2020.10.16 at 16h 20m 09s.xml">
+      <configuration name="Unittests in test_01_usm.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_02_land_record_py - 2020.10.15 at 15h 44m 18s.xml">
-      <configuration name="Unittests in test_02_land_record.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_01_usm_py - 2020.10.16 at 16h 23m 16s.xml">
+      <configuration name="Unittests in test_01_usm.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_06_requiredValidate_py - 2020.10.15 at 14h 57m 38s.xml">
-      <configuration name="Unittests in test_06_requiredValidate.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_01_usm_py - 2020.10.16 at 16h 31m 14s.xml">
+      <configuration name="Unittests in test_01_usm.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
@@ -557,14 +512,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="7.163324E-4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="300" height="677" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10810811" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22567567" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.05135135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25143266" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -886,6 +840,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
           <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -893,13 +848,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
           <caret line="52" column="90" lean-forward="false" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pageobjects/land/Summary.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -907,21 +856,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
           <caret line="31" column="54" lean-forward="false" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pageobjects/land/landCommon.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3725">
-          <caret line="152" column="33" lean-forward="false" selection-start-line="152" selection-start-column="33" selection-end-line="152" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testsuites/test_land_module/test_03_land_special.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -950,14 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pageobjects/login/login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/usm/usm_entity.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -966,34 +892,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/base_page.py">
+    <entry file="file://$PROJECT_DIR$/pageobjects/land/landCommon.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="414" column="28" lean-forward="false" selection-start-line="414" selection-start-column="28" selection-end-line="414" selection-end-column="28" />
+        <state relative-caret-position="399">
+          <caret line="176" column="22" lean-forward="true" selection-start-line="176" selection-start-column="22" selection-end-line="176" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pageobjects/land/Summary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="85" column="8" lean-forward="false" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testsuites/test_land_module/test_03_land_special.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="51" column="53" lean-forward="true" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/browser_engine.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="71" column="40" lean-forward="false" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
+        <state relative-caret-position="83">
+          <caret line="71" column="39" lean-forward="false" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pageobjects/login/login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="21" column="47" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/base_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="721">
+          <caret line="423" column="11" lean-forward="true" selection-start-line="423" selection-start-column="11" selection-end-line="423" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pageobjects/usm/usm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1243">
-          <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+        <state relative-caret-position="296">
+          <caret line="32" column="23" lean-forward="false" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testsuites/test_usermanagement_module/test_01_usm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-125">
-          <caret line="22" column="65" lean-forward="false" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
+        <state relative-caret-position="1325">
+          <caret line="53" column="31" lean-forward="true" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
           <folding>
             <element signature="e#23#38#0" expanded="true" />
           </folding>
