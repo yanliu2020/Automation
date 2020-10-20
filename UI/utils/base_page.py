@@ -515,5 +515,5 @@ class BasePage(object):
         self.driver.execute_script("arguments[0].value = '';", element)
         self.sleep(2)
         print("###########")
-        self.driver.execute_script("arguments[0].value = '';", element)
+
 

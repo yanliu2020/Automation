@@ -33,16 +33,16 @@ class USM(unittest.TestCase):
 
     def test_04_removeMultiCapability_removeMultiUser(self):
         u"""edit role:remove MultiCapability removeMultiUser"""
-        UsmPage(self.driver).switch_tab("Users")
-        UsmPage(self.driver).switch_tab("Roles")
+        # UsmPage(self.driver).switch_tab("Users")
+        # UsmPage(self.driver).switch_tab("Roles")
         UsmPage(self.driver).click_button("Edit",1)
         capabilityNamelist = ['Business Entity', 'Business Entity Alias']
         self.assertTrue(UsmPage(self.driver).operation("remove","","Roles","Edit",capabilityNamelist))
 
     def test_05_role_inactivate(self):
         u"""inactivate role"""
-        UsmPage(self.driver).switch_tab("Users")
-        UsmPage(self.driver).switch_tab("Roles")
+        # UsmPage(self.driver).switch_tab("Users")
+        # UsmPage(self.driver).switch_tab("Roles")
         UsmPage(self.driver).click_button("Inactivate",1)
         capabilityNamelist = []
         self.assertTrue(UsmPage(self.driver).operation("","","Roles","Inactivate",capabilityNamelist))
@@ -68,8 +68,8 @@ class USM(unittest.TestCase):
 
     def test_09_user_remove2Role(self):
         u"""edit a user"""
-        UsmPage(self.driver).switch_tab("Roles")
-        UsmPage(self.driver).switch_tab("Users")
+        # UsmPage(self.driver).switch_tab("Roles")
+        # UsmPage(self.driver).switch_tab("Users")
         UsmPage(self.driver).click_button("Edit", 1)
         capabilityNamelist = []
         self.assertTrue(UsmPage(self.driver).operation("remove","","Users","Edit",capabilityNamelist))

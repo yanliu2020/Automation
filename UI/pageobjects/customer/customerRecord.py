@@ -253,6 +253,7 @@ class CustomerRecordPage(BasePage):
         :param : salutation,firstName,middleName,lastName,suffix,contactRole
         :return:
         """
+        self.sleep(2)
         self.drop_select(CustomerRecordEntity().get_field_select("salutation"),salutation)
         self.ctrl_all(CustomerRecordEntity().get_field_input("firstName"))
         self.type(CustomerRecordEntity().get_field_input("firstName"),BasePage(self.driver).randomData("string", 6))
