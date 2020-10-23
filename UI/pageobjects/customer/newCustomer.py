@@ -22,8 +22,8 @@ class NewCustomerPage(BasePage):
         """
         if self.is_newCustomer_page()== True:
             if self.exist_element(NewCustomerEntity.confirm_dialog):
-                if self.find_element(NewCustomerEntity.confirm_dialog).text in "Are you sure you want to navigate away from this page? Doing so will lose any unsaved data":
-                    self.click(NewCustomerEntity().get_leave("Cancel"))
+                    self.refresh_page()
+                    # self.click(NewCustomerEntity().get_leave("Cancel"))
             self.drop_select(NewCustomerEntity().get_field_select("typeName"), entityType)
             self.drop_select(NewCustomerEntity().get_field_select("entityClass"), entityClass)
             randomData = BasePage(self.driver).randomData("string", 6)
@@ -233,7 +233,7 @@ class NewCustomerPage(BasePage):
          # switch page
          :return:
          """
-        if self.find_element(NewCustomerEntity.confirm_dialog).text in "Are you sure you want to navigate away from this page? Doing so will lose any unsaved data.":
+        if self.exist_element(NewCustomerEntity.confirm_dialog).text in "Are you sure you want to navigate away from this page? Doing so will lose any unsaved data.":
             self.execute_script_click(NewCustomerEntity.get_leave("Yes"))
 
 

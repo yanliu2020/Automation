@@ -23,7 +23,7 @@ sender = '1925719012@qq.com'
 
 # 多个接收邮箱，单个收件人的话，直接是receiver='XXX@126.com'
 to_list1 = ['Alice.Tang@an-chen.com']
-to_list2 = ['Alice.Tang@an-chen.com','Yan.Liu <Yan.Liu@an-chen.com>','chen fiona <fiona.chen@an-chen.com>','Shelly Chen <shelly.chen@redriver.com>']
+to_list2 = ['Alice.Tang@an-chen.com','fiona.cheng@an-chen.com','Shelly Chen <shelly.chen@redriver.com>']
 
 config = ConfigParser()
 file_path = config_path + 'config.ini'

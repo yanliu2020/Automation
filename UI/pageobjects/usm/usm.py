@@ -29,14 +29,27 @@ class UsmPage(BasePage):
         """
         if self.is_usm_page() == True:
             self.sleep(2)
-            if buttonName in ("Edit","Inactivate"):
-                self.ctrl_all(UsmEntity.list_filter)
+            if buttonName in ("Edit", "Inactivate"):
+                self.find_element(UsmEntity.list_filter)
+                self.js_clear(UsmEntity.list_filter)
                 self.type(UsmEntity.list_filter, "automation")
-                self.sleep(5)
+                self.sleep(2)
                 if "background" not in self.find_element(
                         UsmEntity().get_select_record(row)).get_attribute('style'):
                     self.click(UsmEntity().get_select_record(row))
-            self.click(UsmEntity().get_operator(buttonName))
+                if self.exist_element(UsmEntity().get_specific_row(row, "automation")):
+                    self.click(UsmEntity().get_operator(buttonName))
+                else:
+                    self.find_element(UsmEntity.list_filter)
+                    self.js_clear(UsmEntity.list_filter)
+                    self.type(UsmEntity.list_filter, "automation")
+                    self.sleep(2)
+                    if "background" not in self.find_element(
+                            UsmEntity().get_select_record(row)).get_attribute('style'):
+                        self.click(UsmEntity().get_select_record(row))
+                    self.click(UsmEntity().get_operator(buttonName))
+            else:
+                self.click(UsmEntity().get_operator(buttonName))
 
     def operation(self,flag,index,section,buttonName,capabilityNamelist=[]):
         """

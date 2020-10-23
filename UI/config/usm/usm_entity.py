@@ -18,6 +18,11 @@ class UsmEntity(object):
     def get_select_record(self,loc):
         return  self.select_record %loc
 
+    #选中具体行
+    specific_row = "xpath=>//div[@class='card']//div[@class='glo-row']//div[@class='rt-tr-group'][%s]/div/div[contains(text(),'%s')]"
+    def get_specific_row(self,loc1,loc2):
+        return  self.specific_row %(loc1,loc2)
+
    #选中列
     select_column = "xpath=>//div[@class='card']//div[@class='glo-row']//div[@class='rt-tr-group'][%s]/div/div[%s]"
     def get_select_column(self,loc1,loc2):

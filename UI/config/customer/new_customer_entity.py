@@ -37,7 +37,7 @@ class NewCustomerEntity(object):
     #save
     save = "xpath=>//button[text()='Save']"
     #leave
-    leave = "xpath=>//button[text()='%s']"
+    leave = "xpath=>//form[@class='ie-fix-flex']//button[text()='%s']"
     def get_leave(self,loc):
         return  self.leave %loc
     #confirm dialog

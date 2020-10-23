@@ -5,7 +5,7 @@ from config.land.land_details_entity import LandDetailsEntity
 from config.land.land_common_entity import LandCommonEntity
 from pageobjects.land.landCommon import LandCommonPage
 
-class SummaryPage(BasePage):
+class LandDetailPage(BasePage):
     def interest(self,interestClass,interestStatus):
         self.drop_select(LandCommonEntity().get_field_select("class"),interestClass)
         self.ctrl_all(LandCommonEntity().get_field_input("percent"))
@@ -51,12 +51,12 @@ class SummaryPage(BasePage):
         else:
             return False
 
-    def SaleDetails(self,multiTractSale,reservationEasement):
+    def SaleDetails(self,multiTractSaleIndicator,reservationEasement):
         self.ctrl_all(LandCommonEntity().get_field_input("minimumBidAmount"))
         self.type(LandCommonEntity().get_field_input("minimumBidAmount"), BasePage(self.driver).randomData("number", 2))
         self.ctrl_all(LandCommonEntity().get_field_textarea("multiTractComment"))
         self.type(LandCommonEntity().get_field_textarea("multiTractComment"), BasePage(self.driver).randomData("string", 6))
-        self.drop_select(LandCommonEntity().get_field_select("multiTractSale"), multiTractSale)
+        self.drop_select(LandCommonEntity().get_field_select("multiTractSale"), multiTractSaleIndicator)
         self.ctrl_all(LandCommonEntity().get_field_input("nearestCommunity"))
         self.type(LandCommonEntity().get_field_input("nearestCommunity"), BasePage(self.driver).randomData("string", 6))
         self.drop_select(LandCommonEntity().get_field_select("reservationEasementRequired"), reservationEasement)
@@ -70,20 +70,30 @@ class SummaryPage(BasePage):
         else:
             return False
 
-    def locationCountySeat(self,direction,deviation):
-        self.drop_select(LandCommonEntity().get_field_select("direction"),direction)
-        self.ctrl_all(LandCommonEntity().get_field_special_input("distance"))
-        self.type(LandCommonEntity().get_field_special_input("distance"), BasePage(self.driver).randomData("number", 1))
-        self.drop_select(LandCommonEntity().get_field_select("deviation"), deviation)
-        self.ctrl_all(LandCommonEntity().get_field_special_input("degree"))
-        self.type(LandCommonEntity().get_field_special_input("degree"), BasePage(self.driver).randomData("number", 1))
+    def locationCountySeat(self,directionFromCountySeat,deviationFromCountySeat):
+        self.drop_select(LandCommonEntity().get_field_select("direction"),directionFromCountySeat)
+        self.ctrl_all(LandCommonEntity().get_input_special("distance"))
+        self.type(LandCommonEntity().get_input_special("distance"), BasePage(self.driver).randomData("number", 1))
+        self.drop_select(LandCommonEntity().get_field_select("deviation"), deviationFromCountySeat)
+        self.ctrl_all(LandCommonEntity().get_input_special("degree"))
+        self.type(LandCommonEntity().get_input_special("degree"), BasePage(self.driver).randomData("number", 1))
         self.click(LandCommonEntity().get_land_button("Save"))
         if 'successfully' in LandCommonPage(self.driver).get_tips_msg():
             return True
         else:
             return False
 
-    def location(self,city,legalAccess,withinCity):
-        # self.drop_select(LandCommonEntity().get_field_select("city"), city)
-        self.drop_select(LandCommonEntity().get_field_select("legalAccess"), legalAccess)
-        self.drop_select(LandCommonEntity().get_field_select("withinCity"), withinCity)
+    def location(self,legalAccessIndicator,withinCityIndicator):
+        self.ctrl_all(LandCommonEntity().get_input_special("street1"))
+        self.type(LandCommonEntity().get_input_special("street1"),
+                  BasePage(self.driver).randomData("string", 6))
+        self.ctrl_all(LandCommonEntity().get_textarea_specail("directions"))
+        self.type(LandCommonEntity().get_textarea_specail("directions"),
+                  BasePage(self.driver).randomData("string", 6))
+        self.drop_select(LandCommonEntity().get_field_select("legalAccess"), legalAccessIndicator)
+        self.drop_select(LandCommonEntity().get_field_select("withinCity"), withinCityIndicator)
+        self.click(LandCommonEntity().get_land_button("Save"))
+        if 'successfully' in LandCommonPage(self.driver).get_tips_msg():
+            return True
+        else:
+            return False

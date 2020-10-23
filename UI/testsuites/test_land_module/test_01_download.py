@@ -10,7 +10,7 @@ filepath = excel_path +"TestData.xlsx"
 sheetName = "Land_Forms"
 sheetName2 = "Land_Reports"
 @ddt.ddt
-class downLoad(unittest.TestCase):
+class DownLoad(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):

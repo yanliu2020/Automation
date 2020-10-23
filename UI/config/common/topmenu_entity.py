@@ -1,14 +1,7 @@
 # -*- coding: utf-8 -*-
-
 class TopMenuEntity(object):
     #logo
     logo = "id=>alano-glo-brand-logo"
-
-    #用户头像
-    user_logo = "xpath=>//div[@class='header-badge-glo']"
-
-    #退出登录
-    logout_user = "xpath=>//a[text()='Logout']"
 
     #first_menu
     first_menu = "id=>%s"
@@ -17,6 +10,7 @@ class TopMenuEntity(object):
 
     #second_menu_list
     second_menu_list = "xpath=>//ul[@class='dropdown-menu multi-level show']/li/a"
+
     #second_menu
     second_menu = "xpath=>//ul[@class='dropdown-menu multi-level show']/li[%s]/a"
     def get_second_menu(self,loc):
@@ -26,6 +20,7 @@ class TopMenuEntity(object):
     third_menu_list = "xpath=>//ul[@class='dropdown-menu multi-level show']/li[%s]/ul/li/a"
     def get_third_menu_list(self,loc):
         return self.third_menu_list %loc
+
     #third_menu
     third_menu = "xpath=>//ul[@class='dropdown-menu multi-level show']/li[%s]/ul/li[%s]/a"
     def get_third_menu(self,loc1,loc2):
