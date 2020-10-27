@@ -20,15 +20,21 @@ file_name = to_number()
 
 def runtest():
     discover01 = unittest.TestLoader().discover(
-        start_dir=testsuites_path + "test_land_module//", pattern='test_*.py', top_level_dir=None)
+        start_dir=testsuites_path + "test_land_module//", pattern='test_01_*.py', top_level_dir=None)
+    discover02 = unittest.TestLoader().discover(
+        start_dir=testsuites_path + "test_land_module//", pattern='test_08_*.py', top_level_dir=None)
+    discover03 = unittest.TestLoader().discover(
+        start_dir=testsuites_path + "test_land_module//", pattern='test_09_*.py', top_level_dir=None)
 
     testsuite = unittest.TestSuite()
     testsuite.addTest(discover01)
+    testsuite.addTest(discover02)
+    testsuite.addTest(discover03)
 
     filename = report_path + file_name + '_report.html'
 
     with open(filename,'wb') as fp:
-        runner = HTMLTestRunner_cn.HTMLTestRunner(stream=fp,title='UI Automation For Land',description='Testcase Excution:')
+        runner = HTMLTestRunner_cn.HTMLTestRunner(stream=fp,title='UI Automation for Land',description='Testcase Excution:')
         runner.run(testsuite)
 
 

@@ -17,19 +17,19 @@ class LandAcquisition(unittest.TestCase):
         cls.driver = driver
         TopMenuPage(cls.driver).select_multiple_menu(3, "land", "New", "Acquisition", "")
 
-    def test_01_Acquisition_required(self):
+    def test_01_required(self):
         u"""top new Acquisition required"""
         # LandCommonPage(self.driver).top_operate("Acquisition Land", "Actions ", "New")
         self.assertTrue(LandCommonPage(self.driver).required_validation())
 
-    def test_02_New_Acquisition(self):
+    def test_02_new(self):
         u"""new Acquisition"""
         acquisitionClass = dbConnect().getdata(*(excelHandle(filepath,sheetName).read_excel("acquisitionClass")))
         acquisitionMethod = dbConnect().getdata(*(excelHandle(filepath, sheetName).read_excel("acquisitionMethod")))
         self.assertTrue(
             AcquisitionPage(self.driver).Acquisition(acquisitionClass,acquisitionMethod))
 
-    def test_03_edit_Acquisition(self):
+    def test_03_edit(self):
         u"""edit Acquisition"""
         LandCommonPage(self.driver).top_operate("Acquisition Land","Actions ","Edit")
         acquisitionClass = dbConnect().getdata(*(excelHandle(filepath, sheetName).read_excel("acquisitionClass")))
@@ -37,7 +37,7 @@ class LandAcquisition(unittest.TestCase):
         self.assertTrue(
             AcquisitionPage(self.driver).Acquisition(acquisitionClass, acquisitionMethod))
 
-    def test_04_delete_Acquisition(self):
+    def test_04_delete(self):
         u"""delete Acquisition"""
         self.assertTrue(LandCommonPage(self.driver).top_operate("Acquisition Land","Actions ","Delete"))
 

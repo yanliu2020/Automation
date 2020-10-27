@@ -17,12 +17,12 @@ class landExcessAcreage(unittest.TestCase):
         cls.driver = driver
         TopMenuPage(cls.driver).select_multiple_menu(3, "land", "New", "Excess Acreage", "")
 
-    def test_01_EventCalendar_required(self):
+    def test_01_required(self):
         u"""top new ExcessAcreage required"""
         # LandCommonPage(self.driver).top_operate("Excess Acreage", "Actions ", "New")
         self.assertTrue(LandCommonPage(self.driver).required_validation())
 
-    def test_02_New_ExcessAcreage(self):
+    def test_02_new(self):
         u"""new ExcessAcreage"""
         countyName = dbConnect().getdata(*(excelHandle(filepath,sheetName).read_excel("countyName")))
         mineralsSoldIndicator = dbConnect().getdata(*(excelHandle(filepath, sheetName).read_excel("mineralsSoldIndicator")))
@@ -31,7 +31,7 @@ class landExcessAcreage(unittest.TestCase):
         self.assertTrue(
             ExcessAcreagePage(self.driver).ExcessAcreage(countyName, mineralsSoldIndicator, prefix, suffix))
 
-    def test_03_edit_EventCalendar(self):
+    def test_03_edit(self):
         u"""edit ExcessAcreage"""
         LandCommonPage(self.driver).top_operate("Excess Acreage","Actions ","Edit")
         countyName = dbConnect().getdata(*(excelHandle(filepath, sheetName).read_excel("countyName")))
@@ -42,7 +42,7 @@ class landExcessAcreage(unittest.TestCase):
         self.assertTrue(
             ExcessAcreagePage(self.driver).ExcessAcreage(countyName,mineralsSoldIndicator,prefix,suffix))
 
-    def test_04_delete_EventCalendar(self):
+    def test_04_delete(self):
         u"""delete ExcessAcreage"""
         self.assertTrue(LandCommonPage(self.driver).top_operate("Excess Acreage","Actions ","Delete"))
 

@@ -22,26 +22,26 @@ class landAppraisal(unittest.TestCase):
         # LandCommonPage(self.driver).top_operate("Land Appraisals","Actions ","New")
         self.assertTrue(LandCommonPage(self.driver).required_validation())
 
-    def test_02_New_Appraisal(self):
+    def test_02_new(self):
         u"""new Appraisal"""
         source = dbConnect().getdata(*(excelHandle(filepath,sheetName).read_excel("source")))
         estimatedValueMethod = dbConnect().getdata(*(excelHandle(filepath, sheetName).read_excel("estimatedValueMethod")))
         self.assertTrue(AppraisalPage(self.driver).Appraisal(source,estimatedValueMethod))
 
-    def test_03_edit_Appraisal(self):
+    def test_03_edit(self):
         u"""edit Appraisal"""
         LandCommonPage(self.driver).top_operate("Land Appraisals","Actions ","Edit")
         source = dbConnect().getdata(*(excelHandle(filepath,sheetName).read_excel("source")))
         estimatedValueMethod = dbConnect().getdata(*(excelHandle(filepath, sheetName).read_excel("estimatedValueMethod")))
         self.assertTrue(AppraisalPage(self.driver).Appraisal(source,estimatedValueMethod))
 
-    def test_04_delete_Appraisal(self):
+    def test_04_delete(self):
         u"""delete Appraisal"""
         self.assertTrue(LandCommonPage(self.driver).top_operate("Land Appraisals","Actions ","Delete"))
 
-    def test_05_relate_land(self):
-        u"""relate Appraisal to land"""
-        LandCommonPage(self.driver).switch_tab("Land Appraisals","Lands")
-        LandCommonPage(self.driver).entity_operator("Land Appraisals", "Lands","Relate","","")
+    # def test_05_relate_land(self):
+    #     u"""relate Appraisal to land"""
+    #     LandCommonPage(self.driver).switch_tab("Land Appraisals","Lands")
+    #     LandCommonPage(self.driver).entity_operator("Land Appraisals", "Lands","Relate","","")
 
 
