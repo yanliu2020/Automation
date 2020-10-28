@@ -32,7 +32,7 @@ def runtest():
     filename = report_path + file_name + '_report.html'
 
     with open(filename,'wb') as fp:
-        runner = HTMLTestRunner_cn.HTMLTestRunner(stream=fp,title='UI Automation For CUST/UM Module',description='Testcase Excution:')
+        runner = HTMLTestRunner_cn.HTMLTestRunner(stream=fp,title='UI Automation for CUST/UM Module',description='Testcase Excution:')
         runner.run(testsuite)
 
 
