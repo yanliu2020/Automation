@@ -97,3 +97,82 @@ class LandDetailPage(BasePage):
             return True
         else:
             return False
+
+    def characteristics(self,improvementsIndicator,utilitiesAvailableIndicator):
+        self.drop_select(LandCommonEntity().get_field_select("hasImprovements"), improvementsIndicator)
+        self.ctrl_all(LandCommonEntity().get_input_special("topography"))
+        self.type(LandCommonEntity().get_input_special("topography"),
+                  BasePage(self.driver).randomData("string", 6))
+        self.drop_select(LandCommonEntity().get_field_select("utilitiesAvailable"), utilitiesAvailableIndicator)
+        self.ctrl_all(LandCommonEntity().get_input_special("zoning"))
+        self.type(LandCommonEntity().get_input_special("zoning"),
+                  BasePage(self.driver).randomData("string", 6))
+        self.click(LandCommonEntity().get_land_button("Save"))
+        if 'successfully' in LandCommonPage(self.driver).get_tips_msg():
+            return True
+        else:
+            return False
+
+    def dispositionPlan(self,flag,dispositionAttribute):
+        if flag == 1:
+            self.drop_select(LandCommonEntity().get_field_select("attributes1"), dispositionAttribute)
+            self.type(LandCommonEntity().get_input_special("comment1"),
+                      BasePage(self.driver).randomData("string", 6))
+            self.drop_select(LandCommonEntity().get_field_select("attributes2"), dispositionAttribute)
+            self.type(LandCommonEntity().get_input_special("comment2"),
+                      BasePage(self.driver).randomData("string", 6))
+        else:
+            self.drop_select(LandCommonEntity().get_field_select("attributes"), dispositionAttribute)
+            self.ctrl_all(LandCommonEntity().get_textarea_specail("comment"))
+            self.type(LandCommonEntity().get_textarea_specail("comment"),
+                      BasePage(self.driver).randomData("string", 6))
+
+        self.click(LandCommonEntity().get_land_button("Save"))
+        if 'successfully' in LandCommonPage(self.driver).get_tips_msg():
+            return True
+        else:
+            return False
+
+    def improvement(self,improvementType):
+        self.drop_select(LandCommonEntity().get_field_select("type"), improvementType)
+        self.ctrl_all(LandCommonEntity().get_textarea_specail("note"))
+        self.type(LandCommonEntity().get_textarea_specail("note"),
+                  BasePage(self.driver).randomData("string", 6))
+        self.click(LandCommonEntity().get_land_button("Save"))
+        if 'successfully' in LandCommonPage(self.driver).get_tips_msg():
+            return True
+        else:
+            return False
+
+    def encumbrance(self,encumbranceClass):
+        self.drop_select(LandCommonEntity().get_field_select("encumbranceClass"), encumbranceClass)
+        self.ctrl_all(LandCommonEntity().get_textarea_specail("description"))
+        self.type(LandCommonEntity().get_textarea_specail("description"),
+                  BasePage(self.driver).randomData("string", 6))
+        self.click(LandCommonEntity().get_land_button("Save"))
+        if 'successfully' in LandCommonPage(self.driver).get_tips_msg():
+            return True
+        else:
+            return False
+
+    def surroundingUse(self,surroundingUseClass):
+        self.drop_select(LandCommonEntity().get_field_select("propertyClass"), surroundingUseClass)
+        self.ctrl_all(LandCommonEntity().get_textarea_specail("note"))
+        self.type(LandCommonEntity().get_textarea_specail("note"),
+                  BasePage(self.driver).randomData("string", 6))
+        self.click(LandCommonEntity().get_land_button("Save"))
+        if 'successfully' in LandCommonPage(self.driver).get_tips_msg():
+            return True
+        else:
+            return False
+
+    def utilities(self,utilityType):
+        self.drop_select(LandCommonEntity().get_field_select("propertyClass"), utilityType)
+        self.ctrl_all(LandCommonEntity().get_textarea_specail("note"))
+        self.type(LandCommonEntity().get_textarea_specail("note"),
+                  BasePage(self.driver).randomData("string", 6))
+        self.click(LandCommonEntity().get_land_button("Save"))
+        if 'successfully' in LandCommonPage(self.driver).get_tips_msg():
+            return True
+        else:
+            return False

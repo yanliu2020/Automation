@@ -29,5 +29,5 @@ class dbConnect(object):
         # self.connect.close()
 
 # if __name__ == '__main__':
-#     res = dbConnect().getdata('ALAMO','ltblInterestClass','varInterestClass')
+#     res = dbConnect().getdata('dispositionAttribute','ALAMO','ltblDispositionAttribute','varDispositionAttribute')
 

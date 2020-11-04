@@ -65,10 +65,6 @@ class LandCommonEntity(object):
     # special_section_list
     special_section_list = "xpath=>//div[@role='tabpanel']/div[@class='glo-row']//span"
 
-    # fields value on section
-    section_values = "xpath=>//div[@role='tabpanel']/div/div[%s]//div[@class='glo-field row']//input"
-    def get_section_value(self, loc):
-        return self.section_values % loc
 
     # input fields
     field_input = "xpath=>//div[@class='row form-group']//input[@name='%s']"
@@ -130,4 +126,30 @@ class LandCommonEntity(object):
     button = "xpath=>//button[text()='%s']"
     def get_land_button(self,loc):
         return self.button %loc
+
+    #Characteristics tab
+    #Characteristics,Disposition Plan
+    # Management,Uplands
+    special_left_button="xpath=>//div[@role='tabpanel']//div[@class='col-md-5']/div[1]//button[text()=' %s']"
+    def get_left_button(self,loc):
+        return self.special_left_button %loc
+
+    special_right_button = "xpath=>//div[@role='tabpanel']//div[@class='col-md-7']/div[%s]//button[text()=' %s']"
+    def get_right_button(self,loc1,loc2):
+        return self.special_right_button %(loc1,loc2)
+
+    survey_button= "xpath=>//div[@role='tabpanel']//div/div[1]//button[text()=' %s']"
+    def get_survey_button(self,loc):
+        return self.survey_button %loc
+
+    #Disposition Attributes,Improvements,Encumbrances,Surrounding Use,Utilities 从2开始
+    special_list_button= "xpath=>//div[@role='tabpanel']/div[%s]//button[text()=' %s']"
+    def get_section_button(self,loc1,loc2):
+        return self.special_list_button %(loc1,loc2)
+
+    # fields value on section:col-md-5,col-md-7,col-md-12
+    section_value = "xpath=>//div[@role='tabpanel']//div[@class='%s']/div[%s]//div[%s]/div[@class='glo-field row']//input"
+    def get_section_value(self, loc1,loc2,loc3):
+        return self.section_value % (loc1,loc2,loc3)
+
 

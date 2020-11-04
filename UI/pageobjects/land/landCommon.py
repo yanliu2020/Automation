@@ -217,6 +217,121 @@ class LandCommonPage(BasePage):
                     self.delete()
 
 
+    def special(self,title,sectionName,buttonName,row,textarea):
+        if self.is_details_page(title) == True:
+            if sectionName in ("Location From County Seat", "Location", "Characteristics", "Management", "Uplands",
+                               "Survey"):
+                if buttonName == "History":
+                    seciton_value_list = []
+                    field_list = self.special_field_value(sectionName)
+                    for a, item in enumerate(field_list):
+                        value = item.get_attribute('value')
+                        seciton_value_list.append(value)
+                    print("#####")
+                    print(seciton_value_list)
+                    print("#####")
+                    self.choose_button(sectionName,buttonName)
+                    s = []
+                    history_list = self.find_elements(LandCommonEntity().get_history_value(row))
+                    for a, item in enumerate(history_list):
+                        value = item.text
+                        s.append(value)
+                    print("!!!!")
+                    print(s)
+                    print("!!!!")
+                    self.sleep(2)
+                    self.execute_script_click(LandCommonEntity.close)
+                    if set(seciton_value_list) < set(s) or set(s) < set(
+                            seciton_value_list) or seciton_value_list == s:
+                        return True
+                    else:
+                        return False
+                self.sleep(2)
+                self.choose_button(sectionName,buttonName)
+                self.sleep(2)
+            else:
+                section_list = self.find_elements(LandCommonEntity.section_list)
+                # print(section_list)
+                section_item = None
+                for i, item in enumerate(section_list):
+                    if sectionName == item.text:
+                        section_item = (i + 1, item)
+                        break
+                if section_item is None:
+                    logger.info(msg="sectionName %s not found!" % sectionName)
+                else:
+                    # self.scroll_into_view(LandDetailsEntity().get_section_name(sectionName))
+                    if buttonName in ("New"):
+                        pass
+                    elif self.exist_element(LandCommonEntity().get_section_records(section_item[0]+1)):
+                        if self.not_selected(section_item[0]+1, row) == True:
+                            self.click(LandCommonEntity().get_select_record(section_item[0]+1, row))
+                        if buttonName in ("Details", "History"):
+                            table = []
+                            table_list = self.find_elements(LandCommonEntity().get_column_value(section_item[0]+1, row))
+                            for i, item in enumerate(table_list):
+                                value = item.text
+                                table.append(value)
+                            print("#####")
+                            print(table)
+                            print("#####")
+                            self.click(LandCommonEntity().get_section_button(section_item[0]+1, buttonName))
+                            s = []
+                            if buttonName == "Details":
+                                input_list = self.find_elements(LandCommonEntity.input_value)
+                                for a, item in enumerate(input_list):
+                                    value = item.get_attribute('value')
+                                    s.append(value)
+                                if textarea == 1:
+                                    for b, item in enumerate(self.find_elements(LandCommonEntity.textarea_value)):
+                                        value = item.text
+                                        s.append(value)
+                            else:
+                                history_list = self.find_elements(LandCommonEntity().get_history_value(row))
+                                for a, item in enumerate(history_list):
+                                    value = item.text
+                                    s.append(value)
+                            print("!!!!")
+                            print(s)
+                            print("!!!!")
+                            self.sleep(2)
+                            self.execute_script_click(LandCommonEntity.close)
+                            if set(table) < set(s) or set(s) < set(table) or table == s:
+                                return True
+                            else:
+                                return False
+                    self.click(LandCommonEntity().get_section_button(section_item[0]+1, buttonName))
+
+
+    def choose_button(self,sectionName,buttonName):
+        if sectionName in ("Location From County Seat", "Characteristics", "Disposition Plan"):
+            self.click(LandCommonEntity().get_left_button(buttonName))
+        elif sectionName in ("Location", "Management"):
+            self.click(LandCommonEntity().get_right_button(1, buttonName))
+        elif sectionName in ("Uplands"):
+            self.click(LandCommonEntity().get_right_button(2, buttonName))
+        elif sectionName in ("Land Survey"):
+            self.click(LandCommonEntity().get_survey_button(buttonName))
+
+    def special_field_value(self,sectionName):
+        if sectionName in ("Location From County Seat", "Characteristics"):
+            field_list = self.find_elements(LandCommonEntity().get_section_value("col-md-5",1,1))
+        elif sectionName in ("Disposition Plan"):
+            field_list = self.find_elements(LandCommonEntity().get_section_value("col-md-5", 1, 2))
+        elif sectionName in ("Location", "Management"):
+            field_list = self.find_elements(LandCommonEntity().get_section_value("col-md-7", 2, 1))
+        elif sectionName in ("Uplands"):
+            field_list = self.find_elements(LandCommonEntity().get_section_value("col-md-7", 2, 2))
+        elif sectionName in ("Land Survey"):
+            field_list = self.find_elements(LandCommonEntity().get_section_value("col-md-12", 1, 1))
+        return field_list
+
+
+
+
+
+
+
 
 
 
