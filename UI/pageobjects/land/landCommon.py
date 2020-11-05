@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from  utils.base_page import  BasePage
-from config.land.land_details_entity import LandDetailsEntity
 from config.land.land_common_entity import LandCommonEntity
 from utils.logger import logger
 
@@ -51,7 +50,7 @@ class LandCommonPage(BasePage):
     def entity_operator(self,title,sectionName,buttonName,row,textarea):
         """
         #Tabs
-        :param sectionName,buttonName,row
+        :param:title,sectionName,buttonName,row,textarea
         :return:
         """
         if self.is_details_page(title) == True:
@@ -107,59 +106,9 @@ class LandCommonPage(BasePage):
                             return False
                 self.click(LandCommonEntity().get_section_operator(section_item[0], buttonName))
 
-
-    def special_operator(self,title,sectionName,buttonName,row):
-        """
-        #Tabs
-        :param sectionName,buttonName,row
-        :return:
-        """
-        if self.is_details_page(title) == True:
-            special_section_list = self.find_elements(LandCommonEntity.special_section_list)
-            # print(special_section_list)
-            section_item = None
-            for i, item in enumerate(special_section_list):
-                if sectionName == item.text:
-                    section_item = (i + 1, item)
-                    break
-            if section_item is None:
-                logger.info(msg="sectionName %s not found!" % sectionName)
-            else:
-                # self.scroll_into_view(LandDetailsEntity().get_section_name(sectionName))
-                if sectionName in ("Location From County Seat", "Location", "Characteristics", "Management", "Uplands",
-                                   "Survey"):
-                    if buttonName == "History":
-                        seciton_value_list = []
-                        field_list = self.find_elements(LandCommonEntity().get_section_value(section_item[0]))
-                        for a, item in enumerate(field_list):
-                            value = item.get_attribute('value')
-                            seciton_value_list.append(value)
-                        print("#####")
-                        print(seciton_value_list)
-                        print("#####")
-                        self.click(LandCommonEntity().get_specail_operator(section_item[0], buttonName))
-                        s = []
-                        history_list = self.find_elements(LandCommonEntity().get_history_value(row))
-                        for a, item in enumerate(history_list):
-                            value = item.text
-                            s.append(value)
-                        print("!!!!")
-                        print(s)
-                        print("!!!!")
-                        self.sleep(2)
-                        self.execute_script_click(LandCommonEntity.close)
-                        if set(seciton_value_list) < set(s) or set(s) < set(
-                                seciton_value_list) or seciton_value_list == s:
-                            return True
-                        else:
-                            return False
-                    self.sleep(2)
-                    self.click(LandCommonEntity().get_specail_operator(section_item[0], buttonName))
-                    self.sleep(2)
-
     def delete(self):
         """
-        # Execute delete
+        # execute delete
         :return:
         """
         self.sleep(1)
@@ -171,6 +120,11 @@ class LandCommonPage(BasePage):
             return False
 
     def required_validation(self):
+        """
+        #validate the required fields
+        :param:
+        :return:
+        """
         self.sleep(1)
         field_name_list = []
         msg_required_list = []
@@ -205,7 +159,7 @@ class LandCommonPage(BasePage):
     def top_operate(self,title,buttonName,acitonName):
         """
         # Action Drop List
-        :param : buttonName，acitonName
+        :param : title,buttonName,acitonName
         :return:
         """
         #self.scroll_into_view(CustomerRecordEntity().get_customer_operate(buttonName))
@@ -218,12 +172,17 @@ class LandCommonPage(BasePage):
 
 
     def special(self,title,sectionName,buttonName,row,textarea):
+        """
+        #Location tab, Characteristics tab,Survey tab
+        :param:title,sectionName,buttonName,row,textarea
+        :return:
+        """
         if self.is_details_page(title) == True:
             if sectionName in ("Location From County Seat", "Location", "Characteristics", "Management", "Uplands",
                                "Survey"):
                 if buttonName == "History":
                     seciton_value_list = []
-                    field_list = self.special_field_value(sectionName)
+                    field_list = self.special_field_list(sectionName)
                     for a, item in enumerate(field_list):
                         value = item.get_attribute('value')
                         seciton_value_list.append(value)
@@ -304,6 +263,11 @@ class LandCommonPage(BasePage):
 
 
     def choose_button(self,sectionName,buttonName):
+        """
+        #The Edit, History button on Location tab, Characteristics tab,Survey tab
+        :param: sectionName,buttonName
+        :return:
+        """
         if sectionName in ("Location From County Seat", "Characteristics", "Disposition Plan"):
             self.click(LandCommonEntity().get_left_button(buttonName))
         elif sectionName in ("Location", "Management"):
@@ -313,17 +277,22 @@ class LandCommonPage(BasePage):
         elif sectionName in ("Land Survey"):
             self.click(LandCommonEntity().get_survey_button(buttonName))
 
-    def special_field_value(self,sectionName):
+    def special_field_list(self,sectionName):
+        """
+        #The fields value on Location tab, Characteristics tab,Survey tab
+        :param: sectionName
+        :return:
+        """
         if sectionName in ("Location From County Seat", "Characteristics"):
-            field_list = self.find_elements(LandCommonEntity().get_section_value("col-md-5",1,1))
+            field_list = self.find_elements(LandCommonEntity().get_field_list("col-md-5",1,1))
         elif sectionName in ("Disposition Plan"):
-            field_list = self.find_elements(LandCommonEntity().get_section_value("col-md-5", 1, 2))
+            field_list = self.find_elements(LandCommonEntity().get_field_list("col-md-5", 1, 2))
         elif sectionName in ("Location", "Management"):
-            field_list = self.find_elements(LandCommonEntity().get_section_value("col-md-7", 2, 1))
+            field_list = self.find_elements(LandCommonEntity().get_field_list("col-md-7", 2, 1))
         elif sectionName in ("Uplands"):
-            field_list = self.find_elements(LandCommonEntity().get_section_value("col-md-7", 2, 2))
+            field_list = self.find_elements(LandCommonEntity().get_field_list("col-md-7", 2, 2))
         elif sectionName in ("Land Survey"):
-            field_list = self.find_elements(LandCommonEntity().get_section_value("col-md-12", 1, 1))
+            field_list = self.find_elements(LandCommonEntity().get_field_list("col-md-12", 1, 1))
         return field_list
 
 

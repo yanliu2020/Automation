@@ -33,11 +33,6 @@ class LandCommonEntity(object):
     def get_section_operator(self, loc1, loc2):
         return self.section_operator % (loc1, loc2)
 
-     # details page>>Tabs>>Section>> special list buttons
-    specail_operator = "xpath=>//div[@role='tabpanel']/div/div[%s]//button[text()=' %s']"
-    def get_specail_operator(self, loc1, loc2):
-        return self.specail_operator % (loc1, loc2)
-
     # get_section_rows
     section_records = "xpath=>//div[@role='tabpanel']/div[%s]//div[@class='glo-row']//div[@class='rt-tr-group']"
     def get_section_records(self, loc):
@@ -61,10 +56,6 @@ class LandCommonEntity(object):
     select_history_value= "xpath=>//div[@class='modal-body']//div[@class='rt-tr-group'][%s]/div/div"
     def get_history_value(self,loc):
         return self.select_history_value %loc
-
-    # special_section_list
-    special_section_list = "xpath=>//div[@role='tabpanel']/div[@class='glo-row']//span"
-
 
     # input fields
     field_input = "xpath=>//div[@class='row form-group']//input[@name='%s']"
@@ -108,7 +99,7 @@ class LandCommonEntity(object):
     def get_required_name(self,loc1,loc2):
         return self.required_name %(loc1,loc2)
 
-    #fields_section
+    #frame amount
     field_section = "xpath=>//div[@class='row form-group']/div"
 
     #fields of section
@@ -148,8 +139,8 @@ class LandCommonEntity(object):
         return self.special_list_button %(loc1,loc2)
 
     # fields value on section:col-md-5,col-md-7,col-md-12
-    section_value = "xpath=>//div[@role='tabpanel']//div[@class='%s']/div[%s]//div[%s]/div[@class='glo-field row']//input"
-    def get_section_value(self, loc1,loc2,loc3):
-        return self.section_value % (loc1,loc2,loc3)
+    field_list = "xpath=>//div[@role='tabpanel']//div[@class='%s']/div[%s]//div[%s]/div[@class='glo-field row']//input"
+    def get_field_list(self, loc1,loc2,loc3):
+        return self.field_list % (loc1,loc2,loc3)
 
 
