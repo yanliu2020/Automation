@@ -16,8 +16,8 @@ class landDetailsSpecial(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.driver = driver
-        # HomePage(cls.driver).quick_entrance("Land", "04-019662", 2)
-        # BasePage(cls.driver).switch_to_handle(1)
+        HomePage(cls.driver).quick_entrance("Land", "04-019662", 2)
+        BasePage(cls.driver).switch_to_handle(1)
 
     def test_01_countySeat(self):
         u"""New/Edit CountySeat"""
@@ -62,7 +62,7 @@ class landDetailsSpecial(unittest.TestCase):
 
     def test_08_dispositionPlan_details(self):
         u"""dispositionPlan Details"""
-        self.assertTrue(LandCommonPage(self.driver).special("Land Details","Disposition Attributes","Details",1,""))
+        self.assertTrue(LandCommonPage(self.driver).special("Land Details","Disposition Attributes","Details",1,1))
 
     def test_09_dispositionPlan_history(self):
         u"""dispositionPlan history"""
@@ -91,7 +91,7 @@ class landDetailsSpecial(unittest.TestCase):
 
     def test_14_improvement_details(self):
       u"""improvement Details"""
-      self.assertTrue(LandCommonPage(self.driver).special("Land Details","Improvements","Details",1,""))
+      self.assertTrue(LandCommonPage(self.driver).special("Land Details","Improvements","Details",1,1))
 
     def test_15_improvement_history(self):
         u"""improvement history"""
@@ -120,7 +120,7 @@ class landDetailsSpecial(unittest.TestCase):
 
     def test_20_encumbrance_details(self):
       u"""encumbrance Details"""
-      self.assertTrue(LandCommonPage(self.driver).special("Land Details","Encumbrances","Details",1,""))
+      self.assertTrue(LandCommonPage(self.driver).special("Land Details","Encumbrances","Details",1,1))
 
     def test_21_encumbrance_history(self):
         u"""encumbrance history"""
@@ -145,7 +145,7 @@ class landDetailsSpecial(unittest.TestCase):
 
     def test_25_surroundingUse_details(self):
       u"""surroundingUse Details"""
-      self.assertTrue(LandCommonPage(self.driver).special("Land Details","Surrounding Use","Details",1,""))
+      self.assertTrue(LandCommonPage(self.driver).special("Land Details","Surrounding Use","Details",1,1))
 
     def test_26_surroundingUse_history(self):
         u"""surroundingUse history"""
@@ -174,7 +174,7 @@ class landDetailsSpecial(unittest.TestCase):
 
     def test_31_utilities_details(self):
       u"""utilities Details"""
-      self.assertTrue(LandCommonPage(self.driver).special("Land Details","Utilities","Details",1,""))
+      self.assertTrue(LandCommonPage(self.driver).special("Land Details","Utilities","Details",1,1))
 
     def test_32_utilities_history(self):
         u"""utilities history"""

@@ -288,7 +288,7 @@ class LandCommonPage(BasePage):
         elif sectionName in ("Disposition Plan"):
             field_list = self.find_elements(LandCommonEntity().get_field_list("col-md-5", 1, 2))
         elif sectionName in ("Location", "Management"):
-            field_list = self.find_elements(LandCommonEntity().get_field_list("col-md-7", 2, 1))
+            field_list = self.find_elements(LandCommonEntity().get_field_list("col-md-7", 1, 1))
         elif sectionName in ("Uplands"):
             field_list = self.find_elements(LandCommonEntity().get_field_list("col-md-7", 2, 2))
         elif sectionName in ("Land Survey"):

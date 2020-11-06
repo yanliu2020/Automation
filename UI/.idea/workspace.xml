@@ -23,7 +23,7 @@
     <SUITE FILE_PATH="coverage/UI$test_event.coverage" NAME="test_event Coverage Results" MODIFIED="1583852483896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testrunner/test_01_event" />
     <SUITE FILE_PATH="coverage/UI$Unittests_in_test_event_py.coverage" NAME="Unittests in test_event.py Coverage Results" MODIFIED="1585552080096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_01_event" />
     <SUITE FILE_PATH="coverage/UI$Unittests_in_land_02_land_summary_py.coverage" NAME="Unittests in land_02_land_summary.py Coverage Results" MODIFIED="1601343784865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_land_module" />
-    <SUITE FILE_PATH="coverage/UI$Unittests_in_test_09_land_special_py.coverage" NAME="Unittests in test_09_land_special.py Coverage Results" MODIFIED="1604468290948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_land_module" />
+    <SUITE FILE_PATH="coverage/UI$Unittests_in_test_09_land_special_py.coverage" NAME="Unittests in test_09_land_special.py Coverage Results" MODIFIED="1604628189936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_land_module" />
     <SUITE FILE_PATH="coverage/UI$Unittests_in_test_customer_record_py.coverage" NAME="Unittests in test_customer_record_entity.py Coverage Results" MODIFIED="1588842211361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_03_customer_record" />
     <SUITE FILE_PATH="coverage/UI$Unittests_in_test_02__py.coverage" NAME="Unittests in test_02_.py Coverage Results" MODIFIED="1592186388327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_customer_module" />
     <SUITE FILE_PATH="coverage/UI$Unittests_in_test_06_excessAcreage_py.coverage" NAME="Unittests in test_06_excessAcreage.py Coverage Results" MODIFIED="1603420779411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testsuites/test_land_module" />
@@ -102,12 +102,12 @@
     <favorites_list name="UI" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file leaf-file-name="test_09_land_special.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testsuites/test_land_module/test_09_land_special.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="425">
+              <caret line="178" column="40" lean-forward="true" selection-start-line="178" selection-start-column="40" selection-end-line="178" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -116,18 +116,18 @@
       <file leaf-file-name="test_08_land_details.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testsuites/test_land_module/test_08_land_details.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+            <state relative-caret-position="417">
+              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run_land.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testrunner/run_land.py">
+      <file leaf-file-name="landCommon.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pageobjects/land/landCommon.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-225">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="-1494">
+              <caret line="173" column="8" lean-forward="false" selection-start-line="173" selection-start-column="8" selection-end-line="173" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -239,8 +239,8 @@
         <option value="$PROJECT_DIR$/testsuites/test_customer_module/test_07_custPermission.py" />
         <option value="$PROJECT_DIR$/utils/query_sql.py" />
         <option value="$PROJECT_DIR$/pageobjects/land/landDetail.py" />
-        <option value="$PROJECT_DIR$/pageobjects/land/landCommon.py" />
         <option value="$PROJECT_DIR$/config/land/land_common_entity.py" />
+        <option value="$PROJECT_DIR$/pageobjects/land/landCommon.py" />
         <option value="$PROJECT_DIR$/testsuites/test_land_module/test_09_land_special.py" />
       </list>
     </option>
@@ -251,7 +251,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1401" />
@@ -515,27 +515,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_09_land_special_py - 2020.11.04 at 11h 58m 14s.xml">
-      <configuration name="Unittests in test_09_land_special.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_09_land_special_py - 2020.11.04 at 12h 28m 13s.xml">
-      <configuration name="Unittests in test_09_land_special.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_09_land_special_py - 2020.11.04 at 12h 29m 16s.xml">
-      <configuration name="Unittests in test_09_land_special.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_09_land_special_py - 2020.11.04 at 12h 29m 43s.xml">
-      <configuration name="Unittests in test_09_land_special.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_09_land_special_py - 2020.11.04 at 12h 30m 15s.xml">
-      <configuration name="Unittests in test_09_land_special.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_09_land_special_py - 2020.11.04 at 13h 34m 09s.xml">
-      <configuration name="Unittests in test_09_land_special.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_09_land_special_py - 2020.11.04 at 13h 36m 40s.xml">
-      <configuration name="Unittests in test_09_land_special.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_test_09_land_special_py - 2020.11.04 at 13h 37m 34s.xml">
       <configuration name="Unittests in test_09_land_special.py" configurationId="tests" />
     </history-entry>
@@ -543,6 +522,27 @@
       <configuration name="Unittests in test_09_land_special.py" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_test_09_land_special_py - 2020.11.04 at 13h 38m 35s.xml">
+      <configuration name="Unittests in test_09_land_special.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_09_land_special_py - 2020.11.05 at 17h 13m 44s.xml">
+      <configuration name="Unittests in test_09_land_special.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_09_land_special_py - 2020.11.05 at 17h 14m 10s.xml">
+      <configuration name="Unittests in test_09_land_special.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_09_land_special_py - 2020.11.05 at 17h 22m 16s.xml">
+      <configuration name="Unittests in test_09_land_special.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_09_land_special_py - 2020.11.05 at 17h 26m 57s.xml">
+      <configuration name="Unittests in test_09_land_special.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_09_land_special_py - 2020.11.06 at 09h 59m 50s.xml">
+      <configuration name="Unittests in test_09_land_special.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_09_land_special_py - 2020.11.06 at 10h 03m 03s.xml">
+      <configuration name="Unittests in test_09_land_special.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_09_land_special_py - 2020.11.06 at 10h 11m 01s.xml">
       <configuration name="Unittests in test_09_land_special.py" configurationId="tests" />
     </history-entry>
   </component>
@@ -560,7 +560,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -568,9 +568,9 @@
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="7.163324E-4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="300" height="677" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10810811" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21891892" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21081081" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27292264" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28151864" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11318052" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -710,44 +710,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pageobjects/land/landCommon.py">
+    <entry file="file://$PROJECT_DIR$/testrunner/run_land.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="221" column="80" lean-forward="false" selection-start-line="221" selection-start-column="64" selection-end-line="221" selection-end-column="80" />
-          <folding>
-            <element signature="e#24#62#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-225">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testsuites/test_land_module/test_02_appraisal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testsuites/test_land_module/test_03_acquisition.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-300">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testsuites/test_land_module/test_04_excessAcreage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-524">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testsuites/test_land_module/test_05_disposition.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testsuites/test_land_module/test_06_eventCalendar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/land/land_common_entity.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        <state relative-caret-position="288">
+          <caret line="52" column="49" lean-forward="true" selection-start-line="52" selection-start-column="49" selection-end-line="52" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pageobjects/land/landCommon.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1494">
+          <caret line="173" column="8" lean-forward="false" selection-start-line="173" selection-start-column="8" selection-end-line="173" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testsuites/test_land_module/test_09_land_special.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testrunner/run_land.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="425">
+          <caret line="178" column="40" lean-forward="true" selection-start-line="178" selection-start-column="40" selection-end-line="178" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testsuites/test_land_module/test_08_land_details.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+        <state relative-caret-position="417">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
         </state>
       </provider>
