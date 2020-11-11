@@ -47,7 +47,7 @@ class LandCommonPage(BasePage):
         self.sleep(2)
         return  self.find_element(LandCommonEntity.tips_msg).text
 
-    def entity_operator(self,title,sectionName,buttonName,row,textarea):
+    def list_operation(self,title,sectionName,buttonName,row,textarea):
         """
         #Tabs
         :param:title,sectionName,buttonName,row,textarea
@@ -71,36 +71,36 @@ class LandCommonPage(BasePage):
                     if self.not_selected(section_item[0], row) == True:
                         self.click(LandCommonEntity().get_select_record(section_item[0], row))
                     if buttonName in ("Details", "History"):
-                        table = []
-                        table_list = self.find_elements(LandCommonEntity().get_column_value(section_item[0], row))
-                        for i, item in enumerate(table_list):
+                        table_field_value = []
+                        table_column_list = self.find_elements(LandCommonEntity().get_column_value(section_item[0], row))
+                        for i, item in enumerate(table_column_list):
                             value = item.text
-                            table.append(value)
+                            table_field_value.append(value)
                         print("#####")
-                        print(table)
+                        print(table_field_value)
                         print("#####")
                         self.click(LandCommonEntity().get_section_operator(section_item[0], buttonName))
-                        s = []
+                        dialog_field_value = []
                         if buttonName == "Details":
                             input_list = self.find_elements(LandCommonEntity.input_value)
                             for a, item in enumerate(input_list):
                                 value = item.get_attribute('value')
-                                s.append(value)
+                                dialog_field_value.append(value)
                             if textarea == 1:
                                 for b, item in enumerate(self.find_elements(LandCommonEntity.textarea_value)):
                                     value = item.text
-                                    s.append(value)
+                                    dialog_field_value.append(value)
                         else:
-                            history_list = self.find_elements(LandCommonEntity().get_history_value(row))
-                            for a, item in enumerate(history_list):
+                            history_column_list = self.find_elements(LandCommonEntity().get_history_value(row))
+                            for a, item in enumerate(history_column_list):
                                 value = item.text
-                                s.append(value)
+                                dialog_field_value.append(value)
                         print("!!!!")
-                        print(s)
+                        print(dialog_field_value)
                         print("!!!!")
                         self.sleep(2)
                         self.execute_script_click(LandCommonEntity.close)
-                        if set(table) < set(s) or set(s) < set(table) or table == s:
+                        if set(table_field_value) < set(dialog_field_value) or set(dialog_field_value) < set(table_field_value) or table_field_value == dialog_field_value:
                             return True
                         else:
                             return False
@@ -126,31 +126,35 @@ class LandCommonPage(BasePage):
         :return:
         """
         self.sleep(1)
-        field_name_list = []
-        msg_required_list = []
+        expect_message_list = []
+        actual_message_list = []
         for i in range(1,len(self.find_elements(LandCommonEntity.field_section))+1):
             for j in range(1,len(self.find_elements(LandCommonEntity().get_fields_of_section(i)))+1):
                 if  self.exist_element(LandCommonEntity().get_required_name(i,j)) != False:
-                    field_name_list.append((self.find_element(LandCommonEntity().get_fields_name(i,j)).text).rstrip(
+                    if self.find_element(LandCommonEntity().get_fields_name(i,j)).text.rstrip(
+                        '*') in ("Encumbrance Class","State"):
+                        pass
+                    else:
+                        expect_message_list.append((self.find_element(LandCommonEntity().get_fields_name(i,j)).text).rstrip(
                         '*') + " is required.")
         print("!!!!!")
-        print(field_name_list)
+        print(expect_message_list)
         print("!!!!!")
         self.sleep(1)
         self.click(LandCommonEntity().get_land_button("Save"))
-        required_message_list = self.find_elements(LandCommonEntity.required_field_message)
-        for i,item in enumerate(required_message_list):
+        actual_error_list = self.find_elements(LandCommonEntity.required_field_message)
+        for i,item in enumerate(actual_error_list):
             value = item.text
-            msg_required_list.append(value)
+            actual_message_list.append(value)
         print("#####")
-        print(msg_required_list)
+        print(actual_message_list)
         print("#####")
         # self.sleep(1)
         # if flag == 1:
         #     self.execute_script_click(LandCommonEntity.close)
         # else:
         #     self.execute_script_click(LandCommonEntity().get_land_button("Cancel"))
-        if  field_name_list == msg_required_list:
+        if  actual_message_list == expect_message_list:
             return True
         else:
             return False
@@ -171,7 +175,7 @@ class LandCommonPage(BasePage):
                     self.delete()
 
 
-    def special(self,title,sectionName,buttonName,row,textarea):
+    def summary_operation(self,title,sectionName,buttonName,row,textarea):
         """
         #Location tab, Characteristics tab,Survey tab
         :param:title,sectionName,buttonName,row,textarea
@@ -181,27 +185,27 @@ class LandCommonPage(BasePage):
             if sectionName in ("Location From County Seat", "Location", "Characteristics", "Management", "Uplands",
                                "Survey"):
                 if buttonName == "History":
-                    seciton_value_list = []
-                    field_list = self.special_field_list(sectionName)
-                    for a, item in enumerate(field_list):
+                    summay_value_list = []
+                    summary_field_list = self.summary_field_list(sectionName)
+                    for a, item in enumerate(summary_field_list):
                         value = item.get_attribute('value')
-                        seciton_value_list.append(value)
+                        summay_value_list.append(value)
                     print("#####")
-                    print(seciton_value_list)
+                    print(summay_value_list)
                     print("#####")
                     self.choose_button(sectionName,buttonName)
-                    s = []
-                    history_list = self.find_elements(LandCommonEntity().get_history_value(row))
-                    for a, item in enumerate(history_list):
+                    history_value_list = []
+                    history_column_list = self.find_elements(LandCommonEntity().get_history_value(row))
+                    for a, item in enumerate(history_column_list):
                         value = item.text
-                        s.append(value)
+                        history_value_list.append(value)
                     print("!!!!")
-                    print(s)
+                    print(history_value_list)
                     print("!!!!")
                     self.sleep(2)
                     self.execute_script_click(LandCommonEntity.close)
-                    if set(seciton_value_list) < set(s) or set(s) < set(
-                            seciton_value_list) or seciton_value_list == s:
+                    if set(summay_value_list) < set(history_value_list) or set(history_value_list) < set(
+                            summay_value_list) or summay_value_list == history_value_list:
                         return True
                     else:
                         return False
@@ -226,36 +230,36 @@ class LandCommonPage(BasePage):
                         if self.not_selected(section_item[0]+1, row) == True:
                             self.click(LandCommonEntity().get_select_record(section_item[0]+1, row))
                         if buttonName in ("Details", "History"):
-                            table = []
-                            table_list = self.find_elements(LandCommonEntity().get_column_value(section_item[0]+1, row))
-                            for i, item in enumerate(table_list):
+                            table_field_value = []
+                            table_column_list = self.find_elements(LandCommonEntity().get_column_value(section_item[0]+1, row))
+                            for i, item in enumerate(table_column_list):
                                 value = item.text
-                                table.append(value)
+                                table_field_value.append(value)
                             print("#####")
-                            print(table)
+                            print(table_field_value)
                             print("#####")
                             self.click(LandCommonEntity().get_section_button(section_item[0]+1, buttonName))
-                            s = []
+                            dialog_field_value = []
                             if buttonName == "Details":
                                 input_list = self.find_elements(LandCommonEntity.input_value)
                                 for a, item in enumerate(input_list):
                                     value = item.get_attribute('value')
-                                    s.append(value)
+                                    dialog_field_value.append(value)
                                 if textarea == 1:
                                     for b, item in enumerate(self.find_elements(LandCommonEntity.textarea_value)):
                                         value = item.text
-                                        s.append(value)
+                                        dialog_field_value.append(value)
                             else:
-                                history_list = self.find_elements(LandCommonEntity().get_history_value(row))
-                                for a, item in enumerate(history_list):
+                                history_column_list = self.find_elements(LandCommonEntity().get_history_value(row))
+                                for a, item in enumerate(history_column_list):
                                     value = item.text
-                                    s.append(value)
+                                    dialog_field_value.append(value)
                             print("!!!!")
-                            print(s)
+                            print(dialog_field_value)
                             print("!!!!")
                             self.sleep(2)
                             self.execute_script_click(LandCommonEntity.close)
-                            if set(table) < set(s) or set(s) < set(table) or table == s:
+                            if set(table_field_value) < set(dialog_field_value) or set(dialog_field_value) < set(table_field_value) or table_field_value == dialog_field_value:
                                 return True
                             else:
                                 return False
@@ -277,23 +281,23 @@ class LandCommonPage(BasePage):
         elif sectionName in ("Land Survey"):
             self.click(LandCommonEntity().get_survey_button(buttonName))
 
-    def special_field_list(self,sectionName):
+    def summary_field_list(self,sectionName):
         """
         #The fields value on Location tab, Characteristics tab,Survey tab
         :param: sectionName
         :return:
         """
         if sectionName in ("Location From County Seat", "Characteristics"):
-            field_list = self.find_elements(LandCommonEntity().get_field_list("col-md-5",1,1))
+            summary_field_list = self.find_elements(LandCommonEntity().get_field_list("col-md-5",1,1))
         elif sectionName in ("Disposition Plan"):
-            field_list = self.find_elements(LandCommonEntity().get_field_list("col-md-5", 1, 2))
+            summary_field_list = self.find_elements(LandCommonEntity().get_field_list("col-md-5", 1, 2))
         elif sectionName in ("Location", "Management"):
-            field_list = self.find_elements(LandCommonEntity().get_field_list("col-md-7", 1, 1))
+            summary_field_list = self.find_elements(LandCommonEntity().get_field_list("col-md-7", 1, 1))
         elif sectionName in ("Uplands"):
-            field_list = self.find_elements(LandCommonEntity().get_field_list("col-md-7", 2, 2))
+            summary_field_list = self.find_elements(LandCommonEntity().get_field_list("col-md-7", 2, 2))
         elif sectionName in ("Land Survey"):
-            field_list = self.find_elements(LandCommonEntity().get_field_list("col-md-12", 1, 1))
-        return field_list
+            summary_field_list = self.find_elements(LandCommonEntity().get_field_list("col-md-12", 1, 1))
+        return summary_field_list
 
 
 
